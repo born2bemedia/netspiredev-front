@@ -12,7 +12,10 @@ $muted: rgba(255, 255, 255, 0.5);
   top: 0;
   left: 0;
   z-index: 100;
-  background: $black;
+
+  &[data-scrolled="true"] {
+    background: $black;
+  }
 
   &__shell {
     width: 100%;
@@ -109,7 +112,6 @@ $muted: rgba(255, 255, 255, 0.5);
 
   &__main {
     width: 100%;
-    background: $black;
   }
 
   &__mainInner {
