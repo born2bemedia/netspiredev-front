@@ -50,3 +50,11 @@ export const fadeInRight = {
     transition: { duration: 0.5, delay: customDelay },
   }),
 };
+
+export const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: (customDelay = 0) => ({
+    opacity: 1,
+    transition: { duration: 0.5, delay: customDelay },
+  }),
+};

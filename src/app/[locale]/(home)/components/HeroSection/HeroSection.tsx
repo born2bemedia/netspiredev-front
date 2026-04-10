@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
-import { fadeInLeft, fadeInRight } from '@/shared/lib/helpers/animations';
+import { fadeIn, fadeInLeft } from '@/shared/lib/helpers/animations';
 import { cn } from '@/shared/lib/helpers/styles';
 import { ArrowRightSmallIcon, PlusSmallIcon } from '@/shared/ui/icons';
 import { Button } from '@/shared/ui/kit/button/Button';
@@ -83,7 +83,7 @@ export const HeroSection = () => {
 
             <motion.div
               className={styles.heroVisual}
-              variants={fadeInRight}
+              variants={fadeIn}
               initial="hidden"
               whileInView="visible"
               viewport={viewport}
