@@ -85,7 +85,7 @@ export const Header = () => {
     {
       key: 'selectedWork',
       text: t('selectedWork', { fallback: 'Selected Work' }),
-      href: '/#selected-work',
+      href: '/selected-work',
     },
     {
       key: 'ourApproach',

@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 import { fadeInLeft, fadeInRight } from "@/shared/lib/helpers/animations";
-import { PlusSmallIcon } from "@/shared/ui/icons";
-import { Button } from "@/shared/ui/kit/button/Button";
 
 import styles from "./HeroSection.module.scss";
 
@@ -50,22 +48,6 @@ export const HeroSection = () => {
                     "Choose the level of support that fits your idea. Whether you're starting small or building something more advanced, each plan is structured to deliver clarity, performance, and a smooth development process.",
                 })}
               </p>
-
-              <div className={styles.buttonWrap}>
-                <Button
-                  variant="filled"
-                  url="/engagement-plans#plans"
-                  type="link"
-                >
-                  <span className={styles.buttonContent}>
-                    <span>{t("hero.cta", { fallback: "View Plans" })}</span>
-                    <PlusSmallIcon
-                      className={styles.buttonIcon}
-                      aria-hidden="true"
-                    />
-                  </span>
-                </Button>
-              </div>
             </motion.div>
 
             <motion.div

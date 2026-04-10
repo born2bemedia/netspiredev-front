@@ -1,0 +1,129 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$panel: #1a0800;
+$white: #efefef;
+
+.section {
+  position: relative;
+  overflow: hidden;
+  color: $white;
+  background-image: url("/images/selected-work/closing-dots.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dots {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2248px;
+  max-width: none;
+  opacity: 0.5;
+  transform: translate(-50%, -50%) rotate(90deg);
+  pointer-events: none;
+  user-select: none;
+
+  @include tablet {
+    width: 1640px;
+  }
+
+  @include mobile {
+    width: 1320px;
+  }
+}
+
+.sectionInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 112px 0;
+
+  @include mobile {
+    padding: 80px 0;
+  }
+}
+
+.content {
+  display: flex;
+  max-width: 800px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  color: $white;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include tablet {
+    font-size: 42px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-space-mono), monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+
+  @include mobile {
+    width: 100%;
+    gap: 16px;
+  }
+}
+
+.buttonWrap {
+  display: inline-flex;
+
+  :global(a),
+  :global(button) {
+    padding: 14px 24px !important;
+    line-height: 1;
+  }
+
+  @include mobile {
+    width: 100%;
+
+    :global(a),
+    :global(button) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.buttonContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttonIcon {
+  flex: 0 0 auto;
+  color: currentColor;
+}

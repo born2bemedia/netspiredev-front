@@ -16,7 +16,7 @@ export const WorkSection = () => {
   const workCards = [
     {
       key: 'selectedWork',
-      href: '/contacts',
+      href: '/selected-work',
       title: t('work.cards.selectedWork.title', { fallback: 'Selected Work' }),
       description: t('work.cards.selectedWork.description', {
         fallback:

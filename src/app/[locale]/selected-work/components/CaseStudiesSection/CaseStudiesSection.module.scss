@@ -1,0 +1,59 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$bg: #571700;
+$white-25: rgba(255, 255, 255, 0.25);
+
+.section {
+  background: $bg;
+  color: #e0e0e0;
+}
+
+.sectionInner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 0 80px;
+}
+
+.sectionLabelWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sectionLabel {
+  color: #ff4500;
+  font-family: var(--font-roboto-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sectionDivider {
+  width: 100%;
+  height: 1px;
+  background: $white-25;
+}
+
+.title {
+  margin: 0;
+  color: #e0e0e0;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}

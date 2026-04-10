@@ -855,6 +855,101 @@
       "cta": "Start Your Project"
     }
   },
+  "selectedWorkPage": {
+    "hero": {
+      "label": "// SELECTED WORK",
+      "title": "What We've Built",
+      "description": "Each project is built around a different idea, a different challenge, and a tailored solution. Here's a selection of what we've created — focused on functionality, clarity, and performance."
+    },
+    "cases": {
+      "label": "// SELECTED WORK",
+      "title": "Case Studies",
+      "labels": {
+        "overview": "Overview:",
+        "challenge": "Challenge:",
+        "solution": "Solution:",
+        "features": "Key Features:"
+      },
+      "items": {
+        "personalPortfolioPlatform": {
+          "title": "Personal Portfolio Platform",
+          "overview": "A clean, minimal portfolio designed for an individual showcasing creative work and services.",
+          "challenge": "The client needed a structured way to present their work without overwhelming visitors, while keeping the design refined and professional.",
+          "solution": "We developed a custom website with a clear layout, smooth navigation, and responsive design, ensuring content remained the focal point.",
+          "features": {
+            "minimalDesign": "Minimal UI/UX design",
+            "responsiveLayout": "Responsive layout",
+            "contentFlow": "Structured content flow",
+            "performance": "Fast loading performance"
+          }
+        },
+        "ecommerceStoreForNicheProducts": {
+          "title": "E-Commerce Store for Niche Products",
+          "overview": "An online store built for a small niche product business, focused on simplicity and usability.",
+          "challenge": "Creating a seamless shopping experience without unnecessary complexity or a heavy interface.",
+          "solution": "We combined a streamlined product structure with an intuitive checkout flow that keeps the buying journey clear and efficient.",
+          "features": {
+            "catalog": "Product catalog setup",
+            "checkout": "Secure checkout integration",
+            "optimization": "Performance optimization"
+          }
+        },
+        "serviceBasedWebsite": {
+          "title": "Service-Based Website",
+          "overview": "A multi-page website designed for an individual offering professional services.",
+          "challenge": "The client needed a clear way to communicate services and guide users toward inquiry or booking.",
+          "solution": "We structured the website with focused sections, strong visual hierarchy, and clear calls to action.",
+          "features": {
+            "layout": "Structured service layout",
+            "forms": "Contact form integration",
+            "seo": "SEO-ready setup"
+          }
+        },
+        "webApplicationForBookingSystem": {
+          "title": "Web Application for Booking System",
+          "overview": "A custom-built web application allowing users to manage bookings and sessions.",
+          "challenge": "Developing a system that is easy to use while handling multiple interactions and user inputs.",
+          "solution": "We created a structured backend with a simple front-end interface, making session management fast and flexible.",
+          "features": {
+            "dashboard": "User-friendly dashboard",
+            "booking": "Booking and scheduling system",
+            "logic": "Data handling and logic",
+            "scalable": "Scalable architecture"
+          }
+        },
+        "websiteRedesignProject": {
+          "title": "Website Redesign Project",
+          "overview": "A complete redesign of an outdated website that lacked structure and performance.",
+          "challenge": "Improving usability and modernising the visual experience without losing existing content.",
+          "solution": "We rebuilt the website with a new structure, improved navigation, and optimized performance.",
+          "features": {
+            "redesign": "Modern UI/UX redesign",
+            "structure": "Improved site structure",
+            "speed": "Faster loading speed",
+            "responsive": "Responsive rebuild"
+          }
+        },
+        "highPerformanceLandingPage": {
+          "title": "High-Performance Landing Page",
+          "overview": "A single-page solution designed to clearly present an idea and guide user action.",
+          "challenge": "Keeping the page simple while making it engaging and effective.",
+          "solution": "We focused on clarity, structured content, and smooth interaction to guide users naturally.",
+          "features": {
+            "conversion": "Conversion-focused design",
+            "flow": "Clear content flow",
+            "lightweight": "Fast and lightweight structure",
+            "responsive": "Responsive layout"
+          }
+        }
+      }
+    },
+    "closing": {
+      "title": "Have Something in Mind?",
+      "description": "Every project starts with an idea. We're here to help you shape it into something functional, structured, and ready to launch.",
+      "primaryCta": "Start a Project",
+      "secondaryCta": "Discover What We Build"
+    }
+  },
   "journalPage": {
     "heroTitle": "Viaggi, raccontati diversamente",
     "heroSubtitleOne": "Menoscrollare. Più scoprire.",

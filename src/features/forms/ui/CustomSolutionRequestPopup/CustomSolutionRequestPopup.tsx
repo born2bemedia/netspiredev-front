@@ -17,6 +17,7 @@ import {
   type CustomSolutionRequestFormSchema,
   customSolutionRequestFormSchema,
 } from '@/features/forms/model/schemas';
+
 import { cn } from '@/shared/lib/helpers/styles';
 import { FileIcon, PlusSmallIcon } from '@/shared/ui/icons';
 import { Button } from '@/shared/ui/kit/button/Button';
@@ -64,22 +65,90 @@ export const CustomSolutionRequestPopup = ({
   const selectedCommunicationPreferences = form.watch('communicationPreferences');
   const isOtherProjectTypeSelected = selectedProjectTypes.includes('other');
 
-  const projectTypeColumns = useMemo(
-    () => [customSolutionProjectTypeOptions.slice(0, 4), customSolutionProjectTypeOptions.slice(4)],
-    []
-  );
-  const budgetColumns = useMemo(
-    () => [customSolutionBudgetOptions.slice(0, 2), customSolutionBudgetOptions.slice(2)],
-    []
-  );
-  const timelineColumns = useMemo(
-    () => [customSolutionTimelineOptions.slice(0, 2), customSolutionTimelineOptions.slice(2)],
-    []
-  );
-  const communicationColumns = useMemo(
-    () => [customSolutionCommunicationOptions.slice(0, 2), customSolutionCommunicationOptions.slice(2)],
-    []
-  );
+    const projectTypeColumns = [
+      {
+        label: t('projectTypeWebsiteLabel', { fallback: 'Website' }),
+        value: 'website',
+      },
+      {
+        label: t('projectTypeWebApplicationLabel', { fallback: 'Web Application' }),
+        value: 'webApplication',
+      },
+      {
+        label: t('projectTypeEcommerceLabel', { fallback: 'Ecommerce' }),
+        value: 'ecommerce',
+      },
+      {
+        label: t('projectTypeLandingPageLabel', { fallback: 'Landing Page' }),
+        value: 'landingPage',
+      },
+      {
+        label: t('projectTypeRedesignLabel', { fallback: 'Redesign' }),
+        value: 'redesign',
+      },
+      {
+        label: t('projectTypePerformanceImprovementsLabel', { fallback: 'Performance Improvements' }),
+        value: 'performanceImprovements',
+      },
+      {
+        label: t('projectTypeOngoingSupportLabel', { fallback: 'Ongoing Support' }),
+        value: 'ongoingSupport',
+      },
+      {
+        label: t('projectTypeOtherLabel', { fallback: 'Other' }),
+        value: 'other',
+      },
+    ];
+  const budgetColumns = [
+      {
+        label: t('budgetUnder1000Label', { fallback: 'Under €1,000' }),
+        value: 'under1000',
+      },
+      {
+        label: t('budget1000To2500Label', { fallback: '€1,000 – €2,500' }),
+        value: 'budget1000To2500',
+      },
+      {
+        label: t('budget2500To5000Label', { fallback: '€2,500 – €5,000' }),
+        value: 'budget2500To5000',
+      },
+      {
+        label: t('budget5000PlusLabel', { fallback: '€5,000+' }),
+        value: 'budget5000Plus',
+      },
+  ];
+  const timelineColumns = [
+    {
+      label: t('timelineAsSoonAsPossibleLabel', { fallback: 'As soon as possible' }),
+      value: 'asSoonAsPossible',
+    },
+    {
+      label: t('timelineWithinOneToTwoMonthsLabel', { fallback: 'Within 1-2 months' }),
+      value: 'withinOneToTwoMonths',
+    },
+    {
+        label: t('timelineWithinTwoToFourMonthsLabel', { fallback: 'Within 2-4 months' }),
+        value: 'withinTwoToFourMonths',
+      },
+      {
+        label: t('timelineFlexibleLabel', { fallback: 'Flexible' }),
+        value: 'flexible',
+    },
+  ];
+  const communicationColumns = [
+    {
+      label: t('communicationEmailLabel', { fallback: 'Email' }),
+      value: 'email',
+    },
+    {
+      label: t('communicationPhoneLabel', { fallback: 'Phone' }),
+      value: 'phone',
+    },
+    {
+      label: t('communicationVideoCallLabel', { fallback: 'Video Call' }),
+      value: 'videoCall',
+    },
+  ];
 
   const resetState = () => {
     setError(null);
@@ -252,13 +321,13 @@ export const CustomSolutionRequestPopup = ({
   );
 
   const renderChoiceColumns = (
-    columns: readonly string[][],
-    renderItem: (value: string) => React.ReactNode
+    columns: readonly { label: string; value: string }[],
+    renderItem: (item: { label: string; value: string } | string) => React.ReactNode
   ) => (
     <div className={styles.choiceColumns}>
       {columns.map((column, index) => (
-        <div key={`${index}-${column.join('-')}`} className={styles.choiceColumn}>
-          {column.map(renderItem)}
+        <div key={`${index}-${column.value}`} className={styles.choiceColumn}>
+          {renderItem(column)}
         </div>
       ))}
     </div>
@@ -326,17 +395,17 @@ export const CustomSolutionRequestPopup = ({
                     <div className={styles.detailsRow}>
                       {renderTextField(
                         'fullName',
-                        t('customSolutionForm.fields.fullName.label', { fallback: 'Full name' }),
-                        t('customSolutionForm.fields.fullName.placeholder', {
+                        t('fullNameLabel', { fallback: 'Full name' }),
+                        t('fullNamePlaceholder', {
                           fallback: 'Tell us your name',
                         })
                       )}
                       {renderTextField(
                         'email',
-                        t('customSolutionForm.fields.email.label', {
+                        t('emailLabel', {
                           fallback: 'Email address',
                         }),
-                        t('customSolutionForm.fields.email.placeholder', {
+                        t('emailPlaceholder', {
                           fallback: 'So we can reach out to you',
                         }),
                         { type: 'email' }
@@ -345,10 +414,10 @@ export const CustomSolutionRequestPopup = ({
 
                     {renderTextField(
                       'phone',
-                      t('customSolutionForm.fields.phone.label', {
+                      t('phoneLabel', {
                         fallback: 'Phone number (optional)',
                       }),
-                      t('customSolutionForm.fields.phone.placeholder', {
+                      t('phonePlaceholder', {
                         fallback: 'If you prefer to be contacted by phone',
                       }),
                       { type: 'tel' }
@@ -356,10 +425,10 @@ export const CustomSolutionRequestPopup = ({
 
                     {renderTextField(
                       'website',
-                      t('customSolutionForm.fields.website.label', {
+                      t('websiteLabel', {
                         fallback: 'Your website (optional)',
                       }),
-                      t('customSolutionForm.fields.website.placeholder', {
+                      t('websitePlaceholder', {
                         fallback: 'Share a link if you already have something in place',
                       })
                     )}
@@ -373,34 +442,34 @@ export const CustomSolutionRequestPopup = ({
                     })}
                   </div>
                   <div className={styles.cardContent}>
-                    {renderChoiceColumns(projectTypeColumns, (value) =>
+                    {renderChoiceColumns(projectTypeColumns, (item) =>
                       renderChoice({
                         checked: selectedProjectTypes.includes(
-                          value as CustomSolutionRequestFormSchema['projectTypes'][number]
+                          (item as { value: string }).value as CustomSolutionRequestFormSchema['projectTypes'][number]
                         ),
-                        label: t(`customSolutionForm.projectTypes.${value}`, { fallback: value }),
+                        label: (item as { label: string }).label,
                         type: 'checkbox',
                         name: 'projectTypes',
                         onChange: () =>
                           toggleProjectType(
-                            value as CustomSolutionRequestFormSchema['projectTypes'][number]
+                            (item as { value: string }).value as CustomSolutionRequestFormSchema['projectTypes'][number]
                           ),
                       })
                     )}
 
                     {renderTextField(
                       'projectTypeOther',
-                      t('customSolutionForm.fields.projectTypeOther.label', {
+                      t('projectTypeOtherLabel', {
                         fallback: 'Please specify',
                       }),
-                      t('customSolutionForm.fields.projectTypeOther.placeholder', {
+                      t('projectTypeOtherPlaceholder', {
                         fallback: 'Enter your option',
                       })
                     )}
 
                     {!isOtherProjectTypeSelected ? (
                       <p className={styles.helperText}>
-                        {t('customSolutionForm.fields.projectTypeOther.helper', {
+                        {t('projectTypeOtherHelper', {
                           fallback: 'Use this field when "Other" is selected.',
                         })}
                       </p>
@@ -417,19 +486,19 @@ export const CustomSolutionRequestPopup = ({
                   <div className={styles.cardContent}>
                     <div className={styles.group}>
                       <div className={styles.groupLabel}>
-                        {t('customSolutionForm.fields.budget.label', {
+                        {t('budgetLabel', {
                           fallback: 'Estimated budget',
                         })}
                       </div>
-                      {renderChoiceColumns(budgetColumns, (value) =>
+                      {renderChoiceColumns(budgetColumns, (item) =>
                         renderChoice({
-                          checked: selectedBudget === value,
-                          label: t(`customSolutionForm.budgets.${value}`, { fallback: value }),
+                          checked: selectedBudget === (item as { value: string }).value,
+                          label: (item as { label: string }).label,
                           type: 'radio',
                           name: 'budget',
                           onChange: () =>
                             setBudget(
-                              value as NonNullable<CustomSolutionRequestFormSchema['budget']>
+                              (item as { value: string }).value as NonNullable<CustomSolutionRequestFormSchema['budget']>
                             ),
                         })
                       )}
@@ -437,10 +506,10 @@ export const CustomSolutionRequestPopup = ({
 
                     {renderTextField(
                       'goals',
-                      t('customSolutionForm.fields.goals.label', {
+                      t('goalsLabel', {
                         fallback: 'What are your main goals for this project?',
                       }),
-                      t('customSolutionForm.fields.goals.placeholder', {
+                      t('goalsPlaceholder', {
                         fallback: 'Enter your goals',
                       }),
                       { multiline: true }
@@ -450,7 +519,7 @@ export const CustomSolutionRequestPopup = ({
 
                 <section className={styles.card}>
                   <div className={styles.cardTitle}>
-                    {t('customSolutionForm.sections.timelineFiles', {
+                    {t('timelineFilesTitle', {
                       fallback: 'Timeline & Optional Files',
                     })}
                   </div>
@@ -461,15 +530,15 @@ export const CustomSolutionRequestPopup = ({
                           fallback: 'When would you like to get started?',
                         })}
                       </div>
-                      {renderChoiceColumns(timelineColumns, (value) =>
+                      {renderChoiceColumns(timelineColumns, (item) =>
                         renderChoice({
-                          checked: selectedTimeline === value,
-                          label: t(`customSolutionForm.timelines.${value}`, { fallback: value }),
+                          checked: selectedTimeline === (item as { value: string }).value,
+                          label: (item as { label: string }).label,
                           type: 'radio',
                           name: 'timeline',
                           onChange: () =>
                             setTimeline(
-                              value as NonNullable<CustomSolutionRequestFormSchema['timeline']>
+                              (item as { value: string }).value as NonNullable<CustomSolutionRequestFormSchema['timeline']>
                             ),
                         })
                       )}
@@ -481,19 +550,17 @@ export const CustomSolutionRequestPopup = ({
                           fallback: 'Preferred communication',
                         })}
                       </div>
-                      {renderChoiceColumns(communicationColumns, (value) =>
+                      {renderChoiceColumns(communicationColumns, (item) =>
                         renderChoice({
                           checked: selectedCommunicationPreferences.includes(
-                            value as CustomSolutionRequestFormSchema['communicationPreferences'][number]
+                            (item as { value: string }).value as CustomSolutionRequestFormSchema['communicationPreferences'][number]
                           ),
-                          label: t(`customSolutionForm.communication.${value}`, {
-                            fallback: value,
-                          }),
+                          label: (item as { label: string }).label,
                           type: 'checkbox',
                           name: 'communicationPreferences',
                           onChange: () =>
                             toggleCommunicationPreference(
-                              value as CustomSolutionRequestFormSchema['communicationPreferences'][number]
+                              (item as { value: string }).value as CustomSolutionRequestFormSchema['communicationPreferences'][number]
                             ),
                         })
                       )}
@@ -501,7 +568,7 @@ export const CustomSolutionRequestPopup = ({
 
                     <div className={styles.group}>
                       <div className={styles.groupLabel}>
-                        {t('customSolutionForm.fields.attachment.label', {
+                        {t('attachmentLabel', {
                           fallback: 'Upload any materials (optional)',
                         })}
                       </div>
@@ -519,19 +586,19 @@ export const CustomSolutionRequestPopup = ({
                         </span>
                         <span className={styles.fileUploadText}>
                           <span className={styles.fileUploadTitle}>
-                            {t('customSolutionForm.fields.attachment.action', {
+                            {t('attachmentAction', {
                               fallback: 'Choose File',
                             })}
                           </span>
                           <span className={styles.fileUploadName}>
                             {attachment?.name ??
-                              t('customSolutionForm.fields.attachment.empty', {
+                              t('attachmentEmpty', {
                                 fallback: 'no file selected',
                               })}
                           </span>
                         </span>
                         <span className={styles.fileUploadMeta}>
-                          {t('customSolutionForm.fields.attachment.meta', {
+                          {t('attachmentMeta', {
                             fallback: 'Max size: 10MB',
                           })}
                         </span>
@@ -546,10 +613,10 @@ export const CustomSolutionRequestPopup = ({
               <div className={styles.footer}>
                 <div className={styles.footerCopy}>
                   <h3 className={styles.footerTitle}>
-                    {t('customSolutionForm.nextSteps.title', { fallback: 'Next Steps' })}
+                    {t('nextStepsTitle', { fallback: 'Next Steps' })}
                   </h3>
                   <p className={styles.footerDescription}>
-                    {t('customSolutionForm.nextSteps.description', {
+                    {t('nextStepsDescription', {
                       fallback:
                         'Once submitted, we’ll review your request and reach out to discuss your idea, clarify details, and define the best way forward.',
                     })}
@@ -562,7 +629,7 @@ export const CustomSolutionRequestPopup = ({
                       <span>
                         {isLoading
                           ? t('loading', { fallback: 'Sending…' })
-                          : t('customSolutionForm.submit', {
+                          : t('submit', {
                               fallback: 'Submit Your Request',
                             })}
                       </span>
