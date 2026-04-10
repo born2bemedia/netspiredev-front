@@ -1,1 +1,0 @@
-export { JournalArticleBody } from "./JournalArticleBody";

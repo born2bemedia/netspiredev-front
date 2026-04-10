@@ -1,0 +1,18 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$surface: #f4f3ee;
+
+.section {
+  padding: 0 0 124px;
+  background: $surface;
+  
+
+  @include mobile {
+    padding-bottom: 80px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}

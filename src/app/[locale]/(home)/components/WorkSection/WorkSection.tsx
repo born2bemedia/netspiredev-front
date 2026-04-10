@@ -25,7 +25,7 @@ export const WorkSection = () => {
     },
     {
       key: 'insights',
-      href: '/journal',
+      href: '/insights',
       title: t('work.cards.insights.title', { fallback: 'Insights' }),
       description: t('work.cards.insights.description', {
         fallback:

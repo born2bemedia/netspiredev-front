@@ -1,0 +1,90 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$panel: #0d0d0d;
+$white: #efefef;
+
+.section {
+  position: relative;
+  overflow: hidden;
+  background: $panel;
+}
+
+.articleCtaChartImage {
+  margin-top: -100px;
+  width: 100%;
+}
+
+.sectionInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  padding: 60px 0 96px;
+
+  @include mobile {
+    padding: 44px 0 96px;
+  }
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  align-items: flex-end;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.title {
+  margin: 0;
+  flex: 1 1 auto;
+  color: $white;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include mobile {
+    font-size: 30px;
+  }
+}
+
+.buttonWrap {
+  display: inline-flex;
+
+  :global(a),
+  :global(button) {
+    padding: 14px 24px !important;
+    line-height: 1;
+  }
+
+  @include mobile {
+    width: 100%;
+
+    :global(a),
+    :global(button) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.buttonContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttonIcon {
+  flex: 0 0 auto;
+  color: currentColor;
+}

@@ -40,7 +40,7 @@ export const Footer = () => {
     {
       key: 'insights',
       text: t('insights', { fallback: 'Insights' }),
-      href: '/journal',
+      href: '/insights',
     },
     {
       key: 'get-in-touch',

@@ -1,24 +1,10 @@
-import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
-import { ArticlesHero, JournalCards } from "./components";
-
-export const metadata: Metadata = {
-  title: "Travellio Journal | Travel Guides, Insights & Inspiration",
-  description:
-    "Explore travel stories, smart tips, destination insights, and curated inspiration from Travellio Global.",
-  openGraph: {
-    title: "Travellio Journal | Travel Guides, Insights & Inspiration",
-    description:
-      "Explore travel stories, smart tips, destination insights, and curated inspiration from Travellio Global.",
-    images: "https://netspiredev.com/images/meta.png",
-  },
+type PageProps = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Journal() {
-  return (
-    <main>
-      <ArticlesHero />
-      <JournalCards />
-    </main>
-  );
+export default async function JournalPage({ params }: PageProps) {
+  const { locale } = await params;
+  redirect(`/${locale}/insights`);
 }

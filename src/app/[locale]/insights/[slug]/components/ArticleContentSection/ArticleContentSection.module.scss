@@ -1,0 +1,217 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$surface: #f4f3ee;
+$card: #efefef;
+$copy: #141312;
+$muted: #34322e;
+$muted-soft: rgba(0, 0, 0, 0.1);
+
+.section {
+  position: relative;
+  padding: 0 0 112px;
+  background: $surface;
+  background-image: url("/images/insights/insights-dots.svg");
+  background-position: top center;
+  @include mobile {
+    padding-bottom: 80px;
+  }
+}
+
+.pattern {
+  display: none;
+}
+
+.sectionInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 60px 0 60px;
+
+  @include mobile {
+    gap: 20px;
+    padding: 20px 0 0;
+  }
+}
+
+.backWrap {
+  display: flex;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: $copy;
+  text-decoration: none;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.backIcon {
+  display: inline-flex;
+  width: 30px;
+  height: 17px;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  width: 40%;
+  position: sticky;
+  top: 70px;
+  @include tablet {
+    width: 100%;
+    position: static;
+    top: unset;
+  }
+}
+
+.pageTitle {
+  margin: 0;
+  color: $copy;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.toc {
+  position: sticky;
+  top: 112px;
+  width: 360px;
+  padding: 16px;
+  background: $card;
+
+  @include tablet {
+    position: static;
+    width: 100%;
+    display: none;
+  }
+}
+
+.tocItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.tocItem {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  width: 100%;
+  padding: 11px 0 0;
+  border: 0;
+  border-top: 1px solid $muted-soft;
+  background: transparent;
+  color: $copy;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+
+  & + & {
+    margin-top: 16px;
+  }
+}
+
+.tocItemActive {
+  color: $copy;
+  font-weight: 700;
+}
+
+.tocItemFirst {
+  font-size: 14px;
+  //font-weight: 700;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: $card;
+
+  @include mobile {
+    padding: 20px 16px;
+  }
+}
+
+.cardTitle {
+  margin: 0 0 10px;
+  color: $copy;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.cardContent {
+  color: $muted;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include mobile {
+    font-size: 12px;
+  }
+
+  :global(p) {
+    margin: 0 0 10px;
+  }
+
+  :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  :global(ul),
+  :global(ol) {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  :global(li) {
+    margin: 0;
+  }
+}

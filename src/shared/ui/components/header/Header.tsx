@@ -95,7 +95,7 @@ export const Header = () => {
     {
       key: 'insights',
       text: t('insights', { fallback: 'Insights' }),
-      href: '/journal',
+      href: '/insights',
     },
   ] as const;
 

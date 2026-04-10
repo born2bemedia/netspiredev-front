@@ -957,6 +957,19 @@
     "noArticles": "Keine Artikel gefunden",
     "articleContents": "Inhalt des Artikels"
   },
+  "insightsPage": {
+    "hero": {
+      "label": "// INSIGHTS",
+      "title": "Thoughts on Design,\nDevelopment, and Functionality",
+      "descriptionPrimary": "We share ideas, observations, and practical perspectives on web development, design, and digital functionality - focusing on what actually makes products clear, usable, and effective.",
+      "descriptionSecondary": "No unnecessary complexity. Just structured thinking behind better digital solutions."
+    },
+    "article": {
+      "backLabel": "Back",
+      "contentsLabel": "Article contents",
+      "cta": "Start a Project"
+    }
+  },
   "account": {
     "heroTitle": "Willkommen zurück bei Travellio Global",
     "heroSubtitle": "Geben Sie Ihre Anmeldedaten ein, um auf Ihr Konto zuzugreifen. Wenn Sie sich nicht an Ihr Passwort erinnern können, wählen Sie „Passwort vergessen?“ aus. und wir helfen Ihnen beim Zurücksetzen.",
