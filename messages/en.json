@@ -171,9 +171,8 @@
   "cookiePopup": {
     "title": "Cookie Notice",
     "text": "We use cookies to keep things working as expected and to better understand how visitors interact with the site.",
-    "link": "More About Cookies",
     "accept": "Accept Cookies",
-    "decline": "Decline"
+    "link": "More About Cookies"
   },
   "footer": {
     "ourApproach": "Our Approach",
