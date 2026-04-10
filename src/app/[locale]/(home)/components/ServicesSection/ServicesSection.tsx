@@ -109,7 +109,7 @@ export const ServicesSection = () => {
               viewport={viewport}
               custom={0.1}
             >
-              <Button variant="bordered" url="/contacts" type="link">
+              <Button variant="bordered" url="/what-we-build" type="link">
                 <span className={styles.buttonContent}>
                   <span>{t('services.cta', { fallback: 'Discover All Solutions' })}</span>
                   <PlusSmallIcon className={styles.buttonIcon} aria-hidden="true" />

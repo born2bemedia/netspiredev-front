@@ -3,6 +3,7 @@ export * from './delete';
 export * from './email';
 export * from './eye';
 export * from './eye-off';
+export * from './file';
 export * from './home/ArrowRightSmallIcon';
 export * from './home/ArrowUpRightIcon';
 export * from './home/CodeCircleIcon';

@@ -3,7 +3,11 @@
 import { create } from "zustand";
 import { useShallow } from "zustand/react/shallow";
 
-export type FormsPopupType = "market-research" | "property-consultation" | "request";
+export type FormsPopupType =
+  | "market-research"
+  | "property-consultation"
+  | "request"
+  | "custom-solution-request";
 
 type FormsPopupStore = {
   popupType: FormsPopupType | null;
@@ -11,6 +15,7 @@ type FormsPopupStore = {
   openMarketResearch: () => void;
   openPropertyConsultation: () => void;
   openRequest: (name: string) => void;
+  openCustomSolutionRequest: () => void;
   closePopup: () => void;
 };
 
@@ -24,6 +29,9 @@ export const useFormsPopupStore = create<FormsPopupStore>((set) => ({
 
   openRequest: (name: string) => set({ requestName: name, popupType: "request" }),
 
+  openCustomSolutionRequest: () =>
+    set({ popupType: "custom-solution-request", requestName: "" }),
+
   closePopup: () => set({ popupType: null, requestName: "" }),
 }));
 
@@ -34,6 +42,7 @@ export function useFormsPopup() {
       openMarketResearch: state.openMarketResearch,
       openPropertyConsultation: state.openPropertyConsultation,
       openRequest: state.openRequest,
+      openCustomSolutionRequest: state.openCustomSolutionRequest,
       closePopup: state.closePopup,
     }))
   );

@@ -60,7 +60,7 @@ export const SolutionsSection = () => {
               </div>
 
               <div className={cn(styles.buttonWrap, styles.buttonWrapFilled)}>
-                <Button variant="filled" url="/#what-we-build" type="link">
+                <Button variant="filled" url="/what-we-build" type="link">
                   <span className={styles.buttonContent}>
                     <span>{t('solutions.cta', { fallback: 'View Solutions' })}</span>
                     <PlusSmallIcon className={styles.buttonIcon} aria-hidden="true" />
@@ -77,7 +77,11 @@ export const SolutionsSection = () => {
               viewport={viewport}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/home/globe.svg" alt="Solutions Visual" className={styles.solutionsVisualImage} />
+              <img
+                src="/images/home/globe.svg"
+                alt="Solutions Visual"
+                className={styles.solutionsVisualImage}
+              />
             </motion.div>
           </div>
         </div>

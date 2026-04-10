@@ -108,12 +108,177 @@
       "label": "// WORK"
     }
   },
+  "engagementPlansPage": {
+    "closing": {
+      "title": "Start Building with Clarity",
+      "description": "Choose your plan or tell us what you need — we’ll take care of the rest.",
+      "cta": "Start Your Project"
+    },
+    "hero": {
+      "label": "// ENGAGEMENT PLANS",
+      "title": "Flexible Plans.\nClear Scope.\nReal Results.",
+      "description": "Choose the level of support that fits your idea. Whether you're starting small or building something more advanced, each plan is structured to deliver clarity, performance, and a smooth development process.",
+      "cta": "View Plans"
+    },
+    "plans": {
+      "includedLabel": "What's included:",
+      "label": "// PLANS",
+      "siteLabel": "// SITE"
+    },
+    "framework": {
+      "title": "Custom Project Framework",
+      "description": "All plans serve as a structured starting point. Final scope, features, and pricing may vary depending on your specific requirements and project complexity."
+    },
+    "guidance": {
+      "badge": "NETSPIRE DEV",
+      "title": "Not Sure Which Plan Fits?",
+      "description": "Every project is different. If you're unsure which plan suits your idea, we'll help you define the right scope and recommend the most efficient approach.",
+      "cta": "Get in Touch"
+    },
+    "corePlanTitle": "Core Plan",
+    "corePlanDescription": "A practical website package designed for individuals who need a simple, professional online presence without advanced custom functionality.",
+    "corePlanPrice": "From €600",
+    "corePlanCta": "Order Core Plan",
+    "corePlanIncludedPageCount": "1–2 page modern website",
+    "corePlanIncludedResponsive": "Responsive design adaptation",
+    "corePlanIncludedSeo": "Basic SEO setup",
+    "corePlanIncludedContact": "Contact form integration",
+    "corePlanIncludedPresentation": "Clear, structured presentation",
+    "corePlanIncludedPerformance": "Fast-loading structure",
+    "corePlanIncludedLaunch": "Launch-ready delivery",
+    "frameworkPlanTitle": "Framework Plan",
+    "frameworkPlanDescription": "A flexible website package designed for individuals who need more structure, customization, and room to grow.",
+    "frameworkPlanPrice": "From €1,500",
+    "frameworkPlanCta": "Order Framework Plan",
+    "frameworkPlanIncludedPageCount": "3–5 page custom website",
+    "frameworkPlanIncludedDesign": "Enhanced UI/UX design",
+    "frameworkPlanIncludedResponsive": "Responsive layout adaptation",
+    "frameworkPlanIncludedSeo": "SEO foundations and metadata",
+    "frameworkPlanIncludedPerformance": "Performance optimization",
+    "frameworkPlanIncludedCms": "CMS-ready structure",
+    "frameworkPlanIncludedForms": "Lead capture or advanced forms (basic)",
+    "expansionPlanTitle": "Expansion Plan",
+    "expansionPlanDescription": "Designed for growing projects that require more functionality and flexibility.",
+    "expansionPlanPrice": "From €2,000",
+    "expansionPlanCta": "Order Expansion Plan",
+    "expansionPlanIncludedPageCount": "Up to 10 custom pages or sections",
+    "expansionPlanIncludedDesignSystem": "Advanced visual design system",
+    "expansionPlanIncludedInteractions": "Custom interactive elements",
+    "expansionPlanIncludedPerformance": "Optimized performance and speed",
+    "expansionPlanIncludedResponsiveness": "Enhanced responsiveness",
+    "expansionPlanIncludedWebApp": "Basic web app functionality (if required)",
+    "architecturePlanTitle": "Architecture Plan",
+    "architecturePlanDescription": "A comprehensive solution for complex projects that require custom functionality, flexibility, and long-term scalability.",
+    "architecturePlanPrice": "From €3,500",
+    "architecturePlanCta": "Order Architecture Plan",
+    "architecturePlanIncludedWebsite": "Fully custom website or platform",
+    "architecturePlanIncludedInteractions": "Advanced UI/UX with refined interactions",
+    "architecturePlanIncludedFlows": "Custom functionality & user flows",
+    "architecturePlanIncludedIntegrations": "API and system integrations",
+    "architecturePlanIncludedPerformance": "Performance and scalability optimization",
+    "architecturePlanIncludedExpansion": "Advanced structure for future expansion",
+    "architecturePlanIncludedWorkflow": "Priority development workflow",
+    "fullStackPlanTitle": "Full Stack Plan",
+    "fullStackPlanDescription": "A complete, high-end digital solution built from the ground up. Ideal for complex ideas requiring precision, scalability, and a fully tailored approach.",
+    "fullStackPlanPrice": "From €5,000",
+    "fullStackPlanCta": "Order Full Stack Plan",
+    "fullStackPlanIncludedSolution": "Fully custom web solution or application",
+    "fullStackPlanIncludedArchitecture": "Complex system architecture",
+    "fullStackPlanIncludedDesign": "Advanced UI/UX design and interaction logic",
+    "fullStackPlanIncludedBackend": "Custom features and backend functionality",
+    "fullStackPlanIncludedEcosystem": "Full integration ecosystem (APIs, tools, services)",
+    "fullStackPlanIncludedPerformance": "Performance engineering and optimization",
+    "fullStackPlanIncludedSupport": "Ongoing support (initial phase)",
+    "fullStackPlanIncludedDelivery": "Priority delivery and dedicated workflow"
+  },
   "journalPage": {
     "heroTitle": "Travel, Told Differently",
     "heroSubtitleOne": "Less scrolling. More discovering.",
     "heroDescription": "From exploring hidden corners of iconic cities to understanding how to plan your journey more efficiently, each article is created to support both inspiration and decision-making.",
     "noArticles": "No articles found",
     "articleContents": "Article contents"
+  },
+  "whatWeBuildPage": {
+    "closing": {
+      "title": "Let's Build Something That Works for You",
+      "description": "Your idea deserves more than a template. We focus on building solutions that are structured, functional, and ready to perform.",
+      "cta": "Start Your Project"
+    },
+    "hero": {
+      "label": "// WHAT WE BUILD",
+      "title": "Solutions Built\nAround Your Ideas",
+      "description": "We design and develop digital products tailored to individuals - combining functionality, performance, and refined design. Every solution is built with purpose, ensuring it not only looks right but works exactly as intended.",
+      "cta": "View Solutions"
+    },
+    "plans": {
+      "label": "// SITE",
+      "title": "Choose the Right Way\nto Get Started",
+      "description": "Every project is different. Whether you need a one-time solution or ongoing development support, our engagement plans are designed to fit your scope, timeline, and goals.",
+      "cta": "Browse Plans"
+    },
+    "services": {
+      "includedLabel": "What's included:",
+      "cta": "Order a Solution",
+      "label": "// SERVICES",
+      "title": "What We Create",
+      "description": "From simple websites to more advanced digital platforms, our solutions are designed to adapt to your goals. We focus on clarity, usability, and long-term performance - avoiding unnecessary complexity while delivering real results."
+    },
+    "customWebsitesTitle": "Custom Websites",
+    "customWebsitesDescription": "We create fully tailored websites designed around your vision and goals. Whether it's a personal project, portfolio, or service-based website, every detail is crafted to reflect your identity while maintaining usability and performance.",
+    "customWebsitesIncludedResponsiveDesign": "Responsive design across all devices",
+    "customWebsitesIncludedCleanStructure": "Clean structure and intuitive navigation",
+    "customWebsitesIncludedSeoFoundation": "SEO-friendly foundation",
+    "customWebsitesIncludedFastLoading": "Fast loading and optimized performance",
+    "customWebsitesIncludedScalableArchitecture": "Scalable architecture for future growth",
+    "webApplicationsTitle": "Web Applications",
+    "webApplicationsDescription": "For more advanced needs, we build web applications that go beyond static pages. These solutions include custom functionality, user interactions, and system logic tailored to your specific requirements.",
+    "webApplicationsIncludedCustomFeatures": "Custom features and user flows",
+    "webApplicationsIncludedSecureLogic": "Secure data handling and system logic",
+    "webApplicationsIncludedScalableArchitecture": "Scalable and modular architecture",
+    "webApplicationsIncludedIntegrations": "Integration with third-party tools",
+    "webApplicationsIncludedBackendStructure": "Performance-focused backend structure",
+    "uiUxDesignTitle": "UI/UX Design",
+    "uiUxDesignDescription": "Design is not just about appearance - it's about how your product works. We create interfaces that feel natural, structured, and easy to navigate, ensuring a smooth experience for every user.",
+    "uiUxDesignIncludedWireframing": "Wireframing and interface planning",
+    "uiUxDesignIncludedUserCentered": "User-centered design approach",
+    "uiUxDesignIncludedVisualLayouts": "Clean and modern visual layouts",
+    "uiUxDesignIncludedDesignSystems": "Consistent design systems",
+    "uiUxDesignIncludedUsability": "Improved usability and clarity",
+    "ecommerceSolutionsTitle": "E-Commerce Solutions",
+    "ecommerceSolutionsDescription": "We build online stores that are simple to manage and easy to use. The focus is on creating a seamless experience - from product browsing to checkout - while ensuring stability and performance.",
+    "ecommerceSolutionsIncludedCatalog": "Product and catalog setup",
+    "ecommerceSolutionsIncludedCheckout": "Secure checkout experience",
+    "ecommerceSolutionsIncludedMobileFlow": "Mobile-optimized shopping flow",
+    "ecommerceSolutionsIncludedIntegrations": "Payment and system integrations",
+    "ecommerceSolutionsIncludedOptimization": "Performance and speed optimization",
+    "landingPagesTitle": "Landing Pages",
+    "landingPagesDescription": "Landing pages are designed with one goal in mind - clear communication and focused action. We create pages that guide users naturally, without distraction or unnecessary elements.",
+    "landingPagesIncludedMessaging": "Clear structure and messaging",
+    "landingPagesIncludedLayout": "Conversion-focused layout",
+    "landingPagesIncludedResponsive": "Fast-loading and responsive design",
+    "landingPagesIncludedTools": "Integration with tools or forms",
+    "landingPagesIncludedFlow": "Optimized user flow",
+    "websiteRedesignTitle": "Website Redesign",
+    "websiteRedesignDescription": "If your current website no longer reflects your vision or performs effectively, we help transform it into a modern, structured, and efficient product.",
+    "websiteRedesignIncludedDesign": "Design and layout improvements",
+    "websiteRedesignIncludedStructure": "Structural and UX enhancements",
+    "websiteRedesignIncludedPerformance": "Performance upgrades",
+    "websiteRedesignIncludedContent": "Content reorganization",
+    "websiteRedesignIncludedRebuild": "Modern, responsive rebuild",
+    "performanceOptimizationTitle": "Performance Optimization",
+    "performanceOptimizationDescription": "Speed and performance directly impact user experience. We analyze and improve your website or application to ensure it runs efficiently and reliably.",
+    "performanceOptimizationIncludedSpeed": "Speed and loading optimization",
+    "performanceOptimizationIncludedRefinement": "Code and asset refinement",
+    "performanceOptimizationIncludedResponsiveness": "Improved responsiveness",
+    "performanceOptimizationIncludedAudits": "Performance audits and fixes",
+    "performanceOptimizationIncludedStability": "Stability improvements",
+    "maintenanceSupportTitle": "Maintenance & Support",
+    "maintenanceSupportDescription": "Digital products require ongoing care. We provide continuous support to keep your project secure, updated, and functioning without interruptions.",
+    "maintenanceSupportIncludedUpdates": "Regular updates and monitoring",
+    "maintenanceSupportIncludedBugFixes": "Bug fixes and issue resolution",
+    "maintenanceSupportIncludedPerformance": "Performance checks",
+    "maintenanceSupportIncludedFeatures": "Feature updates if needed",
+    "maintenanceSupportIncludedSupport": "Ongoing technical support"
   },
   "contactsForm": {
     "name": "Name",
@@ -133,25 +298,86 @@
     "cta": "Head Back Home"
   },
   "forms": {
+    "customSolutionForm": {
+      "fileTooLarge": "Please choose a file smaller than 10MB.",
+      "successTitle": "Thank you!",
+      "successMessage": "Your request has been received. We will review the details and contact you shortly to discuss the next steps.",
+      "closeAction": "Close",
+      "title": "Start Your Project",
+      "description": "Tell us about your idea — we’ll help shape it into a clear, functional digital solution. Share a few details below, and we’ll get in touch to discuss the next steps.",
+      "sections": {
+        "details": "Your Details",
+        "projectDetails": "Project Details",
+        "scopeBudget": "Project Scope & Budget",
+        "timelineFiles": "Timeline & Optional Files"
+      },
+      "fields": {
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "Tell us your name"
+        },
+        "email": {
+          "label": "Email address",
+          "placeholder": "So we can reach out to you"
+        },
+        "phone": {
+          "label": "Phone number (optional)",
+          "placeholder": "If you prefer to be contacted by phone"
+        },
+        "website": {
+          "label": "Your website (optional)",
+          "placeholder": "Share a link if you already have something in place"
+        },
+        "projectTypeOther": {
+          "label": "Please specify",
+          "placeholder": "Enter your option",
+          "helper": "Use this field when \"Other\" is selected."
+        },
+        "budget": {
+          "label": "Estimated budget"
+        },
+        "goals": {
+          "label": "What are your main goals for this project?",
+          "placeholder": "Enter your goals"
+        },
+        "timeline": {
+          "label": "When would you like to get started?"
+        },
+        "communication": {
+          "label": "Preferred communication"
+        },
+        "attachment": {
+          "label": "Upload any materials (optional)",
+          "action": "Choose File",
+          "empty": "no file selected",
+          "meta": "Max size: 10MB"
+        }
+      },
+      "nextSteps": {
+        "title": "Next Steps",
+        "description": "Once submitted, we’ll review your request and reach out to discuss your idea, clarify details, and define the best way forward."
+      },
+      "submit": "Submit Your Request"
+    },
+    "close": "Close",
+    "loading": "Sending…",
     "requestForm": {
       "successTitle": "Thank you!",
-      "successMessage1": "Your request for our service has been successfully submitted. Our team will review the information provided and get in touch with you shortly to discuss the next steps and how we can assist you."
+      "successMessage1": "Your request has been received successfully. Our team will review your details and contact you shortly to discuss the next steps."
     },
-    "returnHome": "Return to home page",
-    "fullName": "Full name",
-    "fullNamePlaceholder": "Enter your full name",
-    "email": "Email address",
-    "emailPlaceholder": "Enter your email address",
-    "phone": "Phone number",
-    "companyName": "Company name",
-    "optional": "(optional)",
-    "companyNamePlaceholder": "Enter your company name",
-    "website": "Your website",
-    "websitePlaceholder": "Enter your website URL",
-    "message": "Message",
-    "messagePlaceholder": "Enter your message",
-    "loading": "Sending…",
-    "submit": "Submit"
+    "submit": "Submit",
+    "firstName": "First Name:",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastName": "Last Name:",
+    "lastNamePlaceholder": "Enter your last name",
+    "email": "Email:",
+    "emailPlaceholder": "Enter your email",
+    "phone": "Phone:",
+    "phonePlaceholder": "Enter your phone number",
+    "website": "Your Website:",
+    "websitePlaceholder": "Enter your website",
+    "message": "Message:",
+    "messagePlaceholder": "Enter your message"
   },
   "notFoundPage": {
     "title": "This Destination Doesn’t Exist",

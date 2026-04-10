@@ -1,0 +1,210 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$orange: #ff4500;
+$surface: #0d0d0d;
+$panel: #141312;
+$white: #e0e0e0;
+$white-80: rgba(255, 255, 255, 0.8);
+$white-50: rgba(255, 255, 255, 0.5);
+
+.section {
+  background: $surface;
+  color: $white;
+  position: relative;
+}
+
+.frameworkVisual {
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  width: 450px;
+  height: auto;
+  max-width: none;
+  @include tablet {
+    display: none;
+  }
+}
+
+.sectionInner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 60px 0 112px;
+
+  @include mobile {
+    padding-bottom: 80px;
+  }
+}
+
+.sectionLabelWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  &.siteLabelWrap {
+    margin-top: 60px;
+  }
+
+}
+
+.sectionLabel {
+  color: $orange;
+  font-family: var(--font-roboto-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sectionDivider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.guidanceGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: 32px;
+  align-items: stretch;
+  padding-top: 8px;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.frameworkCard,
+.helpCard {
+  position: relative;
+  overflow: hidden;
+
+  @include mobile {
+    min-height: 0;
+  }
+}
+
+.frameworkCard {
+  display: flex;
+  align-items: flex-start;
+  background: $surface;
+  padding: 60px;
+
+  @include mobile {
+    padding: 32px 20px 220px;
+  }
+}
+
+.frameworkCopy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  max-width: 560px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.frameworkTitle,
+.helpTitle {
+  margin: 0;
+  color: $white;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include desktop {
+    font-size: 52px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.frameworkDescription,
+.helpDescription {
+  margin: 0;
+  max-width: 560px;
+  color: $white-80;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.helpCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: $panel;
+  padding: 40px;
+  align-items: flex-end;
+
+  @include mobile {
+    padding: 32px 20px;
+  }
+}
+
+.helpBadge {
+  margin: 0;
+  width: 100%;
+  color: $orange;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.helpContent {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.helpCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttonWrap {
+  display: inline-flex;
+  width: fit-content;
+
+  :global(a),
+  :global(button) {
+    padding: 14px 24px !important;
+    line-height: 1;
+  }
+}
+
+.buttonContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttonIcon {
+  flex: 0 0 auto;
+  color: currentColor;
+}

@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
+import { useFormsPopup } from '@/features/forms';
+
 import { fadeInUp } from '@/shared/lib/helpers/animations';
 import { cn } from '@/shared/lib/helpers/styles';
 import { PlusSmallIcon } from '@/shared/ui/icons';
@@ -12,6 +14,7 @@ import styles from './ClosingSection.module.scss';
 
 export const ClosingSection = () => {
   const t = useTranslations('homePage');
+  const { openCustomSolutionRequest } = useFormsPopup();
   const viewport = { once: true, amount: 0.2 };
 
   return (
@@ -38,7 +41,7 @@ export const ClosingSection = () => {
             </p>
 
             <div className={cn(styles.buttonWrap, styles.buttonWrapFilled)}>
-              <Button variant="filled" url="/contacts" type="link">
+              <Button variant="filled" type="button" onClick={openCustomSolutionRequest}>
                 <span className={styles.buttonContent}>
                   <span>{t('closing.cta', { fallback: 'Get in Touch' })}</span>
                   <PlusSmallIcon className={styles.buttonIcon} aria-hidden="true" />

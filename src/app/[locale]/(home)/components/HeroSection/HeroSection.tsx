@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
+import { useFormsPopup } from '@/features/forms';
+
 import { fadeIn, fadeInLeft } from '@/shared/lib/helpers/animations';
 import { cn } from '@/shared/lib/helpers/styles';
 import { ArrowRightSmallIcon, PlusSmallIcon } from '@/shared/ui/icons';
@@ -12,6 +14,7 @@ import styles from './HeroSection.module.scss';
 
 export const HeroSection = () => {
   const t = useTranslations('homePage');
+  const { openCustomSolutionRequest } = useFormsPopup();
   const viewport = { once: true, amount: 0.2 };
 
   return (
@@ -25,9 +28,7 @@ export const HeroSection = () => {
             whileInView="visible"
             viewport={viewport}
           >
-            <span className={styles.sectionLabel}>
-              {t('hero.label', { fallback: '// SITE' })}
-            </span>
+            <span className={styles.sectionLabel}>{t('hero.label', { fallback: '// SITE' })}</span>
             <span className={styles.sectionDivider} />
           </motion.div>
 
@@ -57,7 +58,7 @@ export const HeroSection = () => {
 
               <div className={styles.heroActions}>
                 <div className={cn(styles.buttonWrap, styles.buttonWrapFilled)}>
-                  <Button variant="filled" url="/contacts" type="link">
+                  <Button variant="filled" type="button" onClick={openCustomSolutionRequest}>
                     <span className={styles.buttonContent}>
                       <span>{t('hero.primaryCta', { fallback: 'Start a Project' })}</span>
                       <PlusSmallIcon className={styles.buttonIcon} aria-hidden="true" />
@@ -66,7 +67,7 @@ export const HeroSection = () => {
                 </div>
 
                 <div className={cn(styles.buttonWrap, styles.buttonWrapText)}>
-                  <Button variant="bordered" url="/#what-we-build" type="link">
+                  <Button variant="bordered" url="/what-we-build" type="link">
                     <span className={styles.buttonContent}>
                       <span>
                         {t('hero.secondaryCta', {
@@ -89,7 +90,11 @@ export const HeroSection = () => {
               viewport={viewport}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/home/dots.svg" alt="Hero Visual" className={styles.heroVisualImage} />
+              <img
+                src="/images/home/dots.svg"
+                alt="Hero Visual"
+                className={styles.heroVisualImage}
+              />
             </motion.div>
           </div>
         </div>

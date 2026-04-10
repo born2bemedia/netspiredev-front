@@ -75,12 +75,12 @@ export const Header = () => {
     {
       key: 'whatWeBuild',
       text: t('whatWeBuild', { fallback: 'What We Build' }),
-      href: '/#what-we-build',
+      href: '/what-we-build',
     },
     {
       key: 'engagementPlans',
       text: t('engagementPlans', { fallback: 'Engagement Plans' }),
-      href: '/#engagement-plans',
+      href: '/engagement-plans',
     },
     {
       key: 'selectedWork',

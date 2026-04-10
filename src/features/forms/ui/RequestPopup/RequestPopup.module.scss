@@ -1,373 +1,350 @@
-@use "@/shared/lib/styles/mixin.scss" as *;
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$panel: #171717;
+$orange: #ff4500;
+$white: #e0e0e0;
+$white-50: rgba(255, 255, 255, 0.5);
+$white-25: rgba(255, 255, 255, 0.25);
+$white-10: rgba(255, 255, 255, 0.1);
 
 .panel {
-  width: 100%;
-  max-width: 1400px;
+  width: min(100%, 1000px);
   max-height: 95vh;
-  background: var(--color-blue-8, #000829);
   overflow-y: auto;
+  background: $panel;
   position: relative;
 
   &::-webkit-scrollbar {
-    background: transparent;
     width: 10px;
+    background: transparent;
   }
+
   &::-webkit-scrollbar-track {
-    background: #000829;
+    background: $panel;
   }
+
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
   }
 }
 
-/* ── Close button ──────────────────────────── */
+.shell {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  background: $panel;
+
+  @include mobile {
+    padding: 40px 20px;
+  }
+}
 
 .close {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  z-index: 10;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 28px;
-  line-height: 1;
-  cursor: pointer;
-  padding: 4px 8px;
-  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-end;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $white-50;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+
   &:hover {
-    color: #fff;
+    color: $white;
   }
 }
 
-/* ── Form state ──────────────────────────── */
-
-.wrapper {
-  display: flex;
-  gap: 64px;
-  align-items: flex-start;
-  padding: 80px;
+.closeIcon {
   position: relative;
-  background-image: url("/images/pricing/popupBack.png");
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 70%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.9;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 1px;
+    background: currentColor;
+    content: '';
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.formLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 600px;
+  gap: 40px;
+  align-items: stretch;
 
   @include tablet {
-    gap: 40px;
-    padding: 48px;
-    background-image: none;
-  }
-  @include mobile {
-    flex-direction: column;
-    gap: 32px;
-    padding: 32px 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
-.left {
-  flex: 1;
-  position: relative;
-  z-index: 1;
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+
+  @include tablet {
+    min-height: 0;
+  }
 }
 
 .title {
-  font-family: var(--font-cabinet-grotesk, sans-serif);
-  font-size: 40px;
-  font-weight: 300;
-  line-height: 120%;
-  letter-spacing: var(--letter-spacing--0_25, -0.25px);
-  color: var(--color-white-solid, #fff);
   margin: 0;
+  color: $white;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
   @include mobile {
-    font-size: 32px;
-    max-width: 80%;
+    font-size: 24px;
   }
 }
-
-.right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  position: relative;
-  z-index: 1;
-}
-
-/* ── Form fields ──────────────────────────── */
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
-.formRow {
+.formGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  @include mobile {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+
+  @include tablet {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
   }
 }
 
-.formGroup {
+.field {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  position: relative;
+  gap: 6px;
+  padding-bottom: 4px;
 }
 
-.label {
-  font-family: var(--font-cabinet-grotesk, sans-serif);
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 140%;
-  letter-spacing: var(--letter-spacing--0_25, -0.25px);
-  color: var(--color-white-solid, #fff);
+.fieldLabel {
+  color: $white-25;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.labelOptional {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.input,
-.textarea {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 12px 16px;
-  color: var(--color-white-solid, #fff);
-  font-family: var(--font-cabinet-grotesk, sans-serif);
-  font-size: 18px;
+.fieldInput {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $white-50;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 140%;
-  letter-spacing: var(--letter-spacing--0_5, -0.5px);
-  width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
-  outline: none;
+  line-height: 1.4;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: $white-50;
   }
 
   &:focus {
-    border-color: rgba(255, 255, 255, 0.6);
+    color: $white;
   }
 
-  @include mobile {
-    font-size: 16px;
+  &:focus::placeholder {
+    color: rgba(255, 255, 255, 0.35);
   }
 }
 
-.textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.inputError {
-  border-color: rgba(255, 62, 71, 0.5);
-}
-
-.error {
-  color: #ff2d30;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 140%;
-  margin-top: 2px;
-  position: absolute;
-  bottom: -15px;
-  left: 0;
+.fieldLine {
   width: 100%;
-  text-align: left;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 140%;
-  color: #ff2d30;
+  height: 1px;
+  background: $white-10;
 }
 
-.submitError {
-  color: #ff2d30;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 140%;
+.field:focus-within .fieldLine {
+  background: rgba(255, 255, 255, 0.28);
 }
 
-.submitBtn {
+.fieldError {
+  color: #ff8a65;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.submitDesktop,
+.submitMobile {
+  display: inline-flex;
+  width: fit-content;
+
+  :global(a),
+  :global(button) {
+    padding: 14px 24px !important;
+    line-height: 1 !important;
+  }
+}
+
+.submitMobile {
+  display: none;
+
+  @include tablet {
+    display: inline-flex;
+  }
+}
+
+.submitDesktop {
+  @include tablet {
+    display: none;
+  }
+}
+
+.submitContent {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
-  height: 40px;
-  width: 200px;
-  background: var(--color-white-solid, #fff);
-  color: var(--color-blue-8, #000829);
-  font-family: var(--font-cabinet-grotesk, sans-serif);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 140%;
-  letter-spacing: var(--letter-spacing--0_25, -0.25px);
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: opacity 0.2s;
+  gap: 8px;
+}
 
-  &:hover {
-    opacity: 0.9;
-  }
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+.submitIcon {
+  flex: 0 0 auto;
+  color: currentColor;
+}
+
+.submitError {
+  margin: 0;
+  color: #ff8a65;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.successShell {
+  background-image: url('/images/what-we-build/success-globe.svg');
+  background-size: 45%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  @include tablet {
+    padding-bottom: 160px;
+    background-size: 100%;
   }
 }
 
-.recaptcha {
+.successLayout {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-
-/* ── Phone input overrides ──────────────────────────── */
-
-.phoneContainer {
-  width: 100%;
-
-  :global(.form-control) {
-    width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 0 !important;
-    padding: 12px 16px 12px 52px !important;
-    color: #fff !important;
-    font-family: var(--font-cabinet-grotesk, sans-serif) !important;
-    font-size: 18px !important;
-    line-height: 140% !important;
-    letter-spacing: -0.5px !important;
-    transition: border-color 0.2s;
-
-    &::placeholder {
-      color: rgba(255, 255, 255, 0.3) !important;
-    }
-    &:focus {
-      border-color: rgba(255, 255, 255, 0.6) !important;
-      box-shadow: none !important;
-    }
-
-    @include mobile {
-      font-size: 16px !important;
-    }
-  }
-
-  :global(.flag-dropdown) {
-    background: transparent !important;
-    border: none !important;
-    border-right: 1px solid rgba(255, 255, 255, 0.3) !important;
-  }
-
-  :global(.selected-flag) {
-    background: transparent !important;
-    &:hover,
-    &:focus {
-      background: transparent !important;
-    }
-  }
-}
-
-.phoneError :global(.form-control) {
-  border-color: rgba(255, 62, 71, 0.5) !important;
-}
-
-/* ── Success state ──────────────────────────── */
-
-.successWrapper {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 80px;
-  min-height: 300px;
-  position: relative;
-  background-image: url("/images/pricing/popupBack.png");
-  background-repeat: no-repeat;
-  background-position: left -90px;
-  background-size: 70%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  overflow: hidden;
 
   @include tablet {
-    padding: 48px;
-    height: 80vh;
-    background-position: left bottom;
-    background-size: 220%;
-  }
-  @include mobile {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 32px 20px;
+    min-height: 0;
   }
 }
 
 .successContent {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 700px;
-  max-width: 100%;
   position: relative;
   z-index: 1;
+  display: flex;
+  width: 55%;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+
+  @include tablet {
+    padding-top: 0;
+    width: 100%;
+  }
 }
 
 .successTitle {
-  font-family: var(--font-cabinet-grotesk, sans-serif);
-  font-size: 40px;
-  font-weight: 300;
-  line-height: 120%;
-  letter-spacing: var(--letter-spacing--0_25, -0.25px);
-  color: var(--color-white-solid, #fff);
   margin: 0;
-  @include mobile {
+  color: $white;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include tablet {
     font-size: 32px;
   }
 }
 
-.successDesc {
-  font-family: var(--font-cabinet-grotesk, sans-serif);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 140%;
-  letter-spacing: var(--letter-spacing--0_5, -0.5px);
-  color: var(--color-white-solid, #fff);
+.successDescription {
   margin: 0;
-  @include mobile {
-    font-size: 16px;
+  color: $white;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.successVisual {
+  position: relative;
+
+  @include tablet {
+    margin-top: 10px;
   }
 }
 
-.returnBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  height: 40px;
-  width: 200px;
-  background: var(--color-white-solid, #fff);
-  color: var(--color-blue-8, #000829);
-  font-family: var(--font-cabinet-grotesk, sans-serif);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 140%;
-  letter-spacing: var(--letter-spacing--0_25, -0.25px);
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: opacity 0.2s;
-  margin-top: 6px;
+.successImageDesktop,
+.successImageMobile {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
 
-  &:hover {
-    opacity: 0.9;
+.successImageDesktop {
+  right: -176px;
+  bottom: -330px;
+  width: 580px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.successImageMobile {
+  display: none;
+
+  @include tablet {
+    display: block;
+    left: 50%;
+    bottom: -300px;
+    width: 580px;
+    transform: translateX(-50%);
   }
 }

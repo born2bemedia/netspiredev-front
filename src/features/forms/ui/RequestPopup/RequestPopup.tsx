@@ -1,24 +1,19 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { Controller, useForm } from 'react-hook-form';
-import PhoneInput from 'react-phone-input-2';
+import { useForm } from 'react-hook-form';
 
 import { submitRequestForm } from '@/features/forms/api/submitForm';
 import { type RequestFormSchema, requestFormSchema } from '@/features/forms/model/schemas';
 
-import { excludedCountries } from '@/shared/lib/countries';
+import { PlusSmallIcon } from '@/shared/ui/icons';
+import { Button } from '@/shared/ui/kit/button/Button';
 
 import { FormPopup } from '../FormPopup/FormPopup';
 import styles from './RequestPopup.module.scss';
-
-import 'react-phone-input-2/lib/style.css';
-
-const ENABLE_RECAPTCHA = true;
 
 type RequestPopupProps = {
   service: string;
@@ -29,7 +24,6 @@ type RequestPopupProps = {
 
 export const RequestPopup = ({ service, isOpen, onClose, onReturnHome }: RequestPopupProps) => {
   const t = useTranslations('forms');
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -37,233 +31,196 @@ export const RequestPopup = ({ service, isOpen, onClose, onReturnHome }: Request
   const form = useForm<RequestFormSchema>({
     resolver: zodResolver(requestFormSchema),
     defaultValues: {
-      fullName: '',
+      firstName: '',
+      lastName: '',
       email: '',
       phone: '',
-      companyName: '',
       website: '',
       message: '',
       recaptcha: '',
     },
   });
 
-  const handleRecaptchaChange = (token: string | null) => {
-    if (ENABLE_RECAPTCHA) {
-      form.setValue('recaptcha', token ?? '', { shouldValidate: true });
-    } else {
-      form.setValue('recaptcha', 'disabled', { shouldValidate: false });
-    }
+  const handleClose = () => {
+    setError(null);
+    setIsLoading(false);
+    setIsSuccess(false);
+    form.reset();
+    onReturnHome?.();
+    onClose();
   };
 
   const onSubmit = async (data: RequestFormSchema) => {
     setError(null);
     setIsLoading(true);
+
     try {
       await submitRequestForm(data, service);
       setIsSuccess(true);
       form.reset();
-      recaptchaRef.current?.reset();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Submission failed');
-      recaptchaRef.current?.reset();
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleReturnHome = () => {
-    setIsSuccess(false);
-    onReturnHome?.();
-    onClose();
+  const renderField = (
+    name: keyof Pick<
+      RequestFormSchema,
+      'firstName' | 'lastName' | 'email' | 'phone' | 'website' | 'message'
+    >,
+    label: string,
+    placeholder: string,
+    type: 'text' | 'email' | 'tel' = 'text'
+  ) => {
+    const fieldError = form.formState.errors[name];
+
+    return (
+      <div className={styles.field}>
+        <label className={styles.fieldLabel} htmlFor={`request-${name}`}>
+          {label}
+        </label>
+        <input
+          id={`request-${name}`}
+          type={type}
+          className={styles.fieldInput}
+          placeholder={placeholder}
+          {...form.register(name)}
+        />
+        <span className={styles.fieldLine} aria-hidden="true" />
+        {fieldError ? <span className={styles.fieldError}>{fieldError.message}</span> : null}
+      </div>
+    );
   };
 
   return (
     <FormPopup
       isOpen={isOpen}
-      onClose={onClose}
+      onClose={handleClose}
       ariaLabelledBy="request-popup-title"
       panelClassName={styles.panel}
     >
-      <button type="button" className={styles.close} onClick={onClose} aria-label="Close">
-        &times;
-      </button>
+      <div className={`${styles.shell} ${isSuccess ? styles.successShell : ''}`}>
+        <button
+          type="button"
+          className={styles.close}
+          onClick={handleClose}
+          aria-label={t('close', { fallback: 'Close' })}
+        >
+          <span>{t('close', { fallback: 'Close' })}</span>
+          <span className={styles.closeIcon} aria-hidden="true" />
+        </button>
 
-      {isSuccess ? (
-        <div className={styles.successWrapper}>
-          <div className={styles.successContent}>
-            <h2 id="request-popup-title" className={styles.successTitle}>
-              {t('requestForm.successTitle', { fallback: 'Thank you!' })}
-            </h2>
-            <p className={styles.successDesc}>
-              {t('requestForm.successMessage1', {
-                service,
-                fallback:
-                  'Your request for our service has been successfully submitted. Our team will review the information provided and get in touch with you shortly to discuss the next steps and how we can assist you.',
-              })}
-            </p>
-            <button type="button" className={styles.returnBtn} onClick={handleReturnHome}>
-              {t('returnHome', { fallback: 'Return to home page' })}
-            </button>
+        {isSuccess ? (
+          <div className={styles.successLayout}>
+            <div className={styles.successContent}>
+              <h2 id="request-popup-title" className={styles.successTitle}>
+                {t('requestForm.successTitle', { fallback: 'Thank you!' })}
+              </h2>
+              <p className={styles.successDescription}>
+                {t('requestForm.successMessage1', {
+                  fallback:
+                    'Your request has been received successfully. Our team will review your details and contact you shortly to discuss the next steps.',
+                })}
+              </p>
+            </div>
+
+            <div className={styles.successVisual} aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/forms/request-popup/success-globe-desktop.svg"
+                alt=""
+                className={styles.successImageDesktop}
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/forms/request-popup/success-globe-mobile.svg"
+                alt=""
+                className={styles.successImageMobile}
+              />
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className={styles.wrapper}>
-          <div className={styles.left}>
-            <h2 id="request-popup-title" className={styles.title}>
-              {service}
-            </h2>
-          </div>
+        ) : (
+          <div className={styles.formLayout}>
+            <div className={styles.summary}>
+              <h2 id="request-popup-title" className={styles.title}>
+                {service}
+              </h2>
 
-          <div className={styles.right}>
-            <form className={styles.form} onSubmit={form.handleSubmit(onSubmit)} noValidate>
-              <input type="hidden" name="service" value={service} />
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}>
-                  <label className={styles.label} htmlFor="req-fullName">
-                    {t('fullName', { fallback: 'Full name' })}
-                  </label>
-                  <input
-                    id="req-fullName"
-                    type="text"
-                    className={`${styles.input} ${form.formState.errors.fullName ? styles.inputError : ''}`}
-                    placeholder={t('fullNamePlaceholder', {
-                      fallback: 'Enter your full name',
-                    })}
-                    {...form.register('fullName')}
-                  />
-                  {form.formState.errors.fullName && (
-                    <span className={styles.error}>{form.formState.errors.fullName.message}</span>
-                  )}
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.label} htmlFor="req-email">
-                    {t('email', { fallback: 'Email address' })}
-                  </label>
-                  <input
-                    id="req-email"
-                    type="email"
-                    className={`${styles.input} ${form.formState.errors.email ? styles.inputError : ''}`}
-                    placeholder={t('emailPlaceholder', {
-                      fallback: 'Enter your email address',
-                    })}
-                    {...form.register('email')}
-                  />
-                  {form.formState.errors.email && (
-                    <span className={styles.error}>{form.formState.errors.email.message}</span>
-                  )}
-                </div>
-              </div>
-
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}>
-                  <label className={styles.label} htmlFor="req-phone">
-                    {t('phone', { fallback: 'Phone number' })}
-                  </label>
-                  <Controller
-                    name="phone"
-                    control={form.control}
-                    render={({ field }) => (
-                      <PhoneInput
-                        country="gb"
-                        value={field.value}
-                        onChange={field.onChange}
-                        excludeCountries={[...new Set(excludedCountries)]}
-                        containerClass={`${styles.phoneContainer} ${form.formState.errors.phone ? styles.phoneError : ''}`}
-                        inputProps={{ id: 'req-phone' }}
-                        enableSearch
-                        preferredCountries={['gb']}
-                      />
-                    )}
-                  />
-                  {form.formState.errors.phone && (
-                    <span className={styles.error}>{form.formState.errors.phone.message}</span>
-                  )}
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.label} htmlFor="req-companyName">
-                    {t('companyName', { fallback: 'Company name' })}{' '}
-                    <span className={styles.labelOptional}>
-                      {t('optional', { fallback: '(optional)' })}
+              <div className={styles.submitDesktop}>
+                <Button
+                  variant="filled"
+                  type="button"
+                  onClick={() => void form.handleSubmit(onSubmit)()}
+                  disabled={isLoading}
+                >
+                  <span className={styles.submitContent}>
+                    <span>
+                      {isLoading
+                        ? t('loading', { fallback: 'Sending…' })
+                        : t('submit', { fallback: 'Submit' })}
                     </span>
-                  </label>
-                  <input
-                    id="req-companyName"
-                    type="text"
-                    className={styles.input}
-                    placeholder={t('companyNamePlaceholder', {
-                      fallback: 'Enter your company name',
-                    })}
-                    {...form.register('companyName')}
-                  />
-                </div>
-              </div>
-
-              <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="req-website">
-                  {t('website', { fallback: 'Your website' })}{' '}
-                  <span className={styles.labelOptional}>
-                    {t('optional', { fallback: '(optional)' })}
+                    <PlusSmallIcon className={styles.submitIcon} aria-hidden="true" />
                   </span>
-                </label>
-                <input
-                  id="req-website"
-                  type="text"
-                  className={styles.input}
-                  placeholder={t('websitePlaceholder', {
-                    fallback: 'Enter your website URL',
-                  })}
-                  {...form.register('website')}
-                />
+                </Button>
+              </div>
+            </div>
+
+            <form className={styles.form} onSubmit={form.handleSubmit(onSubmit)} noValidate>
+              <div className={styles.formGrid}>
+                {renderField(
+                  'firstName',
+                  t('firstName', { fallback: 'First Name:' }),
+                  t('firstNamePlaceholder', { fallback: 'Enter your first name' })
+                )}
+                {renderField(
+                  'lastName',
+                  t('lastName', { fallback: 'Last Name:' }),
+                  t('lastNamePlaceholder', { fallback: 'Enter your last name' })
+                )}
+                {renderField(
+                  'email',
+                  t('email', { fallback: 'Email:' }),
+                  t('emailPlaceholder', { fallback: 'Enter your email' }),
+                  'email'
+                )}
+                {renderField(
+                  'phone',
+                  t('phone', { fallback: 'Phone:' }),
+                  t('phonePlaceholder', { fallback: 'Enter your phone number' }),
+                  'tel'
+                )}
+                {renderField(
+                  'website',
+                  t('website', { fallback: 'Your Website:' }),
+                  t('websitePlaceholder', { fallback: 'Enter your website' })
+                )}
+                {renderField(
+                  'message',
+                  t('message', { fallback: 'Message:' }),
+                  t('messagePlaceholder', { fallback: 'Enter your message' })
+                )}
               </div>
 
-              <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="req-message">
-                  {t('message', { fallback: 'Message' })}{' '}
-                  <span className={styles.labelOptional}>
-                    {t('optional', { fallback: '(optional)' })}
+              {error ? <p className={styles.submitError}>{error}</p> : null}
+
+              <div className={styles.submitMobile}>
+                <Button variant="filled" type="submit" disabled={isLoading}>
+                  <span className={styles.submitContent}>
+                    <span>
+                      {isLoading
+                        ? t('loading', { fallback: 'Sending…' })
+                        : t('submit', { fallback: 'Submit' })}
+                    </span>
+                    <PlusSmallIcon className={styles.submitIcon} aria-hidden="true" />
                   </span>
-                </label>
-                <textarea
-                  id="req-message"
-                  className={styles.textarea}
-                  placeholder={t('messagePlaceholder', {
-                    fallback: 'Enter your message',
-                  })}
-                  {...form.register('message')}
-                />
+                </Button>
               </div>
-
-              {ENABLE_RECAPTCHA && (
-                <div className={styles.recaptcha}>
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}
-                    onChange={handleRecaptchaChange}
-                    theme="dark"
-                  />
-                  {form.formState.errors.recaptcha && (
-                    <span className={styles.error}>{form.formState.errors.recaptcha.message}</span>
-                  )}
-                </div>
-              )}
-
-              {error && <p className={styles.submitError}>{error}</p>}
-
-              <button
-                type="submit"
-                className={styles.submitBtn}
-                disabled={form.formState.isSubmitting || isLoading}
-              >
-                {isLoading
-                  ? t('loading', { fallback: 'Sending…' })
-                  : t('submit', { fallback: 'Submit' })}
-              </button>
             </form>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </FormPopup>
   );
 };
