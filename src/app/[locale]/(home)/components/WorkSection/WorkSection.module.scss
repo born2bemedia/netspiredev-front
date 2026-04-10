@@ -1,0 +1,134 @@
+@use 'sass:color';
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$black: #0d0d0d;
+$card: #171717;
+$orange: #ff4500;
+$white-90: #e0e0e0;
+$white-50: rgba(255, 255, 255, 0.5);
+$white-25: rgba(255, 255, 255, 0.25);
+
+.section {
+  position: relative;
+  overflow: hidden;
+  background: $black;
+  color: $white-90;
+}
+
+.sectionInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 60px 0;
+
+  @include desktop {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include tablet {
+    padding: 60px 0;
+  }
+}
+
+.sectionLabelWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sectionLabel {
+  color: #ff4500;
+  font-family: var(--font-roboto-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sectionDivider {
+  width: 100%;
+  height: 1px;
+  background: $white-25;
+}
+
+.workCards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 40px;
+  text-decoration: none;
+  background: $card;
+  transition:
+    transform 0.24s ease,
+    background-color 0.24s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: color.adjust($card, $lightness: 2%);
+  }
+
+  @include mobile {
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+.workCardText {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.workCardTitle {
+  margin: 0;
+  color: $white-90;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include mobile {
+    font-size: 24px;
+  }
+}
+
+.workCardDescription {
+  margin: 0;
+  color: $white-50;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  @include mobile {
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+.workCardIcon {
+  flex: 0 0 auto;
+  color: $orange;
+
+  @include mobile {
+    width: 32px;
+    height: 32px;
+  }
+}

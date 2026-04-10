@@ -1,0 +1,282 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$black: #0d0d0d;
+$orange: #ff4500;
+$white: #ffffff;
+$white-50: rgba(255, 255, 255, 0.5);
+$white-25: rgba(255, 255, 255, 0.25);
+
+.section {
+  position: relative;
+  overflow: hidden;
+  background: $black;
+  color: $white;
+}
+
+.sectionInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sectionLabelWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sectionLabel {
+  color: $orange;
+  font-family: var(--font-roboto-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sectionDivider {
+  width: 100%;
+  height: 1px;
+  background: $white-25;
+}
+
+.heroLayout {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: 465px;
+
+  @include tablet {
+    min-height: auto;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px;
+  min-width: 0;
+  width: 50%;
+  padding-bottom: 60px;
+
+
+  @include tablet {
+    flex-basis: auto;
+    width: 100%;
+    padding-top: 140px;
+  }
+}
+
+.headingGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heroTitle,
+.heroSubtitle {
+  margin: 0;
+  color: $white;
+  font-family: var(--font-space-mono), monospace;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.heroTitle {
+  font-size: 60px;
+
+  @include desktop {
+    font-size: 56px;
+  }
+
+  @include tablet {
+    font-size: 48px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.heroSubtitle {
+  font-size: 32px;
+
+  @include tablet {
+    font-size: 28px;
+  }
+
+  @include mobile {
+    font-size: 24px;
+  }
+}
+
+.heroDescription {
+  max-width: 560px;
+  margin: 0;
+  color: $white-50;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.buttonWrap {
+  display: inline-flex;
+  align-items: center;
+
+  :global(a),
+  :global(button) {
+    padding: 14px 24px !important;
+    line-height: 1;
+  }
+}
+
+.buttonWrapFilled {
+  
+}
+
+.buttonWrapText {
+  :global(a),
+  :global(button) {
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: $white-25 !important;
+  }
+
+  :global(a:hover),
+  :global(button:hover) {
+    color: $white !important;
+  }
+}
+
+.buttonContent {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttonIcon {
+  flex: 0 0 auto;
+  color: currentColor;
+}
+
+.textButtonGlow {
+  position: absolute;
+  inset: auto;
+}
+
+.heroVisual {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 20px;
+
+  @include tablet {
+    min-height: 260px;
+    display: none;
+  }
+
+  @include mobile {
+    min-height: 180px;
+    border-radius: 16px;
+  }
+}
+
+.heroPattern {
+  position: absolute;
+  inset: -80px 0 0 80px;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 69, 0, 0.9) 0 2px,
+    transparent 2.5px
+  );
+  background-size: 54px 54px;
+  opacity: 0.7;
+  mask-image: linear-gradient(
+    135deg,
+    transparent 10%,
+    rgba(0, 0, 0, 1) 38%,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
+
+  @include tablet {
+    inset: 0;
+  }
+}
+
+.heroGlow {
+  position: absolute;
+  top: 40px;
+  right: -80px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 69, 0, 0.22),
+      rgba(255, 69, 0, 0) 58%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0) 70%
+    );
+  filter: blur(6px);
+
+  @include tablet {
+    top: 20px;
+    right: -30px;
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.heroAccentArc {
+  position: absolute;
+  right: 60px;
+  bottom: 30px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+  opacity: 0.4;
+  transform: rotate(14deg);
+
+  @include tablet {
+    right: 20px;
+    width: 180px;
+    height: 180px;
+  }
+}

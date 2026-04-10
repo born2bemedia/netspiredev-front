@@ -1,0 +1,191 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$black: #0d0d0d;
+$card: #171717;
+$orange: #ff4500;
+$white: #ffffff;
+$white-90: #e0e0e0;
+$white-50: rgba(255, 255, 255, 0.5);
+$white-25: rgba(255, 255, 255, 0.25);
+$white-05: rgba(255, 255, 255, 0.05);
+
+.section {
+  position: relative;
+  overflow: hidden;
+  background: $black;
+  color: $white;
+}
+
+.sectionInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 60px 0;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+}
+
+.sectionLabelWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sectionLabel {
+  color: $orange;
+  font-family: var(--font-roboto-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sectionDivider {
+  width: 100%;
+  height: 1px;
+  background: $white-25;
+}
+
+.whyLayout {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.whyIntro {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  min-width: 0;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.sectionTitle {
+  margin: 0;
+  color: $white-90;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+
+  @include desktop {
+    font-size: 52px;
+  }
+
+  @include tablet {
+    font-size: 44px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.buttonWrap {
+  display: inline-flex;
+  align-items: center;
+
+  :global(a),
+  :global(button) {
+    
+  }
+}
+
+.buttonWrapFilled {}
+
+.buttonContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttonIcon {
+  flex: 0 0 auto;
+  color: currentColor;
+}
+
+.whyPanel {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  background: $card;
+  @include tablet {
+    width: 100%;
+    gap: 32px;
+    padding: 20px;
+  }
+}
+
+.whyPanelLabel {
+  color: $orange;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.whyItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whyItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whyItemRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @include tablet {
+    gap: 20px;
+  }
+
+  @include mobile {
+    align-items: flex-start;
+  }
+}
+
+.whyItemIcon {
+  flex: 0 0 auto;
+}
+
+.whyItemText {
+  margin: 0;
+  color: $white-50;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.whyItemDivider {
+  width: 100%;
+  height: 1px;
+  background: $white-05;
+}

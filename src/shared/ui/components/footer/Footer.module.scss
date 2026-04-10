@@ -1,0 +1,186 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$background: #0d0d0d;
+$orange: #ff4500;
+$white: #ffffff;
+$muted: rgba(255, 255, 255, 0.5);
+$faint: rgba(255, 255, 255, 0.25);
+$label: #737373;
+$divider: rgba(255, 255, 255, 0.05);
+
+.footer {
+  margin-top: 96px;
+  background: $background;
+
+  @include tablet {
+    margin-top: 72px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 0 20px;
+
+    @include tablet {
+      padding: 40px 0 20px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 168px;
+    width: 100%;
+
+    @include desktop {
+      gap: 72px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+
+  &__brandBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  &__brand {
+    color: $orange;
+    font-family: var(--font-space-mono), monospace;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+  }
+
+  &__description {
+    max-width: 400px;
+    color: $faint;
+    font-family: var(--font-space-mono), monospace;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    min-width: 0;
+
+    @include tablet {
+      gap: 40px;
+      width: 100%;
+    }
+  }
+
+  &__topSections {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 60px;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 12px;
+    }
+
+    @include mobile {
+      gap: 24px 14px;
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  &__section--contact {
+    width: 100%;
+
+    @include desktop {
+      max-width: 180px;
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: $label;
+    font-family: var(--font-roboto-mono), monospace;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__label--accent {
+    color: $orange;
+  }
+
+  &__labelBullet {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
+    background: currentColor;
+  }
+
+  &__labelBullet--accent {
+    background: $orange;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__link {
+    color: $muted;
+    font-family: var(--font-space-mono), monospace;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    background: $divider;
+  }
+
+  &__copyright {
+    width: 100%;
+    color: $faint;
+    font-family: var(--font-roboto-mono), monospace;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}

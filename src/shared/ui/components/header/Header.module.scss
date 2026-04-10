@@ -1,0 +1,274 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$black: #0d0d0d;
+$panel: #141312;
+$brown: #1a0800;
+$white: #ffffff;
+$muted: rgba(255, 255, 255, 0.5);
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: $black;
+
+  &__shell {
+    width: 100%;
+    transition: box-shadow 0.25s ease;
+
+    
+  }
+
+  &__topbarWrap {
+    background: $brown;
+
+    @include tablet {
+      padding-top: 12px;
+    }
+
+    @include mobile {
+      padding-top: 8px;
+    }
+  }
+
+  &__topbarShell {
+    width: 100%;
+
+  }
+
+  &__topbarInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 4px 0;
+  }
+
+  &__meta,
+  &__socials,
+  &__mobileSocials {
+    display: flex;
+    align-items: center;
+  }
+
+  &__meta {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  &__socials {
+    gap: 32px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__metaLink,
+  &__socialLink,
+  &__navItem,
+  &__mobileNavItem {
+    color: $muted;
+    font-family: var(--font-space-mono), monospace;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  &__metaLink {
+    color: $white;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.72;
+    }
+  }
+
+  &__socialLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__socialIcon,
+  &__ctaIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__main {
+    width: 100%;
+    background: $black;
+  }
+
+  &__mainInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 0;
+
+    @include tablet {
+      gap: 16px;
+    }
+  }
+
+  &__brand {
+    flex: 0 0 auto;
+    color: $white;
+    font-family: var(--font-roboto-mono), monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  &__nav {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    min-width: 0;
+
+    @include desktop {
+      gap: 20px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__navItem,
+  &__mobileNavItem {
+    white-space: nowrap;
+
+    &:hover,
+    &[data-active="true"] {
+      color: $white;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  &__cta {
+    display: inline-flex;
+    flex: 0 0 auto;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__menuButton {
+    display: none;
+    flex: 0 0 auto;
+
+    @include tablet {
+      display: inline-flex;
+    }
+  }
+
+  &__mobileMenu {
+    display: none;
+
+    @include tablet {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transition: max-height 0.3s ease, opacity 0.25s ease,
+        visibility 0.25s ease;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background: $black;
+        padding: 20px 14px;
+        border-top: 1px solid $brown;
+        border-bottom: 1px solid $brown;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &[data-open="true"] {
+      max-height: 520px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__mobileMenuInner {
+    overflow: hidden;
+    background: $black;
+  }
+
+  &__mobileNav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  &__mobileNavItem {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 20px;
+  }
+
+  &__mobileFooter {
+    background: $panel;
+    padding: 20px 14px;
+  }
+
+  &__mobileSocials {
+    justify-content: space-between;
+    gap: 20px;
+
+    .header__socialLink {
+      flex: 1 1 0;
+      justify-content: center;
+      min-width: 0;
+    }
+  }
+
+  @include mobile {
+    &__mainInner {
+      gap: 16px;
+    }
+
+    &__brand {
+      font-size: 13px;
+    }
+
+    &__mobileSocials {
+      gap: 12px;
+
+      .header__socialLink {
+        justify-content: flex-start;
+      }
+    }
+  }
+}

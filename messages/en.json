@@ -1,0 +1,217 @@
+{
+  "homePage": {
+    "approach": {
+      "steps": {
+        "understandingYourIdea": {
+          "title": "Understanding Your Idea",
+          "description": "We start by defining your vision, goals, and expectations."
+        },
+        "structuredDevelopment": {
+          "title": "Structured Development",
+          "description": "Every step is planned, transparent, and aligned with your needs."
+        },
+        "precisionBuild": {
+          "title": "Precision Build",
+          "description": "We focus on clean code, strong performance, and seamless functionality."
+        },
+        "launchSupport": {
+          "title": "Launch & Support",
+          "description": "Your project goes live - with ongoing support if needed."
+        }
+      },
+      "label": "// APPROACH",
+      "title": "Our Approach",
+      "cta": "See How We Work"
+    },
+    "closing": {
+      "title": "Turn Your Idea Into Something Real",
+      "description": "Let's turn your concept into a working digital product - structured, functional, and ready to launch.",
+      "cta": "Get in Touch"
+    },
+    "hero": {
+      "label": "// SITE",
+      "title": "Build What You Imagine.",
+      "subtitle": "Launch What Matters.",
+      "description": "Custom web and digital solutions designed for individuals - fast, functional, and built with precision.",
+      "primaryCta": "Start a Project",
+      "secondaryCta": "Explore What We Build"
+    },
+    "plans": {
+      "label": "// SITE",
+      "title": "Flexible Ways to Collaborate",
+      "bodyPrimary": "Whether you need a one-time solution or ongoing development support, we offer structured engagement options tailored to your scope and timeline.",
+      "bodySecondary": "Clear process. Transparent approach. No unnecessary complexity.",
+      "cta": "Check Plans"
+    },
+    "services": {
+      "items": {
+        "customWebsites": {
+          "title": "CUSTOM WEBSITES",
+          "description": "Tailored, responsive websites designed to reflect your vision and work seamlessly across all devices."
+        },
+        "webApplications": {
+          "title": "WEB APPLICATIONS",
+          "description": "Functional, scalable platforms built to handle real interactions, logic, and user workflows."
+        },
+        "uiUxDesign": {
+          "title": "UI/UX DESIGN",
+          "description": "Clear, intuitive interfaces designed for smooth navigation and effortless user experience."
+        },
+        "ecommerceSolutions": {
+          "title": "E-COMMERCE SOLUTIONS",
+          "description": "Online stores built for simplicity, performance, and a seamless buying experience."
+        },
+        "landingPages": {
+          "title": "LANDING PAGES",
+          "description": "Focused, conversion-driven pages designed to communicate clearly and guide user action."
+        },
+        "maintenanceSupport": {
+          "title": "MAINTENANCE & SUPPORT",
+          "description": "Ongoing updates, fixes, and improvements to keep your product stable and up to date."
+        }
+      },
+      "label": "// SERVICES",
+      "title": "What We Build",
+      "cta": "Discover All Solutions"
+    },
+    "solutions": {
+      "label": "// SITE",
+      "title": "Digital Solutions, Designed Around You",
+      "bodyPrimary": "We create tailored digital products that fit your goals - not templates, not shortcuts. Every project is built from the ground up to deliver performance, clarity, and long-term usability.",
+      "bodySecondary": "From simple websites to complex platforms, we focus on what matters most: making your idea work seamlessly.",
+      "cta": "View Solutions"
+    },
+    "why": {
+      "items": {
+        "builtAroundIdea": "Built around your idea - not pre-made templates",
+        "cleanScalable": "Clean, modern, and scalable development",
+        "structuredWorkflow": "Clear communication and structured workflow",
+        "performanceUsability": "Focus on performance and usability",
+        "designedForIndividuals": "Designed for individuals, not just businesses"
+      },
+      "label": "// SITE",
+      "title": "Why Netspire Dev?",
+      "cta": "Check Plans",
+      "panelTitle": "NETSPIRE DEV"
+    },
+    "work": {
+      "cards": {
+        "selectedWork": {
+          "title": "Selected Work",
+          "description": "Every project reflects a different idea, a different challenge, and a different solution. We focus on delivering results that are both functional and refined."
+        },
+        "insights": {
+          "title": "Insights",
+          "description": "Thoughts, ideas, and perspectives on development, design, and digital solutions - simplified and relevant."
+        }
+      },
+      "label": "// WORK"
+    }
+  },
+  "journalPage": {
+    "heroTitle": "Travel, Told Differently",
+    "heroSubtitleOne": "Less scrolling. More discovering.",
+    "heroDescription": "From exploring hidden corners of iconic cities to understanding how to plan your journey more efficiently, each article is created to support both inspiration and decision-making.",
+    "noArticles": "No articles found",
+    "articleContents": "Article contents"
+  },
+  "contactsForm": {
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "message": "Message",
+    "messagePlaceholder": "Leave your message here",
+    "loading": "Loading...",
+    "submit": "Send Message"
+  },
+  "contactThankYou": {
+    "title": "Thank you for reaching out to Travellio Global!",
+    "messageReceived": "Your message has been successfully received. Our team will review your inquiry carefully and respond shortly.",
+    "appreciation": "We appreciate your interest and look forward to assisting you.",
+    "prompt": "Return to the previous page or:",
+    "cta": "Head Back Home"
+  },
+  "forms": {
+    "requestForm": {
+      "successTitle": "Thank you!",
+      "successMessage1": "Your request for our service has been successfully submitted. Our team will review the information provided and get in touch with you shortly to discuss the next steps and how we can assist you."
+    },
+    "returnHome": "Return to home page",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Enter your full name",
+    "email": "Email address",
+    "emailPlaceholder": "Enter your email address",
+    "phone": "Phone number",
+    "companyName": "Company name",
+    "optional": "(optional)",
+    "companyNamePlaceholder": "Enter your company name",
+    "website": "Your website",
+    "websitePlaceholder": "Enter your website URL",
+    "message": "Message",
+    "messagePlaceholder": "Enter your message",
+    "loading": "Sending…",
+    "submit": "Submit"
+  },
+  "notFoundPage": {
+    "title": "This Destination Doesn’t Exist",
+    "messagePrimary": "The page you’re looking for seems to have taken a different route.",
+    "messageSecondary": "It may have moved — or perhaps it never existed at all. Either way, your journey continues.",
+    "prompt": "Return to the previous page or:",
+    "cta": "Head Back Home"
+  },
+  "notFound": {
+    "title": "404 — Page Not Found",
+    "description": "The page you tried to reach isn’t here.",
+    "quickLinks": "Quick Links",
+    "button1": "Main Page",
+    "button2": "Free Guides",
+    "button3": "Contact Us"
+  },
+  "cookiePopup": {
+    "title": "Cookie Notice",
+    "text": "We use cookies to keep things working as expected and to better understand how visitors interact with the site.",
+    "link": "More About Cookies",
+    "accept": "Accept Cookies",
+    "decline": "Decline"
+  },
+  "footer": {
+    "ourApproach": "Our Approach",
+    "insights": "Insights",
+    "getInTouch": "Get in Touch",
+    "whatWeBuild": "What We Build",
+    "engagementPlans": "Engagement Plans",
+    "selectedWork": "Selected Work",
+    "termsAndConditions": "Terms and Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "refundPolicy": "Refund Policy",
+    "insideNetspireDev": "Inside Netspire Dev",
+    "solutions": "Solutions",
+    "compliance": "Compliance",
+    "contact": "Contact",
+    "brand": "Netspire Dev",
+    "description": "Turn your idea into a digital solution — start your project with Netspire Dev today.",
+    "copyright": "All content is legally protected and owned by Netspire Dev Ltd."
+  },
+  "header": {
+    "home": "Home",
+    "whatWeBuild": "What We Build",
+    "engagementPlans": "Engagement Plans",
+    "selectedWork": "Selected Work",
+    "ourApproach": "Our Approach",
+    "insights": "Insights",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "x": "X",
+    "emailLabel": "Email",
+    "phoneNumber": "Phone Number",
+    "brand": "NETSPIRE DEV",
+    "getInTouch": "Get in Touch",
+    "menu": "Menu"
+  },
+  "priceList": {
+    "title": "Check our full price list",
+    "button": "Download"
+  }
+}

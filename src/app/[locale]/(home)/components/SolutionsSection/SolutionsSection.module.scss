@@ -1,0 +1,258 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$light: #f4f3ee;
+$dark: #111111;
+$dark-50: #666666;
+$dark-25: rgba(17, 17, 17, 0.25);
+$orange: #ff4500;
+$white: #ffffff;
+
+.section {
+  position: relative;
+  overflow: hidden;
+  background: $light;
+  color: $dark;
+
+}
+
+.sectionInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 60px 0;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+}
+
+.sectionLabelWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sectionLabel {
+  color: $orange;
+  font-family: var(--font-roboto-mono), monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sectionDivider {
+  width: 100%;
+  height: 1px;
+  background: $dark-25;
+}
+
+.sectionDividerLight {
+  background: $dark-25;
+}
+
+.solutionsLayout {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.solutionsContent {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  min-width: 0;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.sectionTitle {
+  margin: 0;
+  color: $dark;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+
+  @include desktop {
+    font-size: 52px;
+  }
+
+  @include tablet {
+    font-size: 44px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.bodyTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bodyText {
+  margin: 0;
+  color: $dark-50;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.buttonWrap {
+  display: inline-flex;
+  align-items: center;
+
+  :global(a),
+  :global(button) {
+    
+    padding: 14px 24px !important;
+    line-height: 1;
+  }
+}
+
+.buttonWrapFilled {}
+
+.buttonContent {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttonIcon {
+  flex: 0 0 auto;
+  color: currentColor;
+}
+
+.solutionsVisual {
+  position: relative;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: -300px;
+
+  @include tablet {
+    width: 100%;
+    justify-content: center;
+    display: none;
+  }
+}
+
+.globe {
+  position: relative;
+  width: min(100%, 620px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02) 38%, rgba(0, 0, 0, 0.95) 70%),
+    radial-gradient(circle at 50% 50%, #202020, #0d0d0d 74%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 30px 60px rgba(0, 0, 0, 0.24);
+
+  @include desktop {
+    width: 520px;
+  }
+
+  @include tablet {
+    width: min(100%, 420px);
+  }
+
+  @include mobile {
+    width: min(100%, 320px);
+  }
+}
+
+.globeRing,
+.globeRingSecondary,
+.globeLatitude,
+.globeLongitude,
+.globeContinentPrimary,
+.globeContinentSecondary,
+.globeShadow {
+  position: absolute;
+}
+
+.globeRing,
+.globeRingSecondary {
+  inset: 4%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.globeRingSecondary {
+  inset: 16% 10%;
+  transform: rotate(-18deg);
+}
+
+.globeLatitude {
+  top: 50%;
+  left: -8%;
+  right: -8%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-50%);
+}
+
+.globeLongitude {
+  top: -6%;
+  bottom: -6%;
+  left: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.09);
+  transform: translateX(-50%);
+}
+
+.globeContinentPrimary {
+  top: 22%;
+  left: 22%;
+  width: 38%;
+  height: 38%;
+  background: radial-gradient(circle at 45% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04) 70%);
+  clip-path: polygon(21% 10%, 52% 0, 74% 12%, 100% 28%, 84% 56%, 86% 84%, 56% 100%, 28% 84%, 8% 58%, 0 30%);
+  opacity: 0.72;
+}
+
+.globeContinentSecondary {
+  right: 18%;
+  bottom: 14%;
+  width: 34%;
+  height: 30%;
+  background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03) 72%);
+  clip-path: polygon(24% 0, 74% 12%, 100% 42%, 86% 100%, 24% 90%, 0 54%);
+  opacity: 0.68;
+}
+
+.globeShadow {
+  inset: auto 10% 4% auto;
+  width: 72%;
+  height: 16%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.28);
+  filter: blur(12px);
+}
