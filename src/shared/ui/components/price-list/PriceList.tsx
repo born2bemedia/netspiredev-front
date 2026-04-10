@@ -25,7 +25,7 @@ export const PriceList = () => {
           <h2>
             {t("title", { fallback: "Check our full price list" })}
           </h2>
-          <Button variant="white" url="https://netspiredev .com/price-list.pdf" target="_blank" type="link">
+          <Button variant="filled" url="https://netspiredev .com/price-list.pdf" target="_blank" type="link">
             {t("button", { fallback: "Download" })}
           </Button>
         </motion.div>

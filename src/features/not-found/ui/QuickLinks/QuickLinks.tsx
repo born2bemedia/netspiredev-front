@@ -20,10 +20,10 @@ export const QuickLinks = () => {
           {t("quickLinks", { fallback: "Quick Links" })}
         </motion.h2>
         <div className={styles.quickLinks__content}>
-          <Button variant="white" url="/" type="link">
+          <Button variant="filled" url="/" type="link">
             {t("button1", { fallback: "Main Page" })}
           </Button>
-          <Button variant="white" url="/free-guides" type="link">
+          <Button variant="filled" url="/free-guides" type="link">
             {t("button2", { fallback: "Free Guides" })}
           </Button>
           <Button variant="bordered" url="/contact" type="link">
