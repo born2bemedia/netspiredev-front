@@ -35,7 +35,7 @@ export const Footer = () => {
     {
       key: 'our-approach',
       text: t('ourApproach', { fallback: 'Our Approach' }),
-      href: '/#our-approach',
+      href: '/our-approach',
     },
     {
       key: 'insights',

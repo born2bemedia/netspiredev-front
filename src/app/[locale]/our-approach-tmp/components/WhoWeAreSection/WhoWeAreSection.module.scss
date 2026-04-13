@@ -1,0 +1,93 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$surface: #f4f3ee;
+$copy: #111111;
+$copy-muted: #666666;
+
+.section {
+  overflow: hidden;
+  background: $surface;
+  color: $copy;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: calc((100vw - 1352px) / 2);
+  @include tablet {
+    padding-right: 0;
+    flex-direction: column-reverse;
+  }
+}
+
+.sectionInner {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 50%;
+
+  @include tablet {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 40px;
+    width: 100%;
+    padding: 60px 16px;
+  }
+}
+
+.visualWrap {
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  @include tablet {
+    width: 100%;
+    transform: scaleX(-1)!important;
+  }
+}
+
+.visual {
+  display: block;
+  width: 100%;
+
+  @include tablet {
+    max-width: unset;
+    width: 110%;
+    
+  }
+}
+
+.copy {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  color: $copy;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include tablet {
+    font-size: 42px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.description {
+  margin: 0;
+  color: $copy-muted;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}

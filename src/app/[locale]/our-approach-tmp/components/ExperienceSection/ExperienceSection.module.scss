@@ -1,0 +1,89 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+$panel: #0d0d0d;
+$white: #efefef;
+$copy-muted: rgba(255, 255, 255, 0.82);
+
+.section {
+  position: relative;
+  overflow: hidden;
+  background: $panel;
+  color: $white;
+}
+
+.topPattern,
+.bottomPattern {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  @include tablet {
+    height: 80px;
+    object-fit: cover;
+  }
+}
+
+.topPattern {
+  top: -55px;
+  @include tablet {
+    top: -40px;
+  }
+}
+
+.bottomPattern {
+  bottom: 0;
+}
+
+.pattern {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sectionInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 96px 0;
+
+  @include mobile {
+    padding: 96px 0;
+  }
+}
+
+.title {
+  margin: 0;
+  color: $white;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+
+  @include tablet {
+    font-size: 42px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.description {
+  margin: 0;
+  color: $copy-muted;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 800px;
+
+  @include mobile {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}

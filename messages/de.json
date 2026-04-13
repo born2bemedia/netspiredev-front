@@ -970,6 +970,79 @@
       "cta": "Start a Project"
     }
   },
+  "ourApproachPage": {
+    "hero": {
+      "label": "// OUR APPROACH",
+      "title": "From Concept to Execution —\nDone Right",
+      "description": "At Netspire Dev, every project starts with an idea — and evolves through structure, precision, and thoughtful execution. We focus on creating digital solutions that are not only functional but genuinely aligned with your needs."
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "descriptionPrimary": "Netspire Dev is a digital development studio focused on building tailored solutions for individuals. We don't use generic methods or predefined structures. Instead, we build every project through a structured process shaped by your goals and refined through execution.",
+      "descriptionSecondary": "We believe that good development is not just about code — it's about creating clarity, usability, and digital products built to work."
+    },
+    "differentiators": {
+      "title": "What Sets Us Apart",
+      "label": "NETSPIRE DEV",
+      "items": {
+        "templateDriven": {
+          "title": "No template-driven work",
+          "description": "Every solution is built from scratch, based on your idea and requirements."
+        },
+        "structuredProcess": {
+          "title": "Structured development process",
+          "description": "Clear steps, transparent workflow, and no unnecessary complexity."
+        },
+        "usability": {
+          "title": "Focus on\nusability",
+          "description": "We prioritise clarity and ease of use in every interface we design."
+        },
+        "performance": {
+          "title": "Performance-first mindset",
+          "description": "Speed, efficiency, and reliability are part of every build."
+        },
+        "individuals": {
+          "title": "Built for individuals",
+          "description": "Our solutions are designed to fit personal projects, not just large-scale systems."
+        }
+      }
+    },
+    "process": {
+      "title": "Our Process",
+      "steps": {
+        "understandingIdea": {
+          "title": "Understanding Your Idea",
+          "description": "We start by learning what you want to build, why it matters, and how it should function."
+        },
+        "structuringSolution": {
+          "title": "Structuring the Solution",
+          "description": "We define the scope, features, and overall direction — creating a clear foundation."
+        },
+        "designDevelopment": {
+          "title": "Design & Development",
+          "description": "Your project is built with attention to detail, performance, and usability."
+        },
+        "testingRefinement": {
+          "title": "Testing & Refinement",
+          "description": "We review, adjust, and optimise everything before launch."
+        },
+        "launchSupport": {
+          "title": "Launch & Support",
+          "description": "Once ready, your product goes live — with support available if needed."
+        }
+      }
+    },
+    "experience": {
+      "title": "A Simple, Transparent Experience",
+      "description": "We keep the process straightforward. You'll always know what's happening, what's next, and how your project is progressing. No confusion, no hidden steps — just a clear path from idea to execution."
+    },
+    "closing": {
+      "title": "Ready to Build Something That Works?",
+      "description": "If you have an idea in mind, we're here to help you shape it into a functional, well-structured digital product.",
+      "primaryCta": "Start a Project",
+      "secondaryCta": "Discover What We Build"
+    }
+  },
   "account": {
     "heroTitle": "Willkommen zurück bei Travellio Global",
     "heroSubtitle": "Geben Sie Ihre Anmeldedaten ein, um auf Ihr Konto zuzugreifen. Wenn Sie sich nicht an Ihr Passwort erinnern können, wählen Sie „Passwort vergessen?“ aus. und wir helfen Ihnen beim Zurücksetzen.",

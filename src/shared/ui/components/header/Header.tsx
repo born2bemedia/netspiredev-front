@@ -90,7 +90,7 @@ export const Header = () => {
     {
       key: 'ourApproach',
       text: t('ourApproach', { fallback: 'Our Approach' }),
-      href: '/#our-approach',
+      href: '/our-approach',
     },
     {
       key: 'insights',

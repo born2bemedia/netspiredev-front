@@ -90,7 +90,7 @@ export const ApproachSection = () => {
               viewport={viewport}
               custom={0.1}
             >
-              <Button variant="bordered" url="/#our-approach" type="link">
+              <Button variant="bordered" url="/our-approach" type="link">
                 <span className={styles.buttonContent}>
                   <span>{t('approach.cta', { fallback: 'See How We Work' })}</span>
                   <PlusSmallIcon className={styles.buttonIcon} aria-hidden="true" />
