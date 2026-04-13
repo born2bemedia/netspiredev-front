@@ -43,7 +43,7 @@ export const ClosingSection = () => {
             <div className={cn(styles.buttonWrap, styles.buttonWrapFilled)}>
               <Button variant="filled" type="button" onClick={openCustomSolutionRequest}>
                 <span className={styles.buttonContent}>
-                  <span>{t('closing.cta', { fallback: 'Get in Touch' })}</span>
+                  <span>{t('closing.cta', { fallback: 'Start Your Project' })}</span>
                   <PlusSmallIcon className={styles.buttonIcon} aria-hidden="true" />
                 </span>
               </Button>

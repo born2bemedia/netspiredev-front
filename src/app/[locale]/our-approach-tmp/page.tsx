@@ -10,13 +10,13 @@ import {
 } from './components';
 
 export const metadata: Metadata = {
-  title: 'Our Web Development Approach | Netspire Dev',
+  title: 'Our Approach to Web Development | Netspire Dev',
   description:
-    'Discover how Netspire Dev approaches digital projects through clear structure, thoughtful execution, and transparent collaboration from idea to launch.',
+    'Learn how Netspire Dev approaches digital projects with structured thinking, clear processes, and performance-focused development.',
   openGraph: {
-    title: 'Our Web Development Approach | Netspire Dev',
+    title: 'Our Approach to Web Development | Netspire Dev',
     description:
-      'Discover how Netspire Dev approaches digital projects through clear structure, thoughtful execution, and transparent collaboration from idea to launch.',
+      'Learn how Netspire Dev approaches digital projects with structured thinking, clear processes, and performance-focused development.',
   },
 };
 

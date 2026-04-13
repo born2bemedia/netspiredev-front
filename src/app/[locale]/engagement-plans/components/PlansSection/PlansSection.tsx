@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
-import { useFormsPopup } from "@/features/forms";
 import { PlanCard,useEngagementPlans } from "@/features/services";
 
 import { fadeInLeft, fadeInUp } from "@/shared/lib/helpers/animations";
@@ -14,7 +13,6 @@ import styles from "./PlansSection.module.scss";
 
 export const PlansSection = () => {
   const t = useTranslations("engagementPlansPage");
-  const { openCustomSolutionRequest } = useFormsPopup();
   const viewport = { once: true, amount: 0.2 };
   const includedLabel = t("plans.includedLabel", {
     fallback: "What's included:",
@@ -113,8 +111,8 @@ export const PlansSection = () => {
                 <div className={styles.buttonWrap}>
                   <Button
                     variant="filled"
-                    type="button"
-                    onClick={openCustomSolutionRequest}
+                    type="link"
+                    url="/get-in-touch"
                   >
                     <span className={styles.buttonContent}>
                       <span>

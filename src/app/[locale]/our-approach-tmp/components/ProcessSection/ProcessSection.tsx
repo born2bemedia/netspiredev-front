@@ -8,41 +8,44 @@ import { cn } from '@/shared/lib/helpers/styles';
 
 import styles from './ProcessSection.module.scss';
 
-const processSteps = [
-  {
-    key: 'understandingIdea',
-    titleFallback: 'Understanding Your Idea',
-    descriptionFallback:
-      'We start by learning what you want to build, why it matters, and how it should function.',
-  },
-  {
-    key: 'structuringSolution',
-    titleFallback: 'Structuring the Solution',
-    descriptionFallback:
-      'We define the scope, features, and overall direction — creating a clear foundation.',
-  },
-  {
-    key: 'designDevelopment',
-    titleFallback: 'Design & Development',
-    descriptionFallback:
-      'Your project is built with attention to detail, performance, and usability.',
-  },
-  {
-    key: 'testingRefinement',
-    titleFallback: 'Testing & Refinement',
-    descriptionFallback: 'We review, adjust, and optimise everything before launch.',
-  },
-  {
-    key: 'launchSupport',
-    titleFallback: 'Launch & Support',
-    descriptionFallback:
-      'Once ready, your product goes live — with support available if needed.',
-  },
-] as const;
+
 
 export const ProcessSection = () => {
   const t = useTranslations('ourApproachPage');
   const viewport = { once: true, amount: 0.15 };
+
+  const processSteps = [
+    {
+      title: t('process.steps.understandingIdea.title', { fallback: 'Understanding Your Idea' }),
+      description: t('process.steps.understandingIdea.description', {
+        fallback: 'We start by learning what you want to build, why it matters, and how it should function.',
+      }),
+    },
+    {
+      title: t('process.steps.structuringSolution.title', { fallback: 'Structuring the Solution' }),
+      description: t('process.steps.structuringSolution.description', {
+        fallback: 'We define the scope, features, and overall direction — creating a clear foundation.',
+      }),
+    },
+    {
+      title: t('process.steps.designDevelopment.title', { fallback: 'Design & Development' }),
+      description: t('process.steps.designDevelopment.description', {
+        fallback: 'Your project is built with attention to detail, performance, and usability.',
+      }),
+    },
+    {
+      title: t('process.steps.testingRefinement.title', { fallback: 'Testing & Refinement' }),
+      description: t('process.steps.testingRefinement.description', {
+        fallback: 'We review, adjust, and optimise everything before launch.',
+      }),
+    },
+    {
+      title: t('process.steps.launchSupport.title', { fallback: 'Launch & Support' }),
+      description: t('process.steps.launchSupport.description', {
+        fallback: 'Once ready, your product goes live — with support available if needed.',
+      }),
+    },
+  ] as const;
 
   return (
     <section className={styles.section}>
@@ -61,7 +64,7 @@ export const ProcessSection = () => {
           <div className={styles.list}>
             {processSteps.map((step, index) => (
               <motion.article
-                key={step.key}
+                key={index}
                 className={styles.item}
                 variants={fadeInUp}
                 initial="hidden"
@@ -79,15 +82,11 @@ export const ProcessSection = () => {
 
                     <div className={styles.copy}>
                       <h3 className={cn(styles.itemTitle, index === 0 && styles.itemTitleActive)}>
-                        {t(`process.steps.${step.key}.title`, {
-                          fallback: step.titleFallback,
-                        })}
+                        {step.title}
                       </h3>
 
                       <p className={styles.itemDescription}>
-                        {t(`process.steps.${step.key}.description`, {
-                          fallback: step.descriptionFallback,
-                        })}
+                        {step.description}
                       </p>
                     </div>
                   </div>

@@ -45,7 +45,7 @@ export const Footer = () => {
     {
       key: 'get-in-touch',
       text: t('getInTouch', { fallback: 'Get in Touch' }),
-      href: '/contacts',
+      href: '/get-in-touch',
     },
   ] as const;
 

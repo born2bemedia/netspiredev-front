@@ -88,7 +88,7 @@ export const WhySection = () => {
               </h2>
 
               <div className={cn(styles.buttonWrap, styles.buttonWrapFilled)}>
-                <Button variant="filled" url="/contacts" type="link">
+                <Button variant="filled" url="/engagement-plans" type="link">
                   <span className={styles.buttonContent}>
                     <span>{t('why.cta', { fallback: 'Check Plans' })}</span>
                     <PlusSmallIcon className={styles.buttonIcon} aria-hidden="true" />

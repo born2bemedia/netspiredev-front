@@ -26,7 +26,7 @@
     "closing": {
       "title": "Turn Your Idea Into Something Real",
       "description": "Let's turn your concept into a working digital product - structured, functional, and ready to launch.",
-      "cta": "Get in Touch"
+      "cta": "Start Your Project"
     },
     "hero": {
       "label": "// SITE",
@@ -117,8 +117,7 @@
     "hero": {
       "label": "// ENGAGEMENT PLANS",
       "title": "Flexible Plans.\nClear Scope.\nReal Results.",
-      "description": "Choose the level of support that fits your idea. Whether you're starting small or building something more advanced, each plan is structured to deliver clarity, performance, and a smooth development process.",
-      "cta": "View Plans"
+      "description": "Choose the level of support that fits your idea. Whether you're starting small or building something more advanced, each plan is structured to deliver clarity, performance, and a smooth development process."
     },
     "plans": {
       "includedLabel": "What's included:",
@@ -191,12 +190,37 @@
     "fullStackPlanIncludedSupport": "Ongoing support (initial phase)",
     "fullStackPlanIncludedDelivery": "Priority delivery and dedicated workflow"
   },
-  "journalPage": {
-    "heroTitle": "Travel, Told Differently",
-    "heroSubtitleOne": "Less scrolling. More discovering.",
-    "heroDescription": "From exploring hidden corners of iconic cities to understanding how to plan your journey more efficiently, each article is created to support both inspiration and decision-making.",
-    "noArticles": "No articles found",
-    "articleContents": "Article contents"
+  "getInTouchPage": {
+    "contact": {
+      "cards": {
+        "email": "Drop Us a Line",
+        "phone": "Call Directly",
+        "office": "Office Location",
+        "legal": "Legal Address"
+      },
+      "title": "Get in Touch, Your Way",
+      "description": "Prefer to reach out directly? You can contact us using the details below."
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "x": "X",
+      "title": "Stay Connected",
+      "description": "Follow us for updates, insights, and a closer look at what we build."
+    },
+    "hero": {
+      "label": "// Get in Touch",
+      "title": "Let’s Turn Your Idea\nInto Something Real",
+      "description": "Whether you have a clear idea or just a starting point, we’re here to help you shape it into a functional digital solution. Reach out, and we’ll take it from there."
+    },
+    "form": {
+      "title": "Tell Us About Your Project",
+      "description": "Share a few details about what you’re looking to build. We’ll review your request and get back to you with the next steps.",
+      "nextStepsTitle": "What to Expect Next",
+      "nextStepsDescription": "Once we receive your message, we’ll review the details and reach out to clarify your requirements, discuss the scope, and guide you on the best way forward.",
+      "submit": "Submit Your Request",
+      "successAction": "Send Another Request"
+    }
   },
   "insightsPage": {
     "hero": {
@@ -212,19 +236,13 @@
     }
   },
   "ourApproachPage": {
-    "hero": {
-      "label": "// OUR APPROACH",
-      "title": "From Concept to Execution —\nDone Right",
-      "description": "At Netspire Dev, every project starts with an idea — and evolves through structure, precision, and thoughtful execution. We focus on creating digital solutions that are not only functional but genuinely aligned with your needs."
-    },
-    "whoWeAre": {
-      "title": "Who We Are",
-      "descriptionPrimary": "Netspire Dev is a digital development studio focused on building tailored solutions for individuals. We don't use generic methods or predefined structures. Instead, we build every project through a structured process shaped by your goals and refined through execution.",
-      "descriptionSecondary": "We believe that good development is not just about code — it's about creating clarity, usability, and digital products built to work."
+    "closing": {
+      "title": "Ready to Build Something That Works?",
+      "description": "If you have an idea in mind, we're here to help you shape it into a functional, well-structured digital product.",
+      "primaryCta": "Start a Project",
+      "secondaryCta": "Discover What We Build"
     },
     "differentiators": {
-      "title": "What Sets Us Apart",
-      "label": "NETSPIRE DEV",
       "items": {
         "templateDriven": {
           "title": "No template-driven work",
@@ -246,10 +264,20 @@
           "title": "Built for individuals",
           "description": "Our solutions are designed to fit personal projects, not just large-scale systems."
         }
-      }
+      },
+      "title": "What Sets Us Apart",
+      "label": "NETSPIRE DEV"
+    },
+    "experience": {
+      "title": "A Simple, Transparent Experience",
+      "description": "We keep the process straightforward. You'll always know what's happening, what's next, and how your project is progressing. No confusion, no hidden steps — just a clear path from idea to execution."
+    },
+    "hero": {
+      "label": "// OUR APPROACH",
+      "title": "From Concept to Execution —\nDone Right",
+      "description": "At Netspire Dev, every project starts with an idea — and evolves through structure, precision, and thoughtful execution. We focus on creating digital solutions that are not only functional but genuinely aligned with your needs."
     },
     "process": {
-      "title": "Our Process",
       "steps": {
         "understandingIdea": {
           "title": "Understanding Your Idea",
@@ -271,17 +299,13 @@
           "title": "Launch & Support",
           "description": "Once ready, your product goes live — with support available if needed."
         }
-      }
+      },
+      "title": "Our Process"
     },
-    "experience": {
-      "title": "A Simple, Transparent Experience",
-      "description": "We keep the process straightforward. You'll always know what's happening, what's next, and how your project is progressing. No confusion, no hidden steps — just a clear path from idea to execution."
-    },
-    "closing": {
-      "title": "Ready to Build Something That Works?",
-      "description": "If you have an idea in mind, we're here to help you shape it into a functional, well-structured digital product.",
-      "primaryCta": "Start a Project",
-      "secondaryCta": "Discover What We Build"
+    "whoWeAre": {
+      "title": "Who We Are",
+      "descriptionPrimary": "Netspire Dev is a digital development studio focused on building tailored solutions for individuals. We don't use generic methods or predefined structures. Instead, we build every project through a structured process shaped by your goals and refined through execution.",
+      "descriptionSecondary": "We believe that good development is not just about code — it's about creating clarity, usability, and digital products built to work."
     }
   },
   "selectedWorkPage": {
@@ -460,7 +484,7 @@
     "projectTypeRedesignLabel": "Redesign",
     "projectTypePerformanceImprovementsLabel": "Performance Improvements",
     "projectTypeOngoingSupportLabel": "Ongoing Support",
-    "projectTypeOtherLabel": "Please specify",
+    "projectTypeOtherOptionLabel": "Other",
     "budgetUnder1000Label": "Under €1,000",
     "budget1000To2500Label": "€1,000 – €2,500",
     "budget2500To5000Label": "€2,500 – €5,000",
@@ -474,11 +498,12 @@
     "communicationVideoCallLabel": "Video Call",
     "customSolutionForm": {
       "fileTooLarge": "Please choose a file smaller than 10MB.",
-      "successTitle": "Thank you!",
-      "successMessage": "Your request has been received. We will review the details and contact you shortly to discuss the next steps.",
-      "closeAction": "Close",
       "title": "Start Your Project",
       "description": "Tell us about your idea — we’ll help shape it into a clear, functional digital solution. Share a few details below, and we’ll get in touch to discuss the next steps.",
+      "resetAction": "Send Another Request",
+      "closeAction": "Close",
+      "successTitle": "Thank you!",
+      "successMessage": "Your request has been received. We will review the details and contact you shortly to discuss the next steps.",
       "sections": {
         "details": "Your Details",
         "projectDetails": "Project Details",
@@ -493,7 +518,10 @@
         }
       }
     },
-    "close": "Close",
+    "nextStepsTitle": "Next Steps",
+    "nextStepsDescription": "Once submitted, we’ll review your request and reach out to discuss your idea, clarify details, and define the best way forward.",
+    "submit": "Submit",
+    "loading": "Sending…",
     "fullNameLabel": "Full name",
     "fullNamePlaceholder": "Tell us your name",
     "emailLabel": "Email address",
@@ -502,6 +530,7 @@
     "phonePlaceholder": "Enter your phone number",
     "websiteLabel": "Your website (optional)",
     "websitePlaceholder": "Enter your website",
+    "projectTypeOtherLabel": "Please specify",
     "projectTypeOtherPlaceholder": "Enter your option",
     "projectTypeOtherHelper": "Use this field when \"Other\" is selected.",
     "budgetLabel": "Estimated budget",
@@ -512,10 +541,7 @@
     "attachmentAction": "Choose File",
     "attachmentEmpty": "no file selected",
     "attachmentMeta": "Max size: 10MB",
-    "nextStepsTitle": "Next Steps",
-    "nextStepsDescription": "Once submitted, we’ll review your request and reach out to discuss your idea, clarify details, and define the best way forward.",
-    "loading": "Sending…",
-    "submit": "Submit",
+    "close": "Close",
     "requestForm": {
       "successTitle": "Thank you!",
       "successMessage1": "Your request has been received successfully. Our team will review your details and contact you shortly to discuss the next steps."

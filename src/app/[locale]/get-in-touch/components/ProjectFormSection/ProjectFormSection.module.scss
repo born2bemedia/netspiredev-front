@@ -1,0 +1,15 @@
+@use '@/shared/lib/styles/mixin.scss' as *;
+
+.section {
+  position: relative;
+  background: #0d0d0d;
+  overflow: hidden;
+}
+
+.sectionInner {
+  padding: 0 0 96px;
+
+  @include tablet {
+    padding-bottom: 60px;
+  }
+}

@@ -1043,6 +1043,38 @@
       "secondaryCta": "Discover What We Build"
     }
   },
+  "getInTouchPage": {
+    "hero": {
+      "label": "// Get in Touch",
+      "title": "Trasformiamo la tua idea\nin qualcosa di reale",
+      "description": "Che tu abbia già un’idea chiara o solo un punto di partenza, siamo qui per aiutarti a trasformarla in una soluzione digitale funzionale. Scrivici e ci occuperemo del resto."
+    },
+    "contact": {
+      "title": "Contattaci nel modo che preferisci",
+      "description": "Preferisci contattarci direttamente? Puoi usare i dettagli qui sotto.",
+      "cards": {
+        "email": "Scrivici",
+        "phone": "Chiama direttamente",
+        "office": "Sede operativa",
+        "legal": "Indirizzo legale"
+      }
+    },
+    "social": {
+      "title": "Resta connesso",
+      "description": "Seguici per aggiornamenti, approfondimenti e uno sguardo più da vicino a ciò che costruiamo.",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "x": "X"
+    },
+    "form": {
+      "title": "Parlaci del tuo progetto",
+      "description": "Condividi alcuni dettagli su ciò che vuoi realizzare. Esamineremo la tua richiesta e ti ricontatteremo con i prossimi passi.",
+      "nextStepsTitle": "Cosa aspettarti dopo",
+      "nextStepsDescription": "Una volta ricevuto il tuo messaggio, esamineremo i dettagli e ti contatteremo per chiarire i requisiti, discutere l’ambito del progetto e guidarti verso la soluzione migliore.",
+      "submit": "Invia la tua richiesta",
+      "successAction": "Invia un’altra richiesta"
+    }
+  },
   "account": {
     "heroTitle": "Bentornati a Travellio Global",
     "heroSubtitle": "Inserisci i tuoi dati di accesso per accedere al tuo account. Se non ricordi la password, seleziona \"Password dimenticata?\" e ti aiuteremo a reimpostarlo.",
@@ -1656,6 +1688,7 @@
   },
   "forms": {
     "close": "Close",
+    "projectTypeOtherOptionLabel": "Other",
     "requestForm": {
       "successTitle": "Grazie!",
       "successMessage1": "Your request has been received successfully. Our team will review your details and contact you shortly to discuss the next steps."
@@ -1665,6 +1698,7 @@
       "description": "Tell us about your idea — we’ll help shape it into a clear, functional digital solution. Share a few details below, and we’ll get in touch to discuss the next steps.",
       "submit": "Submit Your Request",
       "closeAction": "Close",
+      "resetAction": "Invia un’altra richiesta",
       "successTitle": "Thank you!",
       "successMessage": "Your request has been received. We will review the details and contact you shortly to discuss the next steps.",
       "fileTooLarge": "Please choose a file smaller than 10MB.",

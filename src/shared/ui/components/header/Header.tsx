@@ -53,7 +53,7 @@ const resolveContactHref = (value: string, type: 'email' | 'phone') => {
     /^phone$/i.test(trimmedValue) ||
     /^phone number$/i.test(trimmedValue)
   ) {
-    return '/contacts';
+    return '/get-in-touch';
   }
 
   if (type === 'email') {
@@ -257,7 +257,7 @@ export const Header = () => {
 
                 <div className={styles.header__actions}>
                   <div className={styles.header__cta}>
-                    <Button variant="filled" url="/contacts" type="link">
+                    <Button variant="filled" url="/get-in-touch" type="link">
                       <span>{t('getInTouch', { fallback: 'Get in Touch' })}</span>
                       <span className={styles.header__ctaIcon} aria-hidden="true">
                         <Plus />

@@ -1043,6 +1043,38 @@
       "secondaryCta": "Discover What We Build"
     }
   },
+  "getInTouchPage": {
+    "hero": {
+      "label": "// Get in Touch",
+      "title": "Lassen Sie uns Ihre Idee\nin etwas Reales verwandeln",
+      "description": "Ob Sie bereits eine klare Idee haben oder nur einen ersten Ausgangspunkt: Wir helfen Ihnen dabei, daraus eine funktionale digitale Lösung zu formen. Melden Sie sich bei uns, und wir übernehmen den nächsten Schritt."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns auf Ihre Weise",
+      "description": "Möchten Sie uns lieber direkt erreichen? Nutzen Sie einfach die untenstehenden Kontaktdaten.",
+      "cards": {
+        "email": "Schreiben Sie uns",
+        "phone": "Rufen Sie direkt an",
+        "office": "Bürostandort",
+        "legal": "Rechtliche Adresse"
+      }
+    },
+    "social": {
+      "title": "Bleiben Sie verbunden",
+      "description": "Folgen Sie uns für Updates, Einblicke und einen genaueren Blick auf das, was wir entwickeln.",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "x": "X"
+    },
+    "form": {
+      "title": "Erzählen Sie uns von Ihrem Projekt",
+      "description": "Teilen Sie uns ein paar Details zu dem mit, was Sie umsetzen möchten. Wir prüfen Ihre Anfrage und melden uns mit den nächsten Schritten bei Ihnen.",
+      "nextStepsTitle": "So geht es weiter",
+      "nextStepsDescription": "Sobald wir Ihre Nachricht erhalten haben, prüfen wir die Details und melden uns bei Ihnen, um Anforderungen zu klären, den Umfang zu besprechen und den besten nächsten Schritt zu definieren.",
+      "submit": "Anfrage absenden",
+      "successAction": "Weitere Anfrage senden"
+    }
+  },
   "account": {
     "heroTitle": "Willkommen zurück bei Travellio Global",
     "heroSubtitle": "Geben Sie Ihre Anmeldedaten ein, um auf Ihr Konto zuzugreifen. Wenn Sie sich nicht an Ihr Passwort erinnern können, wählen Sie „Passwort vergessen?“ aus. und wir helfen Ihnen beim Zurücksetzen.",
@@ -1656,6 +1688,7 @@
   },
   "forms": {
     "close": "Close",
+    "projectTypeOtherOptionLabel": "Other",
     "requestForm": {
       "successTitle": "Vielen Dank!",
       "successMessage1": "Your request has been received successfully. Our team will review your details and contact you shortly to discuss the next steps."
@@ -1665,6 +1698,7 @@
       "description": "Tell us about your idea — we’ll help shape it into a clear, functional digital solution. Share a few details below, and we’ll get in touch to discuss the next steps.",
       "submit": "Submit Your Request",
       "closeAction": "Close",
+      "resetAction": "Weitere Anfrage senden",
       "successTitle": "Thank you!",
       "successMessage": "Your request has been received. We will review the details and contact you shortly to discuss the next steps.",
       "fileTooLarge": "Please choose a file smaller than 10MB.",
