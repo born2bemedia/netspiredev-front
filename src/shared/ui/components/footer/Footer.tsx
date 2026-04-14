@@ -171,7 +171,7 @@ export const Footer = () => {
           <div className={styles.footer__divider} />
 
           <p className={styles.footer__copyright}>
-            © ${year}{' '}
+            © {year}{' '}
             {t('copyright', {
               fallback: `All content is legally protected and owned by Netspire Dev Ltd.`,
             })}
