@@ -1,11 +1,10 @@
-import Image from "next/image";
+import { notFound } from "next/navigation";
 
 import type { Metadata } from "next";
 
-import { getPolicy } from "@/features/policies/api/get-policy";
-import { PolicyArticle } from "@/features/policies/ui/article/PolicyArticle";
+import { getPolicy, getPolicySlugs } from "@/features/policies/api/get-policy";
 
-import st from "./page.module.scss";
+import { ArticleContentSection, ClosingSection } from "@/app/[locale]/insights/[slug]/components";
 
 export async function generateMetadata({
   params,
@@ -15,16 +14,29 @@ export async function generateMetadata({
   const awaitedParams = await params;
   const { locale, slug } = awaitedParams;
   const policy = await getPolicy({ slug, locale });
-  const pageTitle = policy.title;
+
+  if (!policy) {
+    return {
+      title: "Legal Policy | Netspire Dev",
+      description:
+        "Placeholder legal policy content for Netspire Dev. This text will be replaced with the final legal version.",
+    };
+  }
+
+  const pageTitle = policy.seoTitle;
+
   return {
     title: pageTitle,
-    description: policy.seo_description,
+    description: policy.seoDescription,
     openGraph: {
       title: pageTitle,
-      description: policy.seo_description,
-      images: "",
+      description: policy.seoDescription,
     },
   };
+}
+
+export async function generateStaticParams() {
+  return getPolicySlugs().map((slug) => ({ slug }));
 }
 
 export default async function PostPage({
@@ -36,28 +48,18 @@ export default async function PostPage({
   const { locale, slug } = awaitedParams;
   const policy = await getPolicy({ slug, locale });
 
-  return (
-    <main className={st.page}>
-      <section className={st.hero}>
-        <Image
-          src="/images/legal/dashed-path.svg"
-          alt=""
-          width={1858}
-          height={513}
-          className={st.hero__globe}
-        />
-        <div className="container">
-          <h1 className={st.hero__title}>{policy.title}</h1>
-        </div>
-      </section>
+  if (!policy) {
+    notFound();
+  }
 
-      {policy.content && (
-        <section className={st.surface}>
-          <div className="container">
-            <PolicyArticle content={policy.content.root.children} />
-          </div>
-        </section>
-      )}
-    </main>
+  return (
+    <>
+      <ArticleContentSection
+        backHref="/"
+        title={policy.title}
+        sections={policy.sections}
+      />
+      <ClosingSection title={policy.ctaTitle} />
+    </>
   );
 }

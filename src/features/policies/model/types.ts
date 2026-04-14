@@ -1,3 +1,26 @@
+export type PolicyLocale = "en" | "de" | "it";
+
+export type PolicySection = {
+  id: string;
+  title: string;
+  html: string;
+};
+
+export type PolicyListItem = {
+  slug: string;
+  order: number;
+  locale: PolicyLocale;
+  title: string;
+  excerpt: string;
+  seoTitle: string;
+  seoDescription: string;
+  ctaTitle: string;
+};
+
+export type PolicyDetail = PolicyListItem & {
+  sections: PolicySection[];
+};
+
 export type PolicyDef = {
   docs: Root2[];
 };

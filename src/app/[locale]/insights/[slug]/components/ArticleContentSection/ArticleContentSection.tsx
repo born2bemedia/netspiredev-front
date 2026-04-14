@@ -8,19 +8,21 @@ import { useTranslations } from "next-intl";
 
 import type { ArticleSection } from "@/features/articles/model/types";
 
-import { cn } from "@/shared/lib/helpers/styles";
 import { fadeInLeft, fadeInUp } from "@/shared/lib/helpers/animations";
+import { cn } from "@/shared/lib/helpers/styles";
 
 import styles from "./ArticleContentSection.module.scss";
 
 import { Link } from "@/i18n/navigation";
 
 type ArticleContentSectionProps = {
+  backHref?: string;
   title: string;
   sections: ArticleSection[];
 };
 
 export const ArticleContentSection = ({
+  backHref = "/insights",
   title,
   sections,
 }: ArticleContentSectionProps) => {
@@ -100,7 +102,7 @@ export const ArticleContentSection = ({
             whileInView="visible"
             viewport={viewport}
           >
-            <Link href="/insights" className={styles.backLink}>
+            <Link href={backHref} className={styles.backLink}>
               <span className={styles.backIcon} aria-hidden="true">
                 <Image src="/images/insights/article-back-icon.svg" alt="" width={20} height={20} />
               </span>
