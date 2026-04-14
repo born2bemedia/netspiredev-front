@@ -1,1070 +1,217 @@
 {
-  "homeAboutTravellio": {
-    "topLeft": "Destinazione della fauna selvatica",
-    "bottomLeft": "Rifugio di lusso",
-    "topRight": "Aurora boreale",
-    "bottomRight": "Fuga dalla città",
-    "flexibleBookingsTitle": "Prenotazioni flessibili",
-    "flexibleBookingsDescription": "Cancellazioni gratuite. Riprogrammazione intelligente. Nessun dramma.",
-    "globalAccessTitle": "Accesso globale",
-    "globalAccessDescription": "Oltre 50.000 tour ed esperienze di viaggio in tutto il mondo.",
-    "smartDealsTitle": "Offerte intelligenti",
-    "smartDealsDescription": "Esperienze premium senza stress premium.",
-    "titleLineOne": "A proposito di Travellio",
-    "titleLineTwo": "Globale",
-    "descriptionLead": "Non prenotiamo solo viaggi. Realizziamo fughe.",
-    "descriptionBody": "Travellio Global è stato creato per le persone che vogliono viaggiare senza sforzo pur vivendo esperienze indimenticabili."
-  },
-  "homeEmbarkExtraordinary": {
-    "luxuryRetreat": "Ritiro di lusso",
-    "wellnessReset": "Rilassati e riprendi forza",
-    "culturalDeepDive": "Profondo approfondimento culturale",
-    "highAdrenalineAdventure": "Avventura ad adrenalina alta",
-    "maldivesIslandEscape": "Fuga dalle Maldive",
-    "titleLineOne": "Parti per qualcosa di incredibile",
-    "titleLineTwo": "Eccitante",
-    "eyebrow": "Se si tratta di:",
-    "jumpToPlanner": "Vai al piano di viaggio",
-    "description": "Travellio Global ti mette in contatto con esperienze che ti sembrano personali — non imballate.",
-    "summaryFallback": "Seleziona la destinazione",
-    "summaryOneWay": "Un solo viaggio",
-    "durationDays": "giorni",
-    "summaryRoundTrip": "Andata e ritorno",
-    "originLabel": "Origine",
-    "destinationLabel": "Destinazione città",
-    "destinationPlaceholder": "Città",
-    "oneWay": "Un solo viaggio",
-    "directOnly": "Solo voli diretti",
-    "durationTitle": "Durata del viaggio",
-    "duratioFrom": "da ",
-    "duratioTo": "a ",
-    "durationMinControl": "Durata minima del viaggio",
-    "durationMaxControl": "Durata massima del viaggio",
-    "selectDestinationPrompt": "Seleziona una destinazione per vedere i prezzi",
-    "bestPrice": "Miglior prezzo",
-    "allMonth": "Tutti i mesi"
-  },
-  "homeExperiences": {
-    "guidedToursTitle": "Visite guidate",
-    "guidedToursDescription": "Viaggi guidati da esperti con approfondimenti locali.",
-    "guidedToursAlt": "Meta delle visite guidate",
-    "immersiveTravelTitle": "Viaggio coinvolgente",
-    "immersiveTravelDescription": "Vivi come una persona del posto. Impara qualcosa di nuovo. Parti diversamente.",
-    "immersiveTravelAlt": "Momento culturale di viaggio immersivo",
-    "wellnessEscapesTitle": "Fughe di benessere",
-    "wellnessEscapesDescription": "Ritiri yoga, rifugi spa, viaggi consapevoli.",
-    "wellnessEscapesAlt": "Fughe di benessere in spiaggia",
-    "uniqueActivitiesTitle": "Attività uniche",
-    "uniqueActivitiesDescription": "Giri in elicottero. Lezioni di cucina. Incontri con la fauna selvatica.",
-    "uniqueActivitiesAlt": "Attività di viaggio in famiglia unica",
-    "adventureTravelTitle": "Viaggi avventurosi",
-    "adventureTravelDescription": "Montagne, barriere coralline, safari: se ti fa battere il cuore, ce l'abbiamo.",
-    "adventureTravelAlt": "Scena di montagna di viaggi avventurosi",
-    "ecoConsciousTravelTitle": "Viaggio eco-consapevole",
-    "ecoConsciousTravelDescription": "Esplora in modo responsabile. Viaggia magnificamente.",
-    "ecoConsciousTravelAlt": "Viaggio eco-consapevole nella natura",
-    "title": "Le nostre esperienze"
-  },
-  "homeGatewayAdventures": {
-    "title": "La tua porta d'accesso alle avventure in tutto il mondo",
-    "description": "Scegli la tua partenza. Imposta le tue preferenze. Filtra per umore (sì, umore). Scopri luoghi che sembrano fatti apposta per te.",
-    "lead": "Sole in Spagna? Romanticismo a Parigi? L'energia di New York? La serenità delle Maldive? Tutto a portata di mano.",
-    "previousAria": "Tour precedenti",
-    "nextAria": "Prossimi tour",
-    "tourAria": "Visualizza i dettagli del tour",
-    "addToCart": "Aggiungi al carrello",
-    "cta": "Andiamo in tournée"
-  },
-  "homeHero": {
-    "cortona": "Cortone, Italia",
-    "maldives": "Atollo di Faafu, Maldive",
-    "santorini": "Santorini, Grecia",
-    "tetons": "Teton, Wyoming",
-    "eyebrow": "Viaggia in modo più intelligente. Vagare oltre. Sorridi di più.",
-    "titleLineOne": "Andiamo da qualche parte",
-    "titleLineTwo": "Incredibile",
-    "descriptionLineOne": "Non solo un'altra piattaforma di prenotazione. Siamo il tuo passaporto per momenti indimenticabili.",
-    "descriptionLineTwo": "Voli? Alberghi? Tour epici? SÌ. E sì. E sì."
-  },
   "homePage": {
-    "hero": {
-      "label": "// SITE",
-      "title": "Build What You Imagine.",
-      "subtitle": "Launch What Matters.",
-      "description": "Custom web and digital solutions designed for individuals - fast, functional, and built with precision.",
-      "primaryCta": "Start a Project",
-      "secondaryCta": "Explore What We Build"
+    "approach": {
+      "steps": {
+        "understandingYourIdea": {
+          "title": "Comprendere la tua idea",
+          "description": "Partiamo definendo chiaramente la tua visione, i tuoi obiettivi e le tue aspettative."
+        },
+        "structuredDevelopment": {
+          "title": "Sviluppo strutturato",
+          "description": "Ogni fase è pianificata, trasparente e allineata alle tue esigenze."
+        },
+        "precisionBuild": {
+          "title": "Realizzazione precisa",
+          "description": "Ci concentriamo su codice pulito, performance elevate e funzionalità senza attriti."
+        },
+        "launchSupport": {
+          "title": "Lancio e supporto",
+          "description": "Il tuo progetto va online con supporto continuo, se necessario."
+        }
+      },
+      "label": "// APPROCCIO",
+      "title": "Il nostro approccio",
+      "cta": "Scopri come lavoriamo"
     },
-    "solutions": {
-      "label": "// SITE",
-      "title": "Digital Solutions, Designed Around You",
-      "bodyPrimary": "We create tailored digital products that fit your goals - not templates, not shortcuts. Every project is built from the ground up to deliver performance, clarity, and long-term usability.",
-      "bodySecondary": "From simple websites to complex platforms, we focus on what matters most: making your idea work seamlessly.",
-      "cta": "View Solutions"
+    "closing": {
+      "title": "Trasforma la tua idea in qualcosa di reale",
+      "description": "Trasformiamo il tuo concept in un prodotto digitale funzionante, strutturato e pronto al lancio.",
+      "cta": "Avvia il tuo progetto"
+    },
+    "hero": {
+      "label": "// SITO",
+      "title": "Costruisci ciò che immagini.",
+      "subtitle": "Lancia ciò che conta.",
+      "description": "Soluzioni web e digitali su misura per privati: veloci, funzionali e sviluppate con precisione.",
+      "primaryCta": "Avvia un progetto",
+      "secondaryCta": "Scopri cosa realizziamo"
+    },
+    "plans": {
+      "label": "// SITO",
+      "title": "Modi flessibili di collaborare",
+      "bodyPrimary": "Che tu abbia bisogno di una soluzione una tantum o di supporto continuativo allo sviluppo, offriamo modalità di collaborazione strutturate in base al tuo ambito e alle tue tempistiche.",
+      "bodySecondary": "Processo chiaro. Approccio trasparente. Nessuna complessità inutile.",
+      "cta": "Scopri i piani"
     },
     "services": {
-      "label": "// SERVICES",
-      "title": "What We Build",
-      "cta": "Discover All Solutions",
       "items": {
         "customWebsites": {
-          "title": "CUSTOM WEBSITES",
-          "description": "Tailored, responsive websites designed to reflect your vision and work seamlessly across all devices."
+          "title": "SITI WEB SU MISURA",
+          "description": "Siti web personalizzati e responsive, progettati per riflettere la tua visione e funzionare perfettamente su ogni dispositivo."
         },
         "webApplications": {
           "title": "WEB APPLICATIONS",
-          "description": "Functional, scalable platforms built to handle real interactions, logic, and user workflows."
+          "description": "Piattaforme funzionali e scalabili, progettate per gestire interazioni reali, logiche e flussi utente."
         },
         "uiUxDesign": {
           "title": "UI/UX DESIGN",
-          "description": "Clear, intuitive interfaces designed for smooth navigation and effortless user experience."
+          "description": "Interfacce chiare e intuitive, pensate per una navigazione fluida e un’esperienza d’uso naturale."
         },
         "ecommerceSolutions": {
-          "title": "E-COMMERCE SOLUTIONS",
-          "description": "Online stores built for simplicity, performance, and a seamless buying experience."
+          "title": "SOLUZIONI E-COMMERCE",
+          "description": "Store online costruiti per semplicità, performance e un’esperienza d’acquisto senza attriti."
         },
         "landingPages": {
-          "title": "LANDING PAGES",
-          "description": "Focused, conversion-driven pages designed to communicate clearly and guide user action."
+          "title": "LANDING PAGE",
+          "description": "Pagine focalizzate e orientate alla conversione, progettate per comunicare con chiarezza e guidare l’azione."
         },
         "maintenanceSupport": {
-          "title": "MAINTENANCE & SUPPORT",
-          "description": "Ongoing updates, fixes, and improvements to keep your product stable and up to date."
+          "title": "MANUTENZIONE E SUPPORTO",
+          "description": "Aggiornamenti, correzioni e miglioramenti continui per mantenere il tuo prodotto stabile e aggiornato."
         }
-      }
+      },
+      "label": "// SERVIZI",
+      "title": "Cosa realizziamo",
+      "cta": "Scopri tutte le soluzioni"
     },
-    "approach": {
-      "label": "// APPROACH",
-      "title": "Our Approach",
-      "cta": "See How We Work",
-      "steps": {
-        "understandingYourIdea": {
-          "title": "Understanding Your Idea",
-          "description": "We start by defining your vision, goals, and expectations."
-        },
-        "structuredDevelopment": {
-          "title": "Structured Development",
-          "description": "Every step is planned, transparent, and aligned with your needs."
-        },
-        "precisionBuild": {
-          "title": "Precision Build",
-          "description": "We focus on clean code, strong performance, and seamless functionality."
-        },
-        "launchSupport": {
-          "title": "Launch & Support",
-          "description": "Your project goes live - with ongoing support if needed."
-        }
-      }
-    },
-    "plans": {
-      "label": "// SITE",
-      "title": "Flexible Ways to Collaborate",
-      "bodyPrimary": "Whether you need a one-time solution or ongoing development support, we offer structured engagement options tailored to your scope and timeline.",
-      "bodySecondary": "Clear process. Transparent approach. No unnecessary complexity.",
-      "cta": "Check Plans"
-    },
-    "work": {
-      "label": "// WORK",
-      "cards": {
-        "selectedWork": {
-          "title": "Selected Work",
-          "description": "Every project reflects a different idea, a different challenge, and a different solution. We focus on delivering results that are both functional and refined."
-        },
-        "insights": {
-          "title": "Insights",
-          "description": "Thoughts, ideas, and perspectives on development, design, and digital solutions - simplified and relevant."
-        }
-      }
+    "solutions": {
+      "label": "// SITO",
+      "title": "Soluzioni digitali progettate intorno a te",
+      "bodyPrimary": "Creiamo prodotti digitali su misura in linea con i tuoi obiettivi, senza template e senza scorciatoie. Ogni progetto nasce da zero per offrire performance, chiarezza e usabilità nel lungo periodo.",
+      "bodySecondary": "Da siti semplici a piattaforme complesse, ci concentriamo su ciò che conta davvero: far funzionare la tua idea in modo fluido.",
+      "cta": "Vedi le soluzioni"
     },
     "why": {
-      "label": "// SITE",
-      "title": "Why Netspire Dev?",
-      "cta": "Check Plans",
-      "panelTitle": "NETSPIRE DEV",
       "items": {
-        "builtAroundIdea": "Built around your idea - not pre-made templates",
-        "cleanScalable": "Clean, modern, and scalable development",
-        "structuredWorkflow": "Clear communication and structured workflow",
-        "performanceUsability": "Focus on performance and usability",
-        "designedForIndividuals": "Designed for individuals, not just businesses"
-      }
+        "builtAroundIdea": "Costruito intorno alla tua idea, non su template predefiniti",
+        "cleanScalable": "Sviluppo pulito, moderno e scalabile",
+        "structuredWorkflow": "Comunicazione chiara e workflow strutturato",
+        "performanceUsability": "Focus su performance e usabilità",
+        "designedForIndividuals": "Pensato per privati, non solo per aziende"
+      },
+      "label": "// SITO",
+      "title": "Perché Netspire Dev?",
+      "cta": "Scopri i piani",
+      "panelTitle": "NETSPIRE DEV"
     },
-    "closing": {
-      "title": "Turn Your Idea Into Something Real",
-      "description": "Let's turn your concept into a working digital product - structured, functional, and ready to launch.",
-      "cta": "Get in Touch"
-    }
-  },
-  "homeNextStory": {
-    "cityMadrid": "Madrid",
-    "countrySpain": "Spagna",
-    "altMadrid": "Architettura della città di Madrid",
-    "cityParis": "Parigi",
-    "countryFrance": "Francia",
-    "altParis": "Statua del ponte d'oro di Parigi",
-    "cityNewYork": "New York",
-    "countryUSA": "Stati Uniti",
-    "altNewYork": "Grattacieli di New York",
-    "cityCairo": "Il Cairo",
-    "countryEgypt": "Egitto",
-    "altCairo": "Paesaggio desertico del Cairo",
-    "title": "La tua prossima storia inizia qui",
-    "descriptionLine1": "Il mondo è grande. Le tue opzioni per le vacanze? Ancora più grande.",
-    "descriptionLine2": "Organizziamo qualcosa di indimenticabile.",
-    "descriptionSmall": "Inizia il tuo viaggio oggi.",
-    "cta": "Scopri nuove destinazioni",
-    "previousAria": "Destinazioni precedenti",
-    "nextAria": "Prossime destinazioni",
-    "viewAria": "Visualizza destinazione"
-  },
-  "homeReadyChapter": {
-    "title": "Pronto per il tuo prossimo capitolo?",
-    "subtitle": "Gestiamo i dettagli. Tu vivi la storia.",
-    "stepOne": "Cerca voli, soggiorni e tour selezionati in pochi secondi.",
-    "stepTwo": "Scegli la destinazione dei tuoi sogni: ci occuperemo della logistica.",
-    "bottomCopy": "Tu porti l'eccitazione. Portiamo le prenotazioni!",
-    "passengerLabel": "passeggero",
-    "passengerLabelPlural": "passeggeri",
-    "guestLabel": "ospite",
-    "guestLabelPlural": "ospiti",
-    "tabFlights": "Voli",
-    "tabHotels": "Alberghi",
-    "originPlaceholder": "Paese d'origine",
-    "originLabel": "Paese d'origine",
-    "destinationPlaceholder": "Destinazione",
-    "destinationLabel": "Paese di destinazione",
-    "departDateLabel": "Data di partenza",
-    "returnDateLabel": "Data di ritorno",
-    "increasePassengers": "Aumentare i passeggeri",
-    "decreasePassengers": "Diminuire i passeggeri",
-    "searchNow": "Cerca ora",
-    "hotelDestinationPlaceholder": "Destinazione",
-    "hotelDestinationLabel": "Destinazione alberghiera",
-    "checkInLabel": "Data di arrivo",
-    "checkOutLabel": "Data di partenza",
-    "increaseGuests": "Aumenta gli ospiti",
-    "decreaseGuests": "Diminuire gli ospiti"
-  },
-  "homeTravellersChoose": {
-    "seamlessTitle": "Prenotazione semplice di voli, hotel e tour",
-    "destinationsTitle": "Destinazioni selezionate con cura in Europa, Asia, Americhe e oltre",
-    "toolsTitle": "Strumenti di pianificazione intuitivi che hanno davvero senso",
-    "partnersTitle": "Partnership sicure con i leader dei viaggi globali",
-    "backgroundAlt": "Sfondo paesaggio montano",
-    "title": "I viaggiatori scelgono Travellio Global",
-    "description": "Il viaggio dovrebbe essere emozionante, non complicato. Lo rendiamo semplice, così puoi concentrarti sull'avventura.",
-    "tagline": "Lo sogni. Lo mappiamo."
-  },
-  "homeWhatWeDo": {
-    "featureOneTitle": "Avventure memorabili",
-    "featureOneDescription": "Dalle coste turchesi alle vivaci luci della città: curiamo viaggi che sembrano storie che vale la pena raccontare.",
-    "featureTwoTitle": "Viaggi stimolanti",
-    "featureTwoDescription": "Antiche rovine. Vicoli segreti. Acque cristalline. Il tuo rullino fotografico sta per fare gli straordinari.",
-    "featureThreeTitle": "Esperienze di viaggio personalizzate",
-    "featureThreeDescription": "Non nello \"standard\"? Bene. Personalizziamo i viaggi che corrispondono alla tua atmosfera, al tuo budget e alla tua lista dei desideri.",
-    "imageAlt": "Paesaggio montano",
-    "title": "Cosa sappiamo fare meglio",
-    "caption": "Viaggio, aggiornato."
-  },
-  "homeWhyExplore": {
-    "varietyTitle": "Varietà senza sopraffazione",
-    "varietyDescription": "Migliaia di opzioni, organizzate in modo intelligente.",
-    "varietyAlt": "Icona dell'isola",
-    "supportTitle": "Supporto che si presenta",
-    "supportDescription": "Assistenza reale quando ne hai bisogno.",
-    "supportAlt": "Icona del salvagente",
-    "luxuryTitle": "Il lusso a portata di mano",
-    "luxuryDescription": "Prezzi competitivi. Offerte di viaggio esclusive.",
-    "luxuryAlt": "Icona della barca a vela",
-    "secureTitle": "Sicuro e protetto",
-    "secureDescription": "Collaboriamo con fornitori di viaggi globali di fiducia.",
-    "secureAlt": "Icona di controllo del sigillo",
-    "title": "Perché esplorare con noi?"
-  },
-  "aboutPage": {
-    "ctaTitle": "Unisciti a noi nella tua prossima avventura!",
-    "ctaLineOne": "Pronto a scoprire la tua prossima avventura?",
-    "ctaLineTwo": "Travellio Global offre esperienze di viaggio personalizzate per ogni tipo di esploratore.",
-    "ctaNote": "Realizziamo i tuoi sogni di viaggio!",
-    "ctaButton": "Esplora i nostri tour",
-    "title": "Circa",
-    "journeyAlt": "Paesaggio montano per il tuo viaggio",
-    "journeyTitle": "Il tuo viaggio,\nLa nostra passione",
-    "journeyDescriptionOne": "Noi di Travellio Global crediamo che il viaggio non sia solo una questione di destinazione: riguarda le esperienze, i momenti e i ricordi che crei lungo il percorso.",
-    "journeyDescriptionTwo": "Fondati con la missione di rendere i viaggi fluidi, emozionanti e indimenticabili, ci dedichiamo ad aiutarti a scoprire il mondo in un modo che si adatti al tuo stile di vita e alle tue passioni.",
-    "promiseCustomerCareTitle": "Assistenza clienti",
-    "promiseCustomerCareDescription": "Non offriamo solo viaggi: offriamo esperienze. Il nostro team di assistenza clienti è sempre pronto ad aiutare con qualsiasi domanda, assicurando che il tuo viaggio sia fluido e senza stress.",
-    "promiseSustainableTitle": "Viaggi sostenibili",
-    "promiseSustainableDescription": "Abbiamo a cuore il mondo che esploriamo, ecco perché diamo priorità alle opzioni di viaggio eco-consapevoli che aiutano a preservare le destinazioni che amiamo.",
-    "promiseMemoriesTitle": "Ricordi che durano",
-    "promiseMemoriesDescription": "Ogni viaggio con Travellio Global è più di una vacanza: è un'opportunità per esplorare, scoprire e immergersi in nuove culture ed esperienze indimenticabili.",
-    "promiseTitle": "La nostra promessa per te",
-    "visionAlt": "Veduta paesaggistica che riflette la visione di Travellio",
-    "visionTitle": "La nostra visione",
-    "visionDescription": "Creare un mondo in cui il viaggio non sia solo un servizio, ma un’opportunità per arricchire la vita, esplorare nuovi orizzonti e favorire connessioni più profonde tra persone e luoghi.",
-    "whyBookingTitle": "Prenotazione senza intoppi, viaggio senza sforzo",
-    "whyBookingDescription": "Sappiamo che il tempo è prezioso, quindi abbiamo semplificato il processo di prenotazione: voli, hotel, tour e altro ancora, tutto in un unico posto. Pianifica il tuo viaggio con facilità e dedica più tempo alla creazione di ricordi.",
-    "whyBookingAlt": "Viaggiatori che effettuano il check-in al banco di un hotel",
-    "whyGlobalTitle": "Accesso globale, su misura per te",
-    "whyGlobalDescription": "Dalle coste assolate della Spagna alle affollate strade di Tokyo, le nostre destinazioni accuratamente selezionate ti danno accesso al meglio che il mondo ha da offrire, con opzioni per ogni tipo di viaggiatore.",
-    "whyGlobalAlt": "Viaggiatore che guarda fuori dal finestrino di un aereo",
-    "whyCuratedTitle": "Esperienze selezionate con cura e curate con cura",
-    "whyCuratedDescription": "Perché accontentarsi dell'ordinario? Che tu stia cercando un rilassante rifugio benessere, un'avventura piena di adrenalina o un'esperienza culturale coinvolgente, offriamo tour e attività su misura per te.",
-    "whyCuratedAlt": "Donna che si rilassa durante un'esperienza panoramica al tramonto",
-    "whyExpertTitle": "Tour guidati da esperti e\nApprofondimenti locali",
-    "whyExpertDescription": "Le nostre guide sono più che semplici esperti; sono gente del posto appassionata pronta a condividere le gemme nascoste, le meraviglie culturali, le storie non raccontate e le intuizioni uniche di ogni vibrante destinazione.",
-    "whyExpertAlt": "Visita guidata di gruppo in una città storica",
-    "whyTitle": "Perché sceglierci?"
-  },
-  "bikesPage": {
-    "ctaTitle": "Avviare il motore. Il mondo attende.",
-    "ctaTextOne": "Che si tratti di una rilassante pedalata in riva al mare, di un giro in autostrada ad alta velocità o di una fuga fuoristrada in quad, Travellio Global mette l'avventura nelle tue mani.",
-    "ctaTextTwo": "Pronti a partire?",
-    "searchPickupLabel": "Inserisci la città di ritiro",
-    "searchDropoffLabel": "Inserisci la città di riconsegna",
-    "searchSameReturn": "Lascia l'auto in un luogo diverso",
-    "searchPickupDateLabel": "Data di ritiro",
-    "searchPickupTimeLabel": "Orario di ritiro",
-    "searchDropoffDateLabel": "Data di riconsegna",
-    "searchDropoffTimeLabel": "Orario di riconsegna",
-    "searchButton": "Cerca",
-    "experienceCustomisedTitle": "Esperienza di guida personalizzata",
-    "experienceCustomisedLead": "Il tuo viaggio è unico: anche la tua corsa dovrebbe esserlo.",
-    "experienceCustomisedSubtitle": "Scegli tra:",
-    "experienceCustomisedList1": "Modelli urban-friendly",
-    "experienceCustomisedList2": "Moto da turismo",
-    "experienceCustomisedList3": "Biciclette sportive",
-    "experienceCustomisedList4": "Incrociatori confortevoli",
-    "experienceCustomisedFoot": "Sono disponibili attrezzature opzionali, inclusi caschi e supporto per la navigazione, così puoi concentrarti sulla strada da percorrere.",
-    "experienceSpeedTitle": "Esplora alla tua velocità",
-    "experienceSpeedLead": "Dimentica gli orari. Dimentica i tour affollati.",
-    "experienceSpeedSubtitle": "Con un bicicletta, decidi:",
-    "experienceSpeedList1": "Quando fermarsi",
-    "experienceSpeedList2": "A chi rivolgersi",
-    "experienceSpeedList3": "Quanto lontano andare",
-    "experienceSpeedFoot": "Scopri villaggi tranquilli, strade costiere panoramiche, passi di montagna e vivaci quartieri cittadini, tutto alle tue condizioni.",
-    "heroTitle": "Noleggio biciclette con Travellio Global",
-    "heroTextOne": "Alcuni viaggi sono pensati per essere guidati. Altri sono pensati per essere cavalcati.",
-    "heroTextTwo": "Con Travellio Global Bike Rentals, vivi le destinazioni da vicino: vento tra i capelli, libertà in ogni curva e avventura dietro ogni angolo.",
-    "heroTextThree": "Dalle strade cittadine alle autostrade costiere, la tua corsa ti aspetta.",
-    "rulesTitle": "La tua strada. Le tue regole.",
-    "rulesTextOne": "Avvia il tuo motore in pochi clic.",
-    "rulesTextTwo": "Seleziona:",
-    "rulesListOne": "Luogo di ritiro",
-    "rulesListTwo": "Date di noleggio",
-    "rulesListThree": "Opzioni di reso flessibili",
-    "rulesTextThree": "Vuoi restituire la tua bicicletta in un luogo diverso? Nessun problema. La libertà a senso unico fa parte dell'avventura.",
-    "styleBicycleTitle": "Noleggio biciclette",
-    "styleBicycleDescription": "Perfetto per percorsi urbani panoramici, gite lungo la costa e per scoprire strade nascoste al tuo ritmo.",
-    "styleMotorcycleTitle": "Noleggio moto",
-    "styleMotorcycleDescription": "Da classici incrociatori a moto sportive — costruite per adrenalinici e esploratori di lunga percorrenza.",
-    "styleQuadTitle": "Noleggio quad",
-    "styleQuadDescription": "Vivi l'avventura fuoristrada ed esplora paesaggi oltre i sentieri asfaltati.",
-    "stylesTitle": "Scegli il tuo stile di guida",
-    "whyGlobalTitle": "Sedi nel mondo",
-    "whyGlobalDescription": "Disponibile nelle principali città e nei punti caldi dell'avventura.",
-    "whySupportTitle": "Resi flessibili",
-    "whySupportDescription": "Ritira qui. Scendi lì.",
-    "whyFlexibleTitle": "Partner affidabili",
-    "whyFlexibleDescription": "Veicoli ben mantenuti e fornitori professionali.",
-    "whyTrustTitle": "Libertà garantita",
-    "whyTrustDescription": "Perché a volte conta più il viaggio della destinazione.",
-    "whyTitle": "Perché viaggiare con Travellio Global?"
-  },
-  "carsPage": {
-    "ctaTitle": "Fino al 50% di sconto sui noleggi Premium",
-    "ctaSubtitleOne": "Perché pagare di più quando puoi guidare in modo più intelligente?",
-    "ctaSubtitleTwo": "Approfitta di tariffe competitive su un'ampia selezione di veicoli, dalle city car compatte alle berline di lusso e ai SUV spaziosi. Che si tratti di una fuga nel fine settimana o di una lunga avventura su strada, ti aiutiamo a risparmiare senza compromettere il comfort.",
-    "pickupPlaceholder": "Inserisci il luogo di ritiro",
-    "pickupLabel": "Luogo di ritiro",
-    "dropoffPlaceholder": "Inserisci il luogo di riconsegna",
-    "dropoffLabel": "Luogo di riconsegna",
-    "differentDropoff": "Lascia l'auto in un luogo diverso",
-    "pickupDateLabel": "Data di ritiro",
-    "pickupTimeLabel": "Orario di ritiro",
-    "dropoffDateLabel": "Data di riconsegna",
-    "dropoffTimeLabel": "Orario di riconsegna",
-    "searchButton": "Cerca",
-    "engineStep1": "Inserisci il luogo di ritiro",
-    "engineStep2": "Scegli il tuo punto di riconsegna.",
-    "engineStep3": "Seleziona le date del tuo viaggio.",
-    "engineStep4": "Premi Cerca - e inizia l'avventura.",
-    "engineTitle": "Avvia il tuo motore",
-    "engineSubtitle": "La pianificazione è semplice:",
-    "engineNoteOne": "Hai bisogno di lasciare l'auto da qualche altra parte? Nessun problema.",
-    "engineNoteTwo": "Noleggi unidirezionali? Assolutamente.",
-    "globeLondon": "Londra",
-    "globeBarcelona": "Barcellona",
-    "globeRome": "Roma",
-    "globeParis": "Parigi",
-    "globeDubai": "Dubai",
-    "globeToronto": "Toronto",
-    "globeTitle": "Guida in tutto il mondo",
-    "globeSubtitle": "Ovunque atterrerai, ti aiuteremo a rotolare. Trova la tua auto perfetta in:",
-    "globeMore": "E molte altre destinazioni in tutto il mondo.",
-    "globeMoreDesc": "Dal fascino europeo agli skyline del Medio Oriente, dalle autostrade nordamericane alle coste delle isole, le tue ruote ti aspettano.",
-    "heroTitle": "Automobili",
-    "heroSubtitle": "Guida il mondo a modo tuo",
-    "heroDescriptionOne": "L'avventura non inizia sempre in aeroporto. A volte tutto inizia al volante.",
-    "heroDescriptionTwo": "Con Travellio Global, puoi noleggiare l'auto perfetta ovunque ti porti il tuo viaggio, dalle vivaci strade cittadine alle pittoresche autostrade costiere. Flessibile, affidabile e pronto quando lo sei tu.",
-    "roadTitle": "Mettiti in viaggio con Travellio Global",
-    "roadSubtitleOne": "La mappa è completamente aperta.",
-    "roadSubtitleTwo": "Dove guideremo prima?",
-    "termsCityTitle": "Incrociatori urbani",
-    "termsCitySubtitle": "per l'esplorazione urbana",
-    "termsSuvTitle": "SUV e 4x4",
-    "termsSuvSubtitle": "per strade di montagna e paesaggi selvaggi",
-    "termsPremiumTitle": "Modelli premium",
-    "termsPremiumSubtitle": "per arrivi con stile",
-    "termsFamilyTitle": "Veicoli adatti alle famiglie",
-    "termsFamilySubtitle": "per comodi viaggi di gruppo",
-    "termsTitle": "Viaggia alle tue condizioni",
-    "termsSubtitle": "Il tuo viaggio. Il tuo ritmo. Il tuo veicolo.",
-    "whyGlobalTitle": "Accesso globale",
-    "whyGlobalDesc": "Auto disponibili nelle principali città e destinazioni iconiche in tutto il mondo.",
-    "whyFlexibleTitle": "Ritiro flessibile",
-    "whyFlexibleDesc": "Ritira qui. Scendi lì. Viaggia senza limiti.",
-    "whySmartTitle": "Offerte intelligenti",
-    "whySmartDesc": "Prezzi competitivi e offerte di noleggio esclusive.",
-    "whyFreedomTitle": "Libertà di esplorare",
-    "whyFreedomDesc": "Scopri strade nascoste, spiagge segrete e luoghi che i tour non possono raggiungere.",
-    "whyTitle": "Perché noleggiare con Travellio Global?"
-  },
-  "contactsPage": {
-    "closingTitle": "Siamo qui per te",
-    "closingLine1": "Grande viaggio o piccola domanda: manca solo un messaggio.",
-    "closingLine2": "Organizziamo qualcosa di indimenticabile.",
-    "cardTravel": "Ispirazione di viaggio",
-    "cardDestination": "Punti salienti della destinazione",
-    "cardOffers": "Offerte esclusive",
-    "cardTips": "Consigli utili",
-    "stayConnectedTitle": "Rimani connesso",
-    "stayConnectedSubtitle": "Segui Travellio Global sui social media per:",
-    "getInTouchTitle": "Mettiti in contatto con Travellio Global",
-    "getInTouchSubtitle": "I grandi viaggi iniziano con grandi conversazioni.",
-    "heroTitle": "Parla di viaggi con noi",
-    "heroSubtitle": "Domande? Idee? Sogni di viaggio in attesa di realizzarsi? Ci piacerebbe sentire la tua opinione.",
-    "heroDescription": "Se hai bisogno di aiuto con una prenotazione, desideri una guida per la tua prossima avventura o semplicemente hai qualcosa da condividere, il nostro team è pronto ad aiutarti.",
-    "callUsTitle": "Chiamaci",
-    "emailUsTitle": "Inviaci un'e-mail",
-    "registeredAddressTitle": "Indirizzo registrato",
-    "officeAddressTitle": "Indirizzo dell'ufficio"
-  },
-  "eventsPage": {
-    "ctaTitle": "Trasforma il tuo viaggio in una storia",
-    "ctaTextOne": "Chiunque può visitare una città. Pochi la vivono davvero dal vivo.",
-    "ctaTextTwo": "Aggiungi un evento al tuo viaggio e trasformalo in qualcosa di straordinario.",
-    "ctaTextThree": "Pronto a prendere posto?",
-    "heroTitle": "Vivi il momento",
-    "heroTextOne": "Viaggiare non significa solo luoghi. Significa esperienze.",
-    "heroTextTwo": "Dai concerti di livello mondiale ai festival culturali, dalle prime teatrali ai grandi eventi sportivi — Travellio Global ti connette ai momenti che rendono una destinazione indimenticabile.",
-    "heroTextThree": "I viaggi migliori hanno sempre un pizzico di magia.",
-    "interestsConcertsTitle": "Concerti dal vivo",
-    "interestsTheatreTitle": "Teatro e arti performative",
-    "interestsSportsTitle": "Grandi eventi sportivi",
-    "interestsExhibitionsTitle": "Mostre ed esperienze immersive",
-    "interestsTitle": "Something for Every Passion",
-    "interestsSubtitle1": "We curate events designed to elevate your travel experience.",
-    "interestsSubtitle2": "Whether you’re into:",
-    "introTitle": "Entra sotto i riflettori",
-    "introTextOne": "Senti l’energia del pubblico dal vivo.",
-    "introTextTwo": "Assisti a performance che restano con te anche molto dopo che il sipario è calato.",
-    "introTextThree": "Ti aiutiamo a scoprire e prenotare biglietti per eventi nelle città di tutto il mondo — senza sforzo.",
-    "searchTitle": "Trova eventi che ti emozionano",
-    "searchTextOne": "Cerchi qualcosa di specifico? O sei pronto a lasciarti ispirare?",
-    "searchTextTwo": "La nostra piattaforma ti permette di cercare per:",
-    "searchListOne": "Data",
-    "searchListTwo": "Località",
-    "searchListThree": "Artista o performer",
-    "searchListFour": "Categoria",
-    "searchTextThree": "Dai piccoli spettacoli locali alle performance di fama internazionale — il tuo evento perfetto è a pochi clic di distanza.",
-    "searchPlaceholder": "Cerca per artista, squadra, evento, ecc...",
-    "searchButton": "Cerca",
-    "whyGlobalTitle": "Accesso globale",
-    "whyGlobalDescription": "Eventi nelle principali città e nelle destinazioni iconiche.",
-    "whyCuratedTitle": "Selezione curata",
-    "whyCuratedDescription": "Esperienze selezionate a mano che valgono il tuo tempo.",
-    "whyBookingTitle": "Prenotazione digitale semplice",
-    "whyBookingDescription": "Veloce, sicura e comoda.",
-    "whyTravelPartyTitle": "Viaggio + divertimento insieme",
-    "whyTravelPartyDescription": "Organizza voli e notti indimenticabili — tutto in un unico posto.",
-    "whyTitle": "Perché prenotare eventi con Travellio Global?"
-  },
-  "excursionPage": {
-    "ctaTitle": "Inizia la tua avventura oggi",
-    "ctaSubtitle": "Perché aspettare la vacanza dei tuoi sogni? Facciamo in modo che accada.",
-    "ctaDescription": "Scegli tra le nostre escursioni selezionate e preparati a vivere il mondo in modi di cui parlerai negli anni a venire.",
-    "ctaButton": "Andiamo ad esplorare!",
-    "regionEurope": "Europa",
-    "destFrance": "Francia",
-    "destFranceDesc": "Dalla Torre Eiffel alle gemme nascoste della campagna.",
-    "destSpain": "Spagna",
-    "destSpainDesc": "Paella a Barcellona, degustazione di vini a Montserrat.",
-    "destIceland": "Islanda",
-    "destIcelandDesc": "Vulcani, ghiacciai e l'aurora boreale: l'Islanda come non l'hai mai vista.",
-    "destUK": "Regno Unito",
-    "destUKDesc": "Highlands scozzesi e avventure cinematografiche nel Regno Unito.",
-    "regionAsia": "Asia",
-    "destSouthKorea": "Corea del Sud",
-    "destSouthKoreaDesc": "Esplora la bellezza moderna di Seoul e la storia della DMZ.",
-    "destJapan": "Giappone",
-    "destJapanDesc": "Dai templi di Kyoto alle luci al neon di Osaka.",
-    "destBali": "Bali",
-    "destBaliDesc": "Scopri avventure vulcaniche, giungle lussureggianti e spiagge serene.",
-    "regionAmericas": "Le Americhe",
-    "destUSA": "Stati Uniti",
-    "destUSADesc": "Fai snorkeling a Oahu, esplora New York e molto altro!",
-    "destDominican": "Repubblica Dominicana",
-    "destDominicanDesc": "Spedizioni nella giungla e relax sulla spiaggia a Punta Cana.",
-    "destPeru": "Perù",
-    "destPeruDesc": "Viaggio attraverso valli sacre e antiche meraviglie.",
-    "destBahamas": "Bahamas",
-    "destBahamasDesc": "Nuota con i maiali, rilassati su spiagge perfette e tuffati in acque cristalline.",
-    "regionMiddleEast": "Medio Oriente",
-    "destUAE": "Emirati Arabi Uniti",
-    "destUAEDesc": "Immergiti nel lusso di Dubai e nel suo iconico skyline.",
-    "regionOceania": "Oceania e Isole del Pacifico",
-    "destMaldives": "Maldive",
-    "destMaldivesDesc": "Fai snorkeling con i delfini, rilassati sui banchi di sabbia privati e vivi il sogno.",
-    "destAruba": "Aruba",
-    "destArubaDesc": "Naviga lungo la costa, esplora calette nascoste e scopri la bellezza selvaggia dell'isola.",
-    "destTenerife": "Tenerife",
-    "destTenerifeDesc": "Osservazione delle balene e tour oceanici ecologici alle Isole Canarie.",
-    "exploreTitle": "Esplora le nostre escursioni globali",
-    "heroTitle": "Escursioni",
-    "heroSubtitle": "Escursioni come nessun altro",
-    "heroDescriptionOne": "Pronto a vivere il mondo a un livello completamente nuovo? A Travellio Global non offriamo solo escursioni; offriamo avventure che ti collegano con il cuore e l'anima di ogni destinazione.",
-    "heroDescriptionTwo": "Scoprindo le gemme nascoste di Parigi o ammirando i panorami mozzafiato di Bali, le nostre esperienze sapientemente realizzate sono progettate per lasciarti a bocca aperta e far durare i tuoi ricordi per tutta la vita.",
-    "whyGlobalTitle": "Avventure globali",
-    "whyGlobalDescription": "Dalle soleggiate Maldive ai maestosi paesaggi islandesi, abbiamo l'escursione dei tuoi sogni che ti aspetta in destinazioni iconiche e sottovalutate in tutto il mondo.",
-    "whyLocalTitle": "Guidato dal locale",
-    "whyLocalDescription": "Le nostre guide sono persone del posto con conoscenze privilegiate, pronte a portarti oltre i soliti luoghi turistici e mostrarti i luoghi che rendono ogni destinazione indimenticabile.",
-    "whyTailoredTitle": "Su misura per te",
-    "whyTailoredDescription": "Che tu sia alla ricerca di un'avventura adrenalinica o di un rilassante viaggio culturale, le nostre escursioni sono progettate per adattarsi alla tua atmosfera e avvicinarti a ciò che rende speciale ogni luogo.",
-    "whyTitle": "Perché scegliere le nostre escursioni?",
-    "packYourBags": "Pack Your Bags!"
-  },
-  "flightsPage": {
-    "ctaTitle": "Prenota oggi il tuo prossimo volo",
-    "ctaDescriptionOne": "Pronto a decollare?",
-    "ctaDescriptionTwo": "Lascia che Travellio Global trovi le migliori opzioni di volo per la tua prossima avventura. Semplifichiamo la prenotazione del tuo viaggio e rendiamo ancora più semplice innamorarsi dei luoghi che visiterai.",
-    "ctaDescriptionThree": "Inizia oggi a pianificare il tuo viaggio e lascia che il mondo sia la tua ostrica!",
-    "featuredTitle": "Viaggio aereo senza sforzo",
-    "featuredDescription": "Rendiamo la prenotazione dei voli semplice e senza stress. Volando in tutto il mondo o semplicemente facendo un salto veloce in una città vicina, offriamo voli convenienti per destinazioni in tutto il mondo.",
-    "featuredPointFlexible": "Date flessibili: modifica i tuoi programmi di viaggio secondo necessità.",
-    "featuredPointGlobal": "Destinazioni globali: voli per Europa, Asia, Americhe e oltre.",
-    "featuredPointEasy": "Facile e veloce: abbiamo semplificato il processo così potrai volare in pochissimo tempo!",
-    "globalAdventuresTitle": "Il tuo biglietto per avventure globali",
-    "globalAdventuresLead": "Non lasciare che il prezzo ti impedisca di scoprire il mondo.",
-    "globalAdventuresDescription": "A Travellio Global, forniamo offerte di voli esclusive che ti aiutano a raggiungere la destinazione dei tuoi sogni a un prezzo inferiore. Non importa dove vuoi andare, la nostra piattaforma garantisce che i viaggi aerei convenienti siano a portata di clic.",
-    "globalAdventuresPointExclusiveTitle": "Offerte esclusive",
-    "globalAdventuresPointExclusive": " Risparmia sui voli con offerte speciali e sconti.",
-    "globalAdventuresPointGlobalTitle": "Portata globale",
-    "globalAdventuresPointGlobal": "Voli per tutte le principali città e gemme nascoste in tutto il mondo.",
-    "globalAdventuresPointDreamTitle": "Destinazioni da sogno",
-    "globalAdventuresPointDream": "Che si tratti delle spiagge delle Maldive o della storia di Parigi, abbiamo opzioni adatte alla tua voglia di viaggiare.",
-    "heroTitle": "Voli",
-    "heroHeadline": "Il limite è il cielo: prenota subito il tuo volo",
-    "heroDescription": "Inizia la tua avventura con un volo adatto al tuo budget. Pianificando un weekend spontaneo o una vacanza da sogno, siamo qui per aiutarti a trovare le migliori offerte per i tuoi viaggi. Inserisci semplicemente la città di partenza, la destinazione e le date del viaggio e lasciaci fare il duro lavoro di trovarti le opzioni più convenienti.",
-    "heroTagline": "Viaggia in modo più intelligente, non più difficile.",
-    "journeyTitle": "Personalizza il tuo viaggio",
-    "journeySubtitle": "Il tuo volo, a modo tuo.",
-    "journeyDescription": "Offriamo opzioni di ricerca flessibili per personalizzare la tua esperienza di viaggio. Cerchi un biglietto di sola andata, un viaggio di andata e ritorno o un volo diretto, puoi personalizzare la tua ricerca in base alle tue esigenze.",
-    "journeyPointRoundTrip": "Solo andata o andata e ritorno: scegli cosa funziona meglio per il tuo viaggio.",
-    "journeyPointNonStop": "Voli Non-Stop: Per chi vuole arrivare a destinazione il più velocemente possibile.",
-    "journeyPointFlexible": "Date flessibili: modifica i tuoi piani con facilità, senza stress.",
-    "mobilePromoTitle": "La tua prossima destinazione ti aspetta",
-    "mobilePromoDescription": "Pronti a tuffarvi in nuove avventure? Esplora il nostro elenco curato di luoghi entusiasmanti e inizia a pianificare il tuo prossimo viaggio oggi!"
-  },
-  "forgotPasswordPage": {
-    "heroTitle": "Password dimenticata?",
-    "heroSubtitle": "Inserisci il tuo nome utente o indirizzo email e ti invieremo un collegamento sicuro per impostare una nuova password.",
-    "identifierError": "Ops! Quell'e-mail non corrisponde ai nostri record.",
-    "identifierLabel": "Nome utente o e-mail",
-    "identifierPlaceholder": "Inserisci il tuo nome utente o indirizzo email",
-    "resettingPassword": "Reimpostazione della password...",
-    "resetPassword": "Reimposta password"
-  },
-  "insurancePage": {
-    "audience1Title": "Avventurieri internazionali",
-    "audience2Title": "Viaggiatori di piacere",
-    "audience3Title": "Famiglie con bambini",
-    "audience4Title": "Viaggiatori d'affari",
-    "audience5Title": "Esploratori di lunga durata e multinazionali",
-    "audience6Title": "Coloro che cercano una tutela sanitaria estesa",
-    "audienceTitle": "Per chi è?",
-    "coverage1Title": "Spese mediche d'urgenza",
-    "coverage2Title": "Trasporto verso strutture sanitarie",
-    "coverage3Title": "Interruzione del viaggio",
-    "coverage4Title": "Interruzioni del viaggio",
-    "coverage5Title": "Famiglie che viaggiano insieme",
-    "coverage6Title": "Viaggiatori incinte",
-    "coverageTitle": "Una copertura che si muove con te",
-    "coverageSubtitle": "Reisen ist nicht alles-in-eins-passt — und Ihre Versicherung sollte es auch nicht sein. Von Reisetrips mit Visum bis hin zu spontanen Flügen helfen wir Ihnen, intelligenter zu reisen.",
-    "coverageSubtitleTwo": "I nostri piani possono includere protezione per:",
-    "ctaTitle": "Avventura coraggiosamente. Ti abbiamo coperto.",
-    "ctaDescriptionOne": "Poiché i ricordi più belli accadono quando ti senti abbastanza sicuro da goderteli appieno.",
-    "ctaDescriptionTwo": "Viaggia lontano. Viaggia in modo intelligente.",
-    "ctaDescriptionThree": "Viaggia protetto con Travellio Global.",
-    "heroTitle": "Assicurazione progettata per avventure reali",
-    "heroDescriptionOne": "L'avventura è emozionante. Imprevisti imprevisti? Non proprio.",
-    "heroDescriptionTwo": "Con Travellio Global Travel Insurance, puoi esplorare il mondo sapendo che sei coperto. Da brevi viaggi cittadini a viaggi di lunga percorrenza, aiutiamo a proteggere ciò che conta di più — la tua salute, i tuoi piani e la tua tranquillità.",
-    "introBullet1": "Pianificare un viaggio rilassante",
-    "introBullet2": "Partire per un'avventura internazionale",
-    "introBullet3": "Viaggiare per affari",
-    "introBullet4": "Esplorare con la famiglia",
-    "introTitle": "Il tuo affidabile compagno di viaggio",
-    "introLead": "La nostra assicurazione di viaggio è pensata per gli avventurieri moderni.",
-    "introListLead": "Che tu sia:",
-    "introClosing": "Forniamo una copertura progettata per supportarti lungo il percorso. Adatta per viaggiatori di età compresa tra i 3 e i 85, in diverse destinazioni in tutto il mondo.",
-    "reassuranceBullet1": "Iscrizione online rapida",
-    "reassuranceBullet2": "Facile accesso ai documenti",
-    "reassuranceBullet3": "Processo di reclamo semplificato",
-    "reassuranceBullet4": "Dettagli di copertura trasparenti",
-    "reassuranceTitle": "Configurazione semplice. Rassicurazione immediata.",
-    "reassuranceLead": "Manteniamo le cose chiare e dirette.",
-    "reassuranceDescriptionOne": "Nessuna documentazione complicata. Nessuna stampa fine confusa.",
-    "reassuranceDescriptionTwo": "Solo una protezione affidabile, pronta quando lo sei tu.",
-    "why1Title": "Portata globale",
-    "why1Description": "Copertura pensata per i viaggi in tutto il mondo.",
-    "why2Title": "Pace della mente",
-    "why2Description": "Supporto quando ne hai più bisogno.",
-    "why3Title": "Integrazione perfetta",
-    "why3Description": "Prenota insieme ai tuoi voli, tour o noleggio auto.",
-    "why4Title": "Professionale e affidabile",
-    "why4Description": "Partner fidati. Politiche chiare. Nessuna sorpresa.",
-    "whyTitle": "Perché scegliere l'assicurazione globale Travellio?"
-  },
-  "whatWeBuildPage": {
-    "hero": {
-      "label": "// WHAT WE BUILD",
-      "title": "Solutions Built\nAround Your Ideas",
-      "description": "We design and develop digital products tailored to individuals - combining functionality, performance, and refined design. Every solution is built with purpose, ensuring it not only looks right but works exactly as intended.",
-      "cta": "View Solutions"
-    },
-    "services": {
-      "label": "// SERVICES",
-      "title": "What We Create",
-      "description": "From simple websites to more advanced digital platforms, our solutions are designed to adapt to your goals. We focus on clarity, usability, and long-term performance - avoiding unnecessary complexity while delivering real results.",
-      "includedLabel": "What's included:",
-      "cta": "Order a Solution",
-      "items": {
-        "customWebsites": {
-          "title": "Custom Websites",
-          "description": "We create fully tailored websites designed around your vision and goals. Whether it's a personal project, portfolio, or service-based website, every detail is crafted to reflect your identity while maintaining usability and performance.",
-          "included": {
-            "responsiveDesign": "Responsive design across all devices",
-            "cleanStructure": "Clean structure and intuitive navigation",
-            "seoFoundation": "SEO-friendly foundation",
-            "fastLoading": "Fast loading and optimized performance",
-            "scalableArchitecture": "Scalable architecture for future growth"
-          }
+    "work": {
+      "cards": {
+        "selectedWork": {
+          "title": "Lavori selezionati",
+          "description": "Ogni progetto riflette un’idea diversa, una sfida diversa e una soluzione diversa. Ci concentriamo su risultati funzionali e curati."
         },
-        "webApplications": {
-          "title": "Web Applications",
-          "description": "For more advanced needs, we build web applications that go beyond static pages. These solutions include custom functionality, user interactions, and system logic tailored to your specific requirements.",
-          "included": {
-            "customFeatures": "Custom features and user flows",
-            "secureLogic": "Secure data handling and system logic",
-            "scalableArchitecture": "Scalable and modular architecture",
-            "integrations": "Integration with third-party tools",
-            "backendStructure": "Performance-focused backend structure"
-          }
-        },
-        "uiUxDesign": {
-          "title": "UI/UX Design",
-          "description": "Design is not just about appearance - it's about how your product works. We create interfaces that feel natural, structured, and easy to navigate, ensuring a smooth experience for every user.",
-          "included": {
-            "wireframing": "Wireframing and interface planning",
-            "userCentered": "User-centered design approach",
-            "visualLayouts": "Clean and modern visual layouts",
-            "designSystems": "Consistent design systems",
-            "usability": "Improved usability and clarity"
-          }
-        },
-        "ecommerceSolutions": {
-          "title": "E-Commerce Solutions",
-          "description": "We build online stores that are simple to manage and easy to use. The focus is on creating a seamless experience - from product browsing to checkout - while ensuring stability and performance.",
-          "included": {
-            "catalog": "Product and catalog setup",
-            "checkout": "Secure checkout experience",
-            "mobileFlow": "Mobile-optimized shopping flow",
-            "integrations": "Payment and system integrations",
-            "optimization": "Performance and speed optimization"
-          }
-        },
-        "landingPages": {
-          "title": "Landing Pages",
-          "description": "Landing pages are designed with one goal in mind - clear communication and focused action. We create pages that guide users naturally, without distraction or unnecessary elements.",
-          "included": {
-            "messaging": "Clear structure and messaging",
-            "layout": "Conversion-focused layout",
-            "responsive": "Fast-loading and responsive design",
-            "tools": "Integration with tools or forms",
-            "flow": "Optimized user flow"
-          }
-        },
-        "websiteRedesign": {
-          "title": "Website Redesign",
-          "description": "If your current website no longer reflects your vision or performs effectively, we help transform it into a modern, structured, and efficient product.",
-          "included": {
-            "design": "Design and layout improvements",
-            "structure": "Structural and UX enhancements",
-            "performance": "Performance upgrades",
-            "content": "Content reorganization",
-            "rebuild": "Modern, responsive rebuild"
-          }
-        },
-        "performanceOptimization": {
-          "title": "Performance Optimization",
-          "description": "Speed and performance directly impact user experience. We analyze and improve your website or application to ensure it runs efficiently and reliably.",
-          "included": {
-            "speed": "Speed and loading optimization",
-            "refinement": "Code and asset refinement",
-            "responsiveness": "Improved responsiveness",
-            "audits": "Performance audits and fixes",
-            "stability": "Stability improvements"
-          }
-        },
-        "maintenanceSupport": {
-          "title": "Maintenance & Support",
-          "description": "Digital products require ongoing care. We provide continuous support to keep your project secure, updated, and functioning without interruptions.",
-          "included": {
-            "updates": "Regular updates and monitoring",
-            "bugFixes": "Bug fixes and issue resolution",
-            "performance": "Performance checks",
-            "features": "Feature updates if needed",
-            "support": "Ongoing technical support"
-          }
+        "insights": {
+          "title": "Approfondimenti",
+          "description": "Pensieri, idee e prospettive su sviluppo, design e soluzioni digitali, presentati in modo chiaro e rilevante."
         }
-      }
-    },
-    "plans": {
-      "label": "// SITE",
-      "title": "Choose the Right Way\nto Get Started",
-      "description": "Every project is different. Whether you need a one-time solution or ongoing development support, our engagement plans are designed to fit your scope, timeline, and goals.",
-      "cta": "Browse Plans"
-    },
-    "closing": {
-      "title": "Let's Build Something That Works for You",
-      "description": "Your idea deserves more than a template. We focus on building solutions that are structured, functional, and ready to perform.",
-      "cta": "Start Your Project"
+      },
+      "label": "// LAVORI"
     }
   },
   "engagementPlansPage": {
+    "closing": {
+      "title": "Inizia con chiarezza",
+      "description": "Scegli il tuo piano oppure raccontaci di cosa hai bisogno: al resto pensiamo noi.",
+      "cta": "Avvia il tuo progetto"
+    },
     "hero": {
       "label": "// ENGAGEMENT PLANS",
-      "title": "Flexible Plans.\nClear Scope.\nReal Results.",
-      "description": "Choose the level of support that fits your idea. Whether you're starting small or building something more advanced, each plan is structured to deliver clarity, performance, and a smooth development process.",
-      "cta": "View Plans"
+      "title": "Piani flessibili.\nAmbito chiaro.\nRisultati concreti.",
+      "description": "Scegli il livello di supporto più adatto alla tua idea. Che tu stia iniziando con qualcosa di piccolo o costruendo qualcosa di più avanzato, ogni piano è pensato per offrire chiarezza, performance e un processo di sviluppo fluido."
     },
     "plans": {
-      "label": "// SITE",
-      "includedLabel": "What's included:",
-      "items": {
-        "corePlan": {
-          "title": "Core Plan",
-          "description": "A practical website package designed for individuals who need a simple, professional online presence without advanced custom functionality.",
-          "price": "From €600",
-          "cta": "Order Core Plan",
-          "included": {
-            "pageCount": "1–2 page modern website",
-            "responsive": "Responsive design adaptation",
-            "seo": "Basic SEO setup",
-            "contact": "Contact form integration",
-            "presentation": "Clear, structured presentation",
-            "performance": "Fast-loading structure",
-            "launch": "Launch-ready delivery"
-          }
-        },
-        "frameworkPlan": {
-          "title": "Framework Plan",
-          "description": "A flexible website package designed for individuals who need more structure, customization, and room to grow.",
-          "price": "From €1,500",
-          "cta": "Order Framework Plan",
-          "included": {
-            "pageCount": "3–5 page custom website",
-            "design": "Enhanced UI/UX design",
-            "responsive": "Responsive layout adaptation",
-            "seo": "SEO foundations and metadata",
-            "performance": "Performance optimization",
-            "cms": "CMS-ready structure",
-            "forms": "Lead capture or advanced forms (basic)"
-          }
-        },
-        "expansionPlan": {
-          "title": "Expansion Plan",
-          "description": "Designed for growing projects that require more functionality and flexibility.",
-          "price": "From €2,000",
-          "cta": "Order Expansion Plan",
-          "included": {
-            "pageCount": "Up to 10 custom pages or sections",
-            "designSystem": "Advanced visual design system",
-            "interactions": "Custom interactive elements",
-            "performance": "Optimized performance and speed",
-            "responsiveness": "Enhanced responsiveness",
-            "webApp": "Basic web app functionality (if required)"
-          }
-        },
-        "architecturePlan": {
-          "title": "Architecture Plan",
-          "description": "A comprehensive solution for complex projects that require custom functionality, flexibility, and long-term scalability.",
-          "price": "From €3,500",
-          "cta": "Order Architecture Plan",
-          "included": {
-            "website": "Fully custom website or platform",
-            "interactions": "Advanced UI/UX with refined interactions",
-            "flows": "Custom functionality & user flows",
-            "integrations": "API and system integrations",
-            "performance": "Performance and scalability optimization",
-            "expansion": "Advanced structure for future expansion",
-            "workflow": "Priority development workflow"
-          }
-        },
-        "fullStackPlan": {
-          "title": "Full Stack Plan",
-          "description": "A complete, high-end digital solution built from the ground up. Ideal for complex ideas requiring precision, scalability, and a fully tailored approach.",
-          "price": "From €5,000",
-          "cta": "Order Full Stack Plan",
-          "included": {
-            "solution": "Fully custom web solution or application",
-            "architecture": "Complex system architecture",
-            "design": "Advanced UI/UX design and interaction logic",
-            "backend": "Custom features and backend functionality",
-            "ecosystem": "Full integration ecosystem (APIs, tools, services)",
-            "performance": "Performance engineering and optimization",
-            "support": "Ongoing support (initial phase)",
-            "delivery": "Priority delivery and dedicated workflow"
-          }
-        }
-      }
+      "includedLabel": "Cosa include:",
+      "label": "// PLANS",
+      "siteLabel": "// SITE"
     },
     "framework": {
-      "title": "Custom Project Framework",
-      "description": "All plans serve as a structured starting point. Final scope, features, and pricing may vary depending on your specific requirements and project complexity."
+      "title": "Framework di progetto personalizzato",
+      "description": "Tutti i piani rappresentano un punto di partenza strutturato. Ambito finale, funzionalità e prezzo possono variare in base alle tue esigenze specifiche e alla complessità del progetto."
     },
     "guidance": {
       "badge": "NETSPIRE DEV",
-      "title": "Not Sure Which Plan Fits?",
-      "description": "Every project is different. If you're unsure which plan suits your idea, we'll help you define the right scope and recommend the most efficient approach.",
-      "cta": "Get in Touch"
+      "title": "Non sai quale piano fa per te?",
+      "description": "Ogni progetto è diverso. Se non sei sicuro di quale piano si adatti alla tua idea, ti aiuteremo a definire il giusto ambito di lavoro e a scegliere l’approccio più efficiente.",
+      "cta": "Contattaci"
     },
-    "closing": {
-      "title": "Start Building with Clarity",
-      "description": "Choose your plan or tell us what you need — we’ll take care of the rest.",
-      "cta": "Start Your Project"
-    }
-  },
-  "selectedWorkPage": {
-    "hero": {
-      "label": "// SELECTED WORK",
-      "title": "What We've Built",
-      "description": "Each project is built around a different idea, a different challenge, and a tailored solution. Here's a selection of what we've created — focused on functionality, clarity, and performance."
-    },
-    "cases": {
-      "label": "// SELECTED WORK",
-      "title": "Case Studies",
-      "labels": {
-        "overview": "Overview:",
-        "challenge": "Challenge:",
-        "solution": "Solution:",
-        "features": "Key Features:"
-      },
-      "items": {
-        "personalPortfolioPlatform": {
-          "title": "Personal Portfolio Platform",
-          "overview": "A clean, minimal portfolio designed for an individual showcasing creative work and services.",
-          "challenge": "The client needed a structured way to present their work without overwhelming visitors, while keeping the design refined and professional.",
-          "solution": "We developed a custom website with a clear layout, smooth navigation, and responsive design, ensuring content remained the focal point.",
-          "features": {
-            "minimalDesign": "Minimal UI/UX design",
-            "responsiveLayout": "Responsive layout",
-            "contentFlow": "Structured content flow",
-            "performance": "Fast loading performance"
-          }
-        },
-        "ecommerceStoreForNicheProducts": {
-          "title": "E-Commerce Store for Niche Products",
-          "overview": "An online store built for a small niche product business, focused on simplicity and usability.",
-          "challenge": "Creating a seamless shopping experience without unnecessary complexity or a heavy interface.",
-          "solution": "We combined a streamlined product structure with an intuitive checkout flow that keeps the buying journey clear and efficient.",
-          "features": {
-            "catalog": "Product catalog setup",
-            "checkout": "Secure checkout integration",
-            "optimization": "Performance optimization"
-          }
-        },
-        "serviceBasedWebsite": {
-          "title": "Service-Based Website",
-          "overview": "A multi-page website designed for an individual offering professional services.",
-          "challenge": "The client needed a clear way to communicate services and guide users toward inquiry or booking.",
-          "solution": "We structured the website with focused sections, strong visual hierarchy, and clear calls to action.",
-          "features": {
-            "layout": "Structured service layout",
-            "forms": "Contact form integration",
-            "seo": "SEO-ready setup"
-          }
-        },
-        "webApplicationForBookingSystem": {
-          "title": "Web Application for Booking System",
-          "overview": "A custom-built web application allowing users to manage bookings and sessions.",
-          "challenge": "Developing a system that is easy to use while handling multiple interactions and user inputs.",
-          "solution": "We created a structured backend with a simple front-end interface, making session management fast and flexible.",
-          "features": {
-            "dashboard": "User-friendly dashboard",
-            "booking": "Booking and scheduling system",
-            "logic": "Data handling and logic",
-            "scalable": "Scalable architecture"
-          }
-        },
-        "websiteRedesignProject": {
-          "title": "Website Redesign Project",
-          "overview": "A complete redesign of an outdated website that lacked structure and performance.",
-          "challenge": "Improving usability and modernising the visual experience without losing existing content.",
-          "solution": "We rebuilt the website with a new structure, improved navigation, and optimized performance.",
-          "features": {
-            "redesign": "Modern UI/UX redesign",
-            "structure": "Improved site structure",
-            "speed": "Faster loading speed",
-            "responsive": "Responsive rebuild"
-          }
-        },
-        "highPerformanceLandingPage": {
-          "title": "High-Performance Landing Page",
-          "overview": "A single-page solution designed to clearly present an idea and guide user action.",
-          "challenge": "Keeping the page simple while making it engaging and effective.",
-          "solution": "We focused on clarity, structured content, and smooth interaction to guide users naturally.",
-          "features": {
-            "conversion": "Conversion-focused design",
-            "flow": "Clear content flow",
-            "lightweight": "Fast and lightweight structure",
-            "responsive": "Responsive layout"
-          }
-        }
-      }
-    },
-    "closing": {
-      "title": "Have Something in Mind?",
-      "description": "Every project starts with an idea. We're here to help you shape it into something functional, structured, and ready to launch.",
-      "primaryCta": "Start a Project",
-      "secondaryCta": "Discover What We Build"
-    }
-  },
-  "journalPage": {
-    "heroTitle": "Viaggi, raccontati diversamente",
-    "heroSubtitleOne": "Menoscrollare. Più scoprire.",
-    "heroDescription": "Dalla scoperta di angoli nascosti di città iconiche allo sviluppo di una strategia di viaggio più efficiente, ogni articolo è progettato per supportare sia l'ispirazione che la decisione.",
-    "noArticles": "Nessun articolo trovato",
-    "articleContents": "Contenuto dell'articolo"
-  },
-  "insightsPage": {
-    "hero": {
-      "label": "// INSIGHTS",
-      "title": "Thoughts on Design,\nDevelopment, and Functionality",
-      "descriptionPrimary": "We share ideas, observations, and practical perspectives on web development, design, and digital functionality - focusing on what actually makes products clear, usable, and effective.",
-      "descriptionSecondary": "No unnecessary complexity. Just structured thinking behind better digital solutions."
-    },
-    "article": {
-      "backLabel": "Back",
-      "contentsLabel": "Article contents",
-      "cta": "Start a Project"
-    }
-  },
-  "ourApproachPage": {
-    "hero": {
-      "label": "// OUR APPROACH",
-      "title": "From Concept to Execution —\nDone Right",
-      "description": "At Netspire Dev, every project starts with an idea — and evolves through structure, precision, and thoughtful execution. We focus on creating digital solutions that are not only functional but genuinely aligned with your needs."
-    },
-    "whoWeAre": {
-      "title": "Who We Are",
-      "descriptionPrimary": "Netspire Dev is a digital development studio focused on building tailored solutions for individuals. We don't use generic methods or predefined structures. Instead, we build every project through a structured process shaped by your goals and refined through execution.",
-      "descriptionSecondary": "We believe that good development is not just about code — it's about creating clarity, usability, and digital products built to work."
-    },
-    "differentiators": {
-      "title": "What Sets Us Apart",
-      "label": "NETSPIRE DEV",
-      "items": {
-        "templateDriven": {
-          "title": "No template-driven work",
-          "description": "Every solution is built from scratch, based on your idea and requirements."
-        },
-        "structuredProcess": {
-          "title": "Structured development process",
-          "description": "Clear steps, transparent workflow, and no unnecessary complexity."
-        },
-        "usability": {
-          "title": "Focus on\nusability",
-          "description": "We prioritise clarity and ease of use in every interface we design."
-        },
-        "performance": {
-          "title": "Performance-first mindset",
-          "description": "Speed, efficiency, and reliability are part of every build."
-        },
-        "individuals": {
-          "title": "Built for individuals",
-          "description": "Our solutions are designed to fit personal projects, not just large-scale systems."
-        }
-      }
-    },
-    "process": {
-      "title": "Our Process",
-      "steps": {
-        "understandingIdea": {
-          "title": "Understanding Your Idea",
-          "description": "We start by learning what you want to build, why it matters, and how it should function."
-        },
-        "structuringSolution": {
-          "title": "Structuring the Solution",
-          "description": "We define the scope, features, and overall direction — creating a clear foundation."
-        },
-        "designDevelopment": {
-          "title": "Design & Development",
-          "description": "Your project is built with attention to detail, performance, and usability."
-        },
-        "testingRefinement": {
-          "title": "Testing & Refinement",
-          "description": "We review, adjust, and optimise everything before launch."
-        },
-        "launchSupport": {
-          "title": "Launch & Support",
-          "description": "Once ready, your product goes live — with support available if needed."
-        }
-      }
-    },
-    "experience": {
-      "title": "A Simple, Transparent Experience",
-      "description": "We keep the process straightforward. You'll always know what's happening, what's next, and how your project is progressing. No confusion, no hidden steps — just a clear path from idea to execution."
-    },
-    "closing": {
-      "title": "Ready to Build Something That Works?",
-      "description": "If you have an idea in mind, we're here to help you shape it into a functional, well-structured digital product.",
-      "primaryCta": "Start a Project",
-      "secondaryCta": "Discover What We Build"
-    }
+    "corePlanTitle": "Core Plan",
+    "corePlanDescription": "Un pacchetto pratico pensato per chi ha bisogno di una presenza online semplice e professionale, senza funzionalità avanzate su misura.",
+    "corePlanPrice": "Da €600",
+    "corePlanCta": "Richiedi Core Plan",
+    "corePlanIncludedPageCount": "Sito moderno da 1-2 pagine",
+    "corePlanIncludedResponsive": "Adattamento responsive del design",
+    "corePlanIncludedSeo": "Configurazione SEO di base",
+    "corePlanIncludedContact": "Integrazione del modulo di contatto",
+    "corePlanIncludedPresentation": "Presentazione chiara e strutturata",
+    "corePlanIncludedPerformance": "Struttura a caricamento rapido",
+    "corePlanIncludedLaunch": "Consegna pronta per il lancio",
+    "frameworkPlanTitle": "Framework Plan",
+    "frameworkPlanDescription": "Un pacchetto flessibile per chi ha bisogno di più struttura, personalizzazione e spazio per crescere.",
+    "frameworkPlanPrice": "Da €1.500",
+    "frameworkPlanCta": "Richiedi Framework Plan",
+    "frameworkPlanIncludedPageCount": "Sito personalizzato da 3-5 pagine",
+    "frameworkPlanIncludedDesign": "UI/UX design avanzato",
+    "frameworkPlanIncludedResponsive": "Adattamento responsive del layout",
+    "frameworkPlanIncludedSeo": "Basi SEO e metadati",
+    "frameworkPlanIncludedPerformance": "Ottimizzazione della performance",
+    "frameworkPlanIncludedCms": "Struttura pronta per CMS",
+    "frameworkPlanIncludedForms": "Acquisizione lead o moduli avanzati (base)",
+    "expansionPlanTitle": "Expansion Plan",
+    "expansionPlanDescription": "Pensato per progetti in crescita che richiedono più funzionalità e flessibilità.",
+    "expansionPlanPrice": "Da €2.000",
+    "expansionPlanCta": "Richiedi Expansion Plan",
+    "expansionPlanIncludedPageCount": "Fino a 10 pagine o sezioni personalizzate",
+    "expansionPlanIncludedDesignSystem": "Sistema visuale avanzato",
+    "expansionPlanIncludedInteractions": "Elementi interattivi personalizzati",
+    "expansionPlanIncludedPerformance": "Performance e velocità ottimizzate",
+    "expansionPlanIncludedResponsiveness": "Responsività migliorata",
+    "expansionPlanIncludedWebApp": "Funzionalità base da web app (se necessarie)",
+    "architecturePlanTitle": "Architecture Plan",
+    "architecturePlanDescription": "Una soluzione completa per progetti complessi che richiedono funzionalità personalizzate, flessibilità e scalabilità nel lungo periodo.",
+    "architecturePlanPrice": "Da €3.500",
+    "architecturePlanCta": "Richiedi Architecture Plan",
+    "architecturePlanIncludedWebsite": "Sito o piattaforma completamente personalizzati",
+    "architecturePlanIncludedInteractions": "UI/UX avanzata con interazioni raffinate",
+    "architecturePlanIncludedFlows": "Funzionalità personalizzate e user flow",
+    "architecturePlanIncludedIntegrations": "Integrazioni API e sistemi esterni",
+    "architecturePlanIncludedPerformance": "Ottimizzazione di performance e scalabilità",
+    "architecturePlanIncludedExpansion": "Struttura avanzata per sviluppi futuri",
+    "architecturePlanIncludedWorkflow": "Workflow di sviluppo prioritario",
+    "fullStackPlanTitle": "Full Stack Plan",
+    "fullStackPlanDescription": "Una soluzione digitale completa e di alto livello, costruita da zero. Ideale per idee complesse che richiedono precisione, scalabilità e un approccio interamente su misura.",
+    "fullStackPlanPrice": "Da €5.000",
+    "fullStackPlanCta": "Richiedi Full Stack Plan",
+    "fullStackPlanIncludedSolution": "Soluzione web o applicazione completamente personalizzata",
+    "fullStackPlanIncludedArchitecture": "Architettura di sistema complessa",
+    "fullStackPlanIncludedDesign": "UI/UX avanzata e logica di interazione",
+    "fullStackPlanIncludedBackend": "Funzionalità personalizzate e logica backend",
+    "fullStackPlanIncludedEcosystem": "Ecosistema completo di integrazioni (API, strumenti, servizi)",
+    "fullStackPlanIncludedPerformance": "Performance engineering e ottimizzazione",
+    "fullStackPlanIncludedSupport": "Supporto continuativo (fase iniziale)",
+    "fullStackPlanIncludedDelivery": "Consegna prioritaria e workflow dedicato"
   },
   "getInTouchPage": {
-    "hero": {
-      "label": "// Get in Touch",
-      "title": "Trasformiamo la tua idea\nin qualcosa di reale",
-      "description": "Che tu abbia già un’idea chiara o solo un punto di partenza, siamo qui per aiutarti a trasformarla in una soluzione digitale funzionale. Scrivici e ci occuperemo del resto."
-    },
     "contact": {
-      "title": "Contattaci nel modo che preferisci",
-      "description": "Preferisci contattarci direttamente? Puoi usare i dettagli qui sotto.",
       "cards": {
         "email": "Scrivici",
         "phone": "Chiama direttamente",
         "office": "Sede operativa",
         "legal": "Indirizzo legale"
-      }
+      },
+      "title": "Contattaci nel modo che preferisci",
+      "description": "Preferisci contattarci direttamente? Puoi usare i dettagli qui sotto."
     },
     "social": {
-      "title": "Resta connesso",
-      "description": "Seguici per aggiornamenti, approfondimenti e uno sguardo più da vicino a ciò che costruiamo.",
       "facebook": "Facebook",
       "instagram": "Instagram",
-      "x": "X"
+      "x": "X",
+      "title": "Resta connesso",
+      "description": "Seguici per aggiornamenti, approfondimenti e uno sguardo più da vicino a ciò che costruiamo."
+    },
+    "hero": {
+      "label": "// CONTATTACI",
+      "title": "Trasformiamo la tua idea\nin qualcosa di reale",
+      "description": "Che tu abbia già un’idea chiara o solo un punto di partenza, siamo qui per aiutarti a trasformarla in una soluzione digitale funzionale. Scrivici e ci occuperemo del resto."
     },
     "form": {
       "title": "Parlaci del tuo progetto",
@@ -1075,541 +222,242 @@
       "successAction": "Invia un’altra richiesta"
     }
   },
-  "account": {
-    "heroTitle": "Bentornati a Travellio Global",
-    "heroSubtitle": "Inserisci i tuoi dati di accesso per accedere al tuo account. Se non ricordi la password, seleziona \"Password dimenticata?\" e ti aiuteremo a reimpostarlo.",
-    "identifierError": "Ops! Quell'e-mail non corrisponde ai nostri record.",
-    "identifierLabel": "Nome utente o e-mail",
-    "identifierPlaceholder": "Inserisci il tuo nome utente o la tua email",
-    "passwordLabel": "Parola d'ordine",
-    "passwordPlaceholder": "Inserisci la tua password",
-    "hidePassword": "Nascondi la password",
-    "showPassword": "Mostra password",
-    "keepSigned": "Mantienimi connesso su questo dispositivo",
-    "loggingIn": "Accesso...",
-    "login": "Accedi",
-    "forgotPasswordLink": "Password dimenticata?"
-  },
-  "placesPage": {
-    "ctaTitle": "La tua prossima destinazione ti aspetta",
-    "ctaSubtitle": "Pronti a tuffarvi in nuove avventure?",
-    "ctaDescription": "Esplora il nostro elenco curato di luoghi entusiasmanti e inizia a pianificare il tuo prossimo viaggio oggi!",
-    "getawayTitle": "Trova una vacanza perfetta",
-    "getawayDescription": "Scopri alloggi in linea con il tuo desiderio di emozioni. Cerchi lusso, avventura o una fuga tranquilla, offriamo una gamma di soggiorni adatti al tuo stile. Scegli le date del tuo viaggio e seleziona le esperienze che corrispondono alle tue esigenze e lasciaci gestire il resto.",
-    "getawayOpulent": "Soggiorni opulenti: rilassati nel lusso in resort e ville di prima classe.",
-    "getawayCosy": "Ritiri accoglienti: rilassatevi in luoghi intimi e affascinanti, perfetti per una vacanza tranquilla.",
-    "getawayAdventure": "Hotel pieni di avventure: soggiorna in strutture che offrono attività emozionanti come escursioni, snorkeling e safari.",
-    "customiseTitle": "Personalizza il tuo viaggio",
-    "customiseDescription": "Parti per un viaggio che unisce comfort e fascino. Dai soggiorni opulenti ai rifugi accoglienti, il tuo posto ideale è pronto per te. Che tu stia cercando un'isola appartata o una fuga in città, offriamo esperienze curate su misura per i tuoi desideri.",
-    "customisePersonalized": "Itinerari personalizzati: scegli tra visite guidate, escursioni o esplorazioni gratuite, tutto personalizzato per te.",
-    "customiseAccommodations": "Sistemazioni perfette: scegli tra resort di lusso, boutique hotel o affascinanti soggiorni locali che si adattano al tuo stile di viaggio.",
-    "customiseFlexible": "Date di viaggio flessibili: prenota a tuo piacimento, con la flessibilità di modificare date ed esperienze come meglio credi.",
-    "exploreCta": "Il mondo sta aspettando",
-    "heroTitle": "Luoghi",
-    "heroSubtitle": "Scopri i luoghi più emozionanti del mondo",
-    "heroDescriptionOne": "Noi di Travellio Global ti portiamo nel cuore di alcune delle destinazioni più emozionanti, vivaci e uniche del mondo.",
-    "heroDescriptionTwo": "Dalle affollate strade di Tokyo alla serena bellezza di Bali, le nostre esperienze sapientemente curate ti trasporteranno in alcune delle gemme più iconiche e nascoste del pianeta.",
-    "regionEurope": "Europa",
-    "regionEuropeSubtitle": "Il fascino classico incontra la cultura vivace",
-    "destParisFrance": "Parigi, Francia",
-    "destParisFranceDesc": "Passeggia lungo la Senna, ammira la Torre Eiffel e scopri l'arte della cucina francese.",
-    "destBarcelonaSpain": "Barcellona, Spagna",
-    "destBarcelonaSpainDesc": "Scopri l'affascinante architettura di Gaudì alla Sagrada Familia e concediti un'autentica paella sulla costa mediterranea.",
-    "destMontserratSpain": "Montserrat, Spagna",
-    "destMontserratSpainDesc": "Nascosto tra le montagne vicino a Barcellona, questo splendido monastero offre panorami mozzafiato e un assaggio della storia catalana.",
-    "destReykjavikIceland": "Reykjavik, Islanda",
-    "destReykjavikIcelandDesc": "Inizia la tua avventura islandese nella stravagante capitale, quindi avventurati verso le meraviglie naturali come il Circolo d'Oro e la Laguna Blu.",
-    "destScottishHighlandsUK": "Highlands scozzesi, Regno Unito",
-    "destScottishHighlandsUKDesc": "Scopri Loch Ness, fai un'escursione tra le colline nebbiose ed esplora il Royal Mile di Edimburgo.",
-    "regionAsia": "Asia",
-    "regionAsiaSubtitle": "Un arazzo di antiche tradizioni e meraviglie moderne",
-    "destKyotoJapan": "Kyoto, Giappone",
-    "destKyotoJapanDesc": "Immergiti in antichi templi e giardini lussureggianti o vivi una tradizionale cerimonia del tè in questo tranquillo centro culturale.",
-    "destTokyoJapan": "Tokio, Giappone",
-    "destTokyoJapanDesc": "Immergiti nelle strade illuminate dai neon di Shibuya, visita lo storico Santuario Meiji o fai shopping fino allo sfinimento a Harajuku.",
-    "destNamiIslandSouthKorea": "Isola di Nami, Corea del Sud",
-    "destNamiIslandSouthKoreaDesc": "Famosa per i suoi pittoreschi sentieri alberati, l'isola di Nami offre un rifugio tranquillo dal caos urbano di Seoul.",
-    "destBaliIndonesia": "Bali, Indonesia",
-    "destBaliIndonesiaDesc": "Esplora la ricca cultura di Ubud, sali sul Monte Batur per ammirare l'alba o concediti una rilassante vacanza sulla spiaggia a Jimbaran.",
-    "destPetiteFranceSouthKorea": "Petite France, Corea del Sud",
-    "destPetiteFranceSouthKoreaDesc": "Entra in questo villaggio a tema francese, immerso nel Giardino della Calma Mattutina, e goditi un'esperienza culturale coinvolgente.",
-    "regionAmericas": "Le Americhe",
-    "regionAmericasSubtitle": "Dalle strade cittadine alle meraviglie naturali",
-    "destNewYorkCityUSA": "New York City, Stati Uniti",
-    "destNewYorkCityUSADesc": "Da Times Square alla Statua della Libertà, Central Park e Broadway, New York offre la migliore esperienza urbana.",
-    "destOahuHawaiiUSA": "Oahu, Hawaii, Stati Uniti",
-    "destOahuHawaiiUSADesc": "Fai snorkeling con le tartarughe marine a Hanauma Bay, fai un'escursione sul cratere Diamond Head o rilassati sulle splendide spiagge di Waikiki.",
-    "destLimaPeru": "Lima, Perù",
-    "destLimaPeruDesc": "Esplora la capitale culturale, quindi dirigiti a Machu Picchu per l'ultima avventura Inca.",
-    "destBallestasIslandsPeru": "Isole Ballestas, Perù",
-    "destBallestasIslandsPeruDesc": "Fai una gita in barca verso queste isole naturali e osserva leoni marini, pinguini e uccelli esotici nel loro habitat naturale.",
-    "destPuntaCanaDominican": "Punta Cana, Repubblica Dominicana",
-    "destPuntaCanaDominicanDesc": "Immergiti in giungle lussureggianti con un'avventura in buggy o rilassati sulle splendide rive di Macao Beach.",
-    "destRoseIslandBahamas": "Isola delle Rose, Bahamas",
-    "destRoseIslandBahamasDesc": "Nuota con i maiali ed esplora le acque cristalline di questo paradiso tropicale.",
-    "regionMiddleEast": "Medio Oriente",
-    "regionMiddleEastSubtitle": "Avventure lussuose e tradizioni senza tempo",
-    "destDubaiUAE": "Dubai, Emirati Arabi Uniti",
-    "destDubaiUAEDesc": "Scopri lo shopping di lusso, l'avventura nel deserto di Dubai e ammira viste mozzafiato dal Burj Khalifa, l'edificio più alto del mondo.",
-    "destAbuDhabiUAE": "Abu Dhabi, Emirati Arabi Uniti",
-    "destAbuDhabiUAEDesc": "Visita la Grande Moschea di Sheikh Zayed ed esplora i musei e i siti culturali di livello mondiale dell'emirato.",
-    "regionOceania": "Oceania e Isole del Pacifico",
-    "regionOceaniaSubtitle": "La felicità tropicale ti aspetta",
-    "destMaldives": "Maldive",
-    "destMaldivesDesc": "Paradiso sulla Terra: spiagge di sabbia bianca, resort di lusso e snorkeling di livello mondiale, dove ti aspettano delfini e vivaci barriere coralline.",
-    "destTenerifeSpain": "Tenerife, Isole Canarie, Spagna",
-    "destTenerifeSpainDesc": "Tour ecologici di osservazione delle balene e dei delfini nell'Oceano Atlantico, oppure escursioni nel Parco Nazionale del Teide per spettacolari paesaggi vulcanici.",
-    "destAruba": "Aruba",
-    "destArubaDesc": "Spiagge perfette, calette appartate e le famose acque limpide di Aruba, ideali per lo snorkeling, la vela e tramonti indimenticabili."
-  },
-  "refundsPage": {
-    "checkStat1Title": "Rimborsi",
-    "checkStat2Title": "Compensazione",
-    "checkStat3Title": "Opzioni di rimborso",
-    "checkNeed1": "Il tuo numero di volo",
-    "checkNeed2": "Data del viaggio",
-    "checkNeed3": "Aeroporti di partenza e di arrivo",
-    "checkTitle": "Controlla il tuo volo in pochi minuti",
-    "checkSidebarLead": "Tutto ciò di cui abbiamo bisogno:",
-    "checkEligibilityTitle": "Il nostro sistema esamina la tua situazione e ti consente di sapere se sei idoneo a:",
-    "formIssueDelayed": "Volo in ritardo",
-    "formIssueCancelled": "Volo cancellato",
-    "formIssueOverbooked": "Imbarco negato",
-    "formIssueConnection": "Connessione persa",
-    "formFromPlaceholder": "Da (ad esempio Londra o LHR)",
-    "formFromLabel": "Da",
-    "formToPlaceholder": "A (ad esempio Parigi o CDG)",
-    "formToLabel": "A",
-    "formIssueLabel": "Problema del volo",
-    "formDateLabel": "Data di partenza",
-    "formSubmit": "Controlla il volo",
-    "ctaTitle": "In ritardo? Annullato? Risolviamolo.",
-    "ctaDescriptionOne": "Gli intoppi nel viaggio accadono. Perdere i tuoi soldi non dovrebbe.",
-    "ctaDescriptionTwo": "Controlla il tuo volo oggi e scopri a cosa hai diritto.",
-    "heroTitle": "Volo interrotto? Ti abbiamo preso.",
-    "heroDescriptionOne": "Il viaggio non sempre va esattamente come previsto. Si verificano ritardi. Si verificano cancellazioni.",
-    "heroDescriptionTwo": "Ciò che conta è quanto velocemente ti riprendi. Noi di Travellio Global ti aiutiamo a verificare se hai diritto a un rimborso o a un risarcimento: in modo rapido, chiaro e senza stress inutili.",
-    "process1Title": "Facile da navigare",
-    "process2Title": "Trasparente sull'idoneità",
-    "process3Title": "Efficiente nella gestione delle richieste",
-    "process4Title": "Chiaro nella comunicazione",
-    "processTitle": "Processo di compensazione semplice",
-    "processDescriptionOne": "Crediamo che la chiarezza generi fiducia. Dalla presentazione alla risoluzione: manteniamo tutto semplice.",
-    "processDescriptionTwo": "La nostra piattaforma è progettata per essere:",
-    "rights1Title": "In ritardo",
-    "rights2Title": "Annullato",
-    "rights3Title": "Overbooking",
-    "rights4Title": "Significativamente riprogrammato",
-    "rightsTitle": "Protezione dei tuoi diritti di viaggio aereo",
-    "rightsLead": "Se il tuo volo era:",
-    "rightsDescriptionOne": "Potresti avere diritto a un risarcimento, a seconda delle politiche della compagnia aerea e delle normative applicabili.",
-    "rightsDescriptionTwo": "Inserisci semplicemente i dettagli del tuo volo e il nostro sistema valuterà il tuo caso e ti guiderà attraverso i passaggi successivi.",
-    "supportBullet1": "Comprendi i tuoi diritti di passeggero",
-    "supportBullet2": "Naviga tra le richieste di rimborso",
-    "supportBullet3": "Presentare richieste di risarcimento",
-    "supportBullet4": "Tieni traccia dei progressi del tuo caso",
-    "supportTitle": "Supporto fluido durante le interruzioni",
-    "supportLead": "Viaggiando per affari o per piacere, le interruzioni non dovrebbero far deragliare i tuoi piani.",
-    "supportListLead": "Travellio Global ti aiuta:",
-    "supportClosing": "Semplifichiamo ciò che spesso le compagnie aeree complicano.",
-    "why1Title": "Fiducia nel viaggiare",
-    "why1Description": "Conosci i tuoi diritti e le tue opzioni.",
-    "why2Title": "Copertura globale",
-    "why2Description": "Assistenza per voli internazionali.",
-    "why3Title": "Risparmia tempo",
-    "why3Description": "Non è necessario affrontare da soli le complesse procedure delle compagnie aeree.",
-    "why4Title": "Professionale e affidabile",
-    "why4Description": "Proteggi ogni parte del tuo viaggio: prima, durante e dopo.",
-    "whyTitle": "Perché utilizzare il supporto per i rimborsi globali di Travellio?"
-  },
-  "setPasswordPage": {
-    "heroTitle": "Imposta nuova password",
-    "heroSubtitle": "Inserisci la tua nuova password e ripetila per confermare.",
-    "newPasswordLabel": "Nuova password",
-    "newPasswordPlaceholderText": "Inserisci la nuova password",
-    "hidePassword": "Nascondi la password",
-    "showPassword": "Mostra password",
-    "repeatNewPasswordLabel": "Ripeti la nuova password",
-    "repeatNewPasswordPlaceholderText": "Ripeti la nuova password",
-    "savingPassword": "Salvataggio della password...",
-    "savePassword": "Salva password"
-  },
-  "SignUpHero": {
-    "heroTitle": "Entra a far parte di Travellio Global",
-    "heroSubtitle": "Crea un account per gestire le tue prenotazioni e accedere a vantaggi di viaggio esclusivi. Unisciti a Travellio Global e inizia a pianificare viaggi più intelligenti oggi stesso."
-  },
-  "taxiPage": {
-    "bookTitleOne": "Prenota il tuo",
-    "bookTitleTwo": "Pedala adesso",
-    "bookSubtitleOne": "Prenotazione rapida. Prezzi chiari. Totale tranquillità.",
-    "bookSubtitleTwo": "Poiché i viaggi migliori non iniziano con lo stress, iniziano con la fiducia.",
-    "ctaTitle": "Guida intelligente. Guida confortevole.",
-    "ctaSubtitleOne": "Il viaggio dovrebbe essere emozionante e non stressante.",
-    "ctaSubtitleTwo": "Inserisci semplicemente il luogo di ritiro, la destinazione e il programma e ti abbineremo all'opzione di trasferimento perfetta. Che si tratti di una corsa in aeroporto al mattino presto o di un arrivo in città a tarda notte, abbiamo la soluzione per te.",
-    "globalTitleOne": "Città globali.",
-    "globalTitleTwo": "Precisione locale.",
-    "globalDescOne": "Atterraggio a Londra? Stai andando al tuo hotel a Parigi? Hai bisogno di un trasferimento agevole a Dubai o Barcellona?",
-    "globalDescTwo": "Travellio Global ti mette in contatto con autisti locali fidati nelle principali città del mondo, garantendo affidabilità ovunque tu atterri.",
-    "heroTitle": "Taxi",
-    "heroSubtitle": "Arriva con stile",
-    "heroDescriptionOne": "I grandi viaggi non iniziano nel caos.",
-    "heroDescriptionTwo": "Con Travellio Global Taxi Services, il tuo viaggio inizia nel momento in cui esci. Dai trasferimenti aeroportuali ai viaggi in città: ci muoviamo quando ti sposti.",
-    "schedulePickup": "Scegli l'orario esatto di ritiro",
-    "scheduleDropoff": "Seleziona luoghi di riconsegna flessibili",
-    "scheduleAirport": "Genießen Sie reibungslose Flughafentransfers",
-    "scheduleHotel": "Buchen Sie problemlose Hotelabholungen",
-    "scheduleTitle": "Il tuo tempo. Il tuo programma.",
-    "scheduleSubtitleOne": "Siamo noi ad adattarci al tuo itinerario e non il contrario.",
-    "scheduleSubtitleTwo": "La precisione incontra il comfort ogni volta.",
-    "fromLabel": "Da",
-    "fromPlaceholder": "Città, aeroporto o stazione ferroviaria...",
-    "swapLabel": "Scambia posizioni",
-    "toLabel": "A",
-    "toPlaceholder": "Città, aeroporto o stazione ferroviaria...",
-    "searchButton": "Trova Trasferimento",
-    "styleExecutive": "Berline executive per viaggiatori d'affari",
-    "styleFamilies": "Furgoni spaziosi per famiglie e gruppi",
-    "stylePremium": "Veicoli premium per arrivi speciali",
-    "styleStandard": "Comfort standard per la comodità di tutti i giorni",
-    "styleTitle": "Scegli il tuo stile di viaggio",
-    "styleSubtitleOne": "Viaggi diversi richiedono corse diverse.",
-    "styleSubtitleTwo": "Qualunque sia l'occasione, ci assicuriamo che tu arrivi rilassato e pronto.",
-    "whyBookingTitle": "Prenotazione senza sforzo",
-    "whyBookingDesc": "Prenota il tuo trasferimento in pochi minuti.",
-    "whyReliableTitle": "Affidabile e sicuro",
-    "whyReliableDesc": "Fornitori affidabili e autisti verificati.",
-    "whyWorldwideTitle": "Copertura mondiale",
-    "whyWorldwideDesc": "Trasferimenti aeroportuali e urbani verso destinazioni globali.",
-    "whyComfortTitle": "La comodità innanzitutto",
-    "whyComfortDesc": "Veicoli puliti. Servizio professionale. Nessuna sorpresa.",
-    "whyTitle": "Perché viaggiare con Travellio Global?"
-  },
-  "toursPage": {
-    "findDestination": "Trova la tua prossima destinazione",
-    "searchPlaceholder": "Cerca il tour dei tuoi sogni...",
-    "tourCollections": "Collezioni turistiche",
-    "noTours": "Nessun tour trovato. Prova a modificare i filtri o a effettuare una ricerca.",
-    "heroTitle": "Tour",
-    "heroSubtitle": "Andiamo a divertirci",
-    "heroDesc1": "Prepara le valigie, stiamo per portarti in un viaggio che non dimenticherai mai! Dalle gemme nascoste ai monumenti iconici, i nostri tour sono realizzati per suscitare entusiasmo e creare ricordi duraturi.",
-    "heroDesc2": "Che tu sia interessato all'avventura, al relax o alla scoperta culturale, il mondo è tuo da esplorare. Iniziamo la tua avventura ora!"
-  },
-  "visasPage": {
-    "benefit1Title": "Esplora le opzioni di visto corrette per la tua destinazione",
-    "benefit2Title": "Ricevi indicazioni sui documenti richiesti",
-    "benefit3Title": "Richiedere un'elaborazione accelerata (ove disponibile)",
-    "benefit4Title": "Ottieni aiuto per completare le domande in modo accurato",
-    "benefitsTitle": "Elaborazione fluida = avventure più fluide",
-    "benefitsSubtitle": "Con Travellio Global puoi:",
-    "ctaTitle": "Pronti ad attraversare i confini?",
-    "ctaDescriptionOne": "I visti non dovrebbero rallentare la tua voglia di viaggiare.",
-    "ctaDescriptionTwo": "Lascia che Travellio Global gestisca il processo, così la tua prossima avventura inizierà senza intoppi.",
-    "destination1Title": "Visto elettronico per il Canada",
-    "destination1Description": "Ottieni rapidamente la tua autorizzazione di viaggio e preparati a esplorare vasti paesaggi e città vivaci.",
-    "destination2Title": "Visto del Vietnam",
-    "destination2Description": "Candidati con facilità e preparati a vivere una ricca cultura, una cucina incredibile e paesaggi mozzafiato.",
-    "destination3Title": "Visto australiano",
-    "destination3Description": "Semplifica i tuoi piani per visitare coste iconiche, città e meraviglie naturali.",
-    "destination4Title": "Visto del Kenia",
-    "destination4Description": "Semplifica i preparativi per il tuo safari e concentrati sull'avventura che ti aspetta.",
-    "destination5Title": "Visto per la Cina",
-    "destination5Description": "Preparati senza problemi alla scoperta di monumenti storici e meraviglie moderne.",
-    "destination6Title": "Carta turistica del Messico",
-    "destination6Description": "Preparati per città colorate, spiagge ed esperienze indimenticabili.",
-    "destinationsTitle": "Destinazioni popolari per i visti",
-    "destinationsSubtitle": "Assistiamo con i processi di ingresso per destinazioni tra cui:",
-    "discoverMore": "Scopri di più",
-    "searchPassportLabel": "Il mio passaporto",
-    "searchPassportPlaceholder": "Scegli il passaporto",
-    "searchDestinationLabel": "La mia destinazione",
-    "searchDestinationPlaceholder": "In viaggio verso",
-    "searchButton": "Inizia",
-    "heroTitle": "Visti di viaggio resi semplici",
-    "heroDescriptionOne": "Le grandi avventure non dovrebbero essere bloccate dalle scartoffie.",
-    "heroDescriptionTwo": "A Travellio Global, rendiamo il supporto per il visto semplice, chiaro e senza stress, così puoi concentrarti sull'imballaggio, non sulla stampa.",
-    "introTitle": "Assistenza per il visto semplice per i viaggiatori globali",
-    "introLead": "Stai pianificando di esplorare un nuovo paese?",
-    "introDescription": "Raccontaci il tuo paese d'origine e la tua destinazione e ti guideremo passo dopo passo attraverso i requisiti per il visto.",
-    "introNote": "Poiché il viaggio dovrebbe essere emozionante, non travolgente. Lascia che il visto giusto apra le porte giuste.",
-    "why1Title": "Guida incentrata sul viaggio",
-    "why1Description": "Comprendiamo i viaggi, non solo i documenti.",
-    "why2Title": "Ritiro flessibile",
-    "why2Description": "Istruzioni chiare per evitare inutili ritardi.",
-    "why3Title": "Portata internazionale",
-    "why3Description": "Supporto per più destinazioni in tutto il mondo.",
-    "why4Title": "Libertà di esplorare",
-    "why4Description": "Opzioni standard o prioritarie in base alla sequenza temporale.",
-    "whyTitle": "Perché scegliere Travellio Global per il supporto per il visto?"
-  },
-  "accountNavigation": {
-    "my-orders": "I miei ordini",
-    "my-services": "I miei servizi",
-    "account-settings": "Impostazione dell'account",
-    "hi": "Ciao"
-  },
-  "accountPage": {
-    "bookings": {
-      "columns": {
-        "orderId": "ID dell'ordine",
-        "tourName": "Nome del giro",
-        "quantity": "Quantità",
-        "purchaseDate": "Data di acquisto",
-        "totalPrice": "Prezzo totale",
-        "paymentMethod": "Metodo di pagamento",
-        "orderStatus": "Stato dell'ordine",
-        "invoice": "Fattura"
-      },
-      "title": "La tua cronologia di viaggio e le prossime avventure",
-      "description": "Qui troverai una panoramica completa delle tue esperienze passate e future. Controlla i dettagli dell'ordine, scarica le fatture e monitora lo stato delle tue prenotazioni, il tutto con chiarezza e facilità.",
-      "note": "Ogni viaggio racconta una storia. Qui è dove sono archiviati i tuoi.",
-      "loading": "Caricamento delle tue prenotazioni...",
-      "emptyTitle": "Nessuna prenotazione ancora.",
-      "emptyBody": "Una volta prenotato il tuo primo viaggio, verrà visualizzato qui con i dettagli di pagamento e l'accesso alla fattura.",
-      "download": "Scarica"
+  "insightsPage": {
+    "hero": {
+      "label": "// INSIGHTS",
+      "title": "Riflessioni su design,\nsviluppo e funzionalità",
+      "descriptionPrimary": "Condividiamo idee, osservazioni e prospettive pratiche su sviluppo web, design e funzionalità digitali - concentrandoci su ciò che rende davvero i prodotti chiari, usabili ed efficaci.",
+      "descriptionSecondary": "Nessuna complessità inutile. Solo pensiero strutturato dietro soluzioni digitali migliori."
     },
-    "tabs": {
-      "bookings": "Informazioni sulle prenotazioni",
-      "account": "Il tuo conto",
-      "wishlist": "Lista dei desideri di viaggio",
-      "aria": "Sezioni del conto"
-    },
-    "loading": "Caricamento del tuo account...",
-    "traveler": "Viaggiatore",
-    "logOutLinkTitle": "Esci",
-    "mainTitle": "Benvenuto nel tuo hub globale Travellio",
-    "greeting": "Ciao,",
-    "introPrimary": "Questo è il tuo centro di comando di viaggio personale: dove i piani prendono forma, i ricordi vengono tracciati e iniziano le avventure future.",
-    "introSecondary": "Gestisci le tue prenotazioni, aggiorna i tuoi dettagli e mantieni le destinazioni dei tuoi sogni in un unico spazio senza soluzione di continuità.",
-    "introEmphasis": "I tuoi viaggi, organizzati magnificamente.",
-    "account": {
-      "validation": {
-        "currentPassword": "È richiesta la password attuale.",
-        "newPassword": "È richiesta una nuova password.",
-        "repeatNewPassword": "Per favore conferma la tua nuova password.",
-        "passwordMismatch": "Le password non corrispondono.",
-        "lastName": "Il cognome è obbligatorio.",
-        "email": "L'e-mail è obbligatoria.",
-        "emailFormat": "Inserisci un indirizzo email valido.",
-        "address1": "L'indirizzo è obbligatorio.",
-        "address2": "È richiesto l'appartamento o la suite.",
-        "city": "La città è obbligatoria.",
-        "country": "Il Paese è obbligatorio.",
-        "zip": "Il codice postale è obbligatorio."
-      },
-      "updateFailed": "Non è stato possibile aggiornare i dettagli del tuo account.",
-      "passwordPartialFailure": "I tuoi dati sono stati salvati, ma non è stato possibile aggiornare la password.",
-      "updatedWithPassword": "I dettagli del tuo account e la password sono stati aggiornati.",
-      "updated": "I dettagli del tuo account sono stati aggiornati.",
-      "title": "La tua cronologia di viaggio e le prossime avventure",
-      "description": "Mantieni aggiornate le tue informazioni personali per garantire prenotazioni agevoli e supporto di viaggio senza sforzo. Dai dettagli di contatto alla gestione delle password, tutto ciò di cui hai bisogno per gestire il tuo account in sicurezza è proprio qui.",
-      "personalInformation": "Informazioni personali",
-      "fields": {
-        "lastName": "Cognome",
-        "email": "E-mail",
-        "phone": "Numero di telefono",
-        "address1": "Indirizzo stradale",
-        "address2": "Appartamento/Suite",
-        "city": "Città",
-        "country": "Paese",
-        "zip": "Codice postale",
-        "currentPassword": "Password attuale",
-        "passwordHint": "Lascia vuoto per lasciare invariato",
-        "newPassword": "Nuova password",
-        "repeatNewPassword": "Conferma la nuova password"
-      },
-      "placeholders": {
-        "lastName": "Inserisci il tuo cognome",
-        "email": "Inserisci il tuo indirizzo email",
-        "phone": "Inserisci il tuo numero di telefono",
-        "address1": "Inserisci il tuo indirizzo",
-        "address2": "Inserisci il tuo appartamento o suite",
-        "city": "Inserisci la tua città",
-        "country": "Inserisci il tuo paese",
-        "zip": "Inserisci il tuo codice postale",
-        "currentPassword": "Inserisci la tua password attuale",
-        "newPassword": "Inserisci la tua nuova password",
-        "repeatNewPassword": "Inserisci nuovamente la tua nuova password"
-      },
-      "accountAccess": "Accesso all'account",
-      "save": "Salva"
-    },
-    "wishlist": {
-      "updateFailed": "Aggiornamento della lista dei desideri non riuscito.",
-      "saved": "La tua lista dei desideri è sincronizzata con il tuo account.",
-      "title": "Sogna adesso. Viaggia presto.",
-      "description": "Le tue fughe salvate vivono qui: le esperienze che hanno attirato la tua attenzione e suscitato ispirazione. Rivedi, gestisci o rimuovi elementi in qualsiasi momento e trasforma le idee di oggi nelle avventure di domani.",
-      "note": "Poiché ogni grande viaggio inizia con un po' di voglia di viaggiare.",
-      "emptyTitle": "La tua lista dei desideri è vuota.",
-      "emptyBody": "Salva qui i tuoi itinerari preferiti in modo da potervi ritornare ogni volta che arriva l'ispirazione.",
-      "columns": {
-        "tourName": "Nome del giro",
-        "preview": "Anteprima del tour",
-        "manage": "Gestisci"
-      },
-      "delete": "Elimina",
-      "save": "Salva la lista dei desideri"
+    "article": {
+      "backLabel": "Indietro",
+      "contentsLabel": "Contenuti dell’articolo",
+      "cta": "Avvia un progetto"
     }
   },
-  "accountSettingsPage": {
-    "loading": "Caricamento...",
-    "title": "Impostazione dell'account",
-    "backToAccount": "← Torniamo al conto",
-    "formPasswordTitle": "Accesso all'account",
-    "currentPassword": "PASSWORD ATTUALE",
-    "currentPasswordPlaceholder": "Inserisci la tua password",
-    "newPassword": "NUOVA PASSWORD",
-    "newPasswordPlaceholder": "Inserisci la tua password",
-    "repeatNewPassword": "CONFERMA NUOVA PASSWORD",
-    "repeatNewPasswordPlaceholder": "Ripeti Nuova password",
-    "updateData": "Salva",
-    "formTitle1": "Informazioni personali",
-    "firstName": "PRIMO NOME",
-    "yourNamePlaceholder": "Inserisci il tuo nome",
-    "yourLastName": "COGNOME",
-    "yourLastNamePlaceholder": "Inserisci il tuo cognome",
-    "yourPhone": "NUMERO DI TELEFONO",
-    "yourEmail": "E-MAIL",
-    "yourEmailPlaceholder": "La tua e-mail",
-    "yourAddress1": "INDIRIZZO VIA",
-    "yourAddress1Placeholder": "Inserisci il tuo indirizzo",
-    "yourAddress2": "APPARTAMENTO/SUITE",
-    "yourAddress2Placeholder": "Inserisci il tuo appartamento/suite",
-    "yourCity": "CITTÀ",
-    "yourCityPlaceholder": "Inserisci la tua città",
-    "yourCountry": "PAESE",
-    "yourCountryPlaceholder": "Inserisci il tuo paese",
-    "yourZip": "CODICE POSTALE",
-    "yourZipPlaceholder": "Inserisci il tuo codice postale",
-    "dataUpdated": "Dati aggiornati con successo!",
-    "dataUpdatedDescription": "Le tue informazioni personali sono state aggiornate con successo.",
-    "close": "Chiudi"
+  "ourApproachPage": {
+    "closing": {
+      "title": "Pronto a costruire qualcosa che funzioni davvero?",
+      "description": "Se hai un’idea in mente, siamo qui per aiutarti a trasformarla in un prodotto digitale funzionale e ben strutturato.",
+      "primaryCta": "Avvia un progetto",
+      "secondaryCta": "Scopri cosa realizziamo"
+    },
+    "differentiators": {
+      "items": {
+        "templateDriven": {
+          "title": "Niente lavoro basato su template",
+          "description": "Ogni soluzione viene costruita da zero, in base alla tua idea e ai tuoi requisiti."
+        },
+        "structuredProcess": {
+          "title": "Processo di sviluppo strutturato",
+          "description": "Fasi chiare, workflow trasparente e nessuna complessità inutile."
+        },
+        "usability": {
+          "title": "Focus sulla\nusabilità",
+          "description": "Diamo priorità a chiarezza e facilità d’uso in ogni interfaccia che progettiamo."
+        },
+        "performance": {
+          "title": "Mentalità orientata alla performance",
+          "description": "Velocità, efficienza e affidabilità fanno parte di ogni progetto."
+        },
+        "individuals": {
+          "title": "Pensato per i privati",
+          "description": "Le nostre soluzioni sono progettate per progetti personali, non solo per sistemi su larga scala."
+        }
+      },
+      "title": "Cosa ci distingue",
+      "label": "NETSPIRE DEV"
+    },
+    "experience": {
+      "title": "Un’esperienza semplice e trasparente",
+      "description": "Manteniamo il processo lineare. Saprai sempre cosa sta succedendo, quale sarà il prossimo passo e come procede il tuo progetto. Nessuna confusione, nessun passaggio nascosto: solo un percorso chiaro dall’idea all’esecuzione."
+    },
+    "hero": {
+      "label": "// IL NOSTRO APPROCCIO",
+      "title": "Dal concept all’esecuzione,\nfatto nel modo giusto",
+      "description": "In Netspire Dev ogni progetto parte da un’idea e prende forma attraverso struttura, precisione ed esecuzione consapevole. Creiamo soluzioni digitali che non siano solo funzionali, ma davvero allineate alle tue esigenze."
+    },
+    "process": {
+      "steps": {
+        "understandingIdea": {
+          "title": "Comprendere la tua idea",
+          "description": "Partiamo da ciò che vuoi costruire, dal perché è importante e da come dovrebbe funzionare."
+        },
+        "structuringSolution": {
+          "title": "Strutturare la soluzione",
+          "description": "Definiamo ambito, funzionalità e direzione generale, creando una base chiara."
+        },
+        "designDevelopment": {
+          "title": "Design e sviluppo",
+          "description": "Il tuo progetto viene realizzato con attenzione ai dettagli, alla performance e all’usabilità."
+        },
+        "testingRefinement": {
+          "title": "Test e rifinitura",
+          "description": "Rivediamo, regoliamo e ottimizziamo tutto prima del lancio."
+        },
+        "launchSupport": {
+          "title": "Lancio e supporto",
+          "description": "Quando tutto è pronto, il tuo prodotto va online con supporto disponibile se necessario."
+        }
+      },
+      "title": "Il nostro processo"
+    },
+    "whoWeAre": {
+      "title": "Chi siamo",
+      "descriptionPrimary": "Netspire Dev è uno studio di sviluppo digitale specializzato nella creazione di soluzioni su misura per privati. Non usiamo metodi generici o strutture predefinite. Ogni progetto nasce attraverso un processo strutturato, guidato dai tuoi obiettivi e perfezionato nell’esecuzione.",
+      "descriptionSecondary": "Crediamo che un buon sviluppo non riguardi solo il codice, ma la capacità di creare chiarezza, usabilità e prodotti digitali che funzionano davvero."
+    }
   },
-  "formsCta": {
-    "button": "Contatta l'assistenza Estanora"
+  "selectedWorkPage": {
+    "cases": {
+      "labels": {
+        "overview": "Panoramica:",
+        "challenge": "Sfida:",
+        "solution": "Soluzione:",
+        "features": "Caratteristiche principali:"
+      },
+      "label": "// LAVORI SELEZIONATI",
+      "title": "Casi studio"
+    },
+    "closing": {
+      "title": "Hai qualcosa in mente?",
+      "description": "Ogni progetto parte da un’idea. Siamo qui per aiutarti a trasformarla in qualcosa di funzionale, strutturato e pronto al lancio.",
+      "primaryCta": "Avvia un progetto",
+      "secondaryCta": "Scopri cosa realizziamo"
+    },
+    "hero": {
+      "label": "// LAVORI SELEZIONATI",
+      "title": "Cosa abbiamo realizzato",
+      "description": "Ogni progetto nasce da un’idea diversa, una sfida diversa e una soluzione su misura. Ecco una selezione di ciò che abbiamo creato, con attenzione a funzionalità, chiarezza e performance."
+    },
+    "personalPortfolioPlatformTitle": "Piattaforma portfolio personale",
+    "personalPortfolioPlatformOverview": "Un portfolio pulito e minimale, progettato per una persona che presenta lavori creativi e servizi.",
+    "personalPortfolioPlatformChallenge": "Il cliente aveva bisogno di un modo strutturato per mostrare il proprio lavoro senza sovraccaricare i visitatori, mantenendo al contempo un design curato e professionale.",
+    "personalPortfolioPlatformSolution": "Abbiamo sviluppato un sito su misura con layout chiaro, navigazione fluida e design responsive, lasciando ai contenuti il ruolo principale.",
+    "personalPortfolioPlatformFeature1": "UI/UX minimale",
+    "personalPortfolioPlatformFeature2": "Layout responsive",
+    "personalPortfolioPlatformFeature3": "Flusso dei contenuti strutturato",
+    "personalPortfolioPlatformFeature4": "Caricamento veloce",
+    "ecommerceStoreForNicheProductsTitle": "E-commerce per prodotti di nicchia",
+    "ecommerceStoreForNicheProductsOverview": "Uno store online per una piccola attività di nicchia, con focus su semplicità e usabilità.",
+    "ecommerceStoreForNicheProductsChallenge": "Creare un’esperienza d’acquisto fluida senza complessità inutili o un’interfaccia pesante.",
+    "ecommerceStoreForNicheProductsSolution": "Abbiamo combinato una struttura prodotto essenziale con un flusso di checkout intuitivo, rendendo il percorso d’acquisto chiaro ed efficiente.",
+    "ecommerceStoreForNicheProductsFeature1": "Configurazione catalogo prodotti",
+    "ecommerceStoreForNicheProductsFeature2": "Integrazione checkout sicuro",
+    "ecommerceStoreForNicheProductsFeature3": "Ottimizzazione delle performance",
+    "serviceBasedWebsiteTitle": "Sito web per servizi professionali",
+    "serviceBasedWebsiteOverview": "Un sito multi-pagina progettato per una persona che offre servizi professionali.",
+    "serviceBasedWebsiteChallenge": "Il cliente aveva bisogno di comunicare in modo chiaro i servizi e guidare gli utenti verso una richiesta o una prenotazione.",
+    "serviceBasedWebsiteSolution": "Abbiamo strutturato il sito con sezioni mirate, una forte gerarchia visiva e call to action chiare.",
+    "serviceBasedWebsiteFeature1": "Struttura chiara dei servizi",
+    "serviceBasedWebsiteFeature2": "Integrazione del modulo di contatto",
+    "serviceBasedWebsiteFeature3": "Setup pronto per la SEO",
+    "webApplicationForBookingSystemTitle": "Web application per sistema di prenotazione",
+    "webApplicationForBookingSystemOverview": "Una web application su misura che consente agli utenti di gestire prenotazioni e sessioni.",
+    "webApplicationForBookingSystemChallenge": "Sviluppare un sistema facile da usare pur gestendo molteplici interazioni e input utente.",
+    "webApplicationForBookingSystemSolution": "Abbiamo creato un backend strutturato con un’interfaccia frontend semplice, rendendo la gestione delle sessioni veloce e flessibile.",
+    "webApplicationForBookingSystemFeature1": "Dashboard intuitiva",
+    "webApplicationForBookingSystemFeature2": "Sistema di prenotazione e pianificazione",
+    "webApplicationForBookingSystemFeature3": "Gestione dati e logiche",
+    "webApplicationForBookingSystemFeature4": "Architettura scalabile",
+    "websiteRedesignProjectTitle": "Progetto di redesign del sito web",
+    "websiteRedesignProjectOverview": "Un redesign completo di un sito obsoleto che mancava di struttura e performance.",
+    "websiteRedesignProjectChallenge": "Migliorare l’usabilità e modernizzare l’esperienza visiva senza perdere i contenuti esistenti.",
+    "websiteRedesignProjectSolution": "Abbiamo ricostruito il sito con una nuova struttura, una navigazione migliorata e performance ottimizzate.",
+    "websiteRedesignProjectFeature1": "Redesign UI/UX moderno",
+    "websiteRedesignProjectFeature2": "Struttura del sito migliorata",
+    "websiteRedesignProjectFeature3": "Velocità di caricamento più rapida",
+    "websiteRedesignProjectFeature4": "Ricostruzione responsive",
+    "highPerformanceLandingPageTitle": "Landing page ad alte performance",
+    "highPerformanceLandingPageOverview": "Una soluzione a pagina singola pensata per presentare chiaramente un’idea e guidare l’azione dell’utente.",
+    "highPerformanceLandingPageChallenge": "Mantenere la pagina semplice ma allo stesso tempo coinvolgente ed efficace.",
+    "highPerformanceLandingPageSolution": "Ci siamo concentrati su chiarezza, contenuti strutturati e interazioni fluide per guidare gli utenti in modo naturale.",
+    "highPerformanceLandingPageFeature1": "Design orientato alla conversione",
+    "highPerformanceLandingPageFeature2": "Flusso dei contenuti chiaro",
+    "highPerformanceLandingPageFeature3": "Struttura veloce e leggera",
+    "highPerformanceLandingPageFeature4": "Layout responsive"
   },
-  "myOrdersPage": {
-    "serviceOrdered": "Servizio ordinato",
-    "orderId": "ID dell'ordine",
-    "total": "Prezzo totale",
-    "paymentMethod": "Metodo di pagamento",
-    "status": "Stato dell'ordine",
-    "invoice": "Fattura",
-    "deliverablesBold": "Risultati finali",
-    "download": "Scarica",
-    "loading": "Caricamento ordini...",
-    "title": "Storia del progetto",
-    "noOrders": "Non hai ancora ordini.",
-    "date": "Data di acquisto"
-  },
-  "registration": {
-    "successTitle": "Il tuo account è stato creato con successo!",
-    "successMessage": "Ora puoi accedere con la tua email e password.",
-    "goToAccount": "Vai al tuo account",
-    "firstNameLabel": "Nome",
-    "firstNamePlaceholderText": "Inserisci il tuo nome",
-    "lastNameLabel": "Cognome",
-    "lastNamePlaceholderText": "Inserisci il tuo cognome",
-    "usernameLabel": "Nome utente",
-    "usernamePlaceholderText": "Inserisci il tuo nome utente",
-    "emailLabel": "E-mail",
-    "emailPlaceholderText": "Inserisci la tua email",
-    "phoneLabel": "Numero di telefono",
-    "phonePlaceholderText": "Inserisci il tuo numero di telefono",
-    "passwordLabel": "Parola d'ordine",
-    "passwordPlaceholderText": "Inserisci la tua password",
-    "hidePassword": "Nascondi la password",
-    "showPassword": "Mostra password",
-    "repeatPasswordLabel": "Ripeti la password",
-    "repeatPasswordPlaceholderText": "Ripeti la tua password",
-    "agreementPartOne": "Registrandoti confermi di avere almeno 18 anni e accetti i ns",
-    "agreementBoldOne": "Termini e condizioni",
-    "agreementPartTwo": "e",
-    "agreementBoldTwo": "Informativa sulla privacy.",
-    "registering": "Registrazione...",
-    "register": "Iscriviti ora"
-  },
-  "articlesLoop": {
-    "button": "Leggi l'articolo",
-    "empty": "Nessun articolo trovato"
-  },
-  "checkoutForm": {
-    "inYourCart": "Nel tuo carrello",
-    "tourName": "Nome del giro",
-    "tourDate": "Data del tour",
-    "pricePerPerson": "Prezzo per persona",
-    "participants": "Partecipanti",
-    "subtotalLabel": "Totale parziale",
-    "tourDateFallback": "Da confermare",
-    "decreaseQuantity": "Diminuire la quantità",
-    "increaseQuantity": "Aumenta la quantità",
-    "total": "Totale",
-    "billingDetails": "Dettagli di fatturazione",
-    "firstName": "Nome",
-    "lastName": "Cognome",
-    "address1": "Riga indirizzo 1",
-    "address2": "Riga indirizzo 2",
-    "optional": "(facoltativo)",
-    "city": "Città",
-    "country": "Paese",
-    "zip": "Codice postale",
-    "phone": "Numero di telefono",
-    "email": "E-mail",
-    "currencyTitle": "La tua valuta",
-    "currencyValue": "EUR",
-    "paymentMethod": "Metodo di pagamento",
-    "bankTransferShort": "Bonifico Bancario *",
-    "paymentMethodNote": "* Controlla la tua casella di posta per una panoramica dettagliata dell'esperienza selezionata insieme alle nostre istruzioni per il bonifico bancario sicuro.",
-    "paymentMethodFollowup": "Il tuo viaggio sta già prendendo forma.",
-    "orderRequirements": "Requisiti dell'ordine",
-    "termsOfUse": "Ho letto e accetto i Termini di utilizzo del sito web.",
-    "refundPolicy": "Ho letto e accetto la Politica di rimborso.",
-    "submitting": "Invio...",
-    "submitOrder": "Invia ordine"
-  },
-  "emptyCart": {
-    "heading": "Il tuo carrello sta aspettando l'avventura",
-    "descriptionLead": "Sembra che ci si senta un po' vuoti qui.",
-    "description": "Nessun problema: il mondo è pieno di esperienze pronte per essere aggiunte. Dai tour indimenticabili alle escursioni curate, il tuo prossimo viaggio è a pochi clic di distanza.",
-    "prompt": "Perché non iniziare a pianificare qualcosa di straordinario?",
-    "cta": "Andiamo in tournée!"
-  },
-  "emptyCta": {
-    "title": "Non sai da dove iniziare?",
-    "description1": "Ottieni una revisione professionale del caso senza alcun costo. ",
-    "description2": "Pianifica una chiamata introduttiva gratuita per discutere degli obiettivi della tua proprietà. Raccomanderemo l'esatto esperto o l'audit richiesto per la tua situazione.",
-    "button": "Prenota chiamata gratuita"
-  },
-  "thankYou": {
-    "thankYou": "Prenotazione ricevuta con successo",
-    "bookingIntro": "Grazie per aver scelto Travellio Global.",
-    "bookingProcessedWithOrder": "La tua richiesta di prenotazione è stata ricevuta ed è attualmente in fase di elaborazione. A breve ti verrà inviata un'email di conferma con i dettagli della tua prenotazione.",
-    "bookingProcessed": "La tua richiesta di prenotazione è stata ricevuta ed è attualmente in fase di elaborazione. A breve ti verrà inviata un'email di conferma con i dettagli della tua prenotazione.",
-    "bookingSupportPrefix": "Se hai bisogno di assistenza, contattaci all'indirizzo ",
-    "journeyCloser": "Il tuo prossimo viaggio è più vicino di quanto pensi.",
-    "prompt": "Torna alla pagina precedente oppure:",
-    "backToHomePage": "Torna a casa"
-  },
-  "contactForm": {
-    "fullName": "Nome completo",
-    "email": "Indirizzo e-mail",
-    "phone": "Numero di telefono",
-    "optional": "(Facoltativo)",
-    "propertyLocation": "Ubicazione dell'immobile (città, paese)",
-    "primaryObjective": "Obiettivo primario",
-    "selectObjective": "Seleziona obiettivo",
-    "inheritance": "Eredità",
-    "description": "Breve descrizione della situazione",
-    "descriptionPlaceholder": "Descrivi la proprietà, il tuo obiettivo e qualsiasi preoccupazione nota (prezzi, rischio, tempistica, aspetti legali, finanziamenti, ecc.).",
-    "uploadDocuments": "Carica i documenti rilevanti",
-    "chooseFiles": "Scegli i file da caricare",
-    "acceptedFormats": "Formati accettati: PDF, JPG, PNG • Dimensione massima file: 10 MB per file",
-    "loading": "Caricamento...",
-    "submit": "RICHIEDI ANALISI",
-    "formNote": "Tutte le richieste sono confidenziali. Rispondiamo entro un giorno lavorativo.",
-    "success": "La tua richiesta è stata ",
-    "submitted": "inviato con successo",
-    "thankYou": "Il nostro team ti contatterà entro il giorno lavorativo successivo.",
-    "close": "Continua"
+  "whatWeBuildPage": {
+    "closing": {
+      "title": "Costruiamo qualcosa che funzioni per te",
+      "description": "La tua idea merita più di un template. Ci concentriamo su soluzioni strutturate, funzionali e pronte a dare risultati.",
+      "cta": "Avvia il tuo progetto"
+    },
+    "hero": {
+      "label": "// COSA REALIZZIAMO",
+      "title": "Soluzioni costruite\nintorno alle tue idee",
+      "description": "Progettiamo e sviluppiamo prodotti digitali su misura per privati, combinando funzionalità, performance e design raffinato. Ogni soluzione nasce con uno scopo preciso, per garantire non solo il giusto aspetto, ma anche il funzionamento corretto.",
+      "cta": "Vedi le soluzioni"
+    },
+    "plans": {
+      "label": "// SITO",
+      "title": "Scegli il modo giusto\nper iniziare",
+      "description": "Ogni progetto è diverso. Che tu abbia bisogno di una soluzione una tantum o di supporto continuativo allo sviluppo, i nostri piani sono pensati per adattarsi al tuo ambito, alle tue tempistiche e ai tuoi obiettivi.",
+      "cta": "Sfoglia i piani"
+    },
+    "services": {
+      "includedLabel": "Cosa include:",
+      "cta": "Richiedi una soluzione",
+      "label": "// SERVIZI",
+      "title": "Cosa realizziamo",
+      "description": "Da siti semplici a piattaforme digitali più avanzate, le nostre soluzioni sono progettate per adattarsi ai tuoi obiettivi. Ci concentriamo su chiarezza, usabilità e performance nel lungo periodo, evitando complessità inutili ma offrendo risultati concreti."
+    },
+    "customWebsitesTitle": "Siti web su misura",
+    "customWebsitesDescription": "Creiamo siti completamente personalizzati intorno alla tua visione e ai tuoi obiettivi. Che si tratti di un progetto personale, di un portfolio o di un sito per servizi, ogni dettaglio viene curato per riflettere la tua identità mantenendo usabilità e performance.",
+    "customWebsitesIncludedResponsiveDesign": "Design responsive su tutti i dispositivi",
+    "customWebsitesIncludedCleanStructure": "Struttura pulita e navigazione intuitiva",
+    "customWebsitesIncludedSeoFoundation": "Base SEO-friendly",
+    "customWebsitesIncludedFastLoading": "Caricamento veloce e performance ottimizzate",
+    "customWebsitesIncludedScalableArchitecture": "Architettura scalabile per la crescita futura",
+    "webApplicationsTitle": "Applicazioni web",
+    "webApplicationsDescription": "Per esigenze più avanzate realizziamo web application che vanno oltre le pagine statiche. Queste soluzioni includono funzionalità personalizzate, interazioni utente e logiche di sistema modellate sulle tue necessità specifiche.",
+    "webApplicationsIncludedCustomFeatures": "Funzionalità personalizzate e user flow",
+    "webApplicationsIncludedSecureLogic": "Gestione sicura dei dati e logiche di sistema",
+    "webApplicationsIncludedScalableArchitecture": "Architettura scalabile e modulare",
+    "webApplicationsIncludedIntegrations": "Integrazione con strumenti di terze parti",
+    "webApplicationsIncludedBackendStructure": "Struttura backend orientata alla performance",
+    "uiUxDesignTitle": "UI/UX Design",
+    "uiUxDesignDescription": "Il design non riguarda solo l’aspetto, ma anche il modo in cui il tuo prodotto funziona. Creiamo interfacce naturali, strutturate e facili da navigare, per garantire un’esperienza fluida a ogni utente.",
+    "uiUxDesignIncludedWireframing": "Wireframing e pianificazione dell’interfaccia",
+    "uiUxDesignIncludedUserCentered": "Approccio di design centrato sull’utente",
+    "uiUxDesignIncludedVisualLayouts": "Layout visivi puliti e moderni",
+    "uiUxDesignIncludedDesignSystems": "Design system coerenti",
+    "uiUxDesignIncludedUsability": "Usabilità e chiarezza migliorate",
+    "ecommerceSolutionsTitle": "Soluzioni e-commerce",
+    "ecommerceSolutionsDescription": "Realizziamo store online facili da gestire e semplici da usare. L’obiettivo è creare un’esperienza senza attriti, dalla navigazione dei prodotti al checkout, mantenendo stabilità e performance.",
+    "ecommerceSolutionsIncludedCatalog": "Configurazione prodotti e catalogo",
+    "ecommerceSolutionsIncludedCheckout": "Esperienza di checkout sicura",
+    "ecommerceSolutionsIncludedMobileFlow": "Flusso d’acquisto ottimizzato per mobile",
+    "ecommerceSolutionsIncludedIntegrations": "Integrazioni con pagamenti e sistemi",
+    "ecommerceSolutionsIncludedOptimization": "Ottimizzazione di performance e velocità",
+    "landingPagesTitle": "Landing page",
+    "landingPagesDescription": "Le landing page sono progettate con un solo obiettivo: comunicare con chiarezza e guidare l’azione. Creiamo pagine che accompagnano l’utente in modo naturale, senza distrazioni o elementi superflui.",
+    "landingPagesIncludedMessaging": "Struttura e messaggio chiari",
+    "landingPagesIncludedLayout": "Layout orientato alla conversione",
+    "landingPagesIncludedResponsive": "Design responsive e a caricamento veloce",
+    "landingPagesIncludedTools": "Integrazione con strumenti o form",
+    "landingPagesIncludedFlow": "User flow ottimizzato",
+    "websiteRedesignTitle": "Redesign del sito web",
+    "websiteRedesignDescription": "Se il tuo sito attuale non riflette più la tua visione o non performa in modo efficace, ti aiutiamo a trasformarlo in un prodotto moderno, strutturato ed efficiente.",
+    "websiteRedesignIncludedDesign": "Miglioramenti di design e layout",
+    "websiteRedesignIncludedStructure": "Miglioramenti strutturali e UX",
+    "websiteRedesignIncludedPerformance": "Upgrade delle performance",
+    "websiteRedesignIncludedContent": "Riorganizzazione dei contenuti",
+    "websiteRedesignIncludedRebuild": "Ricostruzione moderna e responsive",
+    "performanceOptimizationTitle": "Ottimizzazione delle performance",
+    "performanceOptimizationDescription": "Velocità e performance influenzano direttamente l’esperienza utente. Analizziamo e miglioriamo il tuo sito o la tua applicazione per assicurarne efficienza e affidabilità.",
+    "performanceOptimizationIncludedSpeed": "Ottimizzazione di velocità e caricamento",
+    "performanceOptimizationIncludedRefinement": "Ottimizzazione di codice e asset",
+    "performanceOptimizationIncludedResponsiveness": "Maggiore reattività",
+    "performanceOptimizationIncludedAudits": "Audit e correzioni sulle performance",
+    "performanceOptimizationIncludedStability": "Miglioramenti di stabilità",
+    "maintenanceSupportTitle": "Manutenzione e supporto",
+    "maintenanceSupportDescription": "I prodotti digitali richiedono cura continua. Offriamo supporto costante per mantenere il tuo progetto sicuro, aggiornato e funzionante senza interruzioni.",
+    "maintenanceSupportIncludedUpdates": "Aggiornamenti regolari e monitoraggio",
+    "maintenanceSupportIncludedBugFixes": "Bug fixing e risoluzione dei problemi",
+    "maintenanceSupportIncludedPerformance": "Controlli delle performance",
+    "maintenanceSupportIncludedFeatures": "Aggiornamenti funzionali se necessari",
+    "maintenanceSupportIncludedSupport": "Supporto tecnico continuativo"
   },
   "contactsForm": {
     "name": "Nome",
@@ -1621,413 +469,151 @@
     "loading": "Caricamento...",
     "submit": "Invia messaggio"
   },
-  "contactFormNew": {
-    "fullName": "Nome completo",
-    "email": "Indirizzo e-mail",
-    "phone": "Numero di telefono",
-    "optional": "(Facoltativo)",
-    "message": "Il tuo messaggio",
-    "messagePlaceholder": "Descrivi la proprietà, il tuo obiettivo e qualsiasi preoccupazione nota (prezzi, rischio, tempistica, aspetti legali, finanziamenti, ecc.).",
-    "loading": "Caricamento...",
-    "submit": "Invia",
-    "formNote": "Tutte le richieste sono confidenziali. Rispondiamo entro un giorno lavorativo."
-  },
   "contactThankYou": {
-    "title": "Grazie per aver contattato Travellio Global!",
-    "messageReceived": "Il tuo messaggio è stato ricevuto con successo. Il nostro team esaminerà attentamente la tua richiesta e risponderà a breve.",
-    "appreciation": "Apprezziamo il tuo interesse e non vediamo l'ora di aiutarti.",
+    "title": "Grazie per aver contattato Netspire Dev!",
+    "messageReceived": "Il tuo messaggio è stato ricevuto con successo. Il nostro team esaminerà con attenzione la tua richiesta e ti risponderà a breve.",
+    "appreciation": "Apprezziamo il tuo interesse e saremo felici di aiutarti.",
     "prompt": "Torna alla pagina precedente oppure:",
-    "cta": "Torna a casa"
-  },
-  "HomeRequestForm": {
-    "projectTypeBusinessDirection": "Direzione aziendale e chiarezza",
-    "projectTypeOfferRefinement": "Raffinatezza e posizionamento dell'offerta",
-    "projectTypeGrowthPlanning": "Pianificazione della crescita e definizione delle priorità",
-    "projectTypeStructuralSetup": "Impostazione strutturale o operativa",
-    "projectTypeStrategicReview": "Revisione strategica/seconda opinione",
-    "projectTypeOtherOption": "Altro",
-    "investment": {
-      "under": "Sotto"
-    },
-    "timingNextMonth": "Entro il prossimo mese",
-    "timingOneToThreeMonths": "1–3 mesi",
-    "timingThreeToSixMonths": "3–6 mesi",
-    "timingFlexible": "Flessibile/non ancora risolto",
-    "followUpEmail": "E-mail",
-    "followUpPhone": "Telefono",
-    "followUpVideoCall": "Videochiamata",
-    "specifyText": "Si prega di specificare",
-    "optionalText": "FACOLTATIVO",
-    "fullName": "NOME COMPLETO",
-    "fullNamePlaceholder": "Inserisci il tuo nome completo",
-    "emailAddress": "INDIRIZZO E-MAIL",
-    "emailAddressPlaceholder": "Inserisci il tuo indirizzo email",
-    "phone": "NUMERO DI TELEFONO",
-    "companyName": "NOME AZIENDA",
-    "companyNamePlaceholder": "Inserisci il nome della tua azienda",
-    "website": "IL TUO SITO WEB",
-    "websitePlaceholder": "Inserisci l'URL del tuo sito web",
-    "projectType": "COSA DESCRIVE MEGLIO QUELLO CHE STAI CERCANDO?",
-    "investmentRange": "Ambito e investimenti",
-    "goals": "OBIETTIVI E PUNTI DI ATTRITO",
-    "goalsPlaceholder": "Con cosa stai cercando di andare avanti in questo momento?",
-    "frictionPoints": "DOVE SEMBRA ATTUALMENTE POCO CHIARO, BLOCCATO O INEFFICIENTE?",
-    "frictionPointsPlaceholder": "Puoi usare brevi note o pensieri completi",
-    "clientContext": "Con chi lavori o servi?",
-    "clientContextPlaceholder": "Qualsiasi dettaglio che ci aiuti a comprendere il contesto",
-    "timing": "Tempistica",
-    "timingPlaceholder": "Quando vorresti iniziare idealmente?",
-    "followUp": "Come dovremmo seguire?",
-    "followUpPlaceholder": "Modo preferito per continuare la conversazione",
-    "attachments": "Allegati",
-    "attachmentsNotes": "Carica qualsiasi materiale che possa aiutarti a spiegare la tua situazione",
-    "attachmentsExamples": "(ad esempio note, schemi, collegamenti, bozze)",
-    "notice": "Una volta inviata, esamineremo la tua richiesta e proseguiremo con i passaggi successivi o con domande chiarificatrici.",
-    "sending": "Invio...",
-    "submitRequest": "Invia una richiesta"
+    "cta": "Torna alla home"
   },
   "forms": {
-    "close": "Close",
-    "projectTypeOtherOptionLabel": "Other",
-    "requestForm": {
-      "successTitle": "Grazie!",
-      "successMessage1": "Your request has been received successfully. Our team will review your details and contact you shortly to discuss the next steps."
-    },
+    "projectTypeWebsiteLabel": "Sito web",
+    "projectTypeWebApplicationLabel": "Applicazione web",
+    "projectTypeEcommerceLabel": "Ecommerce",
+    "projectTypeLandingPageLabel": "Landing page",
+    "projectTypeRedesignLabel": "Redesign",
+    "projectTypePerformanceImprovementsLabel": "Miglioramenti delle performance",
+    "projectTypeOngoingSupportLabel": "Supporto continuativo",
+    "projectTypeOtherOptionLabel": "Altro",
+    "budgetUnder1000Label": "Sotto €1.000",
+    "budget1000To2500Label": "€1,000 – €2,500",
+    "budget2500To5000Label": "€2,500 – €5,000",
+    "budget5000PlusLabel": "€5,000+",
+    "timelineAsSoonAsPossibleLabel": "Il prima possibile",
+    "timelineWithinOneToTwoMonthsLabel": "Entro 1-2 mesi",
+    "timelineWithinTwoToFourMonthsLabel": "Entro 2-4 mesi",
+    "timelineFlexibleLabel": "Flessibile",
+    "communicationEmailLabel": "E-mail",
+    "communicationPhoneLabel": "Telefono",
+    "communicationVideoCallLabel": "Videochiamata",
     "customSolutionForm": {
-      "title": "Start Your Project",
-      "description": "Tell us about your idea — we’ll help shape it into a clear, functional digital solution. Share a few details below, and we’ll get in touch to discuss the next steps.",
-      "submit": "Submit Your Request",
-      "closeAction": "Close",
+      "fileTooLarge": "Scegli un file più piccolo di 10 MB.",
+      "title": "Avvia il tuo progetto",
+      "description": "Raccontaci la tua idea: ti aiuteremo a trasformarla in una soluzione digitale chiara e funzionale. Condividi alcuni dettagli qui sotto e ti contatteremo per definire i prossimi passi.",
       "resetAction": "Invia un’altra richiesta",
-      "successTitle": "Thank you!",
-      "successMessage": "Your request has been received. We will review the details and contact you shortly to discuss the next steps.",
-      "fileTooLarge": "Please choose a file smaller than 10MB.",
+      "closeAction": "Chiudi",
+      "successTitle": "Grazie!",
+      "successMessage": "Abbiamo ricevuto la tua richiesta. Esamineremo i dettagli e ti contatteremo a breve per discutere i prossimi passi.",
       "sections": {
-        "details": "Your Details",
-        "projectDetails": "Project Details",
-        "scopeBudget": "Project Scope & Budget",
-        "timelineFiles": "Timeline & Optional Files"
+        "details": "I tuoi dati",
+        "projectDetails": "Dettagli del progetto",
+        "scopeBudget": "Ambito del progetto e budget"
       },
       "fields": {
-        "fullName": {
-          "label": "Full name",
-          "placeholder": "Tell us your name"
-        },
-        "email": {
-          "label": "Email address",
-          "placeholder": "So we can reach out to you"
-        },
-        "phone": {
-          "label": "Phone number (optional)",
-          "placeholder": "If you prefer to be contacted by phone"
-        },
-        "website": {
-          "label": "Your website (optional)",
-          "placeholder": "Share a link if you already have something in place"
-        },
-        "projectTypeOther": {
-          "label": "Please specify",
-          "placeholder": "Enter your option",
-          "helper": "Use this field when \"Other\" is selected."
-        },
-        "budget": {
-          "label": "Estimated budget"
-        },
-        "goals": {
-          "label": "What are your main goals for this project?",
-          "placeholder": "Enter your goals"
-        },
         "timeline": {
-          "label": "When would you like to get started?"
+          "label": "Quando vorresti iniziare?"
         },
         "communication": {
-          "label": "Preferred communication"
-        },
-        "attachment": {
-          "label": "Upload any materials (optional)",
-          "action": "Choose File",
-          "empty": "no file selected",
-          "meta": "Max size: 10MB"
+          "label": "Canale di comunicazione preferito"
         }
-      },
-      "projectTypes": {
-        "website": "Website",
-        "webApplication": "Web Application",
-        "ecommerce": "E-commerce",
-        "landingPage": "Landing Page",
-        "redesign": "Redesign",
-        "performanceImprovements": "Performance Improvements",
-        "ongoingSupport": "Ongoing Support",
-        "other": "Other"
-      },
-      "budgets": {
-        "under1000": "Under €1,000",
-        "budget1000To2500": "€1,000 – €2,500",
-        "budget2500To5000": "€2,500 – €5,000",
-        "budget5000Plus": "€5,000+"
-      },
-      "timelines": {
-        "asSoonAsPossible": "As soon as possible",
-        "withinOneToTwoMonths": "Within 1–2 months",
-        "withinTwoToFourMonths": "2–4 months",
-        "flexible": "Flexible"
-      },
-      "communication": {
-        "email": "Email",
-        "phone": "Phone",
-        "videoCall": "Video Call"
-      },
-      "nextSteps": {
-        "title": "Next Steps",
-        "description": "Once submitted, we’ll review your request and reach out to discuss your idea, clarify details, and define the best way forward."
       }
     },
-    "returnHome": "Ritorna alla home page",
-    "firstName": "First Name:",
-    "firstNamePlaceholder": "Enter your first name",
-    "lastName": "Last Name:",
-    "lastNamePlaceholder": "Enter your last name",
-    "email": "Email:",
-    "emailPlaceholder": "Enter your email",
-    "phone": "Phone:",
-    "phonePlaceholder": "Enter your phone number",
-    "website": "Your Website:",
-    "websitePlaceholder": "Enter your website",
-    "message": "Message:",
-    "messagePlaceholder": "Inserisci il tuo messaggio",
-    "loading": "Invio…",
-    "submit": "Invia"
+    "nextStepsTitle": "Prossimi passi",
+    "nextStepsDescription": "Una volta inviata, esamineremo la tua richiesta e ti contatteremo per parlare della tua idea, chiarire i dettagli e definire il percorso migliore.",
+    "submit": "Invia",
+    "loading": "Invio in corso…",
+    "fullNameLabel": "Nome completo",
+    "fullNamePlaceholder": "Dicci come ti chiami",
+    "emailLabel": "Indirizzo email",
+    "emailPlaceholder": "Inserisci la tua email",
+    "phoneLabel": "Numero di telefono (opzionale)",
+    "phonePlaceholder": "Inserisci il tuo numero di telefono",
+    "websiteLabel": "Il tuo sito web (opzionale)",
+    "websitePlaceholder": "Inserisci il tuo sito web",
+    "projectTypeOtherLabel": "Specifica",
+    "projectTypeOtherPlaceholder": "Inserisci la tua opzione",
+    "projectTypeOtherHelper": "Usa questo campo quando selezioni \"Altro\".",
+    "budgetLabel": "Budget stimato",
+    "goalsLabel": "Quali sono i tuoi obiettivi principali per questo progetto?",
+    "goalsPlaceholder": "Inserisci i tuoi obiettivi",
+    "timelineFilesTitle": "Tempistiche e file opzionali",
+    "attachmentLabel": "Carica eventuali materiali (opzionale)",
+    "attachmentAction": "Scegli file",
+    "attachmentEmpty": "nessun file selezionato",
+    "attachmentMeta": "Dimensione massima: 10 MB",
+    "close": "Chiudi",
+    "requestForm": {
+      "successTitle": "Grazie!",
+      "successMessage1": "La tua richiesta è stata ricevuta con successo. Il nostro team esaminerà i dettagli e ti contatterà a breve per discutere i prossimi passi."
+    },
+    "firstName": "Nome:",
+    "firstNamePlaceholder": "Inserisci il tuo nome",
+    "lastName": "Cognome:",
+    "lastNamePlaceholder": "Inserisci il tuo cognome",
+    "email": "E-mail:",
+    "phone": "Telefono:",
+    "website": "Il tuo sito web:",
+    "message": "Messaggio:",
+    "messagePlaceholder": "Inserisci il tuo messaggio"
   },
   "notFoundPage": {
     "title": "Questa destinazione non esiste",
-    "messagePrimary": "La pagina che stai cercando sembra aver preso una strada diversa.",
-    "messageSecondary": "Potrebbe essersi spostato o forse non è mai esistito. In ogni caso, il tuo viaggio continua.",
+    "messagePrimary": "La pagina che stai cercando sembra aver preso un’altra direzione.",
+    "messageSecondary": "Potrebbe essere stata spostata, o forse non è mai esistita. In ogni caso, il tuo percorso continua.",
     "prompt": "Torna alla pagina precedente oppure:",
-    "cta": "Torna a casa"
+    "cta": "Torna alla home"
   },
   "notFound": {
-    "title": "404 — Pagina non trovata",
-    "description": "La pagina a cui hai tentato di accedere non è qui.",
-    "quickLinks": "Collegamenti rapidi",
+    "title": "404 - Pagina non trovata",
+    "description": "La pagina che hai provato a raggiungere non è qui.",
+    "quickLinks": "Link rapidi",
     "button1": "Pagina principale",
     "button2": "Guide gratuite",
     "button3": "Contattaci"
   },
-  "services": {
-    "growthMappingGoalSetting": "Mappatura della crescita e definizione degli obiettivi",
-    "scalableProcessDevelopment": "Sviluppo di processi scalabili",
-    "from": "Da",
-    "marketExpansionDiversification": "Espansione e diversificazione del mercato",
-    "brandAmplificationStrategies": "Strategie di amplificazione del marchio",
-    "customerAcquisitionStrategy": "Strategia di acquisizione clienti",
-    "salesStrategyFunnelOptimization": "Strategia di vendita e ottimizzazione del funnel",
-    "partnershipDevelopment": "Sviluppo del partenariato",
-    "performanceMarketingStrategy": "Strategia di marketing delle prestazioni",
-    "operationalEfficiencyScaling": "Efficienza operativa per la scalabilità",
-    "financialPlanningGrowth": "Pianificazione finanziaria per la crescita",
-    "leadershipDevelopmentTeamScaling": "Sviluppo della leadership e ridimensionamento del team",
-    "metricsKpisGrowth": "Metriche e KPI per la crescita",
-    "businessProcessMapping": "Mappatura e ottimizzazione dei processi aziendali",
-    "sops": "Procedure operative standard (SOP)",
-    "systemsIntegrationAutomation": "Integrazione e automazione dei sistemi",
-    "financialSystemsManagement": "Sistemi finanziari e gestione",
-    "projectManagementFrameworks": "Strutture di gestione del progetto",
-    "teamCollaborationTools": "Strumenti e piattaforme di collaborazione in team",
-    "scalabilityAssessment": "Valutazione della scalabilità",
-    "riskManagementSystems": "Sistemi di gestione del rischio",
-    "businessContinuityPlanning": "Pianificazione della continuità aziendale",
-    "uspDevelopment": "Sviluppo di proposte di vendita uniche (USP).",
-    "targetMarketSegmentation": "Segmentazione del mercato target e sviluppo della persona",
-    "valuePropositionRefinement": "Perfezionamento della proposta di valore",
-    "brandMessagingStrategy": "Strategia di messaggistica del marchio",
-    "pricingStrategy": "Strategia dei prezzi",
-    "productServicePackaging": "Packaging e posizionamento del prodotto/servizio",
-    "customerExperienceMapping": "Mappatura dell'esperienza del cliente",
-    "pitchDevelopment": "Sviluppo del passo",
-    "contentStrategy": "Strategia dei contenuti",
-    "visionDevelopment": "Sviluppo e perfezionamento della visione",
-    "strategicGoalSetting": "Definizione degli obiettivi strategici",
-    "marketResearchAnalysis": "Ricerche e analisi di mercato",
-    "swotAnalysis": "Analisi SWOT",
-    "competitiveLandscapeAssessment": "Valutazione del paesaggio competitivo",
-    "opportunityMapping": "Mappatura delle opportunità",
-    "decisionMakingFrameworks": "Quadri decisionali",
-    "strategicRoadmapDevelopment": "Sviluppo della tabella di marcia strategica",
-    "ongoingStrategicReview": "Revisione e aggiustamenti strategici continui",
-    "perMonth": "al mese"
-  },
-  "pricingPackages": {
-    "pkg1": {
-      "name": "Fondotinta Chiarezza",
-      "boldIntro": "Per gli imprenditori che stanno gettando le basi per una crescita scalabile.",
-      "desc": "Questo pacchetto è progettato per le aziende nelle prime fasi di sviluppo, aiutandole a definire la propria direzione e a stabilire una solida base per la crescita futura.",
-      "cta": "Ordina il Fondotinta Clarity",
-      "item1Title": "Sviluppo e perfezionamento della visione",
-      "item1Desc": "Approfondisci la tua visione aziendale per garantire l'allineamento con i tuoi valori fondamentali e gli obiettivi a lungo termine.",
-      "item2Title": "Panoramica delle ricerche di mercato",
-      "item2Desc": "Effettua ricerche per comprendere il tuo settore, i concorrenti e il mercato di riferimento, con approfondimenti utilizzabili per i passaggi successivi.",
-      "item3Title": "Analisi SWOT",
-      "item3Desc": "Un'analisi dettagliata dei tuoi punti di forza, debolezza, opportunità e minacce, ponendo le basi per decisioni strategiche.",
-      "item4Title": "Definizione degli obiettivi strategici",
-      "item4Desc": "Definisci obiettivi chiari, misurabili e attuabili in linea con la tua visione aziendale.",
-      "item5Title": "Passaggi successivi attuabili",
-      "item5Desc": "Una tabella di marcia di azioni prioritarie che ti consentiranno di mettere in pratica la tua visione e raggiungere i tuoi obiettivi in modo efficiente.",
-      "item6Title": "1 sessione strategica con i nostri esperti",
-      "item6Desc": "Una sessione individuale con i nostri senior strategist per perfezionare il tuo piano e il tuo approccio."
-    },
-    "pkg2": {
-      "name": "Momento di crescita",
-      "boldIntro": "Per le aziende che hanno bisogno di affinare il proprio posizionamento e i propri sistemi per una crescita continua.",
-      "desc": "Questo pacchetto è rivolto alle aziende oltre la fase di avvio che desiderano ottimizzare le operazioni, consolidare la propria posizione sul mercato e costruire sistemi per un'espansione sostenibile.",
-      "cta": "Momento di crescita degli ordini",
-      "inheritsFrom": "Tutti i servizi della Clarity Foundation",
-      "item1Title": "Sviluppo di proposte di vendita uniche (USP).",
-      "item1Desc": "Perfeziona ciò che ti distingue sul mercato e chiarisci la tua proposta di valore al tuo pubblico target.",
-      "item2Title": "Segmentazione del mercato target",
-      "item2Desc": "Identifica e definisci i segmenti chiave della clientela a cui adattare i tuoi messaggi e le tue offerte.",
-      "item3Title": "Strategia di messaggistica del marchio",
-      "item3Desc": "Crea una struttura di messaggistica persuasiva che comunichi il valore del tuo marchio e sia in risonanza con il tuo pubblico.",
-      "item4Title": "Strategia dei prezzi",
-      "item4Desc": "Sviluppa strutture di prezzo competitive e allineate che riflettano il valore del tuo marchio e il mercato di riferimento.",
-      "item5Title": "Sviluppo di processi scalabili",
-      "item5Desc": "Progetta processi efficienti che ti consentano di crescere senza sacrificare la qualità o l'esperienza del cliente.",
-      "item6Title": "Sistemi di base e ottimizzazione del flusso di lavoro",
-      "item6Desc": "Semplifica i sistemi operativi principali per garantire operazioni quotidiane fluide ed efficienti man mano che aumenti.",
-      "item7Title": "3 sessioni strategiche",
-      "item7Desc": "Check-in mensili per verificare i progressi, adattare la strategia e mantenere lo slancio."
-    },
-    "pkg3": {
-      "name": "Espansione strategica",
-      "boldIntro": "Per le aziende pronte ad espandere e perfezionare il proprio approccio a nuovi mercati e operazioni più ampie.",
-      "desc": "Questo pacchetto supporta le aziende che hanno raggiunto la fase di crescita e stanno ora cercando di affinare le proprie strategie di espansione in nuovi mercati o verticali e di rafforzare le basi operative per la scalabilità.",
-      "cta": "Ordina l'espansione strategica",
-      "inheritsFrom": "Tutti i servizi di Growth Momentum",
-      "item1Title": "Sviluppo della tabella di marcia strategica",
-      "item1Desc": "Pianificazione dettagliata per aiutarti ad allineare i tuoi sforzi di espansione con gli obiettivi aziendali e le richieste del mercato.",
-      "item2Title": "Espansione e diversificazione del mercato",
-      "item2Desc": "Identificazione e implementazione di strategie per entrare in nuovi mercati o aggiungere nuove linee di prodotti.",
-      "item3Title": "Mappatura dell'esperienza del cliente",
-      "item3Desc": "Sviluppa un percorso cliente ottimizzato e senza soluzione di continuità per aumentare la soddisfazione e la fidelizzazione.",
-      "item4Title": "Strategia di marketing delle prestazioni",
-      "item4Desc": "Costruisci ed esegui un piano di marketing ad alto impatto per aumentare la notorietà e le vendite.",
-      "item5Title": "Strategia di amplificazione del marchio",
-      "item5Desc": "Aumenta la visibilità e il coinvolgimento del marchio attraverso strategie mirate ed esposizione sui media.",
-      "item6Title": "Configurazione di sistemi finanziari e gestione",
-      "item6Desc": "Assicurati che i tuoi sistemi finanziari siano strutturati per la crescita, con budget, previsioni e reporting.",
-      "item7Title": "Strutture di gestione del progetto",
-      "item7Desc": "Implementa un sistema di gestione dei progetti per mantenere i tuoi sforzi di espansione organizzati e sulla buona strada.",
-      "item8Title": "5 sessioni strategiche",
-      "item8Desc": "Collaborazione continua con i nostri esperti per monitorare i progressi e orientare le strategie secondo necessità."
-    },
-    "pkg4": {
-      "name": "Trasformazione d'élite",
-      "boldIntro": "Per le aziende che necessitano di una trasformazione completa: dalla direzione strategica all'eccellenza operativa e tutto il resto.",
-      "desc": "Questo pacchetto completo è ideale per le aziende pronte per una trasformazione su vasta scala, coprendo tutti gli aspetti del business: dalla strategia all'esecuzione, dall'efficienza operativa allo sviluppo della leadership.",
-      "cta": "Ordina la trasformazione Elite",
-      "inheritsFrom": "Tutti i servizi di espansione strategica",
-      "item1Title": "Mappatura e ottimizzazione completa dei processi aziendali",
-      "item1Desc": "Analisi approfondita di tutti i processi operativi, con particolare attenzione alla rimozione dei colli di bottiglia e al miglioramento dell’efficienza.",
-      "item2Title": "Configurazione dei sistemi di gestione del rischio",
-      "item2Desc": "Identifica, valuta e mitiga i rischi per garantire che la tua azienda possa sostenere la crescita anche durante i periodi incerti.",
-      "item3Title": "Valutazione ed esecuzione della scalabilità",
-      "item3Desc": "Assicurati che la tua azienda cresca facilmente identificando opportunità e sfide chiave.",
-      "item4Title": "Sviluppo della leadership e ridimensionamento del team",
-      "item4Desc": "Fornisci coaching sulla leadership e sviluppa il tuo team per gestire la crescita e la scalabilità.",
-      "item5Title": "Pianificazione finanziaria completa per la crescita",
-      "item5Desc": "Aumenta la visibilità e il coinvolgimento del marchio attraverso strategie mirate ed esposizione sui media.",
-      "item6Title": "Revisione e aggiustamenti strategici continui (fino a 6 mesi)",
-      "item6Desc": "Monitoraggio continuo e aggiustamenti della strategia per mantenere il tuo business sulla buona strada.",
-      "item7Title": "Consulenza dedicata individuale",
-      "item7Desc": "Consulenze personali con i nostri esperti senior per guidarti attraverso decisioni critiche di crescita.",
-      "item8Title": "Monitoraggio completo delle prestazioni",
-      "item8Desc": "Con cicli di feedback continui per monitorare i parametri chiave, ottimizzare i processi e ottenere risultati.",
-      "item9Title": "10 sessioni strategiche",
-      "item9Desc": "Collaborazione approfondita con il nostro team di leadership, comprese revisioni trimestrali, per garantire il successo a lungo termine."
-    }
-  },
-  "tours": {
-    "tourAsiaTitle": "Asia",
-    "tourAustraliaPacificTitle": "Australia e Pacifico",
-    "tourCaribbeanTitle": "Caraibi",
-    "tourCentralSouthAmericaTitle": "Centro e Sud America",
-    "tourEuropeTitle": "Europa",
-    "tourMiddleEastAfricaTitle": "Medio Oriente e Africa",
-    "tourNorthAmericaTitle": "Nord America"
-  },
-  "tourDetailPage": {
-    "back": "Indietro",
-    "operatedBy": "Gestito da",
-    "reviews": "recensioni",
-    "wishlist1": "Rimuovi dalla lista dei desideri",
-    "wishlist2": "Aggiungi alla lista dei desideri",
-    "fromPrice": "A partire da {price} a persona",
-    "summaryMessage": "Puoi assicurarti il tuo posto. Prenota ora e paga più tardi, senza che sia richiesto alcun pagamento anticipato oggi.",
-    "checkAvailability": "Verifica la disponibilità",
-    "selectDate": "Seleziona la data",
-    "participant": "partecipante",
-    "participants": "partecipanti",
-    "increaseParticipants": "Aumentare i partecipanti",
-    "decreaseParticipants": "Diminuire i partecipanti",
-    "whatYouCanExpect": "Cosa puoi aspettarti",
-    "duration": "Durata",
-    "startsAt": "Inizia alle",
-    "meetingPoint": "Punto d'incontro",
-    "priceBreakdown": "Ripartizione dei prezzi: {count} partecipanti x {price}",
-    "totalLabel": "Totale: {price}",
-    "totalNote": "Il prezzo totale include tutte le tasse e le commissioni",
-    "bookNow": "Prenota ora",
-    "relatedTours": "Sblocca il tuo senso di avventura: scopri viaggi degni di essere esplorati",
-    "previousAria": "Tour precedenti",
-    "nextAria": "Prossimi tour"
-  },
   "cookiePopup": {
-    "title": "Avviso sui cookie",
-    "text": "Utilizziamo i cookie per garantire il corretto funzionamento del sito e per capire meglio come i visitatori interagiscono con esso.",
-    "link": "Maggiori informazioni sui cookie",
+    "title": "Informativa sui cookie",
+    "text": "Usiamo i cookie per far funzionare tutto come previsto e per capire meglio come i visitatori interagiscono con il sito.",
     "accept": "Accetta i cookie",
-    "decline": "Rifiutare"
+    "link": "Scopri di più sui cookie"
   },
   "footer": {
-    "brand": "Netspire Dev",
-    "description": "Trasforma la tua idea in una soluzione digitale — avvia oggi il tuo progetto con Netspire Dev.",
-    "insideNetspireDev": "Inside Netspire Dev",
-    "solutions": "Soluzioni",
-    "compliance": "Compliance",
-    "contact": "Contatto",
     "ourApproach": "Il nostro approccio",
-    "insights": "Insights",
-    "getInTouch": "Mettiti in contatto",
+    "insights": "Approfondimenti",
+    "getInTouch": "Contattaci",
     "whatWeBuild": "Cosa realizziamo",
     "engagementPlans": "Piani di collaborazione",
-    "selectedWork": "Progetti selezionati",
+    "selectedWork": "Lavori selezionati",
     "termsAndConditions": "Termini e condizioni",
     "privacyPolicy": "Informativa sulla privacy",
-    "cookiePolicy": "Politica sui cookie",
+    "cookiePolicy": "Cookie policy",
     "refundPolicy": "Politica di rimborso",
-    "copyright": "© 2026 Tutti i contenuti sono legalmente protetti e di proprietà di Netspire Dev Ltd."
+    "insideNetspireDev": "Dentro Netspire Dev",
+    "solutions": "Soluzioni",
+    "compliance": "Conformità",
+    "contact": "Contatto",
+    "brand": "Netspire Dev",
+    "description": "Trasforma la tua idea in una soluzione digitale: avvia oggi il tuo progetto con Netspire Dev.",
+    "officeAddress": "Indirizzo ufficio",
+    "registeredAddress": "Indirizzo legale",
+    "copyright": "Tutti i contenuti sono legalmente protetti e di proprietà di Netspire Dev Ltd."
   },
   "header": {
     "home": "Home",
     "whatWeBuild": "Cosa realizziamo",
     "engagementPlans": "Piani di collaborazione",
-    "selectedWork": "Progetti selezionati",
+    "selectedWork": "Lavori selezionati",
     "ourApproach": "Il nostro approccio",
-    "insights": "Insights",
-    "emailLabel": "Email",
-    "phoneNumber": "Numero di telefono",
+    "insights": "Approfondimenti",
     "facebook": "Facebook",
     "instagram": "Instagram",
     "x": "X",
     "brand": "NETSPIRE DEV",
-    "getInTouch": "Mettiti in contatto",
-    "close": "Chiudi",
+    "getInTouch": "Contattaci",
     "menu": "Menù"
   },
   "priceList": {
-    "title": "Controlla il nostro listino prezzi completo",
+    "title": "Consulta il nostro listino prezzi completo",
     "button": "Scarica"
-  },
-  "tourCard": {
-    "add_to_cart": "Aggiungi al carrello"
   }
 }
