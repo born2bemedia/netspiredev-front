@@ -72,6 +72,7 @@ const resolveContactHref = (value: string, type: "email" | "phone") => {
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isWhiteTheme, setIsWhiteTheme] = useState(false);
   const pathname = usePathname();
   const t = useTranslations("header");
   const previousPathnameRef = useRef(pathname);
@@ -104,6 +105,14 @@ export const Header = () => {
       href: "/insights",
     },
   ] as const;
+
+  const whiteThemePaths = [
+    "/what-we-build",
+    "/engagement-plans",
+    "/selected-work",
+    "/insights",
+    "/legal",
+  ];
 
   const socialItems: readonly HeaderSocialItem[] = [
     {
@@ -167,6 +176,19 @@ export const Header = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (whiteThemePaths.some(path => pathname.includes(path))) {
+      setTimeout(() => {
+        setIsWhiteTheme(true);
+      }, 0);
+    } else {
+      setTimeout(() => {
+        setIsWhiteTheme(false);
+      }, 0);
+    }
+    {/* eslint-disable-next-line react-hooks/exhaustive-deps */}
+  }, [pathname]);
 
   const renderMetaLink = (
     key: string,
@@ -254,7 +276,9 @@ export const Header = () => {
       </div>
 
       <header
-        className={styles.header}
+        className={`${styles.header} ${
+          isWhiteTheme ? styles.header__white : ""
+        }`}
         data-mobile-open={isMobileMenuOpen}
         data-scrolled={isScrolled}
       >

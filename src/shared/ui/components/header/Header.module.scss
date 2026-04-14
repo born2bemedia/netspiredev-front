@@ -13,7 +13,28 @@ $muted: rgba(255, 255, 255, 0.5);
   left: 0;
   z-index: 100;
 
-  &[data-scrolled="true"] {
+  &__white {
+    background: $white;
+
+    .header__brand{
+      color: #eb5e28;
+    }
+
+    .header__nav{
+      a{
+        color: $black;
+        &:hover {
+          color: $black;
+        }
+        &[data-active="true"] {
+          color: #eb5e28;
+        }
+      }
+    }
+
+  }
+
+  &[data-scrolled="true"]:not(.header__white) {
     background: $black;
   }
 
