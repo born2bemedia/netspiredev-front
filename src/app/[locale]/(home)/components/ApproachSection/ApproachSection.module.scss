@@ -168,9 +168,11 @@ $line-light: #c7c4bf;
   &.approachAccentActive {
     opacity: 1;
     @include tablet {
-      display: block;
+      display: none;
     }
   }
+
+
 }
 
 .approachText {

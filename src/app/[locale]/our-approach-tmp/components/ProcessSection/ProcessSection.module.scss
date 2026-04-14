@@ -80,6 +80,7 @@ $orange: #ff4500;
   display: flex;
   gap: 16px;
   align-items: flex-start;
+  position: relative;
 }
 
 .activeDot {
@@ -88,6 +89,8 @@ $orange: #ff4500;
   margin-top: 11px;
   flex: 0 0 auto;
   background: $orange;
+  position: absolute;
+  left: -24px;
 }
 
 .copy {
