@@ -218,13 +218,13 @@ export const Header = () => {
               <div className={styles.header__meta}>
                 {renderMetaLink(
                   'email',
-                  t('emailLabel', { fallback: 'Email' }),
+                  WEBSITE_EMAIL,
                   emailHref,
                   styles.header__metaLink
                 )}
                 {renderMetaLink(
                   'phone',
-                  t('phoneNumber', { fallback: 'Phone Number' }),
+                  WEBSITE_PHONE,
                   phoneHref,
                   styles.header__metaLink
                 )}

@@ -1,4 +1,4 @@
-export const WEBSITE_EMAIL = 'Email';
+export const WEBSITE_EMAIL = 'info@netspiredev.com';
 export const WEBSITE_PHONE = 'Phone';
 
 export const LINKEDIN_URL = '#';
