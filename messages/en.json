@@ -594,6 +594,8 @@
     "contact": "Contact",
     "brand": "Netspire Dev",
     "description": "Turn your idea into a digital solution — start your project with Netspire Dev today.",
+    "officeAddress": "Office address",
+    "registeredAddress": "Registered address",
     "copyright": "All content is legally protected and owned by Netspire Dev Ltd."
   },
   "header": {
@@ -606,8 +608,6 @@
     "facebook": "Facebook",
     "instagram": "Instagram",
     "x": "X",
-    "emailLabel": "Email",
-    "phoneNumber": "Phone Number",
     "brand": "NETSPIRE DEV",
     "getInTouch": "Get in Touch",
     "menu": "Menu"

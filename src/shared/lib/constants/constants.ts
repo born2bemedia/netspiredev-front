@@ -1,5 +1,5 @@
 export const WEBSITE_EMAIL = 'info@netspiredev.com';
-export const WEBSITE_PHONE = 'Phone';
+export const WEBSITE_PHONE = '';
 
 export const LINKEDIN_URL = '#';
 export const FACEBOOK_URL = '#';
@@ -7,9 +7,9 @@ export const INSTAGRAM_URL = '#';
 export const X_URL = '#';
 
 export const WEBSITE_REGISTERED_ADDRESS =
-  'Registered address';
+  '2nd Floor College House, 17 King Edwards Road, Ruislip, London, United Kingdom, HA4 7AE';
 export const WEBSITE_OFFICE_ADDRESS =
-  "Office address";
+  "Office B, 4th Floor, 143–149 Great Portland Street, London W1W 6QN, UK";
 
 export const WEBSITE_REGISTERED_ADDRESS_MAP =
   '';

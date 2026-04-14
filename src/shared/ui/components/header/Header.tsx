@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 import {
   FACEBOOK_URL,
@@ -10,29 +10,35 @@ import {
   WEBSITE_EMAIL,
   WEBSITE_PHONE,
   X_URL,
-} from '@/shared/lib/constants/constants';
+} from "@/shared/lib/constants/constants";
 
-import { Arrow } from '../../icons/header/arrow';
-import { Plus } from '../../icons/header/plus';
-import { Button } from '../../kit/button/Button';
-import styles from './Header.module.scss';
+import { Arrow } from "../../icons/header/arrow";
+import { Plus } from "../../icons/header/plus";
+import { Button } from "../../kit/button/Button";
+import styles from "./Header.module.scss";
 
-import { Link, usePathname } from '@/i18n/navigation';
+import { Link, usePathname } from "@/i18n/navigation";
 
 type HeaderNavItem = {
-  key: 'home' | 'whatWeBuild' | 'engagementPlans' | 'selectedWork' | 'ourApproach' | 'insights';
+  key:
+    | "home"
+    | "whatWeBuild"
+    | "engagementPlans"
+    | "selectedWork"
+    | "ourApproach"
+    | "insights";
   text: string;
   href: string;
 };
 
 type HeaderSocialItem = {
-  key: 'facebook' | 'instagram' | 'x';
+  key: "facebook" | "instagram" | "x";
   text: string;
   href: string;
 };
 
 const normalizePath = (path: string) => {
-  if (path.length > 1 && path.endsWith('/')) {
+  if (path.length > 1 && path.endsWith("/")) {
     return path.slice(0, -1);
   }
 
@@ -40,11 +46,11 @@ const normalizePath = (path: string) => {
 };
 
 const stripHash = (path: string) => {
-  const [pathname] = path.split('#');
-  return pathname || '/';
+  const [pathname] = path.split("#");
+  return pathname || "/";
 };
 
-const resolveContactHref = (value: string, type: 'email' | 'phone') => {
+const resolveContactHref = (value: string, type: "email" | "phone") => {
   const trimmedValue = value.trim();
 
   if (
@@ -53,71 +59,71 @@ const resolveContactHref = (value: string, type: 'email' | 'phone') => {
     /^phone$/i.test(trimmedValue) ||
     /^phone number$/i.test(trimmedValue)
   ) {
-    return '/get-in-touch';
+    return "/get-in-touch";
   }
 
-  if (type === 'email') {
+  if (type === "email") {
     return `mailto:${trimmedValue}`;
   }
 
-  return `tel:${trimmedValue.replace(/\s+/g, '')}`;
+  return `tel:${trimmedValue.replace(/\s+/g, "")}`;
 };
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const t = useTranslations('header');
+  const t = useTranslations("header");
   const previousPathnameRef = useRef(pathname);
 
   const navItems: readonly HeaderNavItem[] = [
-    { key: 'home', text: t('home', { fallback: 'Home' }), href: '/' },
+    { key: "home", text: t("home", { fallback: "Home" }), href: "/" },
     {
-      key: 'whatWeBuild',
-      text: t('whatWeBuild', { fallback: 'What We Build' }),
-      href: '/what-we-build',
+      key: "whatWeBuild",
+      text: t("whatWeBuild", { fallback: "What We Build" }),
+      href: "/what-we-build",
     },
     {
-      key: 'engagementPlans',
-      text: t('engagementPlans', { fallback: 'Engagement Plans' }),
-      href: '/engagement-plans',
+      key: "engagementPlans",
+      text: t("engagementPlans", { fallback: "Engagement Plans" }),
+      href: "/engagement-plans",
     },
     {
-      key: 'selectedWork',
-      text: t('selectedWork', { fallback: 'Selected Work' }),
-      href: '/selected-work',
+      key: "selectedWork",
+      text: t("selectedWork", { fallback: "Selected Work" }),
+      href: "/selected-work",
     },
     {
-      key: 'ourApproach',
-      text: t('ourApproach', { fallback: 'Our Approach' }),
-      href: '/our-approach',
+      key: "ourApproach",
+      text: t("ourApproach", { fallback: "Our Approach" }),
+      href: "/our-approach",
     },
     {
-      key: 'insights',
-      text: t('insights', { fallback: 'Insights' }),
-      href: '/insights',
+      key: "insights",
+      text: t("insights", { fallback: "Insights" }),
+      href: "/insights",
     },
   ] as const;
 
   const socialItems: readonly HeaderSocialItem[] = [
     {
-      key: 'facebook',
-      text: t('facebook', { fallback: 'Facebook' }),
+      key: "facebook",
+      text: t("facebook", { fallback: "Facebook" }),
       href: FACEBOOK_URL,
     },
     {
-      key: 'instagram',
-      text: t('instagram', { fallback: 'Instagram' }),
+      key: "instagram",
+      text: t("instagram", { fallback: "Instagram" }),
       href: INSTAGRAM_URL,
     },
-    { key: 'x', text: t('x', { fallback: 'X' }), href: X_URL },
+    { key: "x", text: t("x", { fallback: "X" }), href: X_URL },
   ] as const;
 
-  const emailHref = resolveContactHref(WEBSITE_EMAIL, 'email');
-  const phoneHref = resolveContactHref(WEBSITE_PHONE, 'phone');
+  const emailHref = resolveContactHref(WEBSITE_EMAIL, "email");
+  const phoneHref = resolveContactHref(WEBSITE_PHONE, "phone");
 
   const isActivePath = (href: string) => {
-    if (href.includes('#')) {
+    if (href.includes("#")) {
       return false;
     }
 
@@ -157,13 +163,18 @@ export const Header = () => {
     };
 
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const renderMetaLink = (key: string, label: string, href: string, className: string) => {
-    if (href.startsWith('/')) {
+  const renderMetaLink = (
+    key: string,
+    label: string,
+    href: string,
+    className: string,
+  ) => {
+    if (href.startsWith("/")) {
       return (
         <Link key={key} href={href} className={className}>
           {label}
@@ -200,7 +211,9 @@ export const Header = () => {
       <Link
         key={item.key}
         href={item.href}
-        className={isMobile ? styles.header__mobileNavItem : styles.header__navItem}
+        className={
+          isMobile ? styles.header__mobileNavItem : styles.header__navItem
+        }
         data-active={isActivePath(item.href)}
         onClick={isMobile ? closeMobileMenu : undefined}
       >
@@ -216,18 +229,20 @@ export const Header = () => {
           <div className={styles.header__topbarShell}>
             <div className={styles.header__topbarInner}>
               <div className={styles.header__meta}>
-                {renderMetaLink(
-                  'email',
-                  WEBSITE_EMAIL,
-                  emailHref,
-                  styles.header__metaLink
-                )}
-                {renderMetaLink(
-                  'phone',
-                  WEBSITE_PHONE,
-                  phoneHref,
-                  styles.header__metaLink
-                )}
+                {WEBSITE_EMAIL &&
+                  renderMetaLink(
+                    "email",
+                    WEBSITE_EMAIL,
+                    emailHref,
+                    styles.header__metaLink,
+                  )}
+                {WEBSITE_PHONE &&
+                  renderMetaLink(
+                    "phone",
+                    WEBSITE_PHONE,
+                    phoneHref,
+                    styles.header__metaLink,
+                  )}
               </div>
 
               <div className={styles.header__socials}>
@@ -248,7 +263,7 @@ export const Header = () => {
             <div className={styles.header__main}>
               <div className={styles.header__mainInner}>
                 <Link href="/" className={styles.header__brand}>
-                  {t('brand', { fallback: 'NETSPIRE DEV' })}
+                  {t("brand", { fallback: "NETSPIRE DEV" })}
                 </Link>
 
                 <nav className={styles.header__nav}>
@@ -258,16 +273,25 @@ export const Header = () => {
                 <div className={styles.header__actions}>
                   <div className={styles.header__cta}>
                     <Button variant="filled" url="/get-in-touch" type="link">
-                      <span>{t('getInTouch', { fallback: 'Get in Touch' })}</span>
-                      <span className={styles.header__ctaIcon} aria-hidden="true">
+                      <span>
+                        {t("getInTouch", { fallback: "Get in Touch" })}
+                      </span>
+                      <span
+                        className={styles.header__ctaIcon}
+                        aria-hidden="true"
+                      >
                         <Plus />
                       </span>
                     </Button>
                   </div>
 
                   <div className={styles.header__menuButton}>
-                    <Button variant="filled" type="button" onClick={toggleMobileMenu}>
-                      <span>{t('menu', { fallback: 'Menu' })}</span>
+                    <Button
+                      variant="filled"
+                      type="button"
+                      onClick={toggleMobileMenu}
+                    >
+                      <span>{t("menu", { fallback: "Menu" })}</span>
                     </Button>
                   </div>
                 </div>
