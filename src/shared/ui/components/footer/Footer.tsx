@@ -151,7 +151,8 @@ export const Footer = () => {
                 ))}
               </div>
 
-              <section
+              {/**
+               * <section
                 className={`${styles.footer__section} ${styles['footer__section--contact']}`}
               >
                 <h3 className={`${styles.footer__label} ${styles['footer__label--accent']}`}>
@@ -165,6 +166,7 @@ export const Footer = () => {
                   {sections[3].items.map((item) => renderFooterLink(item))}
                 </div>
               </section>
+               */}
             </div>
           </div>
 
