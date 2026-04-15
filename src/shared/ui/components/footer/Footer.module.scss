@@ -148,6 +148,26 @@ $divider: rgba(255, 255, 255, 0.05);
     background: $orange;
   }
 
+  &__contactLinks {
+    display: flex;
+    row-gap: 12px;
+    column-gap: 16px;
+    flex-wrap: wrap;
+    a{
+      text-decoration: underline;
+    }
+    a,
+    p {
+      width: calc(50% - 8px);
+      @include mobile {
+        //width: 100%;
+      }
+      span {
+        color: var(--color-white-25, rgba(255, 255, 255, 0.25));
+      }
+    }
+  }
+
   &__links {
     display: flex;
     flex-direction: column;

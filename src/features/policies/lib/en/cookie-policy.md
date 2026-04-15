@@ -278,6 +278,8 @@ If you have questions, concerns, or requests regarding this Cookie Policy or our
 
 - **Email:** [info@netspiredev.com](mailto:info@netspiredev.com)
 
+- **Phone:** [+447426442491](tel:+447426442491)
+
 - **Website contact form:** [](https://axelvior.com/connect)[https://netspiredev.com/get-in-touch](https://netspiredev.com/get-in-touch)
 
 We are committed to transparency and will respond to cookie-related inquiries in a clear and timely manner.

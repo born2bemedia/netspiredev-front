@@ -171,7 +171,7 @@ export const Footer = () => {
                   />
                   <span>{sections[3].title}</span>
                 </h3>
-                <div className={styles.footer__links}>
+                <div className={styles.footer__contactLinks}>
                   {WEBSITE_EMAIL && (
                     <Link
                       key="email"
@@ -192,16 +192,21 @@ export const Footer = () => {
                   )}
                   {WEBSITE_OFFICE_ADDRESS && (
                     <p className={styles.footer__link}>
-                      {t("officeAddress", { fallback: "Office address" })}:{" "}
+                      <span>
+                        {t("officeAddress", { fallback: "Office address" })}:
+                      </span>{" "}
                       {WEBSITE_OFFICE_ADDRESS}
                     </p>
                   )}
                   {WEBSITE_REGISTERED_ADDRESS && (
                     <p className={styles.footer__link}>
-                      {t("registeredAddress", {
-                        fallback: "Registered address",
-                      })}
-                      : {WEBSITE_REGISTERED_ADDRESS}
+                      <span>
+                        {t("registeredAddress", {
+                          fallback: "Registered address",
+                        })}
+                        :
+                      </span>{" "}
+                      {WEBSITE_REGISTERED_ADDRESS}
                     </p>
                   )}
                 </div>
