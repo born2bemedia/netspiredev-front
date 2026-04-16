@@ -69,7 +69,7 @@ export const Preloader: React.FC = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundColor: '#fff',
+        backgroundColor: '#0D0D0D',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

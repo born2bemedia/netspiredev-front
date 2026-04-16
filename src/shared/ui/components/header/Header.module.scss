@@ -18,6 +18,13 @@ $muted: rgba(255, 255, 255, 0.5);
 
     .header__brand{
       color: #eb5e28;
+
+      svg{
+        path[fill="white"]{
+          fill: #000;
+        }
+      }
+
     }
 
     .header__nav{

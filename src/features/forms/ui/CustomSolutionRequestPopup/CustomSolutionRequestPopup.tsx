@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+
 import { useTranslations } from 'next-intl';
 
 import { CustomSolutionRequestForm } from '../CustomSolutionRequestForm/CustomSolutionRequestForm';
@@ -16,19 +18,25 @@ export const CustomSolutionRequestPopup = ({
   onClose,
 }: CustomSolutionRequestPopupProps) => {
   const t = useTranslations('forms');
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleClose = () => {
+    setIsSuccess(false);
+    onClose();
+  };
 
   return (
     <FormPopup
       isOpen={isOpen}
-      onClose={onClose}
+      onClose={handleClose}
       ariaLabelledBy="custom-solution-popup-title"
       panelClassName={styles.panel}
     >
-      <div className={styles.shell}>
+      <div className={`${styles.shell} ${isSuccess ? styles.successShell : ''}`}>
         <button
           type="button"
           className={styles.close}
-          onClick={onClose}
+          onClick={handleClose}
           aria-label={t('close', { fallback: 'Close' })}
         >
           <span>{t('close', { fallback: 'Close' })}</span>
@@ -38,8 +46,10 @@ export const CustomSolutionRequestPopup = ({
         <CustomSolutionRequestForm
           variant="popup"
           titleId="custom-solution-popup-title"
-          onSuccessAction={onClose}
+          onSuccessAction={handleClose}
           successActionLabel={t('customSolutionForm.closeAction', { fallback: 'Close' })}
+          isSuccess={isSuccess}
+          setIsSuccess={setIsSuccess}
         />
       </div>
     </FormPopup>

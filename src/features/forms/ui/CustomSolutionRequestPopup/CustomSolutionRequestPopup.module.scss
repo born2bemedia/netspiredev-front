@@ -35,6 +35,18 @@ $white-50: rgba(255, 255, 255, 0.5);
   @include mobile {
     padding: 40px 20px;
   }
+
+  &.successShell {
+    padding: 40px;
+    background-image: url("/images/what-we-build/success-globe.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 45%;
+    @include tablet {
+      padding-bottom: 160px;
+      background-size: 100%;
+    }
+  }
 }
 
 .close {
@@ -73,7 +85,7 @@ $white-50: rgba(255, 255, 255, 0.5);
     width: 7px;
     height: 1px;
     background: currentColor;
-    content: '';
+    content: "";
   }
 
   &::before {

@@ -29,6 +29,8 @@ type CustomSolutionRequestFormProps = {
   title?: string;
   titleId?: string;
   variant?: 'page' | 'popup';
+  isSuccess?: boolean;
+  setIsSuccess?: (isSuccess: boolean) => void;
 };
 
 const MAX_ATTACHMENT_BYTES = 10 * 1024 * 1024;
@@ -43,9 +45,10 @@ export const CustomSolutionRequestForm = ({
   title,
   titleId,
   variant = 'popup',
+  isSuccess,
+  setIsSuccess,
 }: CustomSolutionRequestFormProps) => {
   const t = useTranslations('forms');
-  const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [attachment, setAttachment] = useState<File | null>(null);
@@ -139,7 +142,7 @@ export const CustomSolutionRequestForm = ({
   const resetState = () => {
     setError(null);
     setIsLoading(false);
-    setIsSuccess(false);
+    setIsSuccess?.(false);
     setAttachment(null);
     form.reset();
   };
@@ -219,7 +222,7 @@ export const CustomSolutionRequestForm = ({
 
     try {
       await submitCustomSolutionRequestForm(data, attachment);
-      setIsSuccess(true);
+      setIsSuccess?.(true);
       setAttachment(null);
       form.reset();
     } catch (err) {
@@ -343,25 +346,56 @@ export const CustomSolutionRequestForm = ({
   return (
     <div className={styles.root} data-variant={variant}>
       {isSuccess ? (
-        <div className={styles.successState}>
-          <h2 id={titleId} className={styles.successTitle}>
-            {t('customSolutionForm.successTitle', { fallback: 'Thank you!' })}
-          </h2>
-          <p className={styles.successDescription}>
-            {t('customSolutionForm.successMessage', {
-              fallback:
-                'Your request has been received. We will review the details and contact you shortly to discuss the next steps.',
-            })}
-          </p>
-          <div className={styles.successAction}>
-            <Button variant="filled" type="button" onClick={handleSuccessAction}>
-              <span className={styles.submitContent}>
-                <span>{successActionText}</span>
-                <PlusSmallIcon className={styles.submitIcon} aria-hidden="true" />
-              </span>
-            </Button>
+        variant === 'popup' ? (
+          <div className={styles.successPopupState}>
+            <div className={styles.successPopupContent}>
+              <h2 id={titleId} className={styles.successTitle}>
+                {t('customSolutionForm.successTitle', { fallback: 'Thank you!' })}
+              </h2>
+              <p className={styles.successDescription}>
+                {t('customSolutionForm.successMessage', {
+                  fallback:
+                    'Your request has been received successfully. Our team will review your details and contact you shortly to discuss the next steps.',
+                })}
+              </p>
+            </div>
+
+            <div className={styles.successPopupVisual} aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/forms/request-popup/success-globe-desktop.svg"
+                alt=""
+                className={styles.successImageDesktop}
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/forms/request-popup/success-globe-mobile.svg"
+                alt=""
+                className={styles.successImageMobile}
+              />
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className={styles.successState}>
+            <h2 id={titleId} className={styles.successTitle}>
+              {t('customSolutionForm.successTitle', { fallback: 'Thank you!' })}
+            </h2>
+            <p className={styles.successDescription}>
+              {t('customSolutionForm.successMessage', {
+                fallback:
+                  'Your request has been received. We will review the details and contact you shortly to discuss the next steps.',
+              })}
+            </p>
+            <div className={styles.successAction}>
+              <Button variant="filled" type="button" onClick={handleSuccessAction}>
+                <span className={styles.submitContent}>
+                  <span>{successActionText}</span>
+                  <PlusSmallIcon className={styles.submitIcon} aria-hidden="true" />
+                </span>
+              </Button>
+            </div>
+          </div>
+        )
       ) : (
         <>
           <div className={styles.intro}>

@@ -14,6 +14,7 @@ import {
 } from "@/shared/lib/constants/constants";
 
 import { Arrow } from "../../icons/header/arrow";
+import { Logo } from "../../icons/header/Logo";
 import { Plus } from "../../icons/header/plus";
 import { Button } from "../../kit/button/Button";
 import styles from "./Header.module.scss";
@@ -189,7 +190,6 @@ export const Header = () => {
       }, 0);
     }
     {
-       
     }
   }, [pathname]);
 
@@ -290,12 +290,7 @@ export const Header = () => {
             <div className={styles.header__main}>
               <div className={styles.header__mainInner}>
                 <Link href="/" className={styles.header__brand}>
-                  <Image
-                    src="/images/logo.svg"
-                    alt="NETSPIRE DEV"
-                    width={142}
-                    height={16}
-                  />
+                  <Logo />
                 </Link>
 
                 <nav className={styles.header__nav}>
