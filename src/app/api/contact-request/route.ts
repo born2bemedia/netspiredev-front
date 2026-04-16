@@ -99,7 +99,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     const userMsg = {
       to: email,
       from: FROM_EMAIL,
-      subject: "We've Received Your Request",
+      subject: "Your Request Has Been Received",
       html: `
 <!DOCTYPE html>
 <html lang="en">

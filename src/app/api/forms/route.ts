@@ -275,7 +275,7 @@ async function handleRequestForm(
   await sendEmail({
     to: requestData.email,
     from: fromEmail,
-    subject: "We've Received Your Request",
+    subject: "Your Request Has Been Received",
     html: buildRequestUserEmailHtml(requestData),
   }, 'request confirmation');
 }
