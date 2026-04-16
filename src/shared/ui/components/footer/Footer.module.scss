@@ -62,6 +62,16 @@ $divider: rgba(255, 255, 255, 0.05);
     line-height: 1.2;
     letter-spacing: -0.03em;
     text-decoration: none;
+    @include mobile {
+      width: 100%;
+      height: auto;
+    }
+    img{
+      @include mobile {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
   &__description {

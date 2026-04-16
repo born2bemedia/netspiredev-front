@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useTranslations } from "next-intl";
 
 import {
@@ -128,7 +130,12 @@ export const Footer = () => {
           <div className={styles.footer__main}>
             <div className={styles.footer__brandBlock}>
               <Link href="/" className={styles.footer__brand}>
-                {t("brand", { fallback: "Netspire Dev" })}
+                <Image
+                  src="/images/logo.svg"
+                  alt="NETSPIRE DEV"
+                  width={355}
+                  height={40}
+                />
               </Link>
               <p className={styles.footer__description}>
                 {t("description", {

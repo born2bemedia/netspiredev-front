@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 import { useTranslations } from "next-intl";
 
@@ -178,7 +179,7 @@ export const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (whiteThemePaths.some(path => pathname.includes(path))) {
+    if (whiteThemePaths.some((path) => pathname.includes(path))) {
       setTimeout(() => {
         setIsWhiteTheme(true);
       }, 0);
@@ -187,7 +188,9 @@ export const Header = () => {
         setIsWhiteTheme(false);
       }, 0);
     }
-    {/* eslint-disable-next-line react-hooks/exhaustive-deps */}
+    {
+       
+    }
   }, [pathname]);
 
   const renderMetaLink = (
@@ -287,7 +290,12 @@ export const Header = () => {
             <div className={styles.header__main}>
               <div className={styles.header__mainInner}>
                 <Link href="/" className={styles.header__brand}>
-                  {t("brand", { fallback: "NETSPIRE DEV" })}
+                  <Image
+                    src="/images/logo.svg"
+                    alt="NETSPIRE DEV"
+                    width={142}
+                    height={16}
+                  />
                 </Link>
 
                 <nav className={styles.header__nav}>
