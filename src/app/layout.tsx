@@ -1,5 +1,6 @@
 import { Roboto_Mono, Space_Mono } from 'next/font/google';
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
 
@@ -41,6 +42,7 @@ export default async function RootLayout({
   const locale = await getLocale();
   return (
     <html lang={locale}>
+      <GoogleAnalytics gaId="G-2KN8RD8E7C" />
       <body className={cn(spaceMono.variable, robotoMono.variable)}>{children}</body>
     </html>
   );
