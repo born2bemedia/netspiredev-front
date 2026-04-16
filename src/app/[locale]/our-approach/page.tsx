@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: 'Our Approach to Web Development | Netspire Dev',
     description:
       'Learn how Netspire Dev approaches digital projects with structured thinking, clear processes, and performance-focused development.',
+    images: 'https://netspiredev.com/images/meta.png',
   },
 };
 

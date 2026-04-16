@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Custom Web Development for Individuals | Netspire Dev',
     description: 'Netspire Dev creates custom websites and digital solutions for individuals. Clean design, strong performance, and tailored development built around your idea.',
-    //images: 'https://netspiredev.com/images/meta.png',
+    images: 'https://netspiredev.com/images/meta.png',
   },
 };
 

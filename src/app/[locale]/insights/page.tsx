@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: "Web Development Insights & Articles | Netspire Dev",
     description:
       "Explore insights on web design, performance, structure, and digital product development. Clear perspectives without unnecessary complexity.",
+    images: 'https://netspiredev.com/images/meta.png',
   },
 };
 

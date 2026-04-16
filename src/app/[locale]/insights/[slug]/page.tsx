@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: article.seoTitle,
       description: article.seoDescription,
+      images: 'https://netspiredev.com/images/meta.png',
     },
   };
 }

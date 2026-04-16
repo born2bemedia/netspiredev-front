@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Custom Websites & Web Solutions | Netspire Dev',
     description: 'Explore tailored digital solutions, including websites, web applications, UI/UX design, and performance optimization built for individuals.',
-    //images: 'https://netspiredev.com/images/meta.png',
+    images: 'https://netspiredev.com/images/meta.png',
   },
 };
 

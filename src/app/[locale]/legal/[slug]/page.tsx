@@ -31,6 +31,7 @@ export async function generateMetadata({
     openGraph: {
       title: pageTitle,
       description: policy.seoDescription,
+      images: 'https://netspiredev.com/images/meta.png',
     },
   };
 }

@@ -7,7 +7,7 @@ import {
 
 const WEBSITE_URL = 'https://netspiredev.com';
 const EMAIL_HEADER_IMAGE = `${WEBSITE_URL}/images/email_header.png`;
-const EMAIL_FOOTER_MARK_IMAGE = `${WEBSITE_URL}/images/email-footer-mark.svg`;
+const EMAIL_FOOTER_MARK_IMAGE = `${WEBSITE_URL}/images/email-footer-mark.png`;
 
 export type EmailDetail = {
   label: string;
@@ -143,27 +143,27 @@ export const createBrandedEmailHtml = ({
                     <td valign="top" style="padding: 0 12px 0 0; width: 120px;">
                       <a
                         href="mailto:${escapeHtml(WEBSITE_EMAIL)}"
-                        style="color: rgba(239, 239, 239, 0.7); font-size: 7px; line-height: 1.4; font-weight: 400; text-decoration: underline; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;"
+                        style="color: rgba(239, 239, 239, 0.7); font-size: 10px; line-height: 1.4; font-weight: 400; text-decoration: underline; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;"
                       >
                         ${escapeHtml(WEBSITE_EMAIL)}
                       </a>
-                      <p style="margin: 4px 0 0; color: rgba(239, 239, 239, 0.7); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                      <p style="margin: 4px 0 0; color: rgba(239, 239, 239, 0.7); font-size: 10px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
                         ${escapeHtml(WEBSITE_PHONE)}
                       </p>
                     </td>
                     <td valign="top" style="padding: 0 12px 0 0; width: 150px;">
-                      <p style="margin: 0; color: rgba(239, 239, 239, 0.35); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                      <p style="margin: 0; color: rgba(239, 239, 239, 0.35); font-size: 10px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
                         Office address:
                       </p>
-                      <p style="margin: 0; color: rgba(239, 239, 239, 0.7); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                      <p style="margin: 0; color: rgba(239, 239, 239, 0.7); font-size: 10px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
                         ${escapeHtml(WEBSITE_OFFICE_ADDRESS)}
                       </p>
                     </td>
                     <td valign="top" style="padding: 0 12px 0 0; width: 150px;">
-                      <p style="margin: 0; color: rgba(239, 239, 239, 0.35); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                      <p style="margin: 0; color: rgba(239, 239, 239, 0.35); font-size: 10px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
                         Registered address:
                       </p>
-                      <p style="margin: 0; color: rgba(239, 239, 239, 0.7); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                      <p style="margin: 0; color: rgba(239, 239, 239, 0.7); font-size: 10px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
                         ${escapeHtml(WEBSITE_REGISTERED_ADDRESS)}
                       </p>
                     </td>
