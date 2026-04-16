@@ -62,8 +62,11 @@ export async function POST(request: Request): Promise<NextResponse> {
       from: process.env.FROM_EMAIL!,
       subject: "We've Received Your Message",
       html: createBrandedEmailHtml({
-        previewTitle: 'Thank you for reaching out to Travellio Global!',
-        title: 'Thank you for reaching out to Travellio Global!',
+        previewTitle: 'Thank you for reaching out to Netspire Dev!',
+        headingLines: [
+          { text: 'Thank you for reaching out to' },
+          { text: 'Netspire Dev!', color: '#ff4500' },
+        ],
         bodyHtml: [
           renderEmailParagraph(
             'Your message has been successfully received. Our team will review your inquiry carefully and respond shortly.'

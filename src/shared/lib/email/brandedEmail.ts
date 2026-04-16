@@ -1,20 +1,30 @@
-import { WEBSITE_EMAIL, WEBSITE_REGISTERED_ADDRESS } from '@/shared/lib/constants/constants';
+import {
+  WEBSITE_EMAIL,
+  WEBSITE_OFFICE_ADDRESS,
+  WEBSITE_PHONE,
+  WEBSITE_REGISTERED_ADDRESS,
+} from '@/shared/lib/constants/constants';
 
 const WEBSITE_URL = 'https://netspiredev.com';
-const EMAIL_HEADER_IMAGE = `${WEBSITE_URL}/images/email-header.png`;
-const EMAIL_FOOTER_LOGO_IMAGE = `${WEBSITE_URL}/images/email-foot-logo.png`;
+const EMAIL_HEADER_IMAGE = `${WEBSITE_URL}/images/email_header.png`;
+const EMAIL_FOOTER_MARK_IMAGE = `${WEBSITE_URL}/images/email-footer-mark.svg`;
 
-type EmailDetail = {
+export type EmailDetail = {
   label: string;
   value: string;
 };
 
+export type EmailHeadingLine = {
+  text: string;
+  color?: string;
+};
+
 type CreateBrandedEmailOptions = {
   previewTitle: string;
-  title: string;
+  headingLines: EmailHeadingLine[];
   bodyHtml: string;
-  signoffLine1?: string;
-  signoffLine2?: string;
+  detailsHtml?: string;
+  signoffLines?: string[];
 };
 
 export const escapeHtml = (value: string | number | null | undefined) =>
@@ -26,128 +36,144 @@ export const escapeHtml = (value: string | number | null | undefined) =>
     .replace(/'/g, '&#039;');
 
 export const renderEmailParagraph = (content: string) =>
-  `<p style="margin: 0; color: #0f0f19; font-size: 16px; line-height: 1.35; font-weight: 400; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">${content}</p>`;
+  `<p style="margin: 0; color: #efefef; font-size: 14px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">${content}</p>`;
 
-export const renderEmailDetailsList = (label: string, details: EmailDetail[]) => `
-  <div style="display: block;">
-    <p style="margin: 0 0 12px; color: #0f0f19; font-size: 16px; line-height: 1.35; font-weight: 400; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">
-      ${label}
+export const renderEmailSpacer = (height = 24) =>
+  `<div style="height: ${height}px; line-height: ${height}px;">&nbsp;</div>`;
+
+export const renderEmailLink = (href: string, label: string) =>
+  `<a href="${href}" target="_blank" rel="noopener noreferrer" style="color: #ff4500; text-decoration: underline;">${label}</a>`;
+
+export const renderEmailDetailsSection = (title: string, details: EmailDetail[]) => `
+  <div style="margin-top: 24px;">
+    <p style="margin: 0 0 12px; color: #ff4500; font-size: 10px; line-height: 1.4; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+      ${escapeHtml(title)}
     </p>
-    <ul style="margin: 0; padding-left: 24px; color: #0f0f19; font-size: 16px; line-height: 1.35; font-weight: 400; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse;">
       ${details
         .map(
-          ({ label: detailLabel, value }) =>
-            `<li style="margin: 0 0 4px;"><span>${detailLabel}: ${value}</span></li>`
+          ({ label, value }) => `
+            <tr>
+              <td valign="top" style="padding: 0 0 10px; width: 170px; color: rgba(239, 239, 239, 0.55); font-size: 12px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                ${escapeHtml(label)}
+              </td>
+              <td valign="top" style="padding: 0 0 10px; color: #efefef; font-size: 12px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                ${value}
+              </td>
+            </tr>
+          `
         )
         .join('')}
-    </ul>
+    </table>
   </div>
 `;
 
-export const renderEmailLink = (href: string, label: string) =>
-  `<a href="${href}" target="_blank" rel="noopener noreferrer" style="color: #eb5e28; text-decoration: underline;">${label}</a>`;
+const renderHeading = (headingLines: EmailHeadingLine[]) =>
+  headingLines
+    .map(
+      ({ text, color = '#efefef' }, index) => `
+        <p style="margin: ${index === 0 ? '0' : '2px'} 0 0; color: ${color}; font-size: 24px; line-height: 1.2; font-weight: 700; letter-spacing: -0.03em; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+          ${escapeHtml(text)}
+        </p>
+      `
+    )
+    .join('');
+
+const renderSignoff = (signoffLines: string[]) => `
+  <div style="margin-top: 24px;">
+    ${signoffLines
+      .map(
+        (line) => `
+          <p style="margin: 0; color: #efefef; font-size: 18px; line-height: 1.2; font-weight: 700; letter-spacing: -0.03em; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+            ${escapeHtml(line)}
+          </p>
+        `
+      )
+      .join('')}
+    <p style="margin: 2px 0 0; font-size: 18px; line-height: 1.2; font-weight: 700; letter-spacing: -0.03em; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+      ${renderEmailLink(WEBSITE_URL, 'netspiredev.com')}
+    </p>
+  </div>
+`;
 
 export const createBrandedEmailHtml = ({
   previewTitle,
-  title,
+  headingLines,
   bodyHtml,
-  signoffLine1 = 'Safe travels,',
-  signoffLine2 = 'Travellio Global',
+  detailsHtml = '',
+  signoffLines = ['Kind regards,', 'The Netspire Dev Crew'],
 }: CreateBrandedEmailOptions) => `
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${previewTitle}</title>
+    <title>${escapeHtml(previewTitle)}</title>
   </head>
-  <body style="margin: 0; padding: 0;">
-    <table role="presentation" style="width: 100%; border-collapse: collapse;background-color: #ccc6ba;
-    max-width: 600px;
-    margin: 0 auto;">
+  <body style="margin: 0; padding: 0; background-color: #1a1a1a;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #1a1a1a;">
       <tr>
-        <td align="center" style="padding: 24px 0 0;">
-          <table role="presentation" style="width: 595px; max-width: 595px; border-collapse: collapse;">
+        <td align="center" style="padding: 0;">
+          <table role="presentation" style="width: 100%; max-width: 640px; border-collapse: collapse; background-color: #1a1a1a; margin: 0 auto;">
             <tr>
-              <td align="center" style="padding: 0 20px 24px;">
+              <td style="padding: 0; background-color: #0d0d0d;">
                 <img
                   src="${EMAIL_HEADER_IMAGE}"
-                  alt="Travellio Global"
-                  style="display: block; width: 555px; max-width: 100%; height: auto; border: 0;"
+                  alt="Netspire Dev"
+                  width="640"
+                  style="display: block; width: 100%; max-width: 640px; height: auto; border: 0;"
                 />
               </td>
             </tr>
             <tr>
-              <td align="center" style="padding: 0 20px 24px;">
-                <table
-                  role="presentation"
-                  style="width: 555px; max-width: 100%; border-collapse: separate; border-spacing: 0; background-color: #f9faf5; border-radius: 24px;"
-                >
-                  <tr>
-                    <td style="padding: 40px;">
-                      <h1
-                        style="margin: 0 0 40px; color: #eb5e28; font-size: 32px; line-height: 1; font-weight: 600; text-align: center; font-family: 'Syne', 'Helvetica Neue', Arial, sans-serif;"
-                      >
-                        ${title}
-                      </h1>
-                      <div>${bodyHtml}</div>
-                      <table role="presentation" style="width: 100%; border-collapse: collapse; margin-top: 40px;">
-                        <tr>
-                          <td valign="bottom" style="color: #0f0f19; font-size: 16px; line-height: 1.35; font-weight: 400; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">
-                            <div>${signoffLine1}</div>
-                            <div>${signoffLine2}</div>
-                          </td>
-                          <td
-                            valign="bottom"
-                            align="right"
-                            style="color: #0f0f19; font-size: 16px; line-height: 1.35; font-weight: 400; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;"
-                          >
-                            <a
-                              href="${WEBSITE_URL}"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style="color: #0f0f19; text-decoration: underline;"
-                            >
-                              netspiredev.com
-                            </a>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
+              <td style="padding: 40px; background-color: #141312;">
+                ${renderHeading(headingLines)}
+                <div style="margin-top: 24px;">${bodyHtml}</div>
+                ${detailsHtml}
+                ${renderSignoff(signoffLines)}
               </td>
             </tr>
             <tr>
-              <td style="background-color: #eb5e28; padding: 28px 32px 24px;">
+              <td style="padding: 12px 24px 14px; background-color: #0d0d0d;">
+                <p style="margin: 0 0 10px; color: #ff4500; font-size: 6px; line-height: 1.4; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                  ■ Contact
+                </p>
                 <table role="presentation" style="width: 100%; border-collapse: collapse;">
                   <tr>
-                    <td valign="top" style="padding-right: 24px;">
-                      <div style="margin: 0 0 4px; color: rgba(249, 250, 245, 0.5); font-size: 8px; line-height: 1.35; font-weight: 700; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">
-                        Email:
-                      </div>
+                    <td valign="top" style="padding: 0 12px 0 0; width: 120px;">
                       <a
-                        href="mailto:${WEBSITE_EMAIL}"
-                        style="color: #fffdf1; font-size: 12px; line-height: 1.35; font-weight: 400; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif; text-decoration: underline;"
+                        href="mailto:${escapeHtml(WEBSITE_EMAIL)}"
+                        style="color: rgba(239, 239, 239, 0.7); font-size: 7px; line-height: 1.4; font-weight: 400; text-decoration: underline; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;"
                       >
-                        ${WEBSITE_EMAIL}
+                        ${escapeHtml(WEBSITE_EMAIL)}
                       </a>
+                      <p style="margin: 4px 0 0; color: rgba(239, 239, 239, 0.7); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                        ${escapeHtml(WEBSITE_PHONE)}
+                      </p>
                     </td>
-                    <td valign="top" style="padding-right: 24px;">
-                      <div style="margin: 0 0 4px; color: rgba(249, 250, 245, 0.5); font-size: 8px; line-height: 1.35; font-weight: 700; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">
+                    <td valign="top" style="padding: 0 12px 0 0; width: 150px;">
+                      <p style="margin: 0; color: rgba(239, 239, 239, 0.35); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                        Office address:
+                      </p>
+                      <p style="margin: 0; color: rgba(239, 239, 239, 0.7); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                        ${escapeHtml(WEBSITE_OFFICE_ADDRESS)}
+                      </p>
+                    </td>
+                    <td valign="top" style="padding: 0 12px 0 0; width: 150px;">
+                      <p style="margin: 0; color: rgba(239, 239, 239, 0.35); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
                         Registered address:
-                      </div>
-                      <div style="color: #fffdf1; font-size: 12px; line-height: 1.35; font-weight: 400; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">
-                        ${WEBSITE_REGISTERED_ADDRESS}
-                      </div>
+                      </p>
+                      <p style="margin: 0; color: rgba(239, 239, 239, 0.7); font-size: 7px; line-height: 1.4; font-weight: 400; font-family: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;">
+                        ${escapeHtml(WEBSITE_REGISTERED_ADDRESS)}
+                      </p>
                     </td>
-                    <td align="right" valign="middle" style="width: 58px;">
+                    <td align="right" valign="bottom" style="width: 56px;">
                       <img
-                        src="${EMAIL_FOOTER_LOGO_IMAGE}"
-                        alt="Travellio Global"
-                        width="57"
-                        height="40"
-                        style="display: block; width: 57px; height: 40px; border: 0;"
+                        src="${EMAIL_FOOTER_MARK_IMAGE}"
+                        alt="Netspire Dev mark"
+                        width="45"
+                        height="42"
+                        style="display: block; width: 45px; height: 42px; border: 0; margin-left: auto;"
                       />
                     </td>
                   </tr>

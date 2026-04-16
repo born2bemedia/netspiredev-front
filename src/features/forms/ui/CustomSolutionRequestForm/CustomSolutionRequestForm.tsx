@@ -1,10 +1,10 @@
 'use client';
 
-import type { ChangeEvent, ReactNode } from 'react';
 import { useState } from 'react';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
+import type { ChangeEvent, ReactNode } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { submitCustomSolutionRequestForm } from '@/features/forms/api/submitForm';

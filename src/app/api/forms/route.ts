@@ -3,6 +3,15 @@ import { NextResponse } from 'next/server';
 import type { MailDataRequired } from '@sendgrid/mail';
 import sgMail from '@sendgrid/mail';
 
+import {
+  createBrandedEmailHtml,
+  escapeHtml,
+  renderEmailDetailsSection,
+  renderEmailLink,
+  renderEmailParagraph,
+  renderEmailSpacer,
+  type EmailDetail,
+} from '@/shared/lib/email/brandedEmail';
 import { verifyRecaptcha } from '@/shared/lib/recaptcha';
 
 export const runtime = 'nodejs';
@@ -40,19 +49,13 @@ type Attachment = {
   disposition: 'attachment';
 };
 
-const escapeHtml = (text: string | undefined | null) => {
-  if (text == null) return '';
-
-  return String(text)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-};
-
 const formatList = (items: string[]) =>
   items.filter(Boolean).map((item) => escapeHtml(item)).join(', ') || 'Not specified';
+
+const getOptionalText = (value: string | undefined | null, fallback: string) => {
+  const trimmed = String(value ?? '').trim();
+  return trimmed ? escapeHtml(trimmed) : fallback;
+};
 
 const parseEmailList = (value: string | undefined) =>
   (value ?? '')
@@ -93,108 +96,110 @@ const sendEmail = async (message: MailDataRequired, label: string) => {
   }
 };
 
-const getSafeFirstName = (fullName: string) => {
-  const [firstName] = fullName.trim().split(/\s+/);
-  return escapeHtml(firstName || fullName);
-};
+const buildParagraphStack = (paragraphs: string[]) =>
+  paragraphs
+    .map((paragraph, index) =>
+      `${index > 0 ? renderEmailSpacer() : ''}${renderEmailParagraph(paragraph)}`
+    )
+    .join('');
 
-const buildRequestUserEmailHtml = (payload: RequestPayload) => {
-  const safeFirstName = getSafeFirstName(payload.fullName);
+const buildUserEmailHtml = (options: {
+  previewTitle: string;
+  intro: string;
+  followUp?: string;
+}) =>
+  createBrandedEmailHtml({
+    previewTitle: options.previewTitle,
+    headingLines: [
+      { text: 'Thank you for reaching out to' },
+      { text: 'Netspire Dev!', color: '#ff4500' },
+    ],
+    bodyHtml: buildParagraphStack(
+      [options.intro, options.followUp ?? 'We look forward to working with you.'].filter(Boolean)
+    ),
+  });
 
-  return `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request Received - Netspire Dev</title>
-</head>
-<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #fff; color: #333;">
-  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #fff;">
-    <tr>
-      <td align="center" style="padding: 40px 20px;">
-        <table role="presentation" style="max-width: 640px; width: 100%; border-collapse: collapse; background-color: #fff; overflow: hidden;">
-          <tr>
-            <td style="padding: 32px; background: #fff;">
-              <p style="margin: 0 0 32px; color: #333;font-size: 24px;font-style: normal;font-weight: 400;line-height: 140%;">
-                Dear ${safeFirstName},
-              </p>
-              <p style="margin: 0 0 24px; color: #333;font-size: 16px;font-style: normal;font-weight: 400;line-height: 140%;">
-                Thank you for reaching out to Netspire Dev. We have successfully received your request and our team is already reviewing the details.
-              </p>
-              <span style="display: block;padding: 20px;background:#384CE3;margin: 32px 0;color: #FFF;font-size: 14px;font-style: normal;font-weight: 400;line-height: 140%;">
-                Request Summary:<br><br>
-                <ul style="margin: 0;padding-left: 16px;">
-                  <li>
-                    Service: <strong>${escapeHtml(payload.service)}</strong>
-                  </li>
-                </ul>
-              </span>
-              <p style="margin: 0 0 24px; color: #333;font-size: 16px;font-style: normal;font-weight: 400;line-height: 140%;">
-                We will contact you shortly to confirm the next steps and discuss the best way forward for your project.
-              </p>
-              <p style="margin: 0 0 24px; color: #333;font-size: 16px;font-style: normal;font-weight: 400;line-height: 140%;">
-                Best regards,<br>
-                <strong style="color: #333;">The Netspire Dev Team</strong>
-              </p>
-              <p style="margin: 0; color: #333;font-size: 18px;font-style: normal;font-weight: 400;line-height: 140%;">
-                <a href="https://netspiredev.com" target="_blank" style="color: #333;font-weight: 400;text-decoration: underline;">netspiredev.com</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
-  `;
-};
+const buildAdminEmailHtml = (options: {
+  previewTitle: string;
+  headingLines: { text: string; color?: string }[];
+  intro: string;
+  detailsTitle: string;
+  details: EmailDetail[];
+}) =>
+  createBrandedEmailHtml({
+    previewTitle: options.previewTitle,
+    headingLines: options.headingLines,
+    bodyHtml: buildParagraphStack([
+      options.intro,
+      `You can reply directly to this email or contact the client via ${renderEmailLink(
+        `mailto:${options.details.find((detail) => detail.label === 'Email')?.value ?? ''}`,
+        options.details.find((detail) => detail.label === 'Email')?.value ?? 'their email'
+      )}.`,
+    ]),
+    detailsHtml: renderEmailDetailsSection(options.detailsTitle, options.details),
+    signoffLines: ['Internal notification,', 'Netspire Dev Website'],
+  });
 
-const buildCustomSolutionUserEmailHtml = (payload: CustomSolutionPayload) => {
-  const safeFirstName = getSafeFirstName(payload.fullName);
+const buildRequestUserEmailHtml = (_payload: RequestPayload) =>
+  buildUserEmailHtml({
+    previewTitle: 'Request Received - Netspire Dev',
+    intro:
+      "We've received your project request and are currently reviewing the details. Our team will contact you shortly to discuss your idea, clarify requirements, and outline the next steps.",
+  });
 
-  return `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Solution Request Received - Netspire Dev</title>
-</head>
-<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #fff; color: #333;">
-  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #fff;">
-    <tr>
-      <td align="center" style="padding: 40px 20px;">
-        <table role="presentation" style="max-width: 640px; width: 100%; border-collapse: collapse; background-color: #fff; overflow: hidden;">
-          <tr>
-            <td style="padding: 32px; background: #fff;">
-              <p style="margin: 0 0 32px; color: #333;font-size: 24px;font-style: normal;font-weight: 400;line-height: 140%;">
-                Dear ${safeFirstName},
-              </p>
-              <p style="margin: 0 0 24px; color: #333;font-size: 16px;font-style: normal;font-weight: 400;line-height: 140%;">
-                Thank you for sharing your project idea with Netspire Dev. We have received your custom solution request and will review it carefully.
-              </p>
-              <p style="margin: 0 0 24px; color: #333;font-size: 16px;font-style: normal;font-weight: 400;line-height: 140%;">
-                Our team will contact you soon to clarify the details, discuss the scope, and recommend the best next steps.
-              </p>
-              <p style="margin: 0 0 24px; color: #333;font-size: 16px;font-style: normal;font-weight: 400;line-height: 140%;">
-                Best regards,<br>
-                <strong style="color: #333;">The Netspire Dev Team</strong>
-              </p>
-              <p style="margin: 0; color: #333;font-size: 18px;font-style: normal;font-weight: 400;line-height: 140%;">
-                <a href="https://netspiredev.com" target="_blank" style="color: #333;font-weight: 400;text-decoration: underline;">netspiredev.com</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
-  `;
-};
+const buildRequestAdminEmailHtml = (payload: RequestPayload) =>
+  buildAdminEmailHtml({
+    previewTitle: `New Service Request: ${payload.service || 'Unknown service'}`,
+    headingLines: [
+      { text: 'New service request' },
+      { text: payload.service || 'Netspire Dev', color: '#ff4500' },
+    ],
+    intro: 'A new service request has been submitted through the website.',
+    detailsTitle: 'Request details',
+    details: [
+      { label: 'Service', value: escapeHtml(payload.service || 'Not specified') },
+      { label: 'Full name', value: escapeHtml(payload.fullName) },
+      { label: 'Email', value: escapeHtml(payload.email) },
+      { label: 'Phone', value: getOptionalText(payload.phone, 'Not provided') },
+      { label: 'Company name', value: getOptionalText(payload.companyName, 'Not provided') },
+      { label: 'Website', value: getOptionalText(payload.website, 'Not provided') },
+      { label: 'Message', value: getOptionalText(payload.message, 'Not provided') },
+    ],
+  });
+
+const buildCustomSolutionUserEmailHtml = (_payload: CustomSolutionPayload) =>
+  buildUserEmailHtml({
+    previewTitle: 'Custom Solution Request Received - Netspire Dev',
+    intro:
+      "We've received your project request and are currently reviewing the details. Our team will contact you shortly to discuss your idea, clarify requirements, and outline the next steps.",
+  });
+
+const buildCustomSolutionAdminEmailHtml = (payload: CustomSolutionPayload) =>
+  buildAdminEmailHtml({
+    previewTitle: 'Custom Solution Request - Netspire Dev',
+    headingLines: [
+      { text: 'New custom solution' },
+      { text: 'request received', color: '#ff4500' },
+    ],
+    intro: 'A new custom solution request has been submitted through the website.',
+    detailsTitle: 'Project details',
+    details: [
+      { label: 'Full name', value: escapeHtml(payload.fullName) },
+      { label: 'Email', value: escapeHtml(payload.email) },
+      { label: 'Phone', value: getOptionalText(payload.phone, 'Not provided') },
+      { label: 'Website', value: getOptionalText(payload.website, 'Not provided') },
+      { label: 'Project types', value: formatList(payload.projectTypes) },
+      { label: 'Other project type', value: getOptionalText(payload.projectTypeOther, 'Not specified') },
+      { label: 'Estimated budget', value: getOptionalText(payload.budget, 'Not specified') },
+      { label: 'Main goals', value: getOptionalText(payload.goals, 'Not specified') },
+      { label: 'Timeline', value: getOptionalText(payload.timeline, 'Not specified') },
+      {
+        label: 'Preferred communication',
+        value: formatList(payload.communicationPreferences),
+      },
+      { label: 'Attachments', value: formatList(payload.attachmentNames) },
+    ],
+  });
 
 const parseJsonBody = async (request: Request) => {
   const body = (await request.json()) as {
@@ -259,23 +264,12 @@ async function handleRequestForm(
   void _recaptcha;
   void attachments;
 
-  const html = `
-    <h2>Request</h2>
-    <p><strong>Service:</strong> ${escapeHtml(requestData.service)}</p>
-    <p><strong>Company name:</strong> ${escapeHtml(requestData.companyName)}</p>
-    <p><strong>Website:</strong> ${escapeHtml(requestData.website)}</p>
-    <p><strong>Message:</strong> ${escapeHtml(requestData.message)}</p>
-    <p><strong>Full name:</strong> ${escapeHtml(requestData.fullName)}</p>
-    <p><strong>Phone:</strong> ${escapeHtml(requestData.phone)}</p>
-    <p><strong>Email:</strong> ${escapeHtml(requestData.email)}</p>
-  `;
-
   await sendEmail({
     to: adminEmails,
     from: fromEmail,
     replyTo: requestData.email,
     subject: `New Service Request: ${requestData.service || 'Unknown service'}`,
-    html,
+    html: buildRequestAdminEmailHtml(requestData),
   }, 'admin request notification');
 
   await sendEmail({
@@ -295,27 +289,12 @@ async function handleCustomSolutionForm(
   const { recaptcha: _recaptcha, ...requestData } = customPayload;
   void _recaptcha;
 
-  const html = `
-    <h2>Custom Solution Request</h2>
-    <p><strong>Full name:</strong> ${escapeHtml(requestData.fullName)}</p>
-    <p><strong>Email:</strong> ${escapeHtml(requestData.email)}</p>
-    <p><strong>Phone:</strong> ${escapeHtml(requestData.phone) || 'Not provided'}</p>
-    <p><strong>Website:</strong> ${escapeHtml(requestData.website) || 'Not provided'}</p>
-    <p><strong>Project types:</strong> ${formatList(requestData.projectTypes)}</p>
-    <p><strong>Other project type:</strong> ${escapeHtml(requestData.projectTypeOther) || 'Not specified'}</p>
-    <p><strong>Estimated budget:</strong> ${escapeHtml(requestData.budget) || 'Not specified'}</p>
-    <p><strong>Main goals:</strong> ${escapeHtml(requestData.goals) || 'Not specified'}</p>
-    <p><strong>Timeline:</strong> ${escapeHtml(requestData.timeline) || 'Not specified'}</p>
-    <p><strong>Preferred communication:</strong> ${formatList(requestData.communicationPreferences)}</p>
-    <p><strong>Attachments:</strong> ${formatList(requestData.attachmentNames)}</p>
-  `;
-
   await sendEmail({
     to: adminEmails,
     from: fromEmail,
     replyTo: requestData.email,
     subject: 'Custom Solution Request',
-    html,
+    html: buildCustomSolutionAdminEmailHtml(requestData),
     attachments,
   }, 'admin custom solution notification');
 
