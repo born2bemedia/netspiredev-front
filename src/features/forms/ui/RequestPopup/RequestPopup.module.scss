@@ -247,6 +247,11 @@ $white-10: rgba(255, 255, 255, 0.1);
   line-height: 1.4;
 }
 
+.recaptcha {
+  display: flex;
+  width: fit-content;
+}
+
 .successShell {
   background-image: url('/images/what-we-build/success-globe.svg');
   background-size: 45%;

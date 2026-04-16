@@ -135,6 +135,7 @@ export const ContactFormContacts = () => {
             <ReCAPTCHA
               key={recaptchaKey}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+              theme="dark"
               onChange={handleRecaptchaChange}
             />
             {errors.recaptcha && <p className={styles.error}>{errors.recaptcha.message}</p>}

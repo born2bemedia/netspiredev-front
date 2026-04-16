@@ -410,6 +410,11 @@ $muted: #666666;
   line-height: 1.4;
 }
 
+.recaptcha {
+  display: flex;
+  width: fit-content;
+}
+
 .successState {
   display: flex;
   min-height: 320px;

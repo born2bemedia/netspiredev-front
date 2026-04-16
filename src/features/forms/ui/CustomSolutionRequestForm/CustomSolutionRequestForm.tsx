@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import type { ChangeEvent, ReactNode } from 'react';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 import { submitCustomSolutionRequestForm } from '@/features/forms/api/submitForm';
 import {
@@ -17,6 +17,8 @@ import { cn } from '@/shared/lib/helpers/styles';
 import { FileIcon, PlusSmallIcon } from '@/shared/ui/icons';
 import { Button } from '@/shared/ui/kit/button/Button';
 
+import { PhoneField } from '../PhoneField/PhoneField';
+import { RecaptchaField } from '../RecaptchaField/RecaptchaField';
 import styles from './CustomSolutionRequestForm.module.scss';
 
 type CustomSolutionRequestFormProps = {
@@ -34,6 +36,7 @@ type CustomSolutionRequestFormProps = {
 };
 
 const MAX_ATTACHMENT_BYTES = 10 * 1024 * 1024;
+const ENABLE_RECAPTCHA = true;
 
 export const CustomSolutionRequestForm = ({
   description,
@@ -52,6 +55,7 @@ export const CustomSolutionRequestForm = ({
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [attachment, setAttachment] = useState<File | null>(null);
+  const [recaptchaKey, setRecaptchaKey] = useState(0);
 
   const form = useForm<CustomSolutionRequestFormSchema>({
     resolver: zodResolver(customSolutionRequestFormSchema),
@@ -144,6 +148,7 @@ export const CustomSolutionRequestForm = ({
     setIsLoading(false);
     setIsSuccess?.(false);
     setAttachment(null);
+    setRecaptchaKey((current) => current + 1);
     form.reset();
   };
 
@@ -224,12 +229,23 @@ export const CustomSolutionRequestForm = ({
       await submitCustomSolutionRequestForm(data, attachment);
       setIsSuccess?.(true);
       setAttachment(null);
+      setRecaptchaKey((current) => current + 1);
       form.reset();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Submission failed');
+      setRecaptchaKey((current) => current + 1);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleRecaptchaChange = (token: string | null) => {
+    if (ENABLE_RECAPTCHA) {
+      form.setValue('recaptcha', token || '', { shouldValidate: true });
+      return;
+    }
+
+    form.setValue('recaptcha', 'disabled', { shouldValidate: false });
   };
 
   const renderTextField = (
@@ -306,6 +322,28 @@ export const CustomSolutionRequestForm = ({
       />
       <span className={styles.choiceLabel}>{label}</span>
     </label>
+  );
+
+  const renderPhoneField = (
+    name: 'phone',
+    label: string,
+    placeholder: string
+  ) => (
+    <Controller
+      control={form.control}
+      name={name}
+      render={({ field, fieldState }) => (
+        <PhoneField
+          name={field.name}
+          value={field.value ?? ''}
+          onChange={field.onChange}
+          onBlur={field.onBlur}
+          label={label}
+          placeholder={placeholder}
+          error={fieldState.error?.message}
+        />
+      )}
+    />
   );
 
   const renderChoiceColumns = (
@@ -426,13 +464,12 @@ export const CustomSolutionRequestForm = ({
                     )}
                   </div>
 
-                  {renderTextField(
+                  {renderPhoneField(
                     'phone',
                     t('phoneLabel', { fallback: 'Phone number (optional)' }),
                     t('phonePlaceholder', {
                       fallback: 'If you prefer to be contacted by phone',
-                    }),
-                    { type: 'tel' }
+                    })
                   )}
 
                   {renderTextField(
@@ -602,6 +639,16 @@ export const CustomSolutionRequestForm = ({
             </div>
 
             {error ? <p className={styles.submitError}>{error}</p> : null}
+
+            {ENABLE_RECAPTCHA ? (
+              <div className={styles.recaptcha}>
+                <RecaptchaField
+                  recaptchaKey={recaptchaKey}
+                  onChange={handleRecaptchaChange}
+                  error={form.formState.errors.recaptcha?.message}
+                />
+              </div>
+            ) : null}
 
             <div className={styles.footer}>
               <div className={styles.footerCopy}>

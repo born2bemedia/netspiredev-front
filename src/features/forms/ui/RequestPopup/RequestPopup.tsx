@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 import { submitRequestForm } from '@/features/forms/api/submitForm';
 import { type RequestFormSchema, requestFormSchema } from '@/features/forms/model/schemas';
@@ -13,6 +13,8 @@ import { PlusSmallIcon } from '@/shared/ui/icons';
 import { Button } from '@/shared/ui/kit/button/Button';
 
 import { FormPopup } from '../FormPopup/FormPopup';
+import { PhoneField } from '../PhoneField/PhoneField';
+import { RecaptchaField } from '../RecaptchaField/RecaptchaField';
 import styles from './RequestPopup.module.scss';
 
 type RequestPopupProps = {
@@ -22,11 +24,14 @@ type RequestPopupProps = {
   onReturnHome?: () => void;
 };
 
+const ENABLE_RECAPTCHA = true;
+
 export const RequestPopup = ({ service, isOpen, onClose, onReturnHome }: RequestPopupProps) => {
   const t = useTranslations('forms');
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [recaptchaKey, setRecaptchaKey] = useState(0);
 
   const form = useForm<RequestFormSchema>({
     resolver: zodResolver(requestFormSchema),
@@ -45,6 +50,7 @@ export const RequestPopup = ({ service, isOpen, onClose, onReturnHome }: Request
     setError(null);
     setIsLoading(false);
     setIsSuccess(false);
+    setRecaptchaKey((current) => current + 1);
     form.reset();
     onReturnHome?.();
     onClose();
@@ -57,12 +63,23 @@ export const RequestPopup = ({ service, isOpen, onClose, onReturnHome }: Request
     try {
       await submitRequestForm(data, service);
       setIsSuccess(true);
+      setRecaptchaKey((current) => current + 1);
       form.reset();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Submission failed');
+      setRecaptchaKey((current) => current + 1);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleRecaptchaChange = (token: string | null) => {
+    if (ENABLE_RECAPTCHA) {
+      form.setValue('recaptcha', token || '', { shouldValidate: true });
+      return;
+    }
+
+    form.setValue('recaptcha', 'disabled', { shouldValidate: false });
   };
 
   const renderField = (
@@ -93,6 +110,24 @@ export const RequestPopup = ({ service, isOpen, onClose, onReturnHome }: Request
       </div>
     );
   };
+
+  const renderPhoneField = () => (
+    <Controller
+      control={form.control}
+      name="phone"
+      render={({ field, fieldState }) => (
+        <PhoneField
+          name={field.name}
+          value={field.value ?? ''}
+          onChange={field.onChange}
+          onBlur={field.onBlur}
+          label={t('phone', { fallback: 'Phone:' })}
+          placeholder={t('phonePlaceholder', { fallback: 'Enter your phone number' })}
+          error={fieldState.error?.message}
+        />
+      )}
+    />
+  );
 
   return (
     <FormPopup
@@ -185,12 +220,7 @@ export const RequestPopup = ({ service, isOpen, onClose, onReturnHome }: Request
                   t('emailPlaceholder', { fallback: 'Enter your email' }),
                   'email'
                 )}
-                {renderField(
-                  'phone',
-                  t('phone', { fallback: 'Phone:' }),
-                  t('phonePlaceholder', { fallback: 'Enter your phone number' }),
-                  'tel'
-                )}
+                {renderPhoneField()}
                 {renderField(
                   'website',
                   t('website', { fallback: 'Your Website:' }),
@@ -204,6 +234,16 @@ export const RequestPopup = ({ service, isOpen, onClose, onReturnHome }: Request
               </div>
 
               {error ? <p className={styles.submitError}>{error}</p> : null}
+
+              {ENABLE_RECAPTCHA ? (
+                <div className={styles.recaptcha}>
+                  <RecaptchaField
+                    recaptchaKey={recaptchaKey}
+                    onChange={handleRecaptchaChange}
+                    error={form.formState.errors.recaptcha?.message}
+                  />
+                </div>
+              ) : null}
 
               <div className={styles.submitMobile}>
                 <Button variant="filled" type="submit" disabled={isLoading}>

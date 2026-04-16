@@ -16,7 +16,7 @@ import { verifyRecaptcha } from '@/shared/lib/recaptcha';
 
 export const runtime = 'nodejs';
 
-const ENABLE_RECAPTCHA = false;
+const ENABLE_RECAPTCHA = true;
 
 type RequestPayload = {
   service: string;

@@ -7,7 +7,7 @@ import {
   customSolutionTimelineOptions,
 } from '../lib/customSolutionOptions';
 
-const ENABLE_RECAPTCHA = false;
+const ENABLE_RECAPTCHA = true;
 
 const serviceSchema = z.string().optional();
 const messageSchema = z.string().optional();
