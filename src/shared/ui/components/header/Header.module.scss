@@ -77,6 +77,17 @@ $muted: rgba(255, 255, 255, 0.5);
     padding: 4px 0;
   }
 
+  &__topbarActions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-left: auto;
+
+    @include tablet {
+      gap: 0;
+    }
+  }
+
   &__meta,
   &__socials,
   &__mobileSocials {
@@ -94,6 +105,24 @@ $muted: rgba(255, 255, 255, 0.5);
 
     @include tablet {
       display: none;
+    }
+  }
+
+  &__desktopLang {
+    display: inline-flex;
+    flex: 0 0 auto;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__mobileLang {
+    display: none;
+    flex: 0 0 auto;
+
+    @include tablet {
+      display: inline-flex;
     }
   }
 
@@ -255,6 +284,10 @@ $muted: rgba(255, 255, 255, 0.5);
     background: $black;
   }
 
+  &__mobileLanguagePanel {
+    background: $black;
+  }
+
   &__mobileNav {
     display: flex;
     flex-direction: column;
@@ -285,6 +318,10 @@ $muted: rgba(255, 255, 255, 0.5);
   }
 
   @include mobile {
+    &__topbarInner {
+      gap: 12px;
+    }
+
     &__mainInner {
       gap: 16px;
     }

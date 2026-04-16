@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 import { useTranslations } from "next-intl";
 
@@ -17,6 +16,7 @@ import { Arrow } from "../../icons/header/arrow";
 import { Logo } from "../../icons/header/Logo";
 import { Plus } from "../../icons/header/plus";
 import { Button } from "../../kit/button/Button";
+import { LangSelector } from "../language-switcher/LangSelector";
 import styles from "./Header.module.scss";
 
 import { Link, usePathname } from "@/i18n/navigation";
@@ -73,6 +73,7 @@ const resolveContactHref = (value: string, type: "email" | "phone") => {
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileLanguageOpen, setIsMobileLanguageOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isWhiteTheme, setIsWhiteTheme] = useState(false);
   const pathname = usePathname();
@@ -146,8 +147,21 @@ export const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const closeMobileLanguage = () => {
+    setIsMobileLanguageOpen(false);
+  };
+
   const toggleMobileMenu = () => {
+    setIsMobileLanguageOpen(false);
     setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  const toggleMobileLanguage = (nextValue: boolean) => {
+    if (nextValue) {
+      setIsMobileMenuOpen(false);
+    }
+
+    setIsMobileLanguageOpen(nextValue);
   };
 
   useEffect(() => {
@@ -157,16 +171,17 @@ export const Header = () => {
 
     previousPathnameRef.current = pathname;
 
-    if (!isMobileMenuOpen) {
+    if (!isMobileMenuOpen && !isMobileLanguageOpen) {
       return;
     }
 
     const timeoutId = window.setTimeout(() => {
       closeMobileMenu();
+      closeMobileLanguage();
     }, 0);
 
     return () => window.clearTimeout(timeoutId);
-  }, [isMobileMenuOpen, pathname]);
+  }, [isMobileLanguageOpen, isMobileMenuOpen, pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -270,8 +285,23 @@ export const Header = () => {
                   )}
               </div>
 
-              <div className={styles.header__socials}>
-                {socialItems.map((item) => renderSocialLink(item))}
+              <div className={styles.header__topbarActions}>
+                <div className={styles.header__socials}>
+                  {socialItems.map((item) => renderSocialLink(item))}
+                </div>
+
+                <div className={styles.header__desktopLang}>
+                  <LangSelector variant="desktop" />
+                </div>
+
+                <div className={styles.header__mobileLang}>
+                  <LangSelector
+                    variant="mobile"
+                    isOpen={isMobileLanguageOpen}
+                    onOpenChange={toggleMobileLanguage}
+                    showDropdown={false}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -280,8 +310,12 @@ export const Header = () => {
 
       <header
         className={`${styles.header} ${
-          isWhiteTheme ? styles.header__white : ""
-        }`}
+          isWhiteTheme
+            ? !isMobileMenuOpen && !isMobileLanguageOpen
+              ? styles.header__white
+              : ""
+            : ""
+        } `}
         data-mobile-open={isMobileMenuOpen}
         data-scrolled={isScrolled}
       >
@@ -328,19 +362,25 @@ export const Header = () => {
             <div
               id="header-mobile-menu"
               className={styles.header__mobileMenu}
-              data-open={isMobileMenuOpen}
+              data-open={isMobileMenuOpen || isMobileLanguageOpen}
             >
-              <div className={styles.header__mobileMenuInner}>
-                <nav className={styles.header__mobileNav}>
-                  {navItems.map((item) => renderNavItem(item, true))}
-                </nav>
+              {isMobileLanguageOpen ? (
+                <div className={styles.header__mobileLanguagePanel}>
+                  <LangSelector variant="mobile" dropdownOnly isOpen />
+                </div>
+              ) : (
+                <div className={styles.header__mobileMenuInner}>
+                  <nav className={styles.header__mobileNav}>
+                    {navItems.map((item) => renderNavItem(item, true))}
+                  </nav>
 
-                <div className={styles.header__mobileFooter}>
-                  <div className={styles.header__mobileSocials}>
-                    {socialItems.map((item) => renderSocialLink(item))}
+                  <div className={styles.header__mobileFooter}>
+                    <div className={styles.header__mobileSocials}>
+                      {socialItems.map((item) => renderSocialLink(item))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

@@ -5,159 +5,167 @@ import Image from 'next/image';
 
 import { useLocale } from 'next-intl';
 
-import styles from './LangSelector.module.scss';
-
+import { usePathname, useRouter } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+
+import styles from './LangSelector.module.scss';
 
 const LOCALE_LABELS: Record<string, string> = {
   en: 'English',
-  de: 'Deutsch',
-  it: 'Italiano',
+  de: 'German',
+  it: 'Italian',
+};
+
+const LOCALE_SHORT_LABELS: Record<string, string> = {
+  en: 'Eng',
+  de: 'Ger',
+  it: 'Ita',
 };
 
 const LOCALE_ICONS: Record<string, string> = {
-  en: '/images/languages/en.svg',
-  de: '/images/languages/de.svg',
-  it: '/images/languages/it.svg',
+  en: '/images/en.svg',
+  de: '/images/de.svg',
+  it: '/images/it.svg',
 };
 
-function getPathnameWithoutLocale(pathname: string, locales: readonly string[]): string {
-  const segments = pathname.replace(/^\/+|\/+$/g, '').split('/');
-  const first = segments[0];
-
-  if (first && locales.includes(first)) {
-    const rest = segments.slice(1).join('/');
-    return rest ? `/${rest}` : '/';
-  }
-
-  return pathname || '/';
-}
-
-function getLocalePath(pathWithoutLocale: string, newLocale: string): string {
-  const path = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
-
-  if (newLocale === routing.defaultLocale) {
-    return path || '/';
-  }
-
-  return `/${newLocale}${path}`;
-}
-
 type LangSelectorProps = {
-  compact?: boolean;
-  inMobileMenu?: boolean;
+  className?: string;
+  dropdownOnly?: boolean;
+  isOpen?: boolean;
+  onOpenChange?: (nextValue: boolean) => void;
+  showDropdown?: boolean;
+  variant?: 'desktop' | 'mobile';
 };
 
 export const LangSelector = ({
-  compact = false,
-  inMobileMenu = false,
+  className,
+  dropdownOnly = false,
+  isOpen,
+  onOpenChange,
+  showDropdown = true,
+  variant = 'desktop',
 }: LangSelectorProps) => {
   const locale = useLocale();
-  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
+  const [internalOpen, setInternalOpen] = useState(false);
 
   const locales = routing.locales.filter((loc) => LOCALE_LABELS[loc] && LOCALE_ICONS[loc]);
   const currentLabel = LOCALE_LABELS[locale] ?? locale;
-  const currentIcon = LOCALE_ICONS[locale] ?? LOCALE_ICONS[routing.defaultLocale];
-  const dropdownLocales = locales.filter((loc) => loc !== locale);
+  const currentShortLabel = LOCALE_SHORT_LABELS[locale] ?? locale.toUpperCase();
+  const open = isOpen ?? internalOpen;
+  const showButton = !dropdownOnly;
 
-  const handleChange = (newLocale: string) => {
-    if (newLocale === locale) {
-      setIsOpen(false);
+  const setOpen = (nextValue: boolean) => {
+    if (onOpenChange) {
+      onOpenChange(nextValue);
       return;
     }
 
-    const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-    const pathWithoutLocale = getPathnameWithoutLocale(pathname, locales);
-    const newPath = getLocalePath(pathWithoutLocale, newLocale);
-
-    if (typeof window !== 'undefined') {
-      window.location.assign(newPath);
-    }
-
-    setIsOpen(false);
+    setInternalOpen(nextValue);
   };
 
   useEffect(() => {
-    if (!isOpen) {
+    if (!showButton || !open || onOpenChange) {
       return;
     }
 
     const handleClickOutside = (event: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        setOpen(false);
       }
     };
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        setIsOpen(false);
+        setOpen(false);
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('keydown', handleEscape);
 
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleEscape);
     };
-  }, [isOpen]);
+  }, [open, showButton]);
+
+  const handleLocaleChange = (nextLocale: string) => {
+    if (nextLocale !== locale) {
+      router.replace(pathname, { locale: nextLocale });
+    }
+
+    setOpen(false);
+  };
 
   return (
     <div
       ref={containerRef}
       className={[
         styles.langSelector,
-        compact ? styles.compact : '',
-        inMobileMenu ? styles.mobileMenu : '',
-      ].join(' ')}
+        variant === 'mobile' ? styles.langSelectorMobile : styles.langSelectorDesktop,
+        dropdownOnly ? styles.langSelectorDropdownOnly : '',
+        className ?? '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
     >
-      <button
-        type="button"
-        onClick={() => setIsOpen((prev) => !prev)}
-        className={isOpen ? styles.langSelectorButtonOpen : ''}
-        aria-expanded={isOpen}
-        aria-haspopup="listbox"
-        aria-label={currentLabel}
-      >
-        <span className={styles.langSelector__current}>
-          <Image src={currentIcon} width={24} height={18} alt="" aria-hidden="true" />
-          <span>{currentLabel}</span>
-        </span>
-      </button>
+      {showButton ? (
+        <button
+          type="button"
+          className={styles.langSelectorButton}
+          aria-expanded={open}
+          aria-haspopup="listbox"
+          aria-label={currentLabel}
+          onClick={() => setOpen(!open)}
+        >
+          <span className={styles.langSelectorButtonLabel}>
+            {variant === 'mobile' ? currentShortLabel : currentLabel}
+          </span>
+          <span
+            className={styles.langSelectorButtonCaret}
+            aria-hidden="true"
+            data-open={open}
+          />
+        </button>
+      ) : null}
 
-      {isOpen && (
+      {open && showDropdown ? (
         <div
           className={styles.langSelectorDropdown}
           role="listbox"
           aria-label="Select language"
         >
-          {dropdownLocales.map((loc) => {
+          {locales.map((loc) => {
+            const label = LOCALE_LABELS[loc] ?? loc;
+            const icon = LOCALE_ICONS[loc] ?? LOCALE_ICONS[routing.defaultLocale];
+            const isActive = loc === locale;
+
             return (
               <button
                 key={loc}
                 type="button"
                 role="option"
-                aria-selected={false}
-                onClick={() => handleChange(loc)}
+                aria-selected={isActive}
                 className={styles.langSelectorDropdownItem}
+                onClick={() => handleLocaleChange(loc)}
               >
-                <span className={styles.langSelectorDropdownItemInner}>
-                  <Image
-                    src={LOCALE_ICONS[loc]}
-                    width={24}
-                    height={18}
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>{LOCALE_LABELS[loc] ?? loc}</span>
-                </span>
+                <span className={styles.langSelectorDropdownText}>{label}</span>
+                <Image
+                  src={icon}
+                  width={22}
+                  height={16}
+                  alt=""
+                  aria-hidden="true"
+                  className={styles.langSelectorDropdownFlag}
+                />
               </button>
             );
           })}
         </div>
-      )}
+      ) : null}
     </div>
   );
 };
