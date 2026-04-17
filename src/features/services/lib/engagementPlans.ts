@@ -12,7 +12,7 @@ export const useEngagementPlans = () => {
         fallback:
           "A practical website package designed for individuals who need a simple, professional online presence without advanced custom functionality.",
       }),
-      priceFallback: t("corePlanPrice", { fallback: "From €600" }),
+      priceFallback: t("corePlanPrice", { fallback: "From €500" }),
       ctaFallback: t("corePlanCta", { fallback: "Order Core Plan" }),
       includedItems: [
         {
@@ -56,14 +56,14 @@ export const useEngagementPlans = () => {
       titleFallback: t("frameworkPlanTitle", { fallback: "Framework Plan" }),
       descriptionFallback: t("frameworkPlanDescription", {
         fallback:
-          "A flexible website package designed for individuals who need more structure, customization, and room to grow.",
+          "A more complete solution for individuals who need structure, flexibility, and a stronger digital foundation.",
       }),
-      priceFallback: t("frameworkPlanPrice", { fallback: "From €1,500" }),
+      priceFallback: t("frameworkPlanPrice", { fallback: "From €1,200" }),
       ctaFallback: t("frameworkPlanCta", { fallback: "Order Framework Plan" }),
       includedItems: [
         {
           fallback: t("frameworkPlanIncludedPageCount", {
-            fallback: "3–5 page custom website",
+            fallback: "Up to 6 custom pages",
           }),
         },
         {
@@ -73,12 +73,12 @@ export const useEngagementPlans = () => {
         },
         {
           fallback: t("frameworkPlanIncludedResponsive", {
-            fallback: "Responsive layout adaptation",
+            fallback: "Improved navigation & structure",
           }),
         },
         {
           fallback: t("frameworkPlanIncludedSeo", {
-            fallback: "SEO foundations and metadata",
+            fallback: "Basic animations and interactions",
           }),
         },
         {
@@ -88,12 +88,12 @@ export const useEngagementPlans = () => {
         },
         {
           fallback: t("frameworkPlanIncludedCms", {
-            fallback: "CMS-ready structure",
+            fallback: "SEO-friendly setup",
           }),
         },
         {
           fallback: t("frameworkPlanIncludedForms", {
-            fallback: "Lead capture or advanced forms (basic)",
+            fallback: "Integration of external tools (basic)",
           }),
         },
       ],
@@ -104,9 +104,9 @@ export const useEngagementPlans = () => {
       titleFallback: t("expansionPlanTitle", { fallback: "Expansion Plan" }),
       descriptionFallback: t("expansionPlanDescription", {
         fallback:
-          "Designed for growing projects that require more functionality and flexibility.",
+          "Designed for more dynamic projects that require deeper functionality and a refined user experience.",
       }),
-      priceFallback: t("expansionPlanPrice", { fallback: "From €2,000" }),
+      priceFallback: t("expansionPlanPrice", { fallback: "From €2,200" }),
       ctaFallback: t("expansionPlanCta", { fallback: "Order Expansion Plan" }),
       includedItems: [
         {

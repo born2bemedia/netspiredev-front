@@ -10,7 +10,7 @@ ctaTitle: "Ready to build something clear and effective?"
 
 This Cookie Policy explains how **Netspire Dev**, operating under the brand name Netspire Dev and operated by **Netspire Dev Ltd**, registered at 2nd Floor College House, 17 King Edwards Road, Ruislip, London, United Kingdom, HA4 7AE, under registration number 17045436 (“we,” “us,” or “our”), uses cookies and similar tracking technologies when you visit or interact with our website [](https://axelvior.com/)[https://netspiredev.com/](https://netspiredev.com/) (the “Website”).
 
-This Cookie Policy should be read together with our Privacy Policy and Terms and Conditions, which provide additional information on how we process personal data and govern the use of our Services.
+This Cookie Policy should be read together with our [Privacy Policy](/legal/privacy-policy) and [Terms and Conditions](/legal/terms-and-conditions), which provide additional information on how we process personal data and govern the use of our Services.
 
 By continuing to browse or use our Website, you acknowledge that cookies may be placed on your device in accordance with this Policy, unless you adjust your browser or consent settings to restrict or disable them.
 
@@ -42,19 +42,19 @@ Cookies can be categorized in several ways depending on their function, duration
 
 ### Based on Duration
 
-- **Session cookies  
-  **These cookies are temporary and remain active only for the duration of your browsing session. They are automatically deleted when you close your browser.
+- **Session cookies**
+  These cookies are temporary and remain active only for the duration of your browsing session. They are automatically deleted when you close your browser.
 
-- **Persistent cookies  
-  **These cookies remain stored on your device for a defined period or until manually deleted. They allow the Website to remember your preferences or actions across multiple visits.
+- **Persistent cookies**  
+  These cookies remain stored on your device for a defined period or until manually deleted. They allow the Website to remember your preferences or actions across multiple visits.
 
 ### Based on Source
 
-- **First-party cookies  
-  **These are cookies set directly by Netspire Dev through the Website.
+- **First-party cookies**
+  These are cookies set directly by Netspire Dev through the Website.
 
-- **Third-party cookies  
-  **These are cookies placed by external service providers whose tools or services are integrated into our Website (for example, analytics or marketing platforms).
+- **Third-party cookies**
+  These are cookies placed by external service providers whose tools or services are integrated into our Website (for example, analytics or marketing platforms).
 
 ## Cookies We Use
 
@@ -206,7 +206,7 @@ Some cookies may process information that qualifies as personal data under appli
 
 When this occurs:
 
-- Processing is carried out in accordance with our **Privacy Policy**
+- Processing is carried out in accordance with our **[Privacy Policy](/legal/privacy-policy)**
 
 - Legal bases, such as consent or legitimate interest, are applied where required
 

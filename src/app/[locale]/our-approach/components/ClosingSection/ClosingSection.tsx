@@ -58,7 +58,7 @@ export const ClosingSection = () => {
               </div>
 
               <div className={styles.buttonWrap}>
-                <Button variant="bordered" url="/what-we-build-tmp" type="link">
+                <Button variant="bordered" url="/what-we-build" type="link">
                   <span className={styles.buttonContent}>
                     <span>
                       {t('closing.secondaryCta', { fallback: 'Discover What We Build' })}

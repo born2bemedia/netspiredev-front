@@ -42,19 +42,19 @@ Cookies können je nach Funktion, Dauer und Herkunft auf verschiedene Weise kate
 
 ### Nach Dauer
 
-- **Sitzungs-Cookies  
-  **Diese Cookies sind vorübergehend und bleiben nur für die Dauer Ihrer Browsersitzung aktiv. Sie werden automatisch gelöscht, wenn Sie Ihren Browser schließen.
+- **Sitzungs-Cookies** 
+  Diese Cookies sind vorübergehend und bleiben nur für die Dauer Ihrer Browsersitzung aktiv. Sie werden automatisch gelöscht, wenn Sie Ihren Browser schließen.
 
-- **Persistente Cookies  
-  **Diese Cookies bleiben für einen definierten Zeitraum oder bis zu ihrer manuellen Löschung auf Ihrem Gerät gespeichert. Sie ermöglichen es der Website, Ihre Präferenzen oder Aktionen über mehrere Besuche hinweg zu speichern.
+- **Persistente Cookies** 
+  Diese Cookies bleiben für einen definierten Zeitraum oder bis zu ihrer manuellen Löschung auf Ihrem Gerät gespeichert. Sie ermöglichen es der Website, Ihre Präferenzen oder Aktionen über mehrere Besuche hinweg zu speichern.
 
 ### Nach Herkunft
 
-- **First-Party-Cookies  
-  **Dies sind Cookies, die direkt von Netspire Dev über die Website gesetzt werden.
+- **First-Party-Cookies**
+  Dies sind Cookies, die direkt von Netspire Dev über die Website gesetzt werden.
 
-- **Third-Party-Cookies  
-  **Dies sind Cookies, die von externen Dienstleistern gesetzt werden, deren Tools oder Dienste in unsere Website integriert sind (zum Beispiel Analyse- oder Marketing-Plattformen).
+- **Third-Party-Cookies**
+  Dies sind Cookies, die von externen Dienstleistern gesetzt werden, deren Tools oder Dienste in unsere Website integriert sind (zum Beispiel Analyse- oder Marketing-Plattformen).
 
 ## Von uns verwendete Cookies
 

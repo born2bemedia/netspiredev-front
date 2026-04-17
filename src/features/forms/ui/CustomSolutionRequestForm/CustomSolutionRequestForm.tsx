@@ -51,7 +51,7 @@ export const CustomSolutionRequestForm = ({
   isSuccess,
   setIsSuccess,
 }: CustomSolutionRequestFormProps) => {
-  const t = useTranslations('forms');
+  const t = useTranslations('customSolutionForm');
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [attachment, setAttachment] = useState<File | null>(null);
@@ -487,6 +487,11 @@ export const CustomSolutionRequestForm = ({
                   {t('customSolutionForm.sections.projectDetails', {
                     fallback: 'Project Details',
                   })}
+                  <span className={styles.cardSubtitle}>
+                    {t('customSolutionForm.sections.projectDetailsSubtitle', {
+                      fallback: 'What would you like to build?',
+                    })}
+                  </span>
                 </div>
                 <div className={styles.cardContent}>
                   {renderChoiceColumns(projectTypeColumns, (item) =>

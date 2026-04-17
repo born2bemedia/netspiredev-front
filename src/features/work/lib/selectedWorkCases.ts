@@ -51,15 +51,15 @@ export const useSelectedWorkCases = () => {
       }),
       overviewFallback: t("ecommerceStoreForNicheProductsOverview", {
         fallback:
-          "An online store built for a small niche product business, focused on simplicity and usability.",
+          "An online store built for a small-scale product business, focused on simplicity and usability.",
       }),
       challengeFallback: t("ecommerceStoreForNicheProductsChallenge", {
         fallback:
-          "Creating a seamless shopping experience without unnecessary complexity or a heavy interface.",
+          "Creating a seamless shopping experience without unnecessary complexity or heavy design.",
       }),
       solutionFallback: t("ecommerceStoreForNicheProductsSolution", {
         fallback:
-          "We combined a streamlined product structure with an intuitive checkout flow that keeps the buying journey clear and efficient.",
+          "We implemented a streamlined product structure, intuitive navigation, and a smooth checkout flow.",
       }),
       featureItems: [
         {
@@ -69,11 +69,16 @@ export const useSelectedWorkCases = () => {
         },
         {
           fallback: t("ecommerceStoreForNicheProductsFeature2", {
-            fallback: "Secure checkout integration",
+            fallback: "Mobile-optimized shopping",
           }),
         },
         {
           fallback: t("ecommerceStoreForNicheProductsFeature3", {
+            fallback: "Secure checkout integration",
+          }),
+        },
+        {
+          fallback: t("ecommerceStoreForNicheProductsFeature4", {
             fallback: "Performance optimization",
           }),
         },
@@ -90,25 +95,30 @@ export const useSelectedWorkCases = () => {
       }),
       challengeFallback: t("serviceBasedWebsiteChallenge", {
         fallback:
-          "The client needed a clear way to communicate services and guide users toward inquiry or booking.",
+          "The client needed a clear way to communicate services and guide users toward taking action.",
       }),
       solutionFallback: t("serviceBasedWebsiteSolution", {
         fallback:
-          "We structured the website with focused sections, strong visual hierarchy, and clear calls to action.",
+          "We structured the website with focused sections, strong content hierarchy, and clear calls-to-action.",
       }),
       featureItems: [
         {
           fallback: t("serviceBasedWebsiteFeature1", {
-            fallback: "Structured service layout",
+            fallback: "Conversion-focused layout",
           }),
         },
         {
           fallback: t("serviceBasedWebsiteFeature2", {
-            fallback: "Contact form integration",
+            fallback: "Service breakdown structure",
           }),
         },
         {
           fallback: t("serviceBasedWebsiteFeature3", {
+            fallback: "Contact form integration",
+          }),
+        },
+        {
+          fallback: t("serviceBasedWebsiteFeature4", {
             fallback: "SEO-ready setup",
           }),
         },
@@ -121,7 +131,7 @@ export const useSelectedWorkCases = () => {
       }),
       overviewFallback: t("webApplicationForBookingSystemOverview", {
         fallback:
-          "A custom-built web application allowing users to manage bookings and sessions.",
+          "A custom-built web application allowing users to manage bookings and schedules.",
       }),
       challengeFallback: t("webApplicationForBookingSystemChallenge", {
         fallback:
@@ -129,7 +139,7 @@ export const useSelectedWorkCases = () => {
       }),
       solutionFallback: t("webApplicationForBookingSystemSolution", {
         fallback:
-          "We created a structured backend with a simple front-end interface, making session management fast and flexible.",
+          "We created a structured backend with a simple front-end interface, ensuring smooth functionality and reliability.",
       }),
       featureItems: [
         {

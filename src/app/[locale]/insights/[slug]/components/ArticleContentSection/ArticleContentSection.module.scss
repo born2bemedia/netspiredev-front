@@ -194,6 +194,11 @@ $muted-soft: rgba(0, 0, 0, 0.1);
     font-size: 12px;
   }
 
+  :global(h3) {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
   :global(p) {
     margin: 0 0 10px;
   }

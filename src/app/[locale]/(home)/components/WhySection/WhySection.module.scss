@@ -106,7 +106,9 @@ $white-05: rgba(255, 255, 255, 0.05);
   }
 }
 
-.buttonWrapFilled {}
+.buttonWrapFilled {
+  display: none;
+}
 
 .buttonContent {
   display: inline-flex;

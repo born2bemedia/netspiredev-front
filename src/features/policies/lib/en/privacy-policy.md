@@ -92,7 +92,7 @@ Netspire Dev uses cookies to:
 
 You can manage or disable cookies through your browser settings at any time. Please note that restricting cookies may affect certain features or interactions on the website.
 
-More detailed information is available in our Cookie Policy.
+More detailed information is available in our [Cookie Policy](/legal/cookie-policy).
 
 ### Data Sharing Practices
 

@@ -54,7 +54,7 @@ export const HeroSection = () => {
               <div className={styles.buttonWrap}>
                 <Button variant="filled" url="/what-we-build#services" type="link">
                   <span className={styles.buttonContent}>
-                    <span>{t('hero.cta', { fallback: 'View Solutions' })}</span>
+                    <span>{t('hero.cta', { fallback: 'Explore Capabilitie' })}</span>
                     <PlusSmallIcon className={styles.buttonIcon} aria-hidden="true" />
                   </span>
                 </Button>

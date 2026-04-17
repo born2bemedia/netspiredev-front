@@ -38,7 +38,7 @@ export const CaseStudiesSection = () => {
             viewport={viewport}
           >
             <span className={styles.sectionLabel}>
-              {t("cases.label", { fallback: "// SELECTED WORK" })}
+              {t("cases.label", { fallback: "// FEATURED PROJECTS" })}
             </span>
             <span className={styles.sectionDivider} />
           </motion.div>

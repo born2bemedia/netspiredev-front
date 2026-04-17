@@ -42,19 +42,19 @@ I cookie possono essere classificati in diversi modi a seconda della loro funzio
 
 ### In base alla durata
 
-- **Cookie di sessione  
-  **Questi cookie sono temporanei e rimangono attivi solo per la durata della tua sessione di navigazione. Vengono automaticamente eliminati quando chiudi il browser.
+- **Cookie di sessione**
+  Questi cookie sono temporanei e rimangono attivi solo per la durata della tua sessione di navigazione. Vengono automaticamente eliminati quando chiudi il browser.
 
-- **Cookie persistenti  
-  **Questi cookie restano memorizzati sul tuo dispositivo per un periodo definito o finché non vengono eliminati manualmente. Consentono al Sito Web di ricordare le tue preferenze o azioni attraverso visite multiple.
+- **Cookie persistenti**
+  Questi cookie restano memorizzati sul tuo dispositivo per un periodo definito o finché non vengono eliminati manualmente. Consentono al Sito Web di ricordare le tue preferenze o azioni attraverso visite multiple.
 
 ### In base alla provenienza
 
-- **Cookie proprietari  
-  **Si tratta di cookie impostati direttamente da Netspire Dev tramite il Sito Web.
+- **Cookie proprietari**
+  Si tratta di cookie impostati direttamente da Netspire Dev tramite il Sito Web.
 
-- **Cookie di terze parti  
-  **Si tratta di cookie installati da fornitori di servizi esterni i cui strumenti o servizi sono integrati nel nostro Sito Web (ad esempio, piattaforme di analisi o marketing).
+- **Cookie di terze parti**
+  Si tratta di cookie installati da fornitori di servizi esterni i cui strumenti o servizi sono integrati nel nostro Sito Web (ad esempio, piattaforme di analisi o marketing).
 
 ## Cookie che utilizziamo
 
