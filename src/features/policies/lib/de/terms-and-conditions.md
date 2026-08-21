@@ -216,7 +216,7 @@ Wenn Sie Fragen, Anliegen oder Feedback zu diesen Allgemeinen Geschäftsbedingun
 
 - **E-Mail:** [info@netspiredev.com](mailto:info@netspiredev.com)
 
-- **Telefon:** [+447426442491](tel:+447426442491)
+[//]: # (- **Telefon:** [+447426442491]&#40;tel:+447426442491&#41;)
 
 - **Kontaktformular auf der Website:** [](https://axelvior.com/connect)[https://netspiredev.com/get-in-touch](https://netspiredev.com/get-in-touch)
 

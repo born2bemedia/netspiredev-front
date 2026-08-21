@@ -216,7 +216,7 @@ Se hai domande, dubbi o feedback riguardo a questi Termini e Condizioni, puoi co
 
 - **Email:** [info@netspiredev.com](mailto:info@netspiredev.com)
 
-- **Telefono:** [+447426442491](tel:+447426442491)
+[//]: # (- **Telefono:** [+447426442491]&#40;tel:+447426442491&#41;)
 
 - **Modulo di contatto sul sito:** [](https://axelvior.com/connect)[https://netspiredev.com/get-in-touch](https://netspiredev.com/get-in-touch)
 
