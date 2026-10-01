@@ -4,10 +4,12 @@ import { ClosingSection, HeroSection, PlansCtaSection, ServicesSection } from '.
 
 export const metadata: Metadata = {
   title: 'Custom Websites & Web Solutions | Netspire Dev',
-  description: 'Explore tailored digital solutions, including websites, web applications, UI/UX design, and performance optimization built for individuals.',
+  description:
+    'Explore tailored digital solutions, including websites, web applications, UI/UX design, and performance optimization built for organizations.',
   openGraph: {
     title: 'Custom Websites & Web Solutions | Netspire Dev',
-    description: 'Explore tailored digital solutions, including websites, web applications, UI/UX design, and performance optimization built for individuals.',
+    description:
+      'Explore tailored digital solutions, including websites, web applications, UI/UX design, and performance optimization built for organizations.',
     images: 'https://netspiredev.com/images/meta.png',
   },
 };

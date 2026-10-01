@@ -55,6 +55,7 @@ const optionalPhoneSchema = z
   );
 
 export const customSolutionRequestFormSchema = z.object({
+  companyName: fullNameSchema,
   fullName: fullNameSchema,
   email: emailSchema,
   phone: optionalPhoneSchema,

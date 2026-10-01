@@ -1,7 +1,4 @@
-import type {
-  CustomSolutionRequestFormSchema,
-  RequestFormSchema,
-} from '../model/schemas';
+import type { CustomSolutionRequestFormSchema, RequestFormSchema } from '../model/schemas';
 
 const buildFullName = (firstName: string, lastName: string) => `${firstName} ${lastName}`.trim();
 
@@ -43,6 +40,7 @@ export async function submitCustomSolutionRequestForm(
   const formData = new FormData();
 
   formData.append('formType', 'custom-solution');
+  formData.append('companyName', data.companyName);
   formData.append('fullName', data.fullName);
   formData.append('email', data.email);
   formData.append('phone', data.phone ?? '');

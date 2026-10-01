@@ -32,7 +32,7 @@
       "label": "// SITO",
       "title": "Costruisci ciò che immagini.",
       "subtitle": "Lancia ciò che conta.",
-      "description": "Soluzioni web e digitali su misura per privati: veloci, funzionali e sviluppate con precisione.",
+      "description": "Soluzioni web e digitali su misura per le aziende: veloci, funzionali e sviluppate con precisione.",
       "primaryCta": "Avvia un progetto",
       "secondaryCta": "Scopri cosa realizziamo"
     },
@@ -87,7 +87,7 @@
         "cleanScalable": "Sviluppo pulito, moderno e scalabile",
         "structuredWorkflow": "Comunicazione chiara e workflow strutturato",
         "performanceUsability": "Focus su performance e usabilità",
-        "designedForIndividuals": "Pensato per privati, non solo per aziende"
+        "designedForIndividuals": "Progettato per aziende di ogni dimensione"
       },
       "label": "// SITO",
       "title": "Perché Netspire Dev?",
@@ -146,7 +146,7 @@
     "corePlanIncludedPerformance": "Struttura a caricamento rapido",
     "corePlanIncludedLaunch": "Consegna pronta per il lancio",
     "frameworkPlanTitle": "Framework Plan",
-    "frameworkPlanDescription": "Un pacchetto flessibile per chi ha bisogno di più struttura, personalizzazione e spazio per crescere.",
+    "frameworkPlanDescription": "Una soluzione più completa per le aziende che necessitano di struttura, flessibilità e basi digitali più solide.",
     "frameworkPlanPrice": "Da €1.500",
     "frameworkPlanCta": "Richiedi Framework Plan",
     "frameworkPlanIncludedPageCount": "Sito personalizzato da 3-5 pagine",
@@ -261,8 +261,8 @@
           "description": "Velocità, efficienza e affidabilità fanno parte di ogni progetto."
         },
         "individuals": {
-          "title": "Pensato per i privati",
-          "description": "Le nostre soluzioni sono progettate per progetti personali, non solo per sistemi su larga scala."
+          "title": "Realizzato per le aziende",
+          "description": "Le nostre soluzioni sono pensate per aziende di diverse dimensioni e progetti di varia portata."
         }
       },
       "title": "Cosa ci distingue",
@@ -304,7 +304,7 @@
     },
     "whoWeAre": {
       "title": "Chi siamo",
-      "descriptionPrimary": "Netspire Dev è uno studio di sviluppo digitale specializzato nella creazione di soluzioni su misura per privati. Non usiamo metodi generici o strutture predefinite. Ogni progetto nasce attraverso un processo strutturato, guidato dai tuoi obiettivi e perfezionato nell’esecuzione.",
+      "descriptionPrimary": "Netspire Dev è uno studio di sviluppo digitale specializzato nella creazione di soluzioni su misura per team aziendali. Non ci affidiamo a template o sistemi predefiniti: ogni progetto viene affrontato in modo unico, plasmato sui vostri obiettivi e perfezionato attraverso un processo strutturato.",
       "descriptionSecondary": "Crediamo che un buon sviluppo non riguardi solo il codice, ma la capacità di creare chiarezza, usabilità e prodotti digitali che funzionano davvero."
     }
   },
@@ -330,9 +330,9 @@
       "title": "Cosa abbiamo realizzato",
       "description": "Ogni progetto nasce da un’idea diversa, una sfida diversa e una soluzione su misura. Ecco una selezione di ciò che abbiamo creato, con attenzione a funzionalità, chiarezza e performance."
     },
-    "personalPortfolioPlatformTitle": "Piattaforma portfolio personale",
-    "personalPortfolioPlatformOverview": "Un portfolio pulito e minimale, progettato per una persona che presenta lavori creativi e servizi.",
-    "personalPortfolioPlatformChallenge": "Il cliente aveva bisogno di un modo strutturato per mostrare il proprio lavoro senza sovraccaricare i visitatori, mantenendo al contempo un design curato e professionale.",
+    "personalPortfolioPlatformTitle": "Piattaforma per il portafoglio aziendale",
+    "personalPortfolioPlatformOverview": "Una piattaforma portfolio pulita e strutturata, sviluppata per un'agenzia creativa per presentare i propri lavori, le competenze e i servizi.",
+    "personalPortfolioPlatformChallenge": "L'azienda aveva bisogno di un modo professionale per presentare i progetti completati senza sovraccaricare i visitatori, mantenendo al contempo un'immagine del brand raffinata.",
     "personalPortfolioPlatformSolution": "Abbiamo sviluppato un sito su misura con layout chiaro, navigazione fluida e design responsive, lasciando ai contenuti il ruolo principale.",
     "personalPortfolioPlatformFeature1": "UI/UX minimale",
     "personalPortfolioPlatformFeature2": "Layout responsive",
@@ -347,8 +347,8 @@
     "ecommerceStoreForNicheProductsFeature3": "Integrazione checkout sicuro",
     "ecommerceStoreForNicheProductsFeature4": "Ottimizzazione delle performance",
     "serviceBasedWebsiteTitle": "Sito web per servizi professionali",
-    "serviceBasedWebsiteOverview": "Un sito multi-pagina progettato per una persona che offre servizi professionali.",
-    "serviceBasedWebsiteChallenge": "Il cliente aveva bisogno di un modo chiaro per comunicare i servizi e guidare gli utenti verso un’azione.",
+    "serviceBasedWebsiteOverview": "Un sito web multipagina sviluppato per un'azienda di servizi, volto a presentare in modo chiaro le proprie competenze e l'offerta di servizi.",
+    "serviceBasedWebsiteChallenge": "L'azienda aveva bisogno di un modo chiaro per presentare i propri servizi e guidare i potenziali clienti verso azioni pertinenti.",
     "serviceBasedWebsiteSolution": "Abbiamo strutturato il sito con sezioni mirate, una forte gerarchia dei contenuti e call-to-action chiare.",
     "serviceBasedWebsiteFeature1": "Layout orientato alla conversione",
     "serviceBasedWebsiteFeature2": "Struttura dettagliata dei servizi",
@@ -388,7 +388,7 @@
     "hero": {
       "label": "// COSA REALIZZIAMO",
       "title": "Soluzioni costruite\nintorno alle tue idee",
-      "description": "Progettiamo e sviluppiamo prodotti digitali su misura per privati, combinando funzionalità, performance e design raffinato. Ogni soluzione nasce con uno scopo preciso, per garantire non solo il giusto aspetto, ma anche il funzionamento corretto.",
+      "description": "Progettiamo e sviluppiamo prodotti digitali su misura per le aziende, coniugando funzionalità, prestazioni e un design raffinato. Ogni soluzione è realizzata con uno scopo preciso, garantendo non solo un'estetica curata, ma anche un funzionamento esattamente conforme alle aspettative.",
       "cta": "Vedi le soluzioni"
     },
     "plans": {
@@ -405,7 +405,7 @@
       "description": "Da siti semplici a piattaforme digitali più avanzate, le nostre soluzioni sono progettate per adattarsi ai tuoi obiettivi. Ci concentriamo su chiarezza, usabilità e performance nel lungo periodo, evitando complessità inutili ma offrendo risultati concreti."
     },
     "customWebsitesTitle": "Siti web su misura",
-    "customWebsitesDescription": "Creiamo siti completamente personalizzati intorno alla tua visione e ai tuoi obiettivi. Che si tratti di un progetto personale, di un portfolio o di un sito per servizi, ogni dettaglio viene curato per riflettere la tua identità mantenendo usabilità e performance.",
+    "customWebsitesDescription": "Realizziamo siti web interamente su misura, progettati in funzione degli obiettivi, dell'operatività e delle esigenze digitali della vostra azienda. Che si tratti di un sito aziendale, di una piattaforma di servizi o di un progetto commerciale in espansione, sviluppiamo ogni elemento per valorizzare il vostro brand, garantire la funzionalità e rispondere alle vostre necessità a lungo termine.",
     "customWebsitesIncludedResponsiveDesign": "Design responsive su tutti i dispositivi",
     "customWebsitesIncludedCleanStructure": "Struttura pulita e navigazione intuitiva",
     "customWebsitesIncludedSeoFoundation": "Base SEO-friendly",
@@ -507,7 +507,7 @@
       "successTitle": "Grazie!",
       "successMessage": "Abbiamo ricevuto la tua richiesta. Esamineremo i dettagli e ti contatteremo a breve per discutere i prossimi passi.",
       "sections": {
-        "details": "I tuoi dati",
+        "details": "Dettagli dell'azienda",
         "projectDetails": "Dettagli del progetto",
         "projectDetailsSubtitle": "Cosa vorresti realizzare?",
         "scopeBudget": "Ambito del progetto e budget"
@@ -525,8 +525,8 @@
     "nextStepsDescription": "Una volta inviata, esamineremo la tua richiesta e ti contatteremo per parlare della tua idea, chiarire i dettagli e definire il percorso migliore.",
     "submit": "Invia",
     "loading": "Invio in corso…",
-    "fullNameLabel": "Nome completo",
-    "fullNamePlaceholder": "Dicci come ti chiami",
+    "fullNameLabel": "Referente",
+    "fullNamePlaceholder": "Il tuo nome e cognome",
     "emailLabel": "Indirizzo email",
     "emailPlaceholder": "Inserisci la tua email",
     "phoneLabel": "Numero di telefono (opzionale)",
@@ -557,7 +557,9 @@
     "phone": "Telefono:",
     "website": "Il tuo sito web:",
     "message": "Messaggio:",
-    "messagePlaceholder": "Inserisci il tuo messaggio"
+    "messagePlaceholder": "Inserisci il tuo messaggio",
+    "companyNameLabel": "Nome dell'azienda",
+    "companyNamePlaceholder": "Dicci quale azienda rappresenti"
   },
   "notFoundPage": {
     "title": "Questa destinazione non esiste",
@@ -684,6 +686,8 @@
     "attachmentLabel": "Carica eventuali materiali (opzionale)",
     "attachmentAction": "Scegli file",
     "attachmentEmpty": "nessun file selezionato",
-    "attachmentMeta": "Dimensione massima: 10 MB"
+    "attachmentMeta": "Dimensione massima: 10 MB",
+    "companyNameLabel": "Company name",
+    "companyNamePlaceholder": "Tell us which company you represent."
   }
 }

@@ -32,7 +32,7 @@
       "label": "// SITE",
       "title": "Build What You Imagine.",
       "subtitle": "Launch What Matters.",
-      "description": "Custom web and digital solutions designed for individuals - fast, functional, and built with precision.",
+      "description": "Custom web and digital solutions designed for businesses - fast, functional, and built with precision.",
       "primaryCta": "Start a Project",
       "secondaryCta": "Explore What We Build"
     },
@@ -87,7 +87,7 @@
         "cleanScalable": "Clean, modern, and scalable development",
         "structuredWorkflow": "Clear communication and structured workflow",
         "performanceUsability": "Focus on performance and usability",
-        "designedForIndividuals": "Designed for individuals, not just businesses"
+        "designedForIndividuals": "Designed for companies of all sizes"
       },
       "label": "// SITE",
       "title": "Why Netspire Dev?",
@@ -146,7 +146,7 @@
     "corePlanIncludedPerformance": "Fast-loading structure",
     "corePlanIncludedLaunch": "Launch-ready delivery",
     "frameworkPlanTitle": "Framework Plan",
-    "frameworkPlanDescription": "A more complete solution for individuals who need structure, flexibility, and a stronger digital foundation.",
+    "frameworkPlanDescription": "A more complete solution for companies who need structure, flexibility, and a stronger digital foundation.",
     "frameworkPlanPrice": "From €1,200",
     "frameworkPlanCta": "Order Framework Plan",
     "frameworkPlanIncludedPageCount": "Up to 6 custom pages",
@@ -261,8 +261,8 @@
           "description": "Speed, efficiency, and reliability are part of every build."
         },
         "individuals": {
-          "title": "Built for individuals",
-          "description": "Our solutions are designed to fit personal projects, not just large-scale systems."
+          "title": "Built for enterprises",
+          "description": "Our solutions are designed for companies of different sizes and project scopes."
         }
       },
       "title": "What Sets Us Apart",
@@ -304,7 +304,7 @@
     },
     "whoWeAre": {
       "title": "Who We Are",
-      "descriptionPrimary": "Netspire Dev is a digital development studio focused on building tailored solutions for individuals. We don't use generic methods or predefined structures. Instead, we build every project through a structured process shaped by your goals and refined through execution.",
+      "descriptionPrimary": "Netspire Dev is a digital development studio focused on building tailored solutions for corporate teams. We don't use generic methods or predefined structures. Instead, we build every project through a structured process shaped by your goals and refined through execution.",
       "descriptionSecondary": "We believe that good development is not just about code — it's about creating clarity, usability, and digital products built to work."
     }
   },
@@ -330,9 +330,9 @@
       "title": "What We've Built",
       "description": "Each project is built around a different idea, a different challenge, and a tailored solution. Here's a selection of what we've created — focused on functionality, clarity, and performance."
     },
-    "personalPortfolioPlatformTitle": "Personal Portfolio Platform",
-    "personalPortfolioPlatformOverview": "A clean, minimal portfolio designed for an individual showcasing creative work and services.",
-    "personalPortfolioPlatformChallenge": "The client needed a structured way to present their work without overwhelming visitors, while keeping the design refined and professional.",
+    "personalPortfolioPlatformTitle": "Corporate Portfolio Platform",
+    "personalPortfolioPlatformOverview": "A clean, structured portfolio platform developed for a creative company to present its work, expertise, and services.",
+    "personalPortfolioPlatformChallenge": "The company needed a professional way to showcase completed projects without overwhelming visitors while maintaining a refined brand presentation.",
     "personalPortfolioPlatformSolution": "We developed a custom website with a clear layout, smooth navigation, and responsive design, ensuring content remained the focal point.",
     "personalPortfolioPlatformFeature1": "Minimal UI/UX design",
     "personalPortfolioPlatformFeature2": "Responsive layout",
@@ -347,8 +347,8 @@
     "ecommerceStoreForNicheProductsFeature3": "Secure checkout integration",
     "ecommerceStoreForNicheProductsFeature4": "Performance optimization",
     "serviceBasedWebsiteTitle": "Service-Based Website",
-    "serviceBasedWebsiteOverview": "A multi-page website designed for an individual offering professional services.",
-    "serviceBasedWebsiteChallenge": "The client needed a clear way to communicate services and guide users toward taking action.",
+    "serviceBasedWebsiteOverview": "A multi-page website developed for a service-based company to present its expertise and service offering clearly.",
+    "serviceBasedWebsiteChallenge": "The company needed a clear way to present its services and guide prospective customers toward relevant actions.",
     "serviceBasedWebsiteSolution": "We structured the website with focused sections, strong content hierarchy, and clear calls-to-action.",
     "serviceBasedWebsiteFeature1": "Conversion-focused layout",
     "serviceBasedWebsiteFeature2": "Service breakdown structure",
@@ -388,7 +388,7 @@
     "hero": {
       "label": "// WHAT WE BUILD",
       "title": "Solutions Built\nAround Your Ideas",
-      "description": "We design and develop digital products tailored to individuals - combining functionality, performance, and refined design. Every solution is built with purpose, ensuring it not only looks right but works exactly as intended.",
+      "description": "We design and develop digital products tailored to enterprises - combining functionality, performance, and refined design. Every solution is built with purpose, ensuring it not only looks right but works exactly as intended.",
       "cta": "Explore Capabilitie"
     },
     "plans": {
@@ -405,7 +405,7 @@
       "description": "From simple websites to more advanced digital platforms, our solutions are designed to adapt to your goals. We focus on clarity, usability, and long-term performance - avoiding unnecessary complexity while delivering real results."
     },
     "customWebsitesTitle": "Custom Websites",
-    "customWebsitesDescription": "We create fully tailored websites designed around your vision and goals. Whether it's a personal project, portfolio, or service-based website, every detail is crafted to reflect your identity while maintaining usability and performance.",
+    "customWebsitesDescription": "We create fully tailored websites designed around your company’s goals, operations, and digital requirements. Whether it’s a corporate website, service platform, or growing commercial project, we develop every element to support your brand, functionality, and long-term needs.",
     "customWebsitesIncludedResponsiveDesign": "Responsive design across all devices",
     "customWebsitesIncludedCleanStructure": "Clean structure and intuitive navigation",
     "customWebsitesIncludedSeoFoundation": "SEO-friendly foundation",
@@ -507,7 +507,7 @@
       "successTitle": "Thank you!",
       "successMessage": "Your request has been received. We will review the details and contact you shortly to discuss the next steps.",
       "sections": {
-        "details": "Your Details",
+        "details": "Company Details",
         "projectDetails": "Project Details",
         "projectDetailsSubtitle": "What would you like to build?",
         "scopeBudget": "Project Scope & Budget"
@@ -525,8 +525,8 @@
     "nextStepsDescription": "Once submitted, we’ll review your request and reach out to discuss your idea, clarify details, and define the best way forward.",
     "submit": "Submit",
     "loading": "Sending…",
-    "fullNameLabel": "Full name",
-    "fullNamePlaceholder": "Tell us your name",
+    "fullNameLabel": "Contact person",
+    "fullNamePlaceholder": "Your full name",
     "emailLabel": "Email address",
     "emailPlaceholder": "So we can reach out to you",
     "phoneLabel": "Phone number (optional)",
@@ -543,7 +543,9 @@
     "attachmentLabel": "Upload any materials (optional)",
     "attachmentAction": "Choose File",
     "attachmentEmpty": "no file selected",
-    "attachmentMeta": "Max size: 10MB"
+    "attachmentMeta": "Max size: 10MB",
+    "companyNameLabel": "Company name",
+    "companyNamePlaceholder": "Tell us which company you represent"
   },
   "forms": {
     "close": "Close",

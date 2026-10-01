@@ -32,7 +32,7 @@
       "label": "// WEBSITE",
       "title": "Bauen Sie, was Sie sich vorstellen.",
       "subtitle": "Starten Sie, was zählt.",
-      "description": "Individuelle Web- und Digitallösungen für Einzelpersonen - schnell, funktional und präzise umgesetzt.",
+      "description": "Maßgeschneiderte Web- und Digital-Lösungen für Unternehmen – schnell, funktional und präzise umgesetzt.",
       "primaryCta": "Projekt starten",
       "secondaryCta": "Entdecken, was wir entwickeln"
     },
@@ -87,7 +87,7 @@
         "cleanScalable": "Saubere, moderne und skalierbare Entwicklung",
         "structuredWorkflow": "Klare Kommunikation und strukturierter Workflow",
         "performanceUsability": "Fokus auf Performance und Benutzerfreundlichkeit",
-        "designedForIndividuals": "Für Einzelpersonen entwickelt, nicht nur für Unternehmen"
+        "designedForIndividuals": "Für Unternehmen jeder Größe konzipiert"
       },
       "label": "// WEBSITE",
       "title": "Warum Netspire Dev?",
@@ -146,7 +146,7 @@
     "corePlanIncludedPerformance": "Schnell ladende Struktur",
     "corePlanIncludedLaunch": "Bereit für den Livegang",
     "frameworkPlanTitle": "Framework Plan",
-    "frameworkPlanDescription": "Ein flexibles Website-Paket für Einzelpersonen, die mehr Struktur, Individualisierung und Entwicklungsspielraum benötigen.",
+    "frameworkPlanDescription": "Eine umfassendere Lösung für Unternehmen, die Struktur, Flexibilität und ein stärkeres digitales Fundament benötigen.",
     "frameworkPlanPrice": "Ab €1.500",
     "frameworkPlanCta": "Framework Plan anfragen",
     "frameworkPlanIncludedPageCount": "Individuelle Website mit 3-5 Seiten",
@@ -261,8 +261,8 @@
           "description": "Geschwindigkeit, Effizienz und Zuverlässigkeit gehören zu jedem Build."
         },
         "individuals": {
-          "title": "Für Einzelpersonen entwickelt",
-          "description": "Unsere Lösungen sind für persönliche Projekte konzipiert, nicht nur für große Systeme."
+          "title": "Für Unternehmen entwickelt",
+          "description": "Unsere Lösungen sind für Unternehmen unterschiedlicher Größe und mit verschiedenartigen Projektumfängen konzipiert."
         }
       },
       "title": "Was uns auszeichnet",
@@ -304,7 +304,7 @@
     },
     "whoWeAre": {
       "title": "Wer wir sind",
-      "descriptionPrimary": "Netspire Dev ist ein digitales Entwicklungsstudio mit Fokus auf maßgeschneiderte Lösungen für Einzelpersonen. Wir arbeiten nicht mit generischen Methoden oder vorgegebenen Strukturen. Stattdessen entsteht jedes Projekt in einem strukturierten Prozess, der von Ihren Zielen geprägt und in der Umsetzung verfeinert wird.",
+      "descriptionPrimary": "Netspire Dev ist ein Studio für digitale Entwicklung, das sich auf die Erstellung maßgeschneiderter Lösungen für Unternehmens-Teams spezialisiert hat. Wir setzen nicht auf Vorlagen oder vorgefertigte Systeme – jedes Projekt wird individuell angegangen, von Ihren Zielen geprägt und durch einen strukturierten Prozess verfeinert.",
       "descriptionSecondary": "Wir glauben, dass gute Entwicklung nicht nur aus Code besteht - sondern aus Klarheit, Benutzerfreundlichkeit und digitalen Produkten, die wirklich funktionieren."
     }
   },
@@ -330,9 +330,9 @@
       "title": "Was wir entwickelt haben",
       "description": "Jedes Projekt basiert auf einer anderen Idee, einer anderen Herausforderung und einer individuellen Lösung. Hier ist eine Auswahl unserer Arbeiten - mit Fokus auf Funktionalität, Klarheit und Performance."
     },
-    "personalPortfolioPlatformTitle": "Persönliche Portfolio-Plattform",
-    "personalPortfolioPlatformOverview": "Ein klares, minimalistisches Portfolio für Einzelpersonen, die kreative Arbeiten und Leistungen präsentieren.",
-    "personalPortfolioPlatformChallenge": "Der Kunde benötigte eine strukturierte Möglichkeit, seine Arbeiten zu zeigen, ohne Besucher zu überfordern, und zugleich ein hochwertiges, professionelles Design zu bewahren.",
+    "personalPortfolioPlatformTitle": "Unternehmens-Portfolio-Plattform",
+    "personalPortfolioPlatformOverview": "Eine klare, strukturierte Portfolio-Plattform, die für ein Kreativunternehmen entwickelt wurde, um dessen Arbeiten, Expertise und Dienstleistungen zu präsentieren.",
+    "personalPortfolioPlatformChallenge": "Das Unternehmen benötigte eine professionelle Möglichkeit, abgeschlossene Projekte zu präsentieren, ohne die Besucher zu überfordern und gleichzeitig einen anspruchsvollen Markenauftritt zu wahren.",
     "personalPortfolioPlatformSolution": "Wir entwickelten eine individuelle Website mit klarem Layout, flüssiger Navigation und responsivem Design, sodass die Inhalte im Mittelpunkt bleiben.",
     "personalPortfolioPlatformFeature1": "Minimalistisches UI/UX-Design",
     "personalPortfolioPlatformFeature2": "Responsives Layout",
@@ -347,8 +347,8 @@
     "ecommerceStoreForNicheProductsFeature3": "Sichere Checkout-Integration",
     "ecommerceStoreForNicheProductsFeature4": "Performance-Optimierung",
     "serviceBasedWebsiteTitle": "Serviceorientierte Website",
-    "serviceBasedWebsiteOverview": "Eine mehrseitige Website für Einzelpersonen, die professionelle Dienstleistungen anbieten.",
-    "serviceBasedWebsiteChallenge": "Der Kunde brauchte eine klare Möglichkeit, Leistungen zu kommunizieren und Nutzer gezielt zum Handeln zu führen.",
+    "serviceBasedWebsiteOverview": "Eine mehrseitige Website, die für ein Dienstleistungsunternehmen entwickelt wurde, um dessen Fachkompetenz und Leistungsangebot übersichtlich zu präsentieren.",
+    "serviceBasedWebsiteChallenge": "Das Unternehmen benötigte eine klare Möglichkeit, seine Dienstleistungen zu präsentieren und potenzielle Kunden zu relevanten Handlungen zu führen.",
     "serviceBasedWebsiteSolution": "Wir strukturierten die Website mit fokussierten Bereichen, einer starken Inhaltshierarchie und klaren Call-to-Actions.",
     "serviceBasedWebsiteFeature1": "Conversion-orientiertes Layout",
     "serviceBasedWebsiteFeature2": "Strukturierte Darstellung der Leistungen",
@@ -388,7 +388,7 @@
     "hero": {
       "label": "// WAS WIR ENTWICKELN",
       "title": "Lösungen, entwickelt\nrund um Ihre Ideen",
-      "description": "Wir gestalten und entwickeln digitale Produkte für Einzelpersonen - mit Fokus auf Funktionalität, Performance und anspruchsvolles Design. Jede Lösung entsteht mit klarem Zweck, sodass sie nicht nur gut aussieht, sondern genau wie vorgesehen funktioniert.",
+      "description": "Wir konzipieren und entwickeln digitale Produkte, die speziell auf Unternehmen zugeschnitten sind – eine Kombination aus Funktionalität, Leistungsstärke und anspruchsvollem Design. Jede Lösung wird zielgerichtet entwickelt, damit sie nicht nur überzeugt, sondern auch exakt wie vorgesehen funktioniert.",
       "cta": "Lösungen ansehen"
     },
     "plans": {
@@ -405,7 +405,7 @@
       "description": "Von einfachen Websites bis zu fortgeschrittenen digitalen Plattformen sind unsere Lösungen darauf ausgelegt, sich Ihren Zielen anzupassen. Wir konzentrieren uns auf Klarheit, Benutzerfreundlichkeit und langfristige Performance - ohne unnötige Komplexität, aber mit echten Ergebnissen."
     },
     "customWebsitesTitle": "Individuelle Websites",
-    "customWebsitesDescription": "Wir entwickeln vollständig maßgeschneiderte Websites rund um Ihre Vision und Ziele. Ob persönliches Projekt, Portfolio oder serviceorientierte Website - jedes Detail wird so gestaltet, dass es Ihre Identität widerspiegelt und zugleich Benutzerfreundlichkeit und Performance wahrt.",
+    "customWebsitesDescription": "Wir erstellen maßgeschneiderte Websites, die exakt auf die Ziele, Abläufe und digitalen Anforderungen Ihres Unternehmens zugeschnitten sind. Ob Unternehmenswebsite, Service-Plattform oder wachsendes Geschäftsprojekt – wir entwickeln jedes Element so, dass es Ihre Marke, die Funktionalität und Ihre langfristigen Bedürfnisse optimal unterstützt.",
     "customWebsitesIncludedResponsiveDesign": "Responsives Design auf allen Geräten",
     "customWebsitesIncludedCleanStructure": "Klare Struktur und intuitive Navigation",
     "customWebsitesIncludedSeoFoundation": "SEO-freundliche Grundlage",
@@ -507,7 +507,7 @@
       "successTitle": "Vielen Dank!",
       "successMessage": "Ihre Anfrage ist eingegangen. Wir prüfen die Details und kontaktieren Sie in Kürze, um die nächsten Schritte zu besprechen.",
       "sections": {
-        "details": "Ihre Angaben",
+        "details": "Unternehmensdaten",
         "projectDetails": "Projektangaben",
         "projectDetailsSubtitle": "Was möchten Sie erstellen?",
         "scopeBudget": "Projektumfang & Budget"
@@ -525,8 +525,8 @@
     "nextStepsDescription": "Nach dem Absenden prüfen wir Ihre Anfrage und melden uns, um Ihre Idee zu besprechen, Details zu klären und den besten weiteren Weg festzulegen.",
     "submit": "Absenden",
     "loading": "Wird gesendet…",
-    "fullNameLabel": "Vollständiger Name",
-    "fullNamePlaceholder": "Nennen Sie uns Ihren Namen",
+    "fullNameLabel": "Ansprechpartner",
+    "fullNamePlaceholder": "Ihr vollständiger Name",
     "emailLabel": "E-Mail-Adresse",
     "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
     "phoneLabel": "Telefonnummer (optional)",
@@ -557,7 +557,9 @@
     "phone": "Telefon:",
     "website": "Ihre Website:",
     "message": "Nachricht:",
-    "messagePlaceholder": "Geben Sie Ihre Nachricht ein"
+    "messagePlaceholder": "Geben Sie Ihre Nachricht ein",
+    "companyNameLabel": "Name der Firma",
+    "companyNamePlaceholder": "Teilen Sie uns mit, welches Unternehmen Sie vertreten"
   },
   "notFoundPage": {
     "title": "Dieses Ziel existiert nicht",
@@ -684,6 +686,8 @@
     "attachmentLabel": "Materialien hochladen (optional)",
     "attachmentAction": "Datei auswählen",
     "attachmentEmpty": "keine Datei ausgewählt",
-    "attachmentMeta": "Max. Größe: 10 MB"
+    "attachmentMeta": "Max. Größe: 10 MB",
+    "companyNameLabel": "Company name",
+    "companyNamePlaceholder": "Tell us which company you represent."
   }
 }

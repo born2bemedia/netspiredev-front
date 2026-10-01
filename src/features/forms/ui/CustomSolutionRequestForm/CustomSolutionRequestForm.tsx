@@ -60,6 +60,7 @@ export const CustomSolutionRequestForm = ({
   const form = useForm<CustomSolutionRequestFormSchema>({
     resolver: zodResolver(customSolutionRequestFormSchema),
     defaultValues: {
+      companyName: '',
       fullName: '',
       email: '',
       phone: '',
@@ -157,9 +158,7 @@ export const CustomSolutionRequestForm = ({
     onSuccessAction?.();
   };
 
-  const toggleProjectType = (
-    value: CustomSolutionRequestFormSchema['projectTypes'][number]
-  ) => {
+  const toggleProjectType = (value: CustomSolutionRequestFormSchema['projectTypes'][number]) => {
     const currentValues = form.getValues('projectTypes');
     const nextValues = currentValues.includes(value)
       ? currentValues.filter((item) => item !== value)
@@ -251,7 +250,7 @@ export const CustomSolutionRequestForm = ({
   const renderTextField = (
     name: keyof Pick<
       CustomSolutionRequestFormSchema,
-      'fullName' | 'email' | 'phone' | 'website' | 'projectTypeOther' | 'goals'
+      'companyName' | 'fullName' | 'email' | 'phone' | 'website' | 'projectTypeOther' | 'goals'
     >,
     label: string,
     placeholder: string,
@@ -324,11 +323,7 @@ export const CustomSolutionRequestForm = ({
     </label>
   );
 
-  const renderPhoneField = (
-    name: 'phone',
-    label: string,
-    placeholder: string
-  ) => (
+  const renderPhoneField = (name: 'phone', label: string, placeholder: string) => (
     <Controller
       control={form.control}
       name={name}
@@ -450,6 +445,14 @@ export const CustomSolutionRequestForm = ({
                   {t('customSolutionForm.sections.details', { fallback: 'Your Details' })}
                 </div>
                 <div className={styles.cardContent}>
+                  {renderTextField(
+                    'companyName',
+                    t('companyNameLabel', { fallback: 'Company name' }),
+                    t('companyNamePlaceholder', {
+                      fallback: 'Tell us which company you represent.',
+                    })
+                  )}
+
                   <div className={styles.detailsRow}>
                     {renderTextField(
                       'fullName',
@@ -631,7 +634,8 @@ export const CustomSolutionRequestForm = ({
                           {t('attachmentAction', { fallback: 'Choose File' })}
                         </span>
                         <span className={styles.fileUploadName}>
-                          {attachment?.name ?? t('attachmentEmpty', { fallback: 'no file selected' })}
+                          {attachment?.name ??
+                            t('attachmentEmpty', { fallback: 'no file selected' })}
                         </span>
                       </span>
                       <span className={styles.fileUploadMeta}>

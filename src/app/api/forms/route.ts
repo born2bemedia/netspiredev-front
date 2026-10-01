@@ -5,12 +5,12 @@ import sgMail from '@sendgrid/mail';
 
 import {
   createBrandedEmailHtml,
+  type EmailDetail,
   escapeHtml,
   renderEmailDetailsSection,
   renderEmailLink,
   renderEmailParagraph,
   renderEmailSpacer,
-  type EmailDetail,
 } from '@/shared/lib/email/brandedEmail';
 import { verifyRecaptcha } from '@/shared/lib/recaptcha';
 
@@ -29,6 +29,7 @@ type RequestPayload = {
 };
 
 type CustomSolutionPayload = {
+  companyName: string;
   fullName: string;
   email: string;
   phone: string;
@@ -50,7 +51,10 @@ type Attachment = {
 };
 
 const formatList = (items: string[]) =>
-  items.filter(Boolean).map((item) => escapeHtml(item)).join(', ') || 'Not specified';
+  items
+    .filter(Boolean)
+    .map((item) => escapeHtml(item))
+    .join(', ') || 'Not specified';
 
 const getOptionalText = (value: string | undefined | null, fallback: string) => {
   const trimmed = String(value ?? '').trim();
@@ -98,16 +102,13 @@ const sendEmail = async (message: MailDataRequired, label: string) => {
 
 const buildParagraphStack = (paragraphs: string[]) =>
   paragraphs
-    .map((paragraph, index) =>
-      `${index > 0 ? renderEmailSpacer() : ''}${renderEmailParagraph(paragraph)}`
+    .map(
+      (paragraph, index) =>
+        `${index > 0 ? renderEmailSpacer() : ''}${renderEmailParagraph(paragraph)}`
     )
     .join('');
 
-const buildUserEmailHtml = (options: {
-  previewTitle: string;
-  intro: string;
-  followUp?: string;
-}) =>
+const buildUserEmailHtml = (options: { previewTitle: string; intro: string; followUp?: string }) =>
   createBrandedEmailHtml({
     previewTitle: options.previewTitle,
     headingLines: [
@@ -177,19 +178,20 @@ const buildCustomSolutionUserEmailHtml = (_payload: CustomSolutionPayload) =>
 const buildCustomSolutionAdminEmailHtml = (payload: CustomSolutionPayload) =>
   buildAdminEmailHtml({
     previewTitle: 'Custom Solution Request - Netspire Dev',
-    headingLines: [
-      { text: 'New custom solution' },
-      { text: 'request received', color: '#ff4500' },
-    ],
+    headingLines: [{ text: 'New custom solution' }, { text: 'request received', color: '#ff4500' }],
     intro: 'A new custom solution request has been submitted through the website.',
     detailsTitle: 'Project details',
     details: [
+      { label: 'Company name', value: escapeHtml(payload.companyName) },
       { label: 'Full name', value: escapeHtml(payload.fullName) },
       { label: 'Email', value: escapeHtml(payload.email) },
       { label: 'Phone', value: getOptionalText(payload.phone, 'Not provided') },
       { label: 'Website', value: getOptionalText(payload.website, 'Not provided') },
       { label: 'Project types', value: formatList(payload.projectTypes) },
-      { label: 'Other project type', value: getOptionalText(payload.projectTypeOther, 'Not specified') },
+      {
+        label: 'Other project type',
+        value: getOptionalText(payload.projectTypeOther, 'Not specified'),
+      },
       { label: 'Estimated budget', value: getOptionalText(payload.budget, 'Not specified') },
       { label: 'Main goals', value: getOptionalText(payload.goals, 'Not specified') },
       { label: 'Timeline', value: getOptionalText(payload.timeline, 'Not specified') },
@@ -237,6 +239,7 @@ const parseMultipartBody = async (request: Request) => {
   return {
     formType: String(formData.get('formType') ?? ''),
     payload: {
+      companyName: String(formData.get('companyName') ?? ''),
       fullName: String(formData.get('fullName') ?? ''),
       email: String(formData.get('email') ?? ''),
       phone: String(formData.get('phone') ?? ''),
@@ -264,20 +267,26 @@ async function handleRequestForm(
   void _recaptcha;
   void attachments;
 
-  await sendEmail({
-    to: adminEmails,
-    from: fromEmail,
-    replyTo: requestData.email,
-    subject: `New Service Request: ${requestData.service || 'Unknown service'}`,
-    html: buildRequestAdminEmailHtml(requestData),
-  }, 'admin request notification');
+  await sendEmail(
+    {
+      to: adminEmails,
+      from: fromEmail,
+      replyTo: requestData.email,
+      subject: `New Service Request: ${requestData.service || 'Unknown service'}`,
+      html: buildRequestAdminEmailHtml(requestData),
+    },
+    'admin request notification'
+  );
 
-  await sendEmail({
-    to: requestData.email,
-    from: fromEmail,
-    subject: "Your Request Has Been Received",
-    html: buildRequestUserEmailHtml(requestData),
-  }, 'request confirmation');
+  await sendEmail(
+    {
+      to: requestData.email,
+      from: fromEmail,
+      subject: 'Your Request Has Been Received',
+      html: buildRequestUserEmailHtml(requestData),
+    },
+    'request confirmation'
+  );
 }
 
 async function handleCustomSolutionForm(
@@ -289,21 +298,27 @@ async function handleCustomSolutionForm(
   const { recaptcha: _recaptcha, ...requestData } = customPayload;
   void _recaptcha;
 
-  await sendEmail({
-    to: adminEmails,
-    from: fromEmail,
-    replyTo: requestData.email,
-    subject: 'Custom Solution Request',
-    html: buildCustomSolutionAdminEmailHtml(requestData),
-    attachments,
-  }, 'admin custom solution notification');
+  await sendEmail(
+    {
+      to: adminEmails,
+      from: fromEmail,
+      replyTo: requestData.email,
+      subject: 'Custom Solution Request',
+      html: buildCustomSolutionAdminEmailHtml(requestData),
+      attachments,
+    },
+    'admin custom solution notification'
+  );
 
-  await sendEmail({
-    to: requestData.email,
-    from: fromEmail,
-    subject: "We've Received Your Custom Solution Request",
-    html: buildCustomSolutionUserEmailHtml(requestData),
-  }, 'custom solution confirmation');
+  await sendEmail(
+    {
+      to: requestData.email,
+      from: fromEmail,
+      subject: "We've Received Your Custom Solution Request",
+      html: buildCustomSolutionUserEmailHtml(requestData),
+    },
+    'custom solution confirmation'
+  );
 }
 
 export async function POST(request: Request): Promise<NextResponse> {
@@ -335,7 +350,10 @@ export async function POST(request: Request): Promise<NextResponse> {
     }
 
     if (parsed.formType === 'request') {
-      await handleRequestForm(parsed.payload as RequestPayload & { recaptcha?: string }, parsed.attachments);
+      await handleRequestForm(
+        parsed.payload as RequestPayload & { recaptcha?: string },
+        parsed.attachments
+      );
     } else if (parsed.formType === 'custom-solution') {
       await handleCustomSolutionForm(parsed.payload, parsed.attachments);
     } else {
